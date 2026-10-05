@@ -6,6 +6,8 @@
 
 Bấm đúp **`RetryLab.cmd`** ở thư mục gốc của dự án. Launcher tái sử dụng máy chủ đang chạy hoặc khởi động máy chủ mới (lần đầu khoảng 20–40 giây), rồi mở RetryLab trong cửa sổ riêng, không có thanh địa chỉ và tab, tại `http://127.0.0.1:8773/`. Cuối thanh bên hiện **● Mô hình sẵn sàng** khi các mô hình v3 đã nạp xong. Cửa sổ dòng lệnh tự đóng khi xong; nếu có lỗi, nó dừng lại để bạn đọc thông báo.
 
+Có thể dùng **`RetryLab.exe`** thay cho `RetryLab.cmd` (không hiện cửa sổ dòng lệnh, báo lỗi bằng hộp thoại, nhật ký ở `app/runtime/launcher.log`): tải ở mục Releases của repo hoặc dựng bằng `python -X utf8 app/build_exe.py` (cần `pip install pyinstaller`), đặt ở thư mục gốc dự án. Exe chỉ là trình khởi động; ứng dụng vẫn chạy bằng Python đã cài.
+
 Muốn có biểu tượng trên Desktop, chạy một lần `python app/desktop.py --install-shortcut`. Lệnh này tạo lối tắt `RetryLab` (biểu tượng `app/static/studio/icon.ico`) trỏ tới `RetryLab.cmd`; nó chỉ chạy khi bạn gọi rõ ràng.
 
 Launcher ưu tiên Microsoft Edge, rồi Google Chrome, ở chế độ cửa sổ riêng; nếu không có cả hai, RetryLab mở bằng trình duyệt mặc định. Cửa sổ dùng hồ sơ mặc định của trình duyệt được chọn, nên tiến độ luyện tập đã lưu trong trình duyệt đó vẫn hiện. Nếu trước đây bạn luyện tập bằng trình duyệt khác, chọn nó bằng `.\RetryLab.cmd --browser chrome` (hoặc `edge`, `default`). Tùy chọn khác: `--port 8774`, `--no-server` (máy chủ đã chạy sẵn), `--dry-run` (chỉ in kế hoạch JSON).

@@ -2,7 +2,7 @@
 
 ## Topic-4 deck with the stencil skills (05/10/2026)
 
-`output/slides/retrylab-de4-stencil.pptx` (28 slides, 16:9, dark 3b1b style, speaker notes, two manim GIFs that play in slideshow mode) built with github.com/ghanemja/stencil @ 8f5c5a2 (pptx-template-styler, pptx-math-3b1b, manim-3b1b) from `presentation/de4/` (template, data from /api/v3, app screenshots, build script; see its README). All 28 slides were exported via PowerPoint and inspected. Stencil itself is not vendored; its venv lives outside the repo. Not committed, not pushed to GitHub, no .exe built yet — both await the user's choice.
+`output/slides/retrylab-de4-stencil.pptx` (28 slides, 16:9, dark 3b1b style, speaker notes, two manim GIFs that play in slideshow mode) built with github.com/ghanemja/stencil @ 8f5c5a2 (pptx-template-styler, pptx-math-3b1b, manim-3b1b) from `presentation/de4/` (template, data from /api/v3, app screenshots, build script; see its README). All 28 slides were exported via PowerPoint and inspected. Stencil itself is not vendored; its venv lives outside the repo. Published at the user's request: public repo https://github.com/meiiie/retrylab (first commit by "meiiie" with the GitHub noreply address, repo-local git identity), release v1.0.0 with `RetryLab.exe` (PyInstaller launcher built by `app/build_exe.py` from `app/exe_launcher.py`; it runs the installed Python, contains no model or data). Excluded from the public repo: raw data, research runs, Pyodide, and three record-level CodeBench files (no redistribution licence; see .gitignore).
 
 ## Desktop app "Gia sư AI" + lab-minimal redesign (29/09/2026) — read first
 
