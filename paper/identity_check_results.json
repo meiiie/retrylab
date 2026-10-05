@@ -1,0 +1,638 @@
+{
+  "purpose": "Independent finite-state verification of standard forecast identities; not empirical student evidence or a new theorem",
+  "method": "Exhaustive joint enumeration of K0,K1,R,Y with exact rational probabilities and Brier losses; natural-log calculations use float",
+  "model": {
+    "initial_mastery": "K0 ~ Bernoulli(p)",
+    "transition": "K1 = 1 if K0=1, otherwise K1 ~ Bernoulli(l)",
+    "response_and_future_target": "R and Y are conditionally independent given K1, each with success probability 0.9 if K1=1 and 0.2 otherwise",
+    "initial_information": "H0 knows p,l and the future target definition, before observing R",
+    "updated_information": "H1 = H0 plus observed R",
+    "forecasts": "p0 = E[Y | H0], p1 = E[Y | H1]"
+  },
+  "case_count": 9,
+  "all_exact_checks_passed": true,
+  "maximum_absolute_nll_identity_residual": 1.3877787807814457e-16,
+  "cases": [
+    {
+      "prior_mastery": {
+        "fraction": "1/10",
+        "decimal": 0.1
+      },
+      "learning_rate": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "nonzero_joint_paths": 8,
+      "post_transition_mastery": {
+        "fraction": "1/10",
+        "decimal": 0.1
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "27/100",
+        "decimal": 0.27
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "153/730",
+        "decimal": 0.2095890410958904
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "13/30",
+        "decimal": 0.43333333333333335
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "441/10000",
+        "decimal": 0.0441
+      },
+      "expected_brier_before": {
+        "fraction": "1971/10000",
+        "decimal": 0.1971
+      },
+      "expected_brier_after": {
+        "fraction": "3417/18250",
+        "decimal": 0.18723287671232877
+      },
+      "expected_brier_improvement": {
+        "fraction": "7203/730000",
+        "decimal": 0.009867123287671233
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "7203/730000",
+        "decimal": 0.009867123287671233
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "27/100",
+        "decimal": 0.27
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "nll_before_nats_float": 0.583258840128597,
+      "nll_after_nats_float": 0.5595330967609439,
+      "nll_improvement_nats_float": 0.023725743367653096,
+      "mutual_information_Y_R_nats_float": 0.023725743367653124,
+      "nll_identity_residual_float": -2.7755575615628914e-17,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "1/10",
+        "decimal": 0.1
+      },
+      "learning_rate": {
+        "fraction": "3/20",
+        "decimal": 0.15
+      },
+      "nonzero_joint_paths": 12,
+      "post_transition_mastery": {
+        "fraction": "47/200",
+        "decimal": 0.235
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "27/200",
+        "decimal": 0.135
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "729/2000",
+        "decimal": 0.3645
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "2871/12710",
+        "decimal": 0.22588512981904013
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "491/810",
+        "decimal": 0.6061728395061728
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "352359/4000000",
+        "decimal": 0.08808975
+      },
+      "expected_brier_before": {
+        "fraction": "926559/4000000",
+        "decimal": 0.23163975
+      },
+      "expected_brier_after": {
+        "fraction": "22665269/114390000",
+        "decimal": 0.19814030072558791
+      },
+      "expected_brier_improvement": {
+        "fraction": "1532800801/45756000000",
+        "decimal": 0.0334994492744121
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "1532800801/45756000000",
+        "decimal": 0.0334994492744121
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "27/100",
+        "decimal": 0.27
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "189/2000",
+        "decimal": 0.0945
+      },
+      "nll_before_nats_float": 0.6559634673840284,
+      "nll_after_nats_float": 0.5838913438966918,
+      "nll_improvement_nats_float": 0.0720721234873366,
+      "mutual_information_Y_R_nats_float": 0.07207212348733656,
+      "nll_identity_residual_float": 4.163336342344337e-17,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "1/10",
+        "decimal": 0.1
+      },
+      "learning_rate": {
+        "fraction": "1/2",
+        "decimal": 0.5
+      },
+      "nonzero_joint_paths": 12,
+      "post_transition_mastery": {
+        "fraction": "11/20",
+        "decimal": 0.55
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "9/20",
+        "decimal": 0.45
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "117/200",
+        "decimal": 0.585
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "243/830",
+        "decimal": 0.2927710843373494
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "103/130",
+        "decimal": 0.7923076923076923
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "4851/40000",
+        "decimal": 0.121275
+      },
+      "expected_brier_before": {
+        "fraction": "9711/40000",
+        "decimal": 0.242775
+      },
+      "expected_brier_after": {
+        "fraction": "196587/1079000",
+        "decimal": 0.18219369786839668
+      },
+      "expected_brier_improvement": {
+        "fraction": "2614689/43160000",
+        "decimal": 0.060581302131603336
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "2614689/43160000",
+        "decimal": 0.060581302131603336
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "27/100",
+        "decimal": 0.27
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "63/200",
+        "decimal": 0.315
+      },
+      "nll_before_nats_float": 0.6786267624557613,
+      "nll_after_nats_float": 0.5497815040952477,
+      "nll_improvement_nats_float": 0.12884525836051353,
+      "mutual_information_Y_R_nats_float": 0.12884525836051355,
+      "nll_identity_residual_float": -2.7755575615628914e-17,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "2/5",
+        "decimal": 0.4
+      },
+      "learning_rate": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "nonzero_joint_paths": 8,
+      "post_transition_mastery": {
+        "fraction": "2/5",
+        "decimal": 0.4
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "12/25",
+        "decimal": 0.48
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "33/130",
+        "decimal": 0.25384615384615383
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "29/40",
+        "decimal": 0.725
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "147/1250",
+        "decimal": 0.1176
+      },
+      "expected_brier_before": {
+        "fraction": "156/625",
+        "decimal": 0.2496
+      },
+      "expected_brier_after": {
+        "fraction": "5049/26000",
+        "decimal": 0.1941923076923077
+      },
+      "expected_brier_improvement": {
+        "fraction": "7203/130000",
+        "decimal": 0.05540769230769231
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "7203/130000",
+        "decimal": 0.05540769230769231
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "12/25",
+        "decimal": 0.48
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "nll_before_nats_float": 0.6923469670899615,
+      "nll_after_nats_float": 0.5769120695940265,
+      "nll_improvement_nats_float": 0.11543489749593494,
+      "mutual_information_Y_R_nats_float": 0.115434897495935,
+      "nll_identity_residual_float": -5.551115123125783e-17,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "2/5",
+        "decimal": 0.4
+      },
+      "learning_rate": {
+        "fraction": "3/20",
+        "decimal": 0.15
+      },
+      "nonzero_joint_paths": 12,
+      "post_transition_mastery": {
+        "fraction": "49/100",
+        "decimal": 0.49
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "9/100",
+        "decimal": 0.09
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "543/1000",
+        "decimal": 0.543
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "1257/4570",
+        "decimal": 0.275054704595186
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "1391/1810",
+        "decimal": 0.7685082872928177
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "122451/1000000",
+        "decimal": 0.122451
+      },
+      "expected_brier_before": {
+        "fraction": "248151/1000000",
+        "decimal": 0.248151
+      },
+      "expected_brier_after": {
+        "fraction": "77641119/413585000",
+        "decimal": 0.18772711534509232
+      },
+      "expected_brier_improvement": {
+        "fraction": "4998082467/82717000000",
+        "decimal": 0.060423884654907695
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "4998082467/82717000000",
+        "decimal": 0.060423884654907695
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "12/25",
+        "decimal": 0.48
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "63/1000",
+        "decimal": 0.063
+      },
+      "nll_before_nats_float": 0.6894446086193585,
+      "nll_after_nats_float": 0.5626197421844256,
+      "nll_improvement_nats_float": 0.12682486643493296,
+      "mutual_information_Y_R_nats_float": 0.126824866434933,
+      "nll_identity_residual_float": -2.7755575615628914e-17,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "2/5",
+        "decimal": 0.4
+      },
+      "learning_rate": {
+        "fraction": "1/2",
+        "decimal": 0.5
+      },
+      "nonzero_joint_paths": 12,
+      "post_transition_mastery": {
+        "fraction": "7/10",
+        "decimal": 0.7
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "3/10",
+        "decimal": 0.3
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "69/100",
+        "decimal": 0.69
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "111/310",
+        "decimal": 0.3580645161290323
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "193/230",
+        "decimal": 0.8391304347826087
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "1029/10000",
+        "decimal": 0.1029
+      },
+      "expected_brier_before": {
+        "fraction": "2139/10000",
+        "decimal": 0.2139
+      },
+      "expected_brier_after": {
+        "fraction": "14652/89125",
+        "decimal": 0.164398316970547
+      },
+      "expected_brier_improvement": {
+        "fraction": "352947/7130000",
+        "decimal": 0.049501683029453014
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "352947/7130000",
+        "decimal": 0.049501683029453014
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "12/25",
+        "decimal": 0.48
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "21/100",
+        "decimal": 0.21
+      },
+      "nll_before_nats_float": 0.6191006644255871,
+      "nll_after_nats_float": 0.5065771152302736,
+      "nll_improvement_nats_float": 0.11252354919531349,
+      "mutual_information_Y_R_nats_float": 0.11252354919531346,
+      "nll_identity_residual_float": 2.7755575615628914e-17,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "7/10",
+        "decimal": 0.7
+      },
+      "learning_rate": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "nonzero_joint_paths": 8,
+      "post_transition_mastery": {
+        "fraction": "7/10",
+        "decimal": 0.7
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "69/100",
+        "decimal": 0.69
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "111/310",
+        "decimal": 0.3580645161290323
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "193/230",
+        "decimal": 0.8391304347826087
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "1029/10000",
+        "decimal": 0.1029
+      },
+      "expected_brier_before": {
+        "fraction": "2139/10000",
+        "decimal": 0.2139
+      },
+      "expected_brier_after": {
+        "fraction": "14652/89125",
+        "decimal": 0.164398316970547
+      },
+      "expected_brier_improvement": {
+        "fraction": "352947/7130000",
+        "decimal": 0.049501683029453014
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "352947/7130000",
+        "decimal": 0.049501683029453014
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "69/100",
+        "decimal": 0.69
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "nll_before_nats_float": 0.6191006644255871,
+      "nll_after_nats_float": 0.5065771152302736,
+      "nll_improvement_nats_float": 0.11252354919531349,
+      "mutual_information_Y_R_nats_float": 0.11252354919531346,
+      "nll_identity_residual_float": 2.7755575615628914e-17,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "7/10",
+        "decimal": 0.7
+      },
+      "learning_rate": {
+        "fraction": "3/20",
+        "decimal": 0.15
+      },
+      "nonzero_joint_paths": 12,
+      "post_transition_mastery": {
+        "fraction": "149/200",
+        "decimal": 0.745
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "9/200",
+        "decimal": 0.045
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "1443/2000",
+        "decimal": 0.7215
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "2157/5570",
+        "decimal": 0.38725314183123877
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "4091/4810",
+        "decimal": 0.8505197505197505
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "372351/4000000",
+        "decimal": 0.09308775
+      },
+      "expected_brier_before": {
+        "fraction": "803751/4000000",
+        "decimal": 0.20093775
+      },
+      "expected_brier_after": {
+        "fraction": "422808669/2679170000",
+        "decimal": 0.157813303747056
+      },
+      "expected_brier_improvement": {
+        "fraction": "46215089067/1071668000000",
+        "decimal": 0.04312444625294401
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "46215089067/1071668000000",
+        "decimal": 0.04312444625294401
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "69/100",
+        "decimal": 0.69
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "63/2000",
+        "decimal": 0.0315
+      },
+      "nll_before_nats_float": 0.5915310385669859,
+      "nll_after_nats_float": 0.49023309451351066,
+      "nll_improvement_nats_float": 0.1012979440534752,
+      "mutual_information_Y_R_nats_float": 0.10129794405347534,
+      "nll_identity_residual_float": -1.3877787807814457e-16,
+      "exact_probability_and_brier_checks_passed": true
+    },
+    {
+      "prior_mastery": {
+        "fraction": "7/10",
+        "decimal": 0.7
+      },
+      "learning_rate": {
+        "fraction": "1/2",
+        "decimal": 0.5
+      },
+      "nonzero_joint_paths": 12,
+      "post_transition_mastery": {
+        "fraction": "17/20",
+        "decimal": 0.85
+      },
+      "expected_latent_mastery_gain": {
+        "fraction": "3/20",
+        "decimal": 0.15
+      },
+      "aligned_future_forecast_p0": {
+        "fraction": "159/200",
+        "decimal": 0.795
+      },
+      "updated_forecast_p1_given_response_0": {
+        "fraction": "201/410",
+        "decimal": 0.4902439024390244
+      },
+      "updated_forecast_p1_given_response_1": {
+        "fraction": "463/530",
+        "decimal": 0.8735849056603774
+      },
+      "expected_signed_forecast_update": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "expected_positive_forecast_update": {
+        "fraction": "2499/40000",
+        "decimal": 0.062475
+      },
+      "expected_brier_before": {
+        "fraction": "6519/40000",
+        "decimal": 0.162975
+      },
+      "expected_brier_after": {
+        "fraction": "302103/2173000",
+        "decimal": 0.13902577082374598
+      },
+      "expected_brier_improvement": {
+        "fraction": "2081667/86920000",
+        "decimal": 0.023949229176254028
+      },
+      "expected_squared_forecast_update": {
+        "fraction": "2081667/86920000",
+        "decimal": 0.023949229176254028
+      },
+      "immediate_forecast_under_K0": {
+        "fraction": "69/100",
+        "decimal": 0.69
+      },
+      "expected_update_against_mismatched_immediate_forecast": {
+        "fraction": "21/200",
+        "decimal": 0.105
+      },
+      "nll_before_nats_float": 0.5072562521085695,
+      "nll_after_nats_float": 0.4437703180404241,
+      "nll_improvement_nats_float": 0.0634859340681454,
+      "mutual_information_Y_R_nats_float": 0.06348593406814541,
+      "nll_identity_residual_float": -1.3877787807814457e-17,
+      "exact_probability_and_brier_checks_passed": true
+    }
+  ]
+}

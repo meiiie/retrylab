@@ -1,0 +1,67 @@
+/* RetryLab studio · tour.css — the "Thuyết trình" panel and the highlight ring (docs/specs/2026-09-29-lab-minimal-redesign.md §4).
+ * Tokens come from base.css. CSP: nothing here needs an inline style; tour.js toggles the class .tour-target on the highlighted
+ * element, sets data-* state attributes on the panel and positions it (left, top, dock width) through the CSSOM.
+ * The panel lives in <body> (not in a view): a view root is a size container and would become the containing block of
+ * a position:fixed panel. data-side is bottom-right | bottom-left | top-right | top-left | dock (compact strip along the bottom).
+ */
+
+/* ---------- highlight ring: static, 2px accent, 4px off the element ---------- */
+.tour-target {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ---------- room for the panel: tour.js sets --tour-room (the panel height) on #view-content while the tour is open ---------- */
+.view-content.tour-room { padding-bottom: calc(var(--tour-room, 0px) + var(--space-4)); }
+
+/* ---------- panel ---------- */
+.tour-panel {
+  position: fixed; left: var(--space-4); top: var(--space-4); z-index: 900;
+  display: flex; flex-direction: column; gap: var(--space-2);
+  width: 320px; max-width: calc(100vw - 2 * 14px);
+  max-height: calc(100vh - 2 * 14px); max-height: calc(100dvh - 2 * 14px); overflow-y: auto;
+  padding: var(--space-3) var(--space-4); background: var(--paper); color: var(--ink);
+  border: 1px solid var(--rule); border-radius: var(--r-float); box-shadow: var(--shadow-float);
+}
+.tour-panel[hidden] { display: none; }
+
+.tour-head { display: flex; align-items: center; gap: var(--space-2); min-height: 28px; margin-right: -6px; }
+.tour-step { flex: none; color: var(--ink-3); font-family: var(--mono); font-size: var(--fs-label); font-variant-numeric: tabular-nums; }
+.tour-busy { flex: 1; min-width: 0; overflow: hidden; color: var(--ink-3); font-size: var(--fs-label); text-overflow: ellipsis; white-space: nowrap; }
+.tour-close { flex: none; width: 28px; height: 28px; margin-left: auto; padding: 0; }
+
+.tour-body { display: grid; gap: var(--space-1); }
+.tour-title { color: var(--ink); font-size: var(--fs-read); font-weight: 600; line-height: 1.3; }
+.tour-notes { color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.5; }
+.tour-warn { color: var(--signal-ink); font-size: var(--fs-table); line-height: 1.45; }
+
+.tour-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--rule); }
+.tour-dots { display: flex; align-items: center; gap: var(--space-1); }
+.tour-dot { flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--rule-strong); }
+.tour-dot.is-done { background: var(--ink-3); }
+.tour-dot.is-current { background: var(--ink); }
+.tour-nav { display: flex; align-items: center; gap: var(--space-2); }
+
+/* ---------- dock: when no corner is clear of the ring, one compact strip along the bottom ---------- */
+.tour-panel[data-side="dock"] {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; column-gap: var(--space-4); row-gap: var(--space-1);
+  max-width: none; padding: var(--space-2) var(--space-4);
+}
+.tour-panel[data-side="dock"] .tour-head,
+.tour-panel[data-side="dock"] .tour-foot { display: contents; }
+.tour-panel[data-side="dock"] .tour-step { grid-column: 1; grid-row: 1; }
+.tour-panel[data-side="dock"] .tour-body { grid-column: 2; grid-row: 1; }
+.tour-panel[data-side="dock"] .tour-nav { grid-column: 3; grid-row: 1; }
+.tour-panel[data-side="dock"] .tour-close { grid-column: 4; grid-row: 1; margin: 0; }
+.tour-panel[data-side="dock"] .tour-busy { grid-column: 2; grid-row: 2; flex: none; }
+.tour-panel[data-side="dock"] .tour-busy:empty { display: none; }
+.tour-panel[data-side="dock"] .tour-warn { grid-column: 1 / -1; grid-row: 3; }
+.tour-panel[data-side="dock"] .tour-dots { display: none; }
+.tour-panel[data-side="dock"] .tour-title { font-size: var(--fs-ui); }
+.tour-panel[data-side="dock"] .tour-notes { font-size: var(--fs-table); line-height: 1.4; }
+
+@media (forced-colors: active) {
+  .tour-target { outline-color: Highlight; }
+  .tour-panel { border-color: CanvasText; }
+  .tour-dot.is-current { background: Highlight; }
+}

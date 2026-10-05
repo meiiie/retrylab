@@ -1,0 +1,6 @@
+create table out_tags
+(
+    id      int default 0 not null,
+    content varchar(255)  not null
+);
+

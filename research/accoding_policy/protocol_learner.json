@@ -1,0 +1,63 @@
+{
+  "id": "accoding-learner-v3",
+  "question": "How well do cognitive-state models (IRT, AFM and PFA with online ability inference, DKT, SAKT and an entropy-based pruned identification tree) forecast first-attempt acceptance of C-programming problems for learners unseen during fitting, overall and by skill; and do two DKT fits that differ only in random seed forecast equally well?",
+  "data_scope": "ACcoding v2.0.0 released archive (SHA-256 26b5637d2a912ce6ae4824e49e055a060c1162422c4a47508e3eb1017762ac1d). All C/C++ judged submissions of the learners absent from the pilot and confirmatory cohorts who have at least 20 distinct released problems in the snapshot. One interaction per learner and problem: the first judged submission, label AC=1; WT/JG/IFNR/OFNR/EFNR/OE removed before sequencing. Educator tags grouped into 15 author-defined skills (kc_map.py). SQL parsed as text; no code executed.",
+  "claim_scope": "Predictive validity of first-attempt forecasts for held-out learners of one platform and course family. Skill-level AUC measures forecasting of new problems with that primary tag, not validated mastery. Lower NLL is not evidence of learning or of better recommendations. The fitted models are also inputs to the separately locked policy stage.",
+  "primary_metric": "Test-learner (T) negative log-likelihood of first-attempt acceptance for models fitted on A; secondary AUC, Brier, ECE; paired NLL difference to DKT-A; 95% percentile bootstrap resampling test learners (1000 replicates).",
+  "split": {
+    "test_previously_inspected": false,
+    "rule": "Rank learners by sha256('accoding-policy-v3:' + creator_id): first 40% A, next 40% B, last 20% T. Inner validation: 10% of A and of B with the smallest sha256('accoding-policy-v3-valid:' + creator_id).",
+    "population_status": "These learners were never loaded by earlier studies or during development. Development and all hyperparameter choices used only the previously inspected pilot cohort (research/accoding_policy/dev_tuning_results.json, dev_settings.json).",
+    "roles": "A fits the deployed tracker and training simulators; B fits independent evaluation simulators; T is used for forecast evaluation here and only as unseen episode starts in accoding-policy-v3."
+  },
+  "selection": "Logistic prior sigma_theta chosen from [0.4, 0.5, 0.6, 0.75] by inner-validation online NLL, then refitted on train+validation learners. DKT, DKT twin and SAKT keep the epoch with the best inner-validation NLL (max 30 epochs, patience 3, min improvement 1e-4). The tree is grown on train learners and reduced-error pruned on validation learners. No T outcome is used for any choice; no model is dropped after seeing T.",
+  "seeds": [17, 1017, 20260928],
+  "seed_roles": {"17": "DKT/SAKT initialisation and batch order", "1017": "re-seeded DKT twin on A", "20260928": "bootstrap"},
+  "inputs": [
+    "data/raw/accoding/ACcoding-Dataset-v2.0.0.zip",
+    "data/processed/accoding/cohort_users.csv",
+    "data/processed/accoding/confirmatory_users.csv",
+    "research/accoding_policy/dev_tuning_results.json"
+  ],
+  "code": [
+    "research/accoding_policy/audit_sources.py",
+    "research/accoding_policy/kc_map.py",
+    "research/accoding_policy/data.py",
+    "research/accoding_policy/learners.py",
+    "research/accoding_policy/learner_benchmark.py",
+    "research/accoding_policy/tests/test_accoding_policy.py"
+  ],
+  "output_files": [
+    "data.npz", "data_catalog.json", "data_counts.json", "split.npz",
+    "models/space_A.npz", "models/space_B.npz",
+    "models/A_irt.json", "models/A_afm.json", "models/A_pfa.json", "models/A_dkt.pt", "models/A_dkt2.pt",
+    "models/A_sakt.pt", "models/A_id3.json",
+    "models/B_irt.json", "models/B_afm.json", "models/B_pfa.json", "models/B_dkt.pt", "models/B_sakt.pt",
+    "models/B_id3.json",
+    "learner_summary.json", "learner_log.txt", "LEARNER_RESULTS.md"
+  ],
+  "timeout_seconds": 14400,
+  "settings": {
+    "threads": 4,
+    "dev_data_dir": "data/processed/accoding_policy",
+    "min_distinct_problems": 20,
+    "split_salt": "accoding-policy-v3",
+    "min_support": 10,
+    "sigma_theta_grid": [0.4, 0.5, 0.6, 0.75],
+    "sigma_item": 1.0,
+    "sigma_learn": 1.0,
+    "dkt": {"dim": 32, "hidden": 64, "dropout": 0.3, "input_dropout": 0.1},
+    "dkt_weight_decay": 0.0001,
+    "sakt": {"dim": 64, "heads": 4, "window": 200, "dropout": 0.1},
+    "sakt_weight_decay": 0.0,
+    "neural_seed": 17,
+    "dkt_twin_seed": 1017,
+    "max_epochs": 30,
+    "patience": 3,
+    "lr": 0.001,
+    "batch_size": 32,
+    "tree": {"min_leaf": 200, "min_gain": 0.001, "max_depth": 6},
+    "bootstrap_reps": 1000,
+    "bootstrap_seed": 20260928
+  }
+}

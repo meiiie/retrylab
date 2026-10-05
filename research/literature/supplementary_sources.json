@@ -1,0 +1,107 @@
+{
+  "audit_date": "2026-09-26",
+  "search_scope": "Targeted novelty stress-test of attempt aggregation, paired future-target evidence, and mastery-decision reliability. No priority claim; five closest additional sources only.",
+  "agent_reach_update_check": {"performed_this_pass": true, "installed_version": "1.5.0", "update_available": false},
+  "sources": [
+    {
+      "id": "step_bkt_2026",
+      "bibkey": "hoa2026stepbkt",
+      "title": "Step-level evidence integration in bayesian knowledge tracing: A controlled within-model ablation study",
+      "authors": ["Nguyen Hoa", "Van Khoa Le"],
+      "year": 2026,
+      "status": "Mendeley Data version 1 research dataset/notebook artifact; peer-reviewed paper not verified",
+      "doi": "10.17632/tnzghkdgfw.1",
+      "primary_url": "https://data.mendeley.com/datasets/tnzghkdgfw/1",
+      "metadata_url": "https://api.datacite.org/dois/10.17632/tnzghkdgfw.1",
+      "metadata_local": "step_bkt_metadata.json",
+      "date_evidence": {"issued": "2026-09-22T16:51:10Z"},
+      "license": "CC BY-NC 4.0 for Mendeley artifact; do not infer original ASSISTments data relicensing",
+      "evidence": [{"section": "Repository Description and Steps to reproduce", "finding": "Matched BKT conditions share parameters, pre-episode state and next same-skill outcome; metadata reports AUC but not Brier/RMSE gains."}],
+      "repositories": [],
+      "access": {"full_text_available": false, "relevant_sections_inspected": false, "metadata_inspected": true, "notebook_inspected": false, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["Metadata alone establishes an earlier public description, not a validated replication or peer-reviewed result.", "Direct repository and public API requests returned 403; notebook not acquired.", "Author names follow DataCite creator parsing (given Nguyen, family Hoa; given Van Khoa, family Le)."]
+    },
+    {
+      "id": "cekt_2026",
+      "bibkey": "zhao2026cekt",
+      "title": "Correctness Is Not Homogeneous Evidence: A Correctness-conditioned Evidence-aware Knowledge Tracing Model",
+      "authors": ["Fuzheng Zhao"],
+      "year": 2026,
+      "status": "arXiv version 1 preprint; peer-reviewed venue unverified",
+      "doi": "10.48550/arXiv.2608.22267",
+      "primary_url": "https://arxiv.org/abs/2608.22267v1",
+      "date_evidence": {"arxiv_v1": "2026-08-23T07:55:49Z"},
+      "evidence": [
+        {"pdf_pages": [6], "section": "3.2.3", "finding": "Separates future windows for weak supervision and proxy validity."},
+        {"pdf_pages": [13, 14, 17, 18, 19, 20], "section": "4.2.3, 4.3.2, 5.3", "finding": "Student/seed uncertainty, context-permutation and random-proxy controls, behavior-fusion ablations and proper scores."},
+        {"pdf_pages": [22, 23], "section": "6", "finding": "Acknowledges unstable independent proxy benefit and noncausal interpretation."}
+      ],
+      "repositories": [],
+      "access": {"full_text_available": true, "relevant_sections_inspected": true, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["No repository linked in the inspected PDF; no code reproduction.", "Behavioral gating and proxy-validity diagnostics are established overlap; exact paired same-future-item replay is not the central reported estimand."]
+    },
+    {
+      "id": "srl_2026",
+      "bibkey": "zhang2026mastery",
+      "title": "Augmenting Knowledge Tracing With Self-Regulated Learning Indicators for Reliable Skill-Mastery Estimation",
+      "authors": ["Yujing Zhang", "Xianghui Meng", "Jionghao Lin"],
+      "year": 2026,
+      "status": "L@S 2026 published proceedings article; bibliographic metadata and institutional abstract verified",
+      "doi": "10.1145/3774398.3811597",
+      "primary_url": "https://doi.org/10.1145/3774398.3811597",
+      "abstract_url": "https://hub.hku.hk/handle/10722/375606",
+      "metadata_url": "https://api.crossref.org/works/10.1145/3774398.3811597",
+      "metadata_local": "srl_2026_metadata.json",
+      "date_evidence": {"published_online": "2026-06-28"},
+      "proceedings_pages": "373-384",
+      "evidence": [{"section": "Institutional abstract only", "finding": "Studies mastery-threshold crossings with weak regulation, including repeated attempts, and subsequent struggle in ASSISTments."}],
+      "repositories": [],
+      "access": {"full_text_available": false, "relevant_sections_inspected": false, "metadata_inspected": true, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["HKU explicitly lists no associated files; full ACM article inaccessible in this audit.", "Exact thresholds, estimation procedure and within-paper page/section anchors are unknown; do not infer them from abstract."]
+    },
+    {
+      "id": "self_attention_2022",
+      "bibkey": "pu2022selfattention",
+      "title": "Self-attention in Knowledge Tracing: Why It Works",
+      "authors": ["Shi Pu", "Lee Becker"],
+      "year": 2022,
+      "status": "AIED 2022 published Springer chapter",
+      "doi": "10.1007/978-3-031-11644-5_75",
+      "primary_url": "https://link.springer.com/chapter/10.1007/978-3-031-11644-5_75",
+      "author_manuscript_url": "https://www.researchgate.net/publication/363291044_Self-Attention_in_Knowledge_Tracing_Why_It_Works",
+      "metadata_url": "https://api.crossref.org/works/10.1007/978-3-031-11644-5_75",
+      "metadata_local": "self_attention_2022_metadata.json",
+      "date_evidence": {"published_online": "2022-07-27", "author_manuscript_upload": "2022-09-06"},
+      "proceedings_pages": "731-736",
+      "evidence": [
+        {"manuscript_pages": [4, 5], "section": "4 and 5", "finding": "Student CV and all-versus-first-attempt comparisons include CSEDM programming data."},
+        {"manuscript_pages": [5, 6, 7, 8], "section": "6", "finding": "DPFA+ compresses repeated attempts into batches and models within-batch success/failure counts."}
+      ],
+      "repositories": [],
+      "access": {"full_text_available": true, "relevant_sections_inspected": true, "full_text_mode": "Web-indexed 9-page manuscript uploaded by Shi Pu on ResearchGate", "local_pdf_available": false, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["ResearchGate heading is incorrectly the whole proceedings; manuscript text and publisher chapter metadata identify the actual paper.", "Page anchors refer to the 9-page author manuscript, not the six published pages.", "Publisher PDF fetch returned non-PDF; linked ResearchGate download returned 404. No PDF hash is available."]
+    },
+    {
+      "id": "grate_2021",
+      "bibkey": "wang2021grate",
+      "title": "Knowledge Tracing for Complex Problem Solving: Granular Rank-Based Tensor Factorization",
+      "authors": ["Chunpai Wang", "Shaghayegh Sahebi", "Siqian Zhao", "Peter Brusilovsky", "Laura O. Moraes"],
+      "year": 2021,
+      "status": "UMAP 2021 published proceedings article",
+      "doi": "10.1145/3450613.3456831",
+      "primary_url": "https://doi.org/10.1145/3450613.3456831",
+      "author_manuscript_url": "https://chunpai.github.io/assets/paper/umap2021.pdf",
+      "metadata_url": "https://api.crossref.org/works/10.1145/3450613.3456831",
+      "metadata_local": "grate_2021_metadata.json",
+      "date_evidence": {"published_online": "2021-06-21", "arxiv_upload_year": 2022},
+      "proceedings_pages": "179-188",
+      "evidence": [
+        {"pdf_pages": [4, 5, 6, 7], "section": "2.2", "finding": "Adaptive attempt aggregation in knowledge tracing."},
+        {"pdf_pages": [9, 11, 12, 13], "section": "3.2, 3.4 and 3.5", "finding": "Next-attempt student-CV evaluation, aggregation ablations and knowledge-state fluctuation diagnostics, including programming datasets."}
+      ],
+      "repositories": ["persai-lab/UMAP2021-GRATE"],
+      "access": {"full_text_available": true, "relevant_sections_inspected": true, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["Page anchors refer to the 16-page author manuscript, not ten proceedings pages.", "Repository URL is cited by the paper; code was not inspected or reproduced in this pass.", "The 2022 arXiv deposit is not the 2021 publication date."]
+    }
+  ]
+}

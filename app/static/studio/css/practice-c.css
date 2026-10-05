@@ -1,0 +1,9 @@
+/* RetryLab studio · practice-c.css — the parts of the practice screens that belong to the Python · C switch and to Luyện C.
+ * Luyện C reuses the .pr- rules of practice.css (same layout and tone); only what is new lives here. No inline styles (CSP). */
+
+.pr-lang-bar { margin-bottom: var(--space-6); }
+
+.pr-rec-meta { color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.5; font-variant-numeric: tabular-nums; }
+.pr-rec-meta strong { color: var(--ink); font-weight: 600; }
+.pr-ranking .table th:first-child, .pr-ranking .table td:first-child { width: 40px; }
+.pr-ranking .table tbody th .pr-item-pick { color: var(--ink-3); }

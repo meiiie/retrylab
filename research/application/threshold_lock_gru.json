@@ -1,0 +1,594 @@
+{
+  "created_utc": "2026-09-26T02:45:21.613054+00:00",
+  "protocol_sha256": "447cb4d6d807d9e704bad7f36faddcf0dd6c6b7db198558c4c742be83191a39f",
+  "script_sha256": "89194f942ef202acbdcbf9eb60eca0b4905d8f57b3db69277d8a4d312e8e6ec6",
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.3.2",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0"
+  },
+  "inputs": [
+    {
+      "path": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\private_predictions\\accoding_gru_pairs.csv",
+      "sha256": "f2d6db36309e04c649ad71839792c9d7cef9664245e86df736889f0ae8731f8a"
+    }
+  ],
+  "validation_rows_sha256": "03133580f8b4cee0515c21a81e7179e13dd2a2de63353d0054e9ad2d9c7906cc",
+  "models": {
+    "gru_ALL": {
+      "pairs": 10734,
+      "students": 211,
+      "stages": {
+        "H0": {
+          "thresholds": {
+            "validation_recall_80": {
+              "threshold": 0.4596201876799265,
+              "feasible": true,
+              "target": 0.8,
+              "tie_count": 1
+            },
+            "validation_workload_30": {
+              "threshold": 0.6739768385887146,
+              "feasible": true,
+              "target": 0.3,
+              "tie_count": 1,
+              "rank": 3221
+            }
+          },
+          "validation": {
+            "calibration": {
+              "failure_auc": 0.7382301893102752,
+              "brier": 0.20676629171615005,
+              "nll": 0.5998500967970842,
+              "mean_risk": 0.5414823077950051,
+              "failure_prevalence": 0.5295323271846469,
+              "calibration_bias": 0.011949980610358124,
+              "ece_10_equal_width": 0.014126738299520275,
+              "reliability_bins": [
+                {
+                  "lower": 0.0,
+                  "upper": 0.1,
+                  "pairs": 119,
+                  "mean_risk": 0.07797920186312593,
+                  "failure_fraction": 0.10084033613445378
+                },
+                {
+                  "lower": 0.1,
+                  "upper": 0.2,
+                  "pairs": 532,
+                  "mean_risk": 0.1551803721670519,
+                  "failure_fraction": 0.15413533834586465
+                },
+                {
+                  "lower": 0.2,
+                  "upper": 0.3,
+                  "pairs": 907,
+                  "mean_risk": 0.2543218304067357,
+                  "failure_fraction": 0.25909592061742004
+                },
+                {
+                  "lower": 0.3,
+                  "upper": 0.4,
+                  "pairs": 1307,
+                  "mean_risk": 0.350965641022823,
+                  "failure_fraction": 0.32364192807957154
+                },
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "pairs": 1538,
+                  "mean_risk": 0.45055043430434555,
+                  "failure_fraction": 0.4408322496749025
+                },
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "pairs": 1768,
+                  "mean_risk": 0.5498924141126048,
+                  "failure_fraction": 0.5271493212669683
+                },
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "pairs": 1826,
+                  "mean_risk": 0.6501359500374486,
+                  "failure_fraction": 0.6341730558598029
+                },
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "pairs": 1518,
+                  "mean_risk": 0.7486041493412822,
+                  "failure_fraction": 0.735836627140975
+                },
+                {
+                  "lower": 0.8,
+                  "upper": 0.9,
+                  "pairs": 1040,
+                  "mean_risk": 0.8429469155111852,
+                  "failure_fraction": 0.8451923076923077
+                },
+                {
+                  "lower": 0.9,
+                  "upper": 1.0,
+                  "pairs": 179,
+                  "mean_risk": 0.9257157773743739,
+                  "failure_fraction": 0.9385474860335196
+                }
+              ]
+            },
+            "policies": {
+              "validation_recall_80": {
+                "feasible": true,
+                "threshold": 0.4596201876799265,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 6955,
+                "flagged_failures": 4548,
+                "workload": 0.6479411216694615,
+                "failure_recall": 0.8001407459535539,
+                "failure_miss_rate": 0.19985925404644617,
+                "ppv": 0.6539180445722502,
+                "nonfailure_flag_rate": 0.4766336633663366
+              },
+              "validation_workload_30": {
+                "feasible": true,
+                "threshold": 0.6739768385887146,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 3221,
+                "flagged_failures": 2492,
+                "workload": 0.30007452953232716,
+                "failure_recall": 0.43842364532019706,
+                "failure_miss_rate": 0.5615763546798029,
+                "ppv": 0.773672772430922,
+                "nonfailure_flag_rate": 0.14435643564356435
+              }
+            }
+          }
+        },
+        "H1": {
+          "thresholds": {
+            "validation_recall_80": {
+              "threshold": 0.43731824556986487,
+              "feasible": true,
+              "target": 0.8,
+              "tie_count": 1
+            },
+            "validation_workload_30": {
+              "threshold": 0.6624128123124441,
+              "feasible": true,
+              "target": 0.3,
+              "tie_count": 1,
+              "rank": 3221
+            }
+          },
+          "validation": {
+            "calibration": {
+              "failure_auc": 0.7470578521610077,
+              "brier": 0.20336146995078516,
+              "nll": 0.5918310601797949,
+              "mean_risk": 0.5230725443854944,
+              "failure_prevalence": 0.5295323271846469,
+              "calibration_bias": -0.006459782799152491,
+              "ece_10_equal_width": 0.009793833381125093,
+              "reliability_bins": [
+                {
+                  "lower": 0.0,
+                  "upper": 0.1,
+                  "pairs": 177,
+                  "mean_risk": 0.07615552424486523,
+                  "failure_fraction": 0.1016949152542373
+                },
+                {
+                  "lower": 0.1,
+                  "upper": 0.2,
+                  "pairs": 684,
+                  "mean_risk": 0.15416696141918731,
+                  "failure_fraction": 0.1608187134502924
+                },
+                {
+                  "lower": 0.2,
+                  "upper": 0.3,
+                  "pairs": 1044,
+                  "mean_risk": 0.2539738416671753,
+                  "failure_fraction": 0.2653256704980843
+                },
+                {
+                  "lower": 0.3,
+                  "upper": 0.4,
+                  "pairs": 1375,
+                  "mean_risk": 0.3511112523945895,
+                  "failure_fraction": 0.3483636363636364
+                },
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "pairs": 1636,
+                  "mean_risk": 0.4508486906827079,
+                  "failure_fraction": 0.45843520782396086
+                },
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "pairs": 1616,
+                  "mean_risk": 0.5497399896948841,
+                  "failure_fraction": 0.5705445544554455
+                },
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "pairs": 1531,
+                  "mean_risk": 0.6490007917910342,
+                  "failure_fraction": 0.643370346178968
+                },
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "pairs": 1442,
+                  "mean_risk": 0.747916550068525,
+                  "failure_fraction": 0.7441054091539528
+                },
+                {
+                  "lower": 0.8,
+                  "upper": 0.9,
+                  "pairs": 1056,
+                  "mean_risk": 0.8422491108079093,
+                  "failure_fraction": 0.8607954545454546
+                },
+                {
+                  "lower": 0.9,
+                  "upper": 1.0,
+                  "pairs": 173,
+                  "mean_risk": 0.9266189568835762,
+                  "failure_fraction": 0.930635838150289
+                }
+              ]
+            },
+            "policies": {
+              "validation_recall_80": {
+                "feasible": true,
+                "threshold": 0.43731824556986487,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 6872,
+                "flagged_failures": 4548,
+                "workload": 0.6402086826905161,
+                "failure_recall": 0.8001407459535539,
+                "failure_miss_rate": 0.19985925404644617,
+                "ppv": 0.6618160651920838,
+                "nonfailure_flag_rate": 0.4601980198019802
+              },
+              "validation_workload_30": {
+                "feasible": true,
+                "threshold": 0.6624128123124441,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 3221,
+                "flagged_failures": 2513,
+                "workload": 0.30007452953232716,
+                "failure_recall": 0.4421182266009852,
+                "failure_miss_rate": 0.5578817733990148,
+                "ppv": 0.7801924868053399,
+                "nonfailure_flag_rate": 0.1401980198019802
+              }
+            }
+          }
+        }
+      }
+    },
+    "gru_FIRST": {
+      "pairs": 10734,
+      "students": 211,
+      "stages": {
+        "H0": {
+          "thresholds": {
+            "validation_recall_80": {
+              "threshold": 0.40461556116739905,
+              "feasible": true,
+              "target": 0.8,
+              "tie_count": 1
+            },
+            "validation_workload_30": {
+              "threshold": 0.6591427475214005,
+              "feasible": true,
+              "target": 0.3,
+              "tie_count": 1,
+              "rank": 3221
+            }
+          },
+          "validation": {
+            "calibration": {
+              "failure_auc": 0.73824602323005,
+              "brier": 0.20732876164256972,
+              "nll": 0.6013460144888082,
+              "mean_risk": 0.512912545828177,
+              "failure_prevalence": 0.5295323271846469,
+              "calibration_bias": -0.01661978135646991,
+              "ece_10_equal_width": 0.025031182157697902,
+              "reliability_bins": [
+                {
+                  "lower": 0.0,
+                  "upper": 0.1,
+                  "pairs": 284,
+                  "mean_risk": 0.07319822025970674,
+                  "failure_fraction": 0.09154929577464789
+                },
+                {
+                  "lower": 0.1,
+                  "upper": 0.2,
+                  "pairs": 842,
+                  "mean_risk": 0.15365152923435987,
+                  "failure_fraction": 0.22327790973871733
+                },
+                {
+                  "lower": 0.2,
+                  "upper": 0.3,
+                  "pairs": 1160,
+                  "mean_risk": 0.25250547832284853,
+                  "failure_fraction": 0.2974137931034483
+                },
+                {
+                  "lower": 0.3,
+                  "upper": 0.4,
+                  "pairs": 1373,
+                  "mean_risk": 0.34956875150427713,
+                  "failure_fraction": 0.39402767662053895
+                },
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "pairs": 1453,
+                  "mean_risk": 0.45071715747039776,
+                  "failure_fraction": 0.4755677907777013
+                },
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "pairs": 1544,
+                  "mean_risk": 0.5502202824974154,
+                  "failure_fraction": 0.5569948186528497
+                },
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "pairs": 1410,
+                  "mean_risk": 0.6493991663102634,
+                  "failure_fraction": 0.6375886524822695
+                },
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "pairs": 1276,
+                  "mean_risk": 0.7496889807924224,
+                  "failure_fraction": 0.7358934169278997
+                },
+                {
+                  "lower": 0.8,
+                  "upper": 0.9,
+                  "pairs": 1073,
+                  "mean_risk": 0.8472487009794408,
+                  "failure_fraction": 0.8443616029822927
+                },
+                {
+                  "lower": 0.9,
+                  "upper": 1.0,
+                  "pairs": 319,
+                  "mean_risk": 0.9303767020709993,
+                  "failure_fraction": 0.9059561128526645
+                }
+              ]
+            },
+            "policies": {
+              "validation_recall_80": {
+                "feasible": true,
+                "threshold": 0.40461556116739905,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 6999,
+                "flagged_failures": 4548,
+                "workload": 0.6520402459474567,
+                "failure_recall": 0.8001407459535539,
+                "failure_miss_rate": 0.19985925404644617,
+                "ppv": 0.649807115302186,
+                "nonfailure_flag_rate": 0.48534653465346533
+              },
+              "validation_workload_30": {
+                "feasible": true,
+                "threshold": 0.6591427475214005,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 3221,
+                "flagged_failures": 2520,
+                "workload": 0.30007452953232716,
+                "failure_recall": 0.4433497536945813,
+                "failure_miss_rate": 0.5566502463054187,
+                "ppv": 0.7823657249301459,
+                "nonfailure_flag_rate": 0.13881188118811882
+              }
+            }
+          }
+        },
+        "H1": {
+          "thresholds": {
+            "validation_recall_80": {
+              "threshold": 0.4080408414204916,
+              "feasible": true,
+              "target": 0.8,
+              "tie_count": 1
+            },
+            "validation_workload_30": {
+              "threshold": 0.6677085558573406,
+              "feasible": true,
+              "target": 0.3,
+              "tie_count": 1,
+              "rank": 3221
+            }
+          },
+          "validation": {
+            "calibration": {
+              "failure_auc": 0.746600619421548,
+              "brier": 0.20416549194008848,
+              "nll": 0.5941243621950294,
+              "mean_risk": 0.5152878136036458,
+              "failure_prevalence": 0.5295323271846469,
+              "calibration_bias": -0.014244513581001095,
+              "ece_10_equal_width": 0.019246301268326903,
+              "reliability_bins": [
+                {
+                  "lower": 0.0,
+                  "upper": 0.1,
+                  "pairs": 295,
+                  "mean_risk": 0.07243692975933269,
+                  "failure_fraction": 0.1152542372881356
+                },
+                {
+                  "lower": 0.1,
+                  "upper": 0.2,
+                  "pairs": 868,
+                  "mean_risk": 0.15253222045902098,
+                  "failure_fraction": 0.19470046082949308
+                },
+                {
+                  "lower": 0.2,
+                  "upper": 0.3,
+                  "pairs": 1143,
+                  "mean_risk": 0.25324639036586594,
+                  "failure_fraction": 0.29571303587051617
+                },
+                {
+                  "lower": 0.3,
+                  "upper": 0.4,
+                  "pairs": 1349,
+                  "mean_risk": 0.3509413935879233,
+                  "failure_fraction": 0.39807264640474427
+                },
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "pairs": 1497,
+                  "mean_risk": 0.4495066514268163,
+                  "failure_fraction": 0.4589178356713427
+                },
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "pairs": 1430,
+                  "mean_risk": 0.5487384012181721,
+                  "failure_fraction": 0.5517482517482517
+                },
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "pairs": 1359,
+                  "mean_risk": 0.6495942199757601,
+                  "failure_fraction": 0.6438557763061075
+                },
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "pairs": 1282,
+                  "mean_risk": 0.7504694845524504,
+                  "failure_fraction": 0.749609984399376
+                },
+                {
+                  "lower": 0.8,
+                  "upper": 0.9,
+                  "pairs": 1129,
+                  "mean_risk": 0.8474820837365303,
+                  "failure_fraction": 0.8405668733392383
+                },
+                {
+                  "lower": 0.9,
+                  "upper": 1.0,
+                  "pairs": 382,
+                  "mean_risk": 0.9296777430262715,
+                  "failure_fraction": 0.9031413612565445
+                }
+              ]
+            },
+            "policies": {
+              "validation_recall_80": {
+                "feasible": true,
+                "threshold": 0.4080408414204916,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 6954,
+                "flagged_failures": 4548,
+                "workload": 0.6478479597540525,
+                "failure_recall": 0.8001407459535539,
+                "failure_miss_rate": 0.19985925404644617,
+                "ppv": 0.6540120793787748,
+                "nonfailure_flag_rate": 0.4764356435643564
+              },
+              "validation_workload_30": {
+                "feasible": true,
+                "threshold": 0.6677085558573406,
+                "pairs": 10734,
+                "failures": 5684,
+                "failure_prevalence": 0.5295323271846469,
+                "flagged": 3221,
+                "flagged_failures": 2544,
+                "workload": 0.30007452953232716,
+                "failure_recall": 0.44757213230119636,
+                "failure_miss_rate": 0.5524278676988037,
+                "ppv": 0.7898168270723378,
+                "nonfailure_flag_rate": 0.13405940594059407
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "expected_models_not_in_this_family_run": [
+    "all_submissions",
+    "first_attempt",
+    "paired_target"
+  ],
+  "coverage": {
+    "by_model": [
+      {
+        "model": "gru_ALL",
+        "split": "validation",
+        "pairs": 10734,
+        "students": 211,
+        "failure_prevalence": 0.5295323271846469
+      },
+      {
+        "model": "gru_FIRST",
+        "split": "validation",
+        "pairs": 10734,
+        "students": 211,
+        "failure_prevalence": 0.5295323271846469
+      }
+    ],
+    "pair_intersections": [
+      {
+        "split": "validation",
+        "model_a": "gru_ALL",
+        "model_b": "gru_FIRST",
+        "intersection": 10734,
+        "only_a": 0,
+        "only_b": 0
+      }
+    ]
+  },
+  "parameters": {
+    "recall_target": 0.8,
+    "workload_target": 0.3,
+    "ties": "include risk >= threshold",
+    "bootstrap_seed": 20260926,
+    "bootstrap_samples": 1000,
+    "ece_bins": 10,
+    "nll_epsilon": 1e-12
+  }
+}

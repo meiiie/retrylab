@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.env
+.env.*
+!.env.example
+data/*
+!data/AGENTS.md
+!data/CLAUDE.md
+tmp/
+.harness/
+app/runtime/
+app/static/vendor/*
+!app/static/vendor/jscpp/
+app/test_outputs/
+research/runs/
+research/literature/papers/
+research/literature/code/
+*.pt
+*.joblib
+*.zip
+*.tar.gz
+*.log
+paper/preview/
+presentation/de4/build/
+# record-level rows of CodeBench, which has no redistribution licence (see research/codebench/README.md)
+research/codebench/archive_inventory_2016_1.tsv
+research/code_revision_feasibility/selected_examples.json
+research/code_revision_feasibility/raw_verification.json
+# PyInstaller output of the launcher
+dist/
+build/RetryLab/
+*.spec
+RetryLab.exe

@@ -1,0 +1,36 @@
+#view-realdata .rd-step { margin: 44px 0; }
+#view-realdata .section-head { align-items: end; gap: 16px; flex-wrap: wrap; }
+#view-realdata .table-scroll { margin: 14px 0; }
+#view-realdata table { min-width: 640px; }
+#view-realdata .rd-history { max-height: 360px; overflow-y: auto; }
+.rd-label { display: flex; flex-direction: column; gap: 8px; font-size: .875rem; }
+.rd-label select { max-width: 100%; min-height: 44px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background: white; color: inherit; }
+.rd-stats { margin: 28px 0 8px; }
+.rd-outcome { min-height: 32px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font: inherit; color: inherit; }
+.rd-outcome.ok { color: var(--success); background: var(--success-soft); }
+.rd-outcome.bad { color: var(--review); background: var(--review-soft); }
+.rd-outcome.flipped { outline: 2px dashed var(--accent); outline-offset: 1px; }
+.rd-outcome:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.rd-skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; margin: 18px 0; }
+.rd-skill { padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.rd-skill-top { display: flex; justify-content: space-between; gap: 12px; font-size: .9rem; margin-bottom: 10px; }
+.rd-bar { height: 8px; border-radius: 4px; background: #eceff4; overflow: hidden; }
+.rd-bar span { display: block; height: 100%; border-radius: 4px; background: #2a78d6; }
+.rd-learned td:first-child { font-weight: 600; }
+.rd-sim-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 18px 0; }
+.rd-sim-cards > div { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); display: flex; flex-direction: column; gap: 8px; }
+.rd-sim-cards span { color: var(--muted); font-size: .875rem; }
+.rd-sim-cards strong { font-size: 1.5rem; }
+.rd-hypotheses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 18px 0; }
+.rd-hyp { padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.rd-hyp h3 { font-size: 1rem; margin: 0 0 10px; }
+.rd-hyp p { color: var(--muted); line-height: 1.6; margin: 0; }
+.rd-matrix th, .rd-matrix td { text-align: right; white-space: nowrap; }
+.rd-matrix th[scope="row"] { text-align: left; }
+.rd-cell { font-variant-numeric: tabular-nums; }
+.rd-cell.pos { background: rgb(42 120 214 / calc(var(--level, 0) * .55)); }
+.rd-cell.neg { background: rgb(227 73 72 / calc(var(--level, 0) * .45)); }
+.rd-rules, .rd-method { line-height: 1.8; padding-left: 22px; }
+@media (max-width: 760px) {
+  .rd-sim-cards, .rd-hypotheses { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,16 @@
+create table out_submissions
+(
+    id          bigint unsigned                                                                                     default '0'   not null,
+    lang        enum ('c++', 'c', 'python', 'java', 'python2', 'python3')                                           default 'c++' not null,
+    result      enum ('WT', 'JG', 'AC', 'WA', 'CE', 'REG', 'MLE', 'REP', 'PE', 'TLE', 'IFNR', 'OFNR', 'EFNR', 'OE') default 'WT'  not null,
+    score       float                                                                                                             null,
+    time_cost   int                                                                                                               null,
+    memory_cost int                                                                                                               null,
+    code_length int                                                                                                               null,
+    detail      text                                                                                                              null,
+    created_at  datetime                                                                                                          not null,
+    creator_id  bigint unsigned                                                                                     default '0'   not null,
+    problem_id  bigint unsigned                                                                                     default '0'   not null,
+    contest_id  bigint unsigned                                                                                     default '0'   null
+);
+

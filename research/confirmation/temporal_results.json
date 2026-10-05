@@ -1,0 +1,299 @@
+{
+  "completed_at_utc": "2026-09-26T02:40:27.918742+00:00",
+  "status": "Secondary exploratory temporal check; main confirmation was already observed.",
+  "elapsed_seconds": 119.69517229999474,
+  "cutoff_lock_sha256": "b930b649ecc9ce1c257d4b732cca3f3d020a79b9b9a69fdf1f36c0b7b8d80174",
+  "protocol_sha256": "c6746f50f872fe1c453794726938852c1ac4267eedd0d4fec71fe6ca613a4e4b",
+  "script_sha256": "05196e546e2257d32a0882177140a997374c05fbda1b136488c023e17a42df3d",
+  "confirmation_csv_sha256": "6dc685aaa4167054306216c2193572c49c371c98276c1e4959ae6760261211ed",
+  "fit_lock_sha256": "87e4009c31c7c98c6502c5b02ee57c4a52381e93d606f742e6f88670120ba21a",
+  "resumed_from_frozen_model_after_pre_metric_repair": true,
+  "repair_record": "temporal_repair_01.json",
+  "cleaning": {
+    "raw_rows": 420076,
+    "cleaned_rows": 420076
+  },
+  "date_proof": {
+    "cutoff": "2025-10-27T08:45:57",
+    "latest_parameter_source_event": "2025-10-27T08:45:57",
+    "minimum_h0": "2025-10-27T09:07:52",
+    "minimum_h1": "2025-10-27T09:13:29",
+    "minimum_target": "2025-10-27T10:17:25",
+    "maximum_target": "2025-12-30T14:24:33",
+    "all_h0_and_h1_at_or_after_cutoff": true,
+    "all_targets_strictly_after_h1": true
+  },
+  "coverage": {
+    "base_pair_coverage_with_past_training_item_support": {
+      "students": 1500,
+      "submissions": 420076,
+      "first_observed_problem_attempts": 179854,
+      "episodes": 215200,
+      "single_submission_episodes": 131897,
+      "multi_submission_episodes": 83303,
+      "excluded_no_next_episode": 735,
+      "excluded_next_previously_observed": 12492,
+      "excluded_next_unknown_training_item": 11130,
+      "retained_pairs": 58946,
+      "retained_students": 1499,
+      "coverage_of_multi_submission_episodes": 0.7076095698834376,
+      "coverage_of_first_observed_targets": 0.3277436142649038
+    },
+    "excluded_h0_before_cutoff": 56655,
+    "excluded_h1_before_cutoff_given_h0_after": 0,
+    "excluded_non_strict_successor_time_after_cutoff": 0,
+    "retained_pairs": 2291,
+    "retained_students": 516,
+    "fraction_of_base_pairs_retained": 0.03886608081973331
+  },
+  "aggregates": [
+    {
+      "policy": "freeze",
+      "group": "all",
+      "value": "all",
+      "students": 516,
+      "rows": 2291,
+      "nll": 0.6504216535916844,
+      "brier": 0.23026968989306415,
+      "mean_probability": 0.498175510913593,
+      "acceptance_rate": 0.5744216499345264,
+      "calibration_in_the_large": -0.07624613902093336,
+      "ece_10_fixed_bins": 0.08080238463787746
+    },
+    {
+      "policy": "freeze",
+      "group": "episode_first_ac",
+      "value": "0",
+      "students": 511,
+      "rows": 2208,
+      "nll": 0.6532199242727065,
+      "brier": 0.23146973842272242,
+      "mean_probability": 0.49618802712625576,
+      "acceptance_rate": 0.5747282608695652,
+      "calibration_in_the_large": -0.07854023374330943,
+      "ece_10_fixed_bins": 0.08338165603631224
+    },
+    {
+      "policy": "freeze",
+      "group": "episode_first_ac",
+      "value": "1",
+      "students": 64,
+      "rows": 83,
+      "nll": 0.5759809106555775,
+      "brier": 0.1983455073209497,
+      "mean_probability": 0.5510473687743236,
+      "acceptance_rate": 0.5662650602409639,
+      "calibration_in_the_large": -0.015217691466640315,
+      "ece_10_fixed_bins": 0.09830201884748627
+    },
+    {
+      "policy": "freeze",
+      "group": "episode_end_ac",
+      "value": "0",
+      "students": 341,
+      "rows": 555,
+      "nll": 0.6540489423018687,
+      "brier": 0.23088086655984058,
+      "mean_probability": 0.497736438568815,
+      "acceptance_rate": 0.5981981981981982,
+      "calibration_in_the_large": -0.1004617596293832,
+      "ece_10_fixed_bins": 0.11498737654489101
+    },
+    {
+      "policy": "freeze",
+      "group": "episode_end_ac",
+      "value": "1",
+      "students": 475,
+      "rows": 1736,
+      "nll": 0.6492620077194767,
+      "brier": 0.23007429643104746,
+      "mean_probability": 0.49831588254455605,
+      "acceptance_rate": 0.5668202764976958,
+      "calibration_in_the_large": -0.06850439395313979,
+      "ece_10_fixed_bins": 0.07201926253857886
+    },
+    {
+      "policy": "freeze",
+      "group": "retry_group",
+      "value": "1",
+      "students": 423,
+      "rows": 1015,
+      "nll": 0.6479596492018179,
+      "brier": 0.228973379844423,
+      "mean_probability": 0.5012571461617238,
+      "acceptance_rate": 0.5645320197044335,
+      "calibration_in_the_large": -0.06327487354270966,
+      "ece_10_fixed_bins": 0.0705154666832007
+    },
+    {
+      "policy": "freeze",
+      "group": "retry_group",
+      "value": "2-3",
+      "students": 366,
+      "rows": 776,
+      "nll": 0.6466891931115877,
+      "brier": 0.22889121213154384,
+      "mean_probability": 0.49688252863241805,
+      "acceptance_rate": 0.5876288659793815,
+      "calibration_in_the_large": -0.09074633734696341,
+      "ece_10_fixed_bins": 0.09197576854905623
+    },
+    {
+      "policy": "freeze",
+      "group": "retry_group",
+      "value": "4+",
+      "students": 299,
+      "rows": 500,
+      "nll": 0.6612123011682232,
+      "brier": 0.2350405967776851,
+      "mean_probability": 0.49392649986027093,
+      "acceptance_rate": 0.574,
+      "calibration_in_the_large": -0.08007350013972903,
+      "ece_10_fixed_bins": 0.08569075021689425
+    },
+    {
+      "policy": "full",
+      "group": "all",
+      "value": "all",
+      "students": 516,
+      "rows": 2291,
+      "nll": 0.6465271062371725,
+      "brier": 0.22842449862029823,
+      "mean_probability": 0.5235677303223567,
+      "acceptance_rate": 0.5744216499345264,
+      "calibration_in_the_large": -0.050853919612169673,
+      "ece_10_fixed_bins": 0.05413435215167946
+    },
+    {
+      "policy": "full",
+      "group": "episode_first_ac",
+      "value": "0",
+      "students": 511,
+      "rows": 2208,
+      "nll": 0.6491359251152251,
+      "brier": 0.22954354627741713,
+      "mean_probability": 0.5227099229512203,
+      "acceptance_rate": 0.5747282608695652,
+      "calibration_in_the_large": -0.05201833791834487,
+      "ece_10_fixed_bins": 0.05567927735468842
+    },
+    {
+      "policy": "full",
+      "group": "episode_first_ac",
+      "value": "1",
+      "students": 64,
+      "rows": 83,
+      "nll": 0.5771262377704227,
+      "brier": 0.1986551344405578,
+      "mean_probability": 0.5463874734002978,
+      "acceptance_rate": 0.5662650602409639,
+      "calibration_in_the_large": -0.019877586840666095,
+      "ece_10_fixed_bins": 0.09093277433612358
+    },
+    {
+      "policy": "full",
+      "group": "episode_end_ac",
+      "value": "0",
+      "students": 341,
+      "rows": 555,
+      "nll": 0.6638767112948276,
+      "brier": 0.23571321614577562,
+      "mean_probability": 0.47635528839333635,
+      "acceptance_rate": 0.5981981981981982,
+      "calibration_in_the_large": -0.12184290980486184,
+      "ece_10_fixed_bins": 0.12727324713842236
+    },
+    {
+      "policy": "full",
+      "group": "episode_end_ac",
+      "value": "1",
+      "students": 475,
+      "rows": 1736,
+      "nll": 0.6409804295050304,
+      "brier": 0.2260942922685472,
+      "mean_probability": 0.5386615697639502,
+      "acceptance_rate": 0.5668202764976958,
+      "calibration_in_the_large": -0.028158706733745653,
+      "ece_10_fixed_bins": 0.03724735935809239
+    },
+    {
+      "policy": "full",
+      "group": "retry_group",
+      "value": "1",
+      "students": 423,
+      "rows": 1015,
+      "nll": 0.6439500433259148,
+      "brier": 0.22701705008256154,
+      "mean_probability": 0.5380527518469781,
+      "acceptance_rate": 0.5645320197044335,
+      "calibration_in_the_large": -0.026479267857455357,
+      "ece_10_fixed_bins": 0.04067640245855909
+    },
+    {
+      "policy": "full",
+      "group": "retry_group",
+      "value": "2-3",
+      "students": 366,
+      "rows": 776,
+      "nll": 0.638621682096285,
+      "brier": 0.22508415442619306,
+      "mean_probability": 0.5221910639226812,
+      "acceptance_rate": 0.5876288659793815,
+      "calibration_in_the_large": -0.06543780205670024,
+      "ece_10_fixed_bins": 0.06838161072578976
+    },
+    {
+      "policy": "full",
+      "group": "retry_group",
+      "value": "4+",
+      "students": 299,
+      "rows": 500,
+      "nll": 0.664027762213683,
+      "brier": 0.2364658333411552,
+      "mean_probability": 0.4962997228796718,
+      "acceptance_rate": 0.574,
+      "calibration_in_the_large": -0.07770027712032818,
+      "ece_10_fixed_bins": 0.08281549482344179
+    }
+  ],
+  "contrasts": [
+    {
+      "metric": "nll",
+      "difference_full_minus_freeze": -0.003894547354511903,
+      "lower_95": -0.007585430359871848,
+      "upper_95": -0.00010021243194229448
+    },
+    {
+      "metric": "brier",
+      "difference_full_minus_freeze": -0.0018451912727658493,
+      "lower_95": -0.0036363361305841277,
+      "upper_95": -1.6702985867131858e-05
+    },
+    {
+      "metric": "probability",
+      "difference_full_minus_freeze": 0.02539221940876372,
+      "lower_95": 0.023999120932495344,
+      "upper_95": 0.026714861493146332
+    }
+  ],
+  "checks": {
+    "no_overlap_with_original_users": true,
+    "all_new_users_held_out": true,
+    "first_observed_retained_from_full_context": true,
+    "h1_matches_frozen_target_prediction": true,
+    "no_post_cutoff_training_parameter_source": true
+  },
+  "bootstrap": {
+    "repetitions": 1000,
+    "seed": 26092026,
+    "unit": "retained held-out student",
+    "method": "paired percentile 95%; conditional on trained model; pair-weighted point estimates"
+  },
+  "limitations": [
+    "Exploratory chronological robustness after observing main confirmation; not independent preregistration.",
+    "Past-only known-item support and temporal filtering change the retained population, so changes versus main results are not a causal effect of chronology.",
+    "Oracle next-item identity, stopping, dropout, and future-conditioned long-history eligibility remain.",
+    "Immediate-first-attempt predictor is transported to H0; paired-target training control is not repeated in this temporal check.",
+    "Predictive information benefit does not identify learning gain or policy value; no alpha tuning performed."
+  ]
+}

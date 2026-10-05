@@ -1,0 +1,808 @@
+{
+  "created_utc": "2026-09-26T02:52:37.346435+00:00",
+  "estimand": "retrospective oracle-target observed-failure screening; not intervention benefit or policy value",
+  "threshold_lock_sha256": "913dbaded871bc8747fb6f521e4f584b87b38bd965c7b6895b79e1707c5e61d5",
+  "protocol_sha256": "447cb4d6d807d9e704bad7f36faddcf0dd6c6b7db198558c4c742be83191a39f",
+  "script_sha256": "89194f942ef202acbdcbf9eb60eca0b4905d8f57b3db69277d8a4d312e8e6ec6",
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.3.2",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0"
+  },
+  "inputs": [
+    {
+      "path": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\private_predictions\\accoding_gru_pairs.csv",
+      "sha256": "de32e2f12e484625b082abeb44b390aabfa3b7c4d20f876fd172d4a230f6d872"
+    }
+  ],
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260926,
+    "unit": "student",
+    "paired": true,
+    "refit_thresholds": false,
+    "refit_models": false
+  },
+  "coverage": {
+    "by_model": [
+      {
+        "model": "gru_ALL",
+        "split": "confirmation",
+        "pairs": 69825,
+        "students": 1500,
+        "failure_prevalence": 0.5322878625134264
+      },
+      {
+        "model": "gru_ALL",
+        "split": "validation",
+        "pairs": 10734,
+        "students": 211,
+        "failure_prevalence": 0.5295323271846469
+      },
+      {
+        "model": "gru_FIRST",
+        "split": "confirmation",
+        "pairs": 69825,
+        "students": 1500,
+        "failure_prevalence": 0.5322878625134264
+      },
+      {
+        "model": "gru_FIRST",
+        "split": "validation",
+        "pairs": 10734,
+        "students": 211,
+        "failure_prevalence": 0.5295323271846469
+      }
+    ],
+    "pair_intersections": [
+      {
+        "split": "confirmation",
+        "model_a": "gru_ALL",
+        "model_b": "gru_FIRST",
+        "intersection": 69825,
+        "only_a": 0,
+        "only_b": 0
+      },
+      {
+        "split": "validation",
+        "model_a": "gru_ALL",
+        "model_b": "gru_FIRST",
+        "intersection": 10734,
+        "only_a": 0,
+        "only_b": 0
+      }
+    ]
+  },
+  "models": {
+    "gru_ALL": {
+      "pairs": 69825,
+      "students": 1500,
+      "stages": {
+        "H0": {
+          "calibration": {
+            "failure_auc": 0.7438117286987452,
+            "brier": 0.2045803717433097,
+            "nll": 0.5946969480491998,
+            "mean_risk": 0.5455829587829617,
+            "failure_prevalence": 0.5322878625134264,
+            "calibration_bias": 0.01329509626953529,
+            "ece_10_equal_width": 0.015503445028696747,
+            "reliability_bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "pairs": 581,
+                "mean_risk": 0.07812108083217224,
+                "failure_fraction": 0.07056798623063683
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "pairs": 3515,
+                "mean_risk": 0.1570150224955628,
+                "failure_fraction": 0.14452347083926032
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "pairs": 5744,
+                "mean_risk": 0.25329104601686603,
+                "failure_fraction": 0.23276462395543177
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "pairs": 8330,
+                "mean_risk": 0.3521114587408154,
+                "failure_fraction": 0.3310924369747899
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "pairs": 9883,
+                "mean_risk": 0.4510369854402657,
+                "failure_fraction": 0.4309420216533441
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "pairs": 11561,
+                "mean_risk": 0.5512941412001928,
+                "failure_fraction": 0.5323068938673126
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "pairs": 11837,
+                "mean_risk": 0.6499429721581308,
+                "failure_fraction": 0.6328461603446819
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "pairs": 10537,
+                "mean_risk": 0.7490420087738338,
+                "failure_fraction": 0.7448989275884976
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "pairs": 6698,
+                "mean_risk": 0.8421714475653334,
+                "failure_fraction": 0.8533890713645864
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "pairs": 1139,
+                "mean_risk": 0.9236494013636252,
+                "failure_fraction": 0.9253731343283582
+              }
+            ]
+          },
+          "policies": {
+            "validation_recall_80": {
+              "feasible": true,
+              "threshold": 0.4596201876799265,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 45893,
+              "flagged_failures": 30086,
+              "workload": 0.6572574292875045,
+              "failure_recall": 0.8094815293136385,
+              "failure_miss_rate": 0.19051847068636155,
+              "ppv": 0.6555683873357593,
+              "nonfailure_flag_rate": 0.4840161675546574
+            },
+            "validation_workload_30": {
+              "feasible": true,
+              "threshold": 0.6739768385887146,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 21503,
+              "flagged_failures": 16706,
+              "workload": 0.30795560329394916,
+              "failure_recall": 0.4494847579842333,
+              "failure_miss_rate": 0.5505152420157666,
+              "ppv": 0.7769148490908245,
+              "nonfailure_flag_rate": 0.14688590850633843
+            }
+          }
+        },
+        "H1": {
+          "calibration": {
+            "failure_auc": 0.7509591511034299,
+            "brier": 0.20173486293461224,
+            "nll": 0.5881980066137893,
+            "mean_risk": 0.528709696119571,
+            "failure_prevalence": 0.5322878625134264,
+            "calibration_bias": -0.003578166393855442,
+            "ece_10_equal_width": 0.004484829572143331,
+            "reliability_bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "pairs": 869,
+                "mean_risk": 0.07649624919269475,
+                "failure_fraction": 0.07825086306098965
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "pairs": 4483,
+                "mean_risk": 0.15438908177225535,
+                "failure_fraction": 0.15123801026098593
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "pairs": 6660,
+                "mean_risk": 0.25293207576981297,
+                "failure_fraction": 0.2503003003003003
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "pairs": 8532,
+                "mean_risk": 0.3516617633011131,
+                "failure_fraction": 0.35185185185185186
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "pairs": 10461,
+                "mean_risk": 0.450809815054611,
+                "failure_fraction": 0.4599942644106682
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "pairs": 10774,
+                "mean_risk": 0.5504838777766536,
+                "failure_fraction": 0.5522554297382588
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "pairs": 10405,
+                "mean_risk": 0.6491865130960368,
+                "failure_fraction": 0.6513214800576645
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "pairs": 9614,
+                "mean_risk": 0.7494079432084771,
+                "failure_fraction": 0.749635947576451
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "pairs": 6834,
+                "mean_risk": 0.8434226357644444,
+                "failure_fraction": 0.8628914252268072
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "pairs": 1193,
+                "mean_risk": 0.9247850345907725,
+                "failure_fraction": 0.9295892707460185
+              }
+            ]
+          },
+          "policies": {
+            "validation_recall_80": {
+              "feasible": true,
+              "threshold": 0.43731824556986487,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 45457,
+              "flagged_failures": 30151,
+              "workload": 0.6510132474042248,
+              "failure_recall": 0.8112303925525332,
+              "failure_miss_rate": 0.18876960744746685,
+              "ppv": 0.6632861825461425,
+              "nonfailure_flag_rate": 0.46867536285136874
+            },
+            "validation_workload_30": {
+              "feasible": true,
+              "threshold": 0.6624128123124441,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 21445,
+              "flagged_failures": 16836,
+              "workload": 0.307124955245256,
+              "failure_recall": 0.45298248446202277,
+              "failure_miss_rate": 0.5470175155379773,
+              "ppv": 0.7850781067847983,
+              "nonfailure_flag_rate": 0.14112927919652152
+            }
+          }
+        }
+      },
+      "paired_contrasts": {
+        "calibration": {
+          "brier": {
+            "difference_h1_minus_h0": -0.0028455088086974667,
+            "ci95": [
+              -0.0034641307976079052,
+              -0.0021970588417841385
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "nll": {
+            "difference_h1_minus_h0": -0.006498941435410521,
+            "ci95": [
+              -0.007931927817429203,
+              -0.005011766772006721
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "mean_risk": {
+            "difference_h1_minus_h0": -0.01687326266339073,
+            "ci95": [
+              -0.01752929254432896,
+              -0.0161981794454313
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "calibration_bias": {
+            "difference_h1_minus_h0": -0.01687326266339073,
+            "ci95": [
+              -0.017529292544328952,
+              -0.01619817944543127
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "ece_10_equal_width": {
+            "difference_h1_minus_h0": -0.011018615456553416,
+            "ci95": [
+              -0.014247700037417068,
+              -0.002992602880821971
+            ],
+            "valid_bootstrap_replicates": 1000
+          }
+        },
+        "policies": {
+          "validation_recall_80": {
+            "workload": {
+              "difference_h1_minus_h0": -0.006244181883279687,
+              "ci95": [
+                -0.008706212931575062,
+                -0.0034795297941247337
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_recall": {
+              "difference_h1_minus_h0": 0.0017488632388946712,
+              "ci95": [
+                -0.001368762534492554,
+                0.0054019469734376355
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_miss_rate": {
+              "difference_h1_minus_h0": -0.001748863238894699,
+              "ci95": [
+                -0.005401946973437556,
+                0.0013687625344926068
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "ppv": {
+              "difference_h1_minus_h0": 0.007717795210383183,
+              "ci95": [
+                0.005745314289726566,
+                0.009700611089330576
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "nonfailure_flag_rate": {
+              "difference_h1_minus_h0": -0.015340804703288635,
+              "ci95": [
+                -0.019493162947061996,
+                -0.011303234890177037
+              ],
+              "valid_bootstrap_replicates": 1000
+            }
+          },
+          "validation_workload_30": {
+            "workload": {
+              "difference_h1_minus_h0": -0.00083064804869315,
+              "ci95": [
+                -0.0031310697201619607,
+                0.001582054139564663
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_recall": {
+              "difference_h1_minus_h0": 0.0034977264777894534,
+              "ci95": [
+                5.359142765397482e-05,
+                0.00703962000725689
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_miss_rate": {
+              "difference_h1_minus_h0": -0.0034977264777893424,
+              "ci95": [
+                -0.007039620007256838,
+                -5.359142765397402e-05
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "ppv": {
+              "difference_h1_minus_h0": 0.008163257693973747,
+              "ci95": [
+                0.004389732884916153,
+                0.012086950886460715
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "nonfailure_flag_rate": {
+              "difference_h1_minus_h0": -0.0057566293098169075,
+              "ci95": [
+                -0.009016963137154967,
+                -0.002609597309460869
+              ],
+              "valid_bootstrap_replicates": 1000
+            }
+          }
+        }
+      }
+    },
+    "gru_FIRST": {
+      "pairs": 69825,
+      "students": 1500,
+      "stages": {
+        "H0": {
+          "calibration": {
+            "failure_auc": 0.7424662041861487,
+            "brier": 0.20528672137511367,
+            "nll": 0.5962637946435573,
+            "mean_risk": 0.5176678952942413,
+            "failure_prevalence": 0.5322878625134264,
+            "calibration_bias": -0.014619967219185126,
+            "ece_10_equal_width": 0.02119158633088867,
+            "reliability_bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "pairs": 1625,
+                "mean_risk": 0.07483803187883817,
+                "failure_fraction": 0.09476923076923077
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "pairs": 5592,
+                "mean_risk": 0.15233161862856104,
+                "failure_fraction": 0.18437052932761086
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "pairs": 7160,
+                "mean_risk": 0.2519945203578117,
+                "failure_fraction": 0.29706703910614524
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "pairs": 8591,
+                "mean_risk": 0.35148578192114355,
+                "failure_fraction": 0.38586893260388777
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "pairs": 9371,
+                "mean_risk": 0.4505566121816288,
+                "failure_fraction": 0.47486927755842495
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "pairs": 10092,
+                "mean_risk": 0.5497639509025469,
+                "failure_fraction": 0.5688664288545382
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "pairs": 9791,
+                "mean_risk": 0.6485375416751828,
+                "failure_fraction": 0.6432437953222347
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "pairs": 8671,
+                "mean_risk": 0.7492864092713701,
+                "failure_fraction": 0.7363625879368009
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "pairs": 6877,
+                "mean_risk": 0.8462821784163862,
+                "failure_fraction": 0.8399011196742766
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "pairs": 2055,
+                "mean_risk": 0.930246027218539,
+                "failure_fraction": 0.9197080291970803
+              }
+            ]
+          },
+          "policies": {
+            "validation_recall_80": {
+              "feasible": true,
+              "threshold": 0.40461556116739905,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 46413,
+              "flagged_failures": 30339,
+              "workload": 0.6647046186895811,
+              "failure_recall": 0.8162886431511825,
+              "failure_miss_rate": 0.1837113568488175,
+              "ppv": 0.6536746170254024,
+              "nonfailure_flag_rate": 0.4921918059893441
+            },
+            "validation_workload_30": {
+              "feasible": true,
+              "threshold": 0.6591427475214005,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 21443,
+              "flagged_failures": 16569,
+              "workload": 0.30709631220909417,
+              "failure_recall": 0.4457986923884091,
+              "failure_miss_rate": 0.5542013076115909,
+              "ppv": 0.7726997155248799,
+              "nonfailure_flag_rate": 0.1492436768938698
+            }
+          }
+        },
+        "H1": {
+          "calibration": {
+            "failure_auc": 0.7481920343498862,
+            "brier": 0.20327379092485984,
+            "nll": 0.5920483636812794,
+            "mean_risk": 0.520450787896119,
+            "failure_prevalence": 0.5322878625134264,
+            "calibration_bias": -0.01183707461730743,
+            "ece_10_equal_width": 0.020445359806613626,
+            "reliability_bins": [
+              {
+                "lower": 0.0,
+                "upper": 0.1,
+                "pairs": 1770,
+                "mean_risk": 0.07406798516963162,
+                "failure_fraction": 0.1
+              },
+              {
+                "lower": 0.1,
+                "upper": 0.2,
+                "pairs": 5714,
+                "mean_risk": 0.15241895796690477,
+                "failure_fraction": 0.18865943297164858
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.3,
+                "pairs": 6912,
+                "mean_risk": 0.25178959311911675,
+                "failure_fraction": 0.2857349537037037
+              },
+              {
+                "lower": 0.3,
+                "upper": 0.4,
+                "pairs": 8692,
+                "mean_risk": 0.3508175690876256,
+                "failure_fraction": 0.38472158306488724
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "pairs": 9467,
+                "mean_risk": 0.45051671537558496,
+                "failure_fraction": 0.4733284039294391
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "pairs": 9516,
+                "mean_risk": 0.5496216399739466,
+                "failure_fraction": 0.5631567885666247
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.7,
+                "pairs": 9199,
+                "mean_risk": 0.6501630759643192,
+                "failure_fraction": 0.6485487552994891
+              },
+              {
+                "lower": 0.7,
+                "upper": 0.8,
+                "pairs": 8722,
+                "mean_risk": 0.749347904224957,
+                "failure_fraction": 0.7307956890621418
+              },
+              {
+                "lower": 0.8,
+                "upper": 0.9,
+                "pairs": 7306,
+                "mean_risk": 0.846644092579206,
+                "failure_fraction": 0.8367095537914043
+              },
+              {
+                "lower": 0.9,
+                "upper": 1.0,
+                "pairs": 2527,
+                "mean_risk": 0.9304679302897223,
+                "failure_fraction": 0.9101701622477246
+              }
+            ]
+          },
+          "policies": {
+            "validation_recall_80": {
+              "feasible": true,
+              "threshold": 0.4080408414204916,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 45978,
+              "flagged_failures": 30264,
+              "workload": 0.6584747583243824,
+              "failure_recall": 0.8142707240293809,
+              "failure_miss_rate": 0.18572927597061908,
+              "ppv": 0.6582278481012658,
+              "nonfailure_flag_rate": 0.48116847326841816
+            },
+            "validation_workload_30": {
+              "feasible": true,
+              "threshold": 0.6677085558573406,
+              "pairs": 69825,
+              "failures": 37167,
+              "failure_prevalence": 0.5322878625134264,
+              "flagged": 21514,
+              "flagged_failures": 16827,
+              "workload": 0.30811313999283924,
+              "failure_recall": 0.45274033416740656,
+              "failure_miss_rate": 0.5472596658325934,
+              "ppv": 0.7821418611136934,
+              "nonfailure_flag_rate": 0.14351766795272214
+            }
+          }
+        }
+      },
+      "paired_contrasts": {
+        "calibration": {
+          "brier": {
+            "difference_h1_minus_h0": -0.0020129304502538303,
+            "ci95": [
+              -0.0026013046284651628,
+              -0.001410158901886069
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "nll": {
+            "difference_h1_minus_h0": -0.004215430962277833,
+            "ci95": [
+              -0.005587673288011094,
+              -0.0028050103071144195
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "mean_risk": {
+            "difference_h1_minus_h0": 0.0027828926018776956,
+            "ci95": [
+              0.0021588191774324335,
+              0.003393576137479254
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "calibration_bias": {
+            "difference_h1_minus_h0": 0.0027828926018776956,
+            "ci95": [
+              0.0021588191774324786,
+              0.003393576137479244
+            ],
+            "valid_bootstrap_replicates": 1000
+          },
+          "ece_10_equal_width": {
+            "difference_h1_minus_h0": -0.0007462265242750427,
+            "ci95": [
+              -0.002917365259983743,
+              0.0018348805616576896
+            ],
+            "valid_bootstrap_replicates": 1000
+          }
+        },
+        "policies": {
+          "validation_recall_80": {
+            "workload": {
+              "difference_h1_minus_h0": -0.006229860365198681,
+              "ci95": [
+                -0.0085749036056112,
+                -0.004031005083637982
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_recall": {
+              "difference_h1_minus_h0": -0.0020179191218016035,
+              "ci95": [
+                -0.004678527630717413,
+                0.0005853114176363409
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_miss_rate": {
+              "difference_h1_minus_h0": 0.0020179191218015757,
+              "ci95": [
+                -0.0005853114176363693,
+                0.004678527630717439
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "ppv": {
+              "difference_h1_minus_h0": 0.004553231075863362,
+              "ci95": [
+                0.0025647138486488753,
+                0.006400981477902855
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "nonfailure_flag_rate": {
+              "difference_h1_minus_h0": -0.011023332720925927,
+              "ci95": [
+                -0.014719709283191587,
+                -0.007250275967141839
+              ],
+              "valid_bootstrap_replicates": 1000
+            }
+          },
+          "validation_workload_30": {
+            "workload": {
+              "difference_h1_minus_h0": 0.0010168277837450668,
+              "ci95": [
+                -0.00140993713691068,
+                0.0033687001131078214
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_recall": {
+              "difference_h1_minus_h0": 0.006941641778997476,
+              "ci95": [
+                0.0033561430358602998,
+                0.010568250526637702
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "failure_miss_rate": {
+              "difference_h1_minus_h0": -0.006941641778997476,
+              "ci95": [
+                -0.010568250526637808,
+                -0.0033561430358602985
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "ppv": {
+              "difference_h1_minus_h0": 0.00944214558881351,
+              "ci95": [
+                0.005500431497806985,
+                0.013267189230619838
+              ],
+              "valid_bootstrap_replicates": 1000
+            },
+            "nonfailure_flag_rate": {
+              "difference_h1_minus_h0": -0.0057260089411476645,
+              "ci95": [
+                -0.008686131090569645,
+                -0.002694672037624645
+              ],
+              "valid_bootstrap_replicates": 1000
+            }
+          }
+        }
+      }
+    }
+  },
+  "expected_models_not_in_this_family_run": [
+    "all_submissions",
+    "first_attempt",
+    "paired_target"
+  ]
+}

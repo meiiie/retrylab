@@ -1,0 +1,18 @@
+{
+  "locked_at_utc": "2026-09-26T02:33:40.231531+00:00",
+  "status": "Secondary exploratory temporal sensitivity; main confirmation already observed.",
+  "protocol_sha256": "c6746f50f872fe1c453794726938852c1ac4267eedd0d4fec71fe6ca613a4e4b",
+  "script_sha256": "3354418624c5a6db2aa6efa0afbb9722ab534c7bc859fb88c349464bac74a13a",
+  "confirmation_helper_sha256": "60f25477c1792d41909ea786c1224388611a24976a016293608fa7c825fef797",
+  "baseline_helper_sha256": "0dcc83c01cf09d9a89f12a2680c06aa1281b976401fef7689aea7c45439e73c1",
+  "pilot_csv_sha256": "b35ab13da3a80ed9f0db37248fa3638c3cb8a9c55929123e5b963549ccbf304a",
+  "cutoff": "2025-10-27T08:45:57",
+  "cutoff_source_timezone": "Not specified by dataset; use original naive timestamps.",
+  "rule": "Original train users only; pandas quantile(.8, interpolation='higher') on finalized-event timestamp covariates.",
+  "original_train_users": 1054,
+  "original_train_rows": 295788,
+  "original_train_timestamp_min": "2024-01-12T19:57:18",
+  "original_train_timestamp_max": "2025-12-30T23:28:23",
+  "fraction_of_original_train_rows_at_or_before_cutoff": 0.8000020284798572,
+  "performance_at_cutoff_selection": "No temporal model fitted or temporal metrics calculated."
+}

@@ -1,0 +1,291 @@
+{
+ "learners": 4634,
+ "test_learners": 926,
+ "interactions": 562912,
+ "problems": 3882,
+ "submissions": 1291558,
+ "pool": 109,
+ "post": 16,
+ "episodes": 926,
+ "auc": {
+  "irt": 0.7751495327279064,
+  "afm": 0.776173547517761,
+  "pfa": 0.7763881372704471,
+  "dkt": 0.7748557038328868,
+  "dkt2": 0.7747443023187659,
+  "sakt": 0.7754258069731329,
+  "id3": 0.7632420068529366
+ },
+ "nll": {
+  "irt": 0.566735278178711,
+  "afm": 0.5657369038650553,
+  "pfa": 0.5655246402187596,
+  "dkt": 0.5669100872583064,
+  "dkt2": 0.5672383131571127,
+  "sakt": 0.5667250297477356,
+  "id3": 0.5795743558954902
+ },
+ "rules": [
+  {
+   "conditions": [
+    "problem_success_rate = <0.30",
+    "overall_success = 0.40-0.55",
+    "primary_skill = Untagged",
+    "skill_practice = 3-9",
+    "released_difficulty = 3"
+   ],
+   "p": 0.06986899563318777,
+   "n": 227
+  },
+  {
+   "conditions": [
+    "problem_success_rate = <0.30",
+    "overall_success = <0.40",
+    "primary_skill = Geometry and advanced mathematics"
+   ],
+   "p": 0.08928571428571429,
+   "n": 222
+  },
+  {
+   "conditions": [
+    "problem_success_rate = <0.30",
+    "overall_success = <0.40",
+    "primary_skill = Conditionals"
+   ],
+   "p": 0.09016393442622951,
+   "n": 242
+  },
+  {
+   "conditions": [
+    "problem_success_rate = <0.30",
+    "overall_success = <0.40",
+    "primary_skill = Sorting and searching"
+   ],
+   "p": 0.09126984126984126,
+   "n": 250
+  },
+  {
+   "conditions": [
+    "problem_success_rate = <0.30",
+    "overall_success = <0.40",
+    "primary_skill = Basic syntax, I/O and data types",
+    "skill_practice = 3-9"
+   ],
+   "p": 0.10185185185185185,
+   "n": 214
+  },
+  {
+   "conditions": [
+    "problem_success_rate = <0.30",
+    "overall_success = <0.40",
+    "primary_skill = Arithmetic and number theory"
+   ],
+   "p": 0.10355029585798817,
+   "n": 336
+  },
+  {
+   "conditions": [
+    "problem_success_rate = >=0.75",
+    "overall_success = 0.55-0.70",
+    "primary_skill = Dynamic programming",
+    "skill_success = <0.40"
+   ],
+   "p": 0.90625,
+   "n": 222
+  },
+  {
+   "conditions": [
+    "problem_success_rate = >=0.75",
+    "overall_success = 0.55-0.70",
+    "primary_skill = Untagged",
+    "recent5_success = 3/5"
+   ],
+   "p": 0.9095940959409594,
+   "n": 540
+  },
+  {
+   "conditions": [
+    "problem_success_rate = >=0.75",
+    "overall_success = 0.55-0.70",
+    "primary_skill = Arithmetic and number theory"
+   ],
+   "p": 0.9125295508274232,
+   "n": 844
+  },
+  {
+   "conditions": [
+    "problem_success_rate = >=0.75",
+    "overall_success = 0.55-0.70",
+    "primary_skill = Strings",
+    "released_difficulty = 2"
+   ],
+   "p": 0.9227053140096618,
+   "n": 205
+  },
+  {
+   "conditions": [
+    "problem_success_rate = >=0.75",
+    "overall_success = >=0.70",
+    "recent5_success = 5/5"
+   ],
+   "p": 0.9243697478991597,
+   "n": 950
+  },
+  {
+   "conditions": [
+    "problem_success_rate = >=0.75",
+    "overall_success = 0.55-0.70",
+    "primary_skill = Data structures"
+   ],
+   "p": 0.9304347826086956,
+   "n": 228
+  }
+ ],
+ "h1_worlds": [
+  "dkt_A",
+  "dkt2_A",
+  "dkt_B",
+  "sakt_B",
+  "afm_B",
+  "pfa_B",
+  "zpd_B"
+ ],
+ "h1": {
+  "dqn_kt": [
+   13.168465947882261,
+   7.123916491970383,
+   6.259381290948241,
+   0.7428577796688199,
+   0.12386141300849396,
+   0.19013023621413208,
+   -0.24852652047997872
+  ],
+  "ppo_kt": [
+   27.16207044152057,
+   10.070656628081764,
+   1.3965580478965076,
+   5.874308477461286,
+   0.3177099798755841,
+   0.34280373831283,
+   -0.05097043509103138
+  ]
+ },
+ "h2": {
+  "random": 1.7572093787696774,
+  "curriculum": 5.996347679564764,
+  "weakest": 3.492004364246871,
+  "zpd50": 0.04113180765200479,
+  "zpd70": 3.7458492825745053,
+  "easiest": 2.2808325717101345,
+  "hardest": 2.853564399154336,
+  "greedy_kt": 12.569603349409482,
+  "dqn_kt": 12.794273814132412,
+  "dqn_afm": 5.561541005995733,
+  "dqn_mix": 11.542701823706523,
+  "ppo_kt": 25.721323852961255,
+  "ppo_afm": 7.368222841327088,
+  "ppo_mix": 9.692985036537452
+ },
+ "h2_ci": {
+  "greedy_kt": [
+   11.965687754884085,
+   13.185136812627025
+  ],
+  "dqn_kt": [
+   12.170013441779446,
+   13.415617689717422
+  ],
+  "ppo_kt": [
+   25.06314223439883,
+   26.383625494195275
+  ]
+ },
+ "h3": 0.9604395604395607,
+ "drift_sd": {
+  "dkt_A": 3.3127847194978273,
+  "dkt2_A": 3.1513308970125986,
+  "sakt_A": 2.012292648112901,
+  "afm_A": 0.20266180069513337,
+  "pfa_A": 0.15998488772904906,
+  "irt_A": 4.0164462639428183e-16
+ },
+ "twin": 0.35130201093503843,
+ "h4": {
+  "mean": 3.110122918802694,
+  "ci95": [
+   3.061807432387377,
+   3.161129986942296
+  ]
+ },
+ "continuation": {
+  "tracker_gain": 9.42713390784417,
+  "claimed_irt_A": 2.4160767895511133
+ },
+ "latent_adv": {
+  "dqn_afm": [
+   1.519201074822138,
+   1.7189131659254513,
+   0.6618577274367108
+  ],
+  "ppo_afm": [
+   1.4240471776452557,
+   1.7141864937310984,
+   0.371287511409665
+  ],
+  "zpd70": [
+   0.200640669553801,
+   0.3976750118467507,
+   0.19919031905151474
+  ],
+  "dqn_kt": [
+   0.12386141300849385,
+   0.19013023621413194,
+   -0.2485265204799787
+  ],
+  "ppo_kt": [
+   0.31770997987558447,
+   0.34280373831282973,
+   -0.05097043509103116
+  ],
+  "curriculum": [
+   -1.1895755738192806,
+   -0.9940425917131208,
+   -1.4053628071562407
+  ]
+ },
+ "latent_worlds": [
+  "afm_B",
+  "pfa_B",
+  "zpd_B"
+ ],
+ "extra_afmB": {
+  "random": 10.796976241900648,
+  "dqn_afm": 6.4434845212383,
+  "ppo_afm": 5.015478761699065,
+  "dqn_kt": 7.879769618430525,
+  "ppo_kt": 9.816774658027358,
+  "hardest": 26.720302375809936
+ },
+ "worst_case": {
+  "random": 0.0,
+  "curriculum": -1.405362807156241,
+  "weakest": -1.0062438105183995,
+  "zpd50": -0.114483208551965,
+  "zpd70": 0.19919031905151474,
+  "easiest": -1.2295409555826864,
+  "hardest": -0.5552575486623097,
+  "greedy_kt": 0.0695403457874487,
+  "dqn_kt": -0.24852652047997872,
+  "dqn_afm": 0.6618577274367103,
+  "dqn_mix": 0.1645450399762529,
+  "ppo_kt": -0.05097043509103138,
+  "ppo_afm": 0.37128751140966526,
+  "ppo_mix": 0.32160193526947145
+ },
+ "insim": {
+  "random": 1.4202868299783078,
+  "dqn_kt": 14.58875277786057,
+  "ppo_kt": 28.582357271498882,
+  "greedy_kt": 15.311300298327243
+ }
+}

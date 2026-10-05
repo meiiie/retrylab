@@ -1,0 +1,120 @@
+{
+  "created": "2026-07-14T11:48:27.365226+00:00",
+  "modified": "2026-07-14T11:48:27.637693+00:00",
+  "id": 11395043,
+  "conceptrecid": "6522355",
+  "doi": "10.5281/zenodo.11395043",
+  "conceptdoi": "10.5281/zenodo.6522355",
+  "doi_url": "https://doi.org/10.5281/zenodo.11395043",
+  "metadata": {
+    "title": "ACcoding-Dataset: v2.0.0",
+    "doi": "10.5281/zenodo.11395043",
+    "publication_date": "2026-07-14",
+    "description": "<p>v1:Data as of May 6, 2022;<br>v2:Data as of May 12, 2025;</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Sun, Yifan",
+        "affiliation": null
+      },
+      {
+        "name": "Zejing Liu",
+        "affiliation": null
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/lapopo233/ACcoding-Dataset/tree/v1.0.0",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "other-open"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 2,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "6522355"
+          }
+        }
+      ]
+    }
+  },
+  "title": "ACcoding-Dataset: v2.0.0",
+  "links": {
+    "self": "https://zenodo.org/api/records/11395043",
+    "self_html": "https://zenodo.org/records/11395043",
+    "preview_html": "https://zenodo.org/records/11395043?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.11395043",
+    "self_doi": "https://doi.org/10.5281/zenodo.11395043",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.11395043",
+    "reserve_doi": "https://zenodo.org/api/records/11395043/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/6522355",
+    "parent_html": "https://zenodo.org/records/6522355",
+    "parent_doi": "https://doi.org/10.5281/zenodo.6522355",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6522355",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:11395043/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:11395043/sequence/default",
+    "files": "https://zenodo.org/api/records/11395043/files",
+    "media_files": "https://zenodo.org/api/records/11395043/media-files",
+    "archive": "https://zenodo.org/api/records/11395043/files-archive",
+    "archive_media": "https://zenodo.org/api/records/11395043/media-files-archive",
+    "latest": "https://zenodo.org/api/records/11395043/versions/latest",
+    "latest_html": "https://zenodo.org/records/11395043/latest",
+    "versions": "https://zenodo.org/api/records/11395043/versions",
+    "draft": "https://zenodo.org/api/records/11395043/draft",
+    "access_links": "https://zenodo.org/api/records/11395043/access/links",
+    "access_grants": "https://zenodo.org/api/records/11395043/access/grants",
+    "access_users": "https://zenodo.org/api/records/11395043/access/users",
+    "access_request": "https://zenodo.org/api/records/11395043/access/request",
+    "access": "https://zenodo.org/api/records/11395043/access",
+    "communities": "https://zenodo.org/api/records/11395043/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/11395043/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/11395043/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/11395043/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/11395043/quota-increase",
+    "requests": "https://zenodo.org/api/records/11395043/requests"
+  },
+  "updated": "2026-07-14T11:48:27.637693+00:00",
+  "recid": "11395043",
+  "revision": 4,
+  "files": [
+    {
+      "id": "bb685c1e-1702-4c25-9316-de3fb86a902f",
+      "key": "ACcoding-Dataset v2.0.0.zip",
+      "size": 96056846,
+      "checksum": "md5:abcf3517565312d0e6e2a1aba36b1236",
+      "links": {
+        "self": "https://zenodo.org/api/records/11395043/files/ACcoding-Dataset%20v2.0.0.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "345813"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 460,
+    "unique_downloads": 356,
+    "views": 1216,
+    "unique_views": 1107,
+    "version_downloads": 19,
+    "version_unique_downloads": 15,
+    "version_unique_views": 73,
+    "version_views": 80
+  },
+  "state": "done",
+  "submitted": true
+}

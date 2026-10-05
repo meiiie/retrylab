@@ -1,0 +1,428 @@
+{
+  "run_id": "policy-controlled-v1",
+  "started_utc": "2026-09-26T14:28:26.521532+00:00",
+  "finished_utc": "2026-09-26T14:28:41.229079+00:00",
+  "protocol_sha256": "fad35309b3b29f5a3d36ff131ab69fd9030f39ddb1ce6fcf32d6b384929a0393",
+  "results_sha256": "c8b3bbfcd00aff2788ac671479e01da8d5dd540b28fea2e04a66be9ed12ffcf3",
+  "scope": "Controlled synthetic benchmark; not human learning efficacy or SOTA",
+  "fits": [
+    {
+      "seed": 11,
+      "model": "naive",
+      "parameters": {
+        "learn": 0.16,
+        "guess": 0.25,
+        "slip": 0.08,
+        "memory": 0
+      },
+      "train_nll": 0.6405871937361057,
+      "validation_nll": 0.649784466876623,
+      "visited_states": 570
+    },
+    {
+      "seed": 11,
+      "model": "repeat_aware",
+      "parameters": {
+        "learn": 0.16,
+        "guess": 0.15,
+        "slip": 0.16,
+        "memory": 0.65
+      },
+      "train_nll": 0.6228346673565376,
+      "validation_nll": 0.6326288795309302,
+      "visited_states": 558
+    },
+    {
+      "seed": 29,
+      "model": "naive",
+      "parameters": {
+        "learn": 0.16,
+        "guess": 0.25,
+        "slip": 0.08,
+        "memory": 0
+      },
+      "train_nll": 0.6400692508161331,
+      "validation_nll": 0.6375166717924743,
+      "visited_states": 557
+    },
+    {
+      "seed": 29,
+      "model": "repeat_aware",
+      "parameters": {
+        "learn": 0.04,
+        "guess": 0.25,
+        "slip": 0.08,
+        "memory": 0.65
+      },
+      "train_nll": 0.6247036180806396,
+      "validation_nll": 0.6279357440792296,
+      "visited_states": 759
+    },
+    {
+      "seed": 47,
+      "model": "naive",
+      "parameters": {
+        "learn": 0.16,
+        "guess": 0.25,
+        "slip": 0.08,
+        "memory": 0
+      },
+      "train_nll": 0.6389880986439341,
+      "validation_nll": 0.6472259402597053,
+      "visited_states": 562
+    },
+    {
+      "seed": 47,
+      "model": "repeat_aware",
+      "parameters": {
+        "learn": 0.16,
+        "guess": 0.15,
+        "slip": 0.08,
+        "memory": 0.65
+      },
+      "train_nll": 0.6159954183089069,
+      "validation_nll": 0.6238755979643471,
+      "visited_states": 556
+    }
+  ],
+  "aggregates": [
+    {
+      "world": "transfer_and_repair",
+      "policy": "random",
+      "probe_gain": 0.1563333333333333,
+      "final_probe": 0.5540833333333333,
+      "practice_success": 0.5175,
+      "cost": 9.618,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.1563333333333333,
+      "seed_max_gain": 0.1563333333333333
+    },
+    {
+      "world": "transfer_and_repair",
+      "policy": "curriculum",
+      "probe_gain": 0.15574999999999997,
+      "final_probe": 0.5535,
+      "practice_success": 0.4990625,
+      "cost": 9.6,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.15574999999999997,
+      "seed_max_gain": 0.15574999999999997
+    },
+    {
+      "world": "transfer_and_repair",
+      "policy": "weakest",
+      "probe_gain": 0.17480555555555552,
+      "final_probe": 0.5725555555555556,
+      "practice_success": 0.4685416666666667,
+      "cost": 9.377333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.17266666666666663,
+      "seed_max_gain": 0.17674999999999996
+    },
+    {
+      "world": "transfer_and_repair",
+      "policy": "challenge",
+      "probe_gain": 0.12658333333333333,
+      "final_probe": 0.5243333333333333,
+      "practice_success": 0.5884375,
+      "cost": 9.067333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.12483333333333331,
+      "seed_max_gain": 0.12891666666666665
+    },
+    {
+      "world": "transfer_and_repair",
+      "policy": "q_naive",
+      "probe_gain": 0.1536111111111111,
+      "final_probe": 0.5513611111111111,
+      "practice_success": 0.5167708333333333,
+      "cost": 9.468000000000002,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.15108333333333332,
+      "seed_max_gain": 0.15516666666666665
+    },
+    {
+      "world": "transfer_and_repair",
+      "policy": "q_repeat_aware",
+      "probe_gain": 0.15166666666666664,
+      "final_probe": 0.5494166666666667,
+      "practice_success": 0.5288541666666667,
+      "cost": 9.397333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.14699999999999996,
+      "seed_max_gain": 0.16099999999999998
+    },
+    {
+      "world": "repair_without_learning",
+      "policy": "random",
+      "probe_gain": 0.0,
+      "final_probe": 0.4076666666666667,
+      "practice_success": 0.4675,
+      "cost": 9.627,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.0,
+      "seed_max_gain": 0.0
+    },
+    {
+      "world": "repair_without_learning",
+      "policy": "curriculum",
+      "probe_gain": 0.0,
+      "final_probe": 0.4076666666666667,
+      "practice_success": 0.440625,
+      "cost": 9.6,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.0,
+      "seed_max_gain": 0.0
+    },
+    {
+      "world": "repair_without_learning",
+      "policy": "weakest",
+      "probe_gain": 0.0,
+      "final_probe": 0.4076666666666667,
+      "practice_success": 0.42854166666666665,
+      "cost": 9.381333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.0,
+      "seed_max_gain": 0.0
+    },
+    {
+      "world": "repair_without_learning",
+      "policy": "challenge",
+      "probe_gain": 0.0,
+      "final_probe": 0.4076666666666667,
+      "practice_success": 0.5558333333333334,
+      "cost": 9.019666666666668,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.0,
+      "seed_max_gain": 0.0
+    },
+    {
+      "world": "repair_without_learning",
+      "policy": "q_naive",
+      "probe_gain": 0.0,
+      "final_probe": 0.4076666666666667,
+      "practice_success": 0.4608333333333333,
+      "cost": 9.494666666666667,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.0,
+      "seed_max_gain": 0.0
+    },
+    {
+      "world": "repair_without_learning",
+      "policy": "q_repeat_aware",
+      "probe_gain": 0.0,
+      "final_probe": 0.4076666666666667,
+      "practice_success": 0.47458333333333336,
+      "cost": 9.409666666666666,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.0,
+      "seed_max_gain": 0.0
+    },
+    {
+      "world": "slow_transfer",
+      "policy": "random",
+      "probe_gain": 0.04199999999999999,
+      "final_probe": 0.45258333333333334,
+      "practice_success": 0.4671875,
+      "cost": 9.612,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.04199999999999999,
+      "seed_max_gain": 0.04199999999999999
+    },
+    {
+      "world": "slow_transfer",
+      "policy": "curriculum",
+      "probe_gain": 0.04199999999999999,
+      "final_probe": 0.45258333333333334,
+      "practice_success": 0.4503125,
+      "cost": 9.6,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.04199999999999999,
+      "seed_max_gain": 0.04199999999999999
+    },
+    {
+      "world": "slow_transfer",
+      "policy": "weakest",
+      "probe_gain": 0.04394444444444443,
+      "final_probe": 0.45452777777777775,
+      "practice_success": 0.4184375,
+      "cost": 9.381666666666668,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.04374999999999999,
+      "seed_max_gain": 0.04433333333333332
+    },
+    {
+      "world": "slow_transfer",
+      "policy": "challenge",
+      "probe_gain": 0.03674999999999999,
+      "final_probe": 0.4473333333333333,
+      "practice_success": 0.5523958333333333,
+      "cost": 9.034666666666668,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.03674999999999999,
+      "seed_max_gain": 0.03674999999999999
+    },
+    {
+      "world": "slow_transfer",
+      "policy": "q_naive",
+      "probe_gain": 0.04258333333333333,
+      "final_probe": 0.45316666666666666,
+      "practice_success": 0.468125,
+      "cost": 9.476666666666668,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.039666666666666656,
+      "seed_max_gain": 0.04549999999999999
+    },
+    {
+      "world": "slow_transfer",
+      "policy": "q_repeat_aware",
+      "probe_gain": 0.04258333333333333,
+      "final_probe": 0.45316666666666666,
+      "practice_success": 0.47572916666666665,
+      "cost": 9.391666666666667,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.039083333333333324,
+      "seed_max_gain": 0.04491666666666666
+    },
+    {
+      "world": "strong_forgetting",
+      "policy": "random",
+      "probe_gain": 0.03791666666666666,
+      "final_probe": 0.44208333333333333,
+      "practice_success": 0.489375,
+      "cost": 9.584,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.03791666666666666,
+      "seed_max_gain": 0.03791666666666666
+    },
+    {
+      "world": "strong_forgetting",
+      "policy": "curriculum",
+      "probe_gain": 0.040833333333333326,
+      "final_probe": 0.445,
+      "practice_success": 0.483125,
+      "cost": 9.6,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.040833333333333326,
+      "seed_max_gain": 0.040833333333333326
+    },
+    {
+      "world": "strong_forgetting",
+      "policy": "weakest",
+      "probe_gain": 0.05327777777777777,
+      "final_probe": 0.45744444444444443,
+      "practice_success": 0.45135416666666667,
+      "cost": 9.378333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.05191666666666666,
+      "seed_max_gain": 0.054833333333333324
+    },
+    {
+      "world": "strong_forgetting",
+      "policy": "challenge",
+      "probe_gain": 0.027611111111111107,
+      "final_probe": 0.43177777777777776,
+      "practice_success": 0.5672916666666666,
+      "cost": 9.056666666666668,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.02508333333333333,
+      "seed_max_gain": 0.03149999999999999
+    },
+    {
+      "world": "strong_forgetting",
+      "policy": "q_naive",
+      "probe_gain": 0.03597222222222222,
+      "final_probe": 0.44013888888888886,
+      "practice_success": 0.4925,
+      "cost": 9.464,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.03266666666666666,
+      "seed_max_gain": 0.04141666666666666
+    },
+    {
+      "world": "strong_forgetting",
+      "policy": "q_repeat_aware",
+      "probe_gain": 0.03558333333333333,
+      "final_probe": 0.43975,
+      "practice_success": 0.5003125,
+      "cost": 9.400333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.030916666666666662,
+      "seed_max_gain": 0.03849999999999999
+    },
+    {
+      "world": "prerequisite_coupling",
+      "policy": "random",
+      "probe_gain": 0.09333333333333332,
+      "final_probe": 0.5109166666666667,
+      "practice_success": 0.526875,
+      "cost": 9.601,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.09333333333333332,
+      "seed_max_gain": 0.09333333333333332
+    },
+    {
+      "world": "prerequisite_coupling",
+      "policy": "curriculum",
+      "probe_gain": 0.11141666666666665,
+      "final_probe": 0.5289999999999999,
+      "practice_success": 0.5046875,
+      "cost": 9.6,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.11141666666666665,
+      "seed_max_gain": 0.11141666666666665
+    },
+    {
+      "world": "prerequisite_coupling",
+      "policy": "weakest",
+      "probe_gain": 0.12191666666666665,
+      "final_probe": 0.5395,
+      "practice_success": 0.47041666666666665,
+      "cost": 9.390333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.11783333333333332,
+      "seed_max_gain": 0.12774999999999997
+    },
+    {
+      "world": "prerequisite_coupling",
+      "policy": "challenge",
+      "probe_gain": 0.07758333333333332,
+      "final_probe": 0.49516666666666664,
+      "practice_success": 0.573125,
+      "cost": 9.066,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.07641666666666666,
+      "seed_max_gain": 0.07933333333333333
+    },
+    {
+      "world": "prerequisite_coupling",
+      "policy": "q_naive",
+      "probe_gain": 0.09527777777777777,
+      "final_probe": 0.5128611111111111,
+      "practice_success": 0.5052083333333334,
+      "cost": 9.476666666666668,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.09274999999999999,
+      "seed_max_gain": 0.09799999999999999
+    },
+    {
+      "world": "prerequisite_coupling",
+      "policy": "q_repeat_aware",
+      "probe_gain": 0.09294444444444444,
+      "final_probe": 0.5105277777777777,
+      "practice_success": 0.52,
+      "cost": 9.403333333333334,
+      "fallback_fraction": 0.0,
+      "seed_min_gain": 0.0875,
+      "seed_max_gain": 0.09624999999999999
+    }
+  ],
+  "uncertainty": "Descriptive range across three fitted seeds; not a confidence interval",
+  "selection": "All configurations fixed before this run; no selection on evaluation worlds",
+  "limitations": [
+    "All learners/tasks are synthetic",
+    "No SOTA baseline reproduced",
+    "Not integrated into real Python practice",
+    "No human learning efficacy evidence"
+  ]
+}

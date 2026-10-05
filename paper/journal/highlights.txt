@@ -1,0 +1,5 @@
+Repeat-aware state estimation improves response prediction in three fitted seeds.
+Better response likelihood does not ensure better exercise selection.
+A weakest-skill rule exceeds the learned policy in the nominal simulator.
+Independent probes separate practice correctness from simulated transfer.
+A shared task catalog links trained policies to an inspectable application.

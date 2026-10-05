@@ -1,0 +1,77 @@
+/* RetryLab studio · evaluation.css — the heat map with its detail panel and the four-row hypotheses table.
+ * Groups are separated by space and a hairline, not by frames. All rules are prefixed .ev- so they cannot collide with
+ * other views (every view stylesheet is loaded on every page). */
+
+.ev-page { position: relative; display: grid; gap: var(--space-7); } /* positioned root: see practice.css */
+.ev-page > .ev-first { padding-top: 0; border-top: 0; }
+
+/* ---------- heat map + detail ---------- */
+.ev-heat-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: var(--space-6); align-items: start; }
+.ev-heat-figure { min-width: 0; }
+.ev-toolbar { display: flex; align-items: center; margin-bottom: var(--space-3); }
+.ev-heat-note { margin-top: var(--space-3); color: var(--ink-3); font-size: var(--fs-label); line-height: 1.5; }
+.ev-heat-note strong { color: var(--ink-2); font-weight: 600; }
+
+.ev-detail { position: sticky; top: 0; min-width: 0; padding-inline-start: var(--space-5); border-inline-start: 1px solid var(--rule); }
+.ev-hint { margin-top: 6px; color: var(--ink-3); font-size: var(--fs-table); line-height: 1.5; }
+.ev-detail-body { display: grid; gap: var(--space-4); }
+.ev-detail-top { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-2); }
+.ev-detail-policy { font: 600 var(--fs-section)/1.3 var(--display); }
+.ev-detail-world { margin-top: 2px; color: var(--ink-3); font-size: var(--fs-table); line-height: 1.45; }
+.ev-facts { display: grid; margin: 0; }
+.ev-fact { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 2px var(--space-3); padding: var(--space-2) 0; border-top: 1px solid var(--rule); font-size: var(--fs-table); }
+.ev-fact dt { color: var(--ink-3); }
+.ev-fact dd { margin: 0; color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; text-align: right; }
+.ev-fact .ev-fact-note { grid-column: 1 / -1; color: var(--ink-3); font-size: var(--fs-label); font-weight: 400; line-height: 1.4; text-align: left; }
+.ev-fact.is-big { grid-template-columns: minmax(0, 1fr); padding-top: 0; border-top: 0; }
+.ev-fact.is-big dt { font-size: var(--fs-label); }
+.ev-fact.is-big dd[data-field] { font: 500 var(--fs-stat)/1.1 var(--display); letter-spacing: -0.02em; text-align: left; }
+.ev-unit { margin-inline-start: 6px; color: var(--ink-3); font: 400 var(--fs-label)/1 var(--font); letter-spacing: 0; }
+.ev-interpretation { max-width: 40ch; color: var(--ink-2); font-size: var(--fs-table); line-height: 1.55; text-wrap: pretty; }
+.ev-ci { margin-inline-start: 6px; color: var(--ink-3); font-size: var(--fs-label); font-weight: 400; white-space: nowrap; }
+
+/* ---------- hypotheses: H · statement · main number · verdict ---------- */
+.ev-hyps-table { table-layout: fixed; }
+.ev-hyps-table > thead th:nth-child(1) { width: 88px; }
+.ev-hyps-table > thead th:nth-child(3) { width: 300px; }
+.ev-hyps-table > thead th:nth-child(4) { width: 168px; }
+.ev-hyps-table > tbody > tr > td, .ev-hyps-table > tbody > tr > th { vertical-align: top; padding-block: var(--space-3); }
+.ev-hyp-row { cursor: pointer; }
+.ev-hyp-tag { color: var(--ink-3); font: 400 var(--fs-table)/1.5 var(--mono); }
+.ev-toggle { display: inline-flex; align-items: baseline; gap: 0; padding: 0; border: 0; background: none; color: var(--ink); font-size: var(--fs-ui); font-weight: 500; line-height: 1.45; text-align: left; }
+.ev-toggle::before { content: "▸"; flex: none; width: 1.1em; color: var(--ink-3); font-size: 11px; transition: transform var(--ease); }
+.ev-toggle[aria-expanded="true"]::before { transform: rotate(90deg); }
+.ev-hyp-key { font-variant-numeric: tabular-nums; }
+.ev-key-value { font: 500 var(--fs-read)/1.4 var(--display); }
+.ev-key-caption { display: block; margin-top: 2px; color: var(--ink-3); font-size: var(--fs-label); line-height: 1.4; }
+.ev-hyp.is-open .ev-hyp-row > * { border-bottom-color: transparent; }
+.ev-hyps-table > tbody > .ev-hyp-detail > td { padding-block: 0 var(--space-5); border-bottom: 1px solid var(--rule); }
+.ev-hyp-open { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); align-items: start; padding-inline-start: 88px; }
+.ev-hyp-text { display: grid; gap: var(--space-3); }
+.ev-hyp-body { max-width: var(--measure); color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.6; text-wrap: pretty; }
+.ev-hyp-body strong { color: var(--ink); font-weight: 600; }
+.ev-hyp-rule { max-width: var(--measure); color: var(--ink-3); font-size: var(--fs-table); line-height: 1.5; }
+.ev-hyp-rule strong { color: var(--ink-2); font-weight: 600; }
+.ev-hyp-evidence { min-width: 0; }
+.ev-hyps-table .ev-table th, .ev-hyps-table .ev-table td { padding: 6px 10px; vertical-align: middle; white-space: nowrap; }
+.ev-hyps-table .ev-table th:first-child { white-space: normal; }
+.ev-table tr.is-train th, .ev-table tr.is-train td { background: var(--accent-soft); }
+
+/* the room a view has depends on the sidebar too, so layouts follow the view container */
+@container view (max-width: 960px) {
+  .ev-heat-layout { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .ev-detail { position: static; padding-block-start: var(--space-4); padding-inline-start: 0; border-inline-start: 0; border-block-start: 1px solid var(--rule); }
+  .ev-hyp-open { grid-template-columns: minmax(0, 1fr); padding-inline-start: 0; }
+}
+@container view (max-width: 760px) {
+  .ev-hyps-table, .ev-hyps-table tbody { display: block; }
+  .ev-hyps-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+  .ev-hyp { border-bottom: 1px solid var(--rule); }
+  .ev-hyp-row { display: grid; grid-template-columns: 40px minmax(0, 1fr); }
+  .ev-hyp-row > * { padding-block: var(--space-1); border-bottom: 0; }
+  .ev-hyp-row > :first-child { padding-block-start: var(--space-3); }
+  .ev-hyp-row > :last-child { padding-block-end: var(--space-3); }
+  .ev-hyp-what, .ev-hyp-key, .ev-hyp-verdict { grid-column: 2; }
+  .ev-hyps-table tbody .ev-hyp-detail, .ev-hyps-table tbody .ev-hyp-detail td { display: block; border-bottom: 0; }
+  .ev-hyp-detail[hidden] { display: none; }
+}

@@ -1,0 +1,279 @@
+{
+  "status": "synthetic diagnostic only; not evidence about real learning or a published baseline",
+  "method": "finite-horizon exhaustive branch enumeration and dynamic programming; floating-point arithmetic, beliefs rounded to 12 decimals for memoization; no Monte Carlo",
+  "horizon": 4,
+  "priors": [
+    0.1,
+    0.4,
+    0.7
+  ],
+  "rows": 45,
+  "tie_order": [
+    "diagnose",
+    "repair",
+    "practice"
+  ],
+  "fixed_probe": "same latent binary mastery variable in every pre/post comparison",
+  "worlds": [
+    {
+      "name": "no_learning_information_only",
+      "learning_rate": 0.0,
+      "repair_success_without_mastery": 0.2,
+      "known_success": 0.9,
+      "unknown_success": 0.2
+    },
+    {
+      "name": "repair_without_transfer",
+      "learning_rate": 0.0,
+      "repair_success_without_mastery": 0.85,
+      "known_success": 0.9,
+      "unknown_success": 0.2
+    },
+    {
+      "name": "repair_and_transfer_0.02",
+      "learning_rate": 0.02,
+      "repair_success_without_mastery": 0.85,
+      "known_success": 0.9,
+      "unknown_success": 0.2
+    },
+    {
+      "name": "repair_and_transfer_0.05",
+      "learning_rate": 0.05,
+      "repair_success_without_mastery": 0.85,
+      "known_success": 0.9,
+      "unknown_success": 0.2
+    },
+    {
+      "name": "repair_and_transfer_0.15",
+      "learning_rate": 0.15,
+      "repair_success_without_mastery": 0.85,
+      "known_success": 0.9,
+      "unknown_success": 0.2
+    }
+  ],
+  "checks": [
+    "planner/evaluator expected returns agree",
+    "zero-learning worlds have zero true expected gain"
+  ],
+  "illustrative_prior_0.4": [
+    {
+      "world": "no_learning_information_only",
+      "learning_rate": 0.0,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "success",
+      "first_action": "diagnose",
+      "expected_objective_return": 1.9200000000000004,
+      "expected_success_rate": 0.4800000000000001,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.4,
+      "naive_observer_expected_gain": 0.0
+    },
+    {
+      "world": "no_learning_information_only",
+      "learning_rate": 0.0,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "positive_belief_change",
+      "first_action": "diagnose",
+      "expected_objective_return": 0.3480371374066033,
+      "expected_success_rate": 0.4800000000000001,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.4,
+      "naive_observer_expected_gain": 0.0
+    },
+    {
+      "world": "no_learning_information_only",
+      "learning_rate": 0.0,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "signed_belief_change",
+      "first_action": "diagnose",
+      "expected_objective_return": 0.0,
+      "expected_success_rate": 0.4800000000000001,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.4,
+      "naive_observer_expected_gain": 0.0
+    },
+    {
+      "world": "repair_without_transfer",
+      "learning_rate": 0.0,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "success",
+      "first_action": "repair",
+      "expected_objective_return": 3.480000000000001,
+      "expected_success_rate": 0.8700000000000002,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.8856009382874048,
+      "naive_observer_expected_gain": 0.4856009382874048
+    },
+    {
+      "world": "repair_without_transfer",
+      "learning_rate": 0.0,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "positive_belief_change",
+      "first_action": "diagnose",
+      "expected_objective_return": 0.3480371374066033,
+      "expected_success_rate": 0.4800000000000001,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.4,
+      "naive_observer_expected_gain": 0.0
+    },
+    {
+      "world": "repair_without_transfer",
+      "learning_rate": 0.0,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "signed_belief_change",
+      "first_action": "diagnose",
+      "expected_objective_return": 0.0,
+      "expected_success_rate": 0.4800000000000001,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.4,
+      "naive_observer_expected_gain": 0.0
+    },
+    {
+      "world": "repair_and_transfer_0.02",
+      "learning_rate": 0.02,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "success",
+      "first_action": "repair",
+      "expected_objective_return": 3.480000000000001,
+      "expected_success_rate": 0.8700000000000002,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.8856009382874048,
+      "naive_observer_expected_gain": 0.4856009382874048
+    },
+    {
+      "world": "repair_and_transfer_0.02",
+      "learning_rate": 0.02,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "positive_belief_change",
+      "first_action": "practice",
+      "expected_objective_return": 0.39233073402564034,
+      "expected_success_rate": 0.500424449472,
+      "expected_true_final_mastery": 0.44612733183999986,
+      "expected_true_mastery_gain": 0.04612733183999984,
+      "naive_observer_expected_final_mastery": 0.44612733183999986,
+      "naive_observer_expected_gain": 0.04612733183999984
+    },
+    {
+      "world": "repair_and_transfer_0.02",
+      "learning_rate": 0.02,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "signed_belief_change",
+      "first_action": "practice",
+      "expected_objective_return": 0.046579103999999955,
+      "expected_success_rate": 0.5005841832,
+      "expected_true_final_mastery": 0.446579104,
+      "expected_true_mastery_gain": 0.04657910399999998,
+      "naive_observer_expected_final_mastery": 0.446579104,
+      "naive_observer_expected_gain": 0.04657910399999998
+    },
+    {
+      "world": "repair_and_transfer_0.05",
+      "learning_rate": 0.05,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "success",
+      "first_action": "repair",
+      "expected_objective_return": 3.480000000000001,
+      "expected_success_rate": 0.8700000000000002,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.8856009382874048,
+      "naive_observer_expected_gain": 0.4856009382874048
+    },
+    {
+      "world": "repair_and_transfer_0.05",
+      "learning_rate": 0.05,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "positive_belief_change",
+      "first_action": "practice",
+      "expected_objective_return": 0.44919455954292054,
+      "expected_success_rate": 0.5295703950000001,
+      "expected_true_final_mastery": 0.5102674,
+      "expected_true_mastery_gain": 0.11026740000000002,
+      "naive_observer_expected_final_mastery": 0.5102674,
+      "naive_observer_expected_gain": 0.11026740000000002
+    },
+    {
+      "world": "repair_and_transfer_0.05",
+      "learning_rate": 0.05,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "signed_belief_change",
+      "first_action": "practice",
+      "expected_objective_return": 0.11129625000000003,
+      "expected_success_rate": 0.5299399687500002,
+      "expected_true_final_mastery": 0.51129625,
+      "expected_true_mastery_gain": 0.11129624999999999,
+      "naive_observer_expected_final_mastery": 0.51129625,
+      "naive_observer_expected_gain": 0.11129624999999999
+    },
+    {
+      "world": "repair_and_transfer_0.15",
+      "learning_rate": 0.15,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "success",
+      "first_action": "repair",
+      "expected_objective_return": 3.480000000000001,
+      "expected_success_rate": 0.8700000000000002,
+      "expected_true_final_mastery": 0.4,
+      "expected_true_mastery_gain": 0.0,
+      "naive_observer_expected_final_mastery": 0.8856009382874048,
+      "naive_observer_expected_gain": 0.4856009382874048
+    },
+    {
+      "world": "repair_and_transfer_0.15",
+      "learning_rate": 0.15,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "positive_belief_change",
+      "first_action": "practice",
+      "expected_objective_return": 0.5813232457443929,
+      "expected_success_rate": 0.607715175,
+      "expected_true_final_mastery": 0.673141,
+      "expected_true_mastery_gain": 0.27314099999999997,
+      "naive_observer_expected_final_mastery": 0.673141,
+      "naive_observer_expected_gain": 0.27314099999999997
+    },
+    {
+      "world": "repair_and_transfer_0.15",
+      "learning_rate": 0.15,
+      "initial_mastery_probability": 0.4,
+      "horizon": 4,
+      "objective": "signed_belief_change",
+      "first_action": "practice",
+      "expected_objective_return": 0.28679625,
+      "expected_success_rate": 0.61559371875,
+      "expected_true_final_mastery": 0.68679625,
+      "expected_true_mastery_gain": 0.28679625,
+      "naive_observer_expected_final_mastery": 0.68679625,
+      "naive_observer_expected_gain": 0.28679625
+    }
+  ],
+  "limitations": [
+    "hand-specified pedagogical dynamics",
+    "oracle model parameters",
+    "not a new theorem",
+    "does not implement ExRec, UNO or any learned KT policy",
+    "misspecified observer is deliberately constructed, not estimated from data",
+    "the naive observer only scores trajectories; it does not select actions",
+    "policies use oracle dynamics and posterior, so this does not test a learned policy exploiting a learned simulator"
+  ]
+}

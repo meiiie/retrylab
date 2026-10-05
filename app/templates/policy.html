@@ -1,0 +1,66 @@
+<section id="view-policy" class="view" hidden>
+  <div class="page-heading">
+    <div><span class="eyebrow">ĐỀ 4 · MÔ HÌNH → CHÍNH SÁCH → BÀI TẬP</span>
+      <h1>Vì sao app chọn bài này?</h1>
+      <p>Thay đổi lịch sử, quan sát quyết định. Không làm thay đổi tiến độ luyện tập.</p></div>
+    <button id="export-policy-trace" class="button secondary">Xuất dấu vết ↓</button>
+  </div>
+  <div class="policy-intro">
+    <div><strong>1. Quan sát</strong><p>Kết quả qua hết test hay chưa qua của từng phiên bản mã.</p></div>
+    <div><strong>2. Ước lượng</strong><p>Mô hình theo dõi ba nhóm kỹ năng, tính đến việc đã gặp lại bài.</p></div>
+    <div><strong>3. Chọn bài</strong><p>Double DQN xếp hạng các bài có thể làm tiếp bằng giá trị Q.</p></div>
+  </div>
+  <div class="policy-scope"><strong>Bản nghiên cứu huấn luyện bằng mô phỏng.</strong>
+    Cùng 12 mã bài, nội dung và test với app; chưa có bằng chứng chính sách này cải thiện việc học của người thật.</div>
+  <div class="policy-controls">
+    <label>Lịch sử để quan sát<select id="policy-scenario">
+      <option value="personal">Nhật ký trên trình duyệt của tôi</option>
+      <option value="new">Người mới · chưa có kết quả</option>
+      <option value="first-pass">Fibonacci · đúng ngay lần đầu</option>
+      <option value="repair">Fibonacci · sai → sai → đúng</option>
+      <option value="transfer">Hai bài cùng kỹ năng · đều đúng lần đầu</option>
+      <option value="custom" disabled>Lịch sử bạn vừa điều chỉnh</option>
+    </select></label>
+    <p id="policy-history-note" class="small muted" role="status"></p>
+  </div>
+  <section class="policy-decision" aria-live="polite">
+    <span class="eyebrow" id="policy-decision-mode">GỢI Ý TIẾP THEO</span>
+    <h2 id="policy-selected">Đang tải mô hình…</h2>
+    <p id="policy-reason"></p>
+    <a id="policy-open-exercise" class="button primary" href="#learn">Mở bài này →</a>
+  </section>
+  <div id="policy-skills" class="skill-grid"></div>
+  <p class="small muted">Các phần trăm trên là biến niềm tin của mô hình, chưa được hiệu chuẩn với bạn. Không phải điểm số hoặc tỷ lệ test sẽ đúng.</p>
+  <details class="quiet-details" open>
+    <summary>Lịch sử đã đi vào mô hình</summary>
+    <div class="table-scroll"><table><thead><tr><th>Bước</th><th>Bài</th><th>Kết quả đã biết</th><th>Dự báo trước khi biết kết quả</th><th>Kỹ năng liên quan: trước → sau</th></tr></thead><tbody id="policy-trace"></tbody></table></div>
+    <div class="policy-controls">
+      <label>Thêm một quan sát giả định<select id="policy-item"></select></label>
+      <button class="button secondary" id="policy-add-fail">Chưa qua</button>
+      <button class="button secondary" id="policy-add-pass">Qua hết test</button>
+      <button class="text-button" id="policy-undo">Bỏ quan sát cuối</button>
+    </div>
+    <p class="small muted">Các nút này chỉ giả định kết quả để thử mô hình; không chạy mã, không lưu vào bài làm cá nhân.</p>
+  </details>
+  <details class="quiet-details">
+    <summary>Điểm Q, dự báo và bài bị loại</summary>
+    <p>Q ước lượng tổng phần thưởng trong môi trường huấn luyện. Q không phải xác suất và có thể sai. Xác suất dự báo là cơ hội qua toàn bộ bài theo mô hình, không phải số test đúng.</p>
+    <div class="table-scroll"><table><thead><tr><th>Bài tập</th><th>Q</th><th>Dự báo qua bài</th><th>Có thể chọn?</th></tr></thead><tbody id="policy-candidates"></tbody></table></div>
+    <p id="policy-version" class="small muted"></p>
+  </details>
+  <section class="policy-results">
+    <div class="section-head"><div><span class="eyebrow">THỰC NGHIỆM ĐÃ CHẠY</span><h2>Chính sách có học được điều hữu ích?</h2></div>
+      <label>Môi trường mô phỏng<select id="policy-world"></select></label></div>
+    <p>Ba lần huấn luyện, 300 người học mô phỏng ghép cặp mỗi môi trường. Đo tiến bộ trên bài thăm dò chưa luyện, riêng với tỷ lệ đúng ở bài luyện.</p>
+    <div class="table-scroll"><table><thead><tr><th>Chính sách</th><th>Tiến bộ trên bài mới</th><th>CI 95%</th><th>Đúng khi luyện</th></tr></thead><tbody id="policy-results"></tbody></table></div>
+    <p id="policy-result-note" class="small muted"></p>
+    <p class="small muted">CI lấy mẫu lại người học mô phỏng, có điều kiện trên ba mô hình đã huấn luyện. Không bao phủ mọi lần huấn luyện hoặc sinh viên thật. Không dùng tập kiểm tra để chọn mô hình đưa vào app.</p>
+  </section>
+  <details class="quiet-details"><summary>Phải chứng minh gì trong buổi thuyết trình?</summary>
+    <ol><li>Nhập mã Python, chạy test thật và xem lỗi cụ thể.</li>
+      <li>So sánh hai lịch sử; trạng thái có thể đổi dù bài cuối đều đúng.</li>
+      <li>Kiểm tra bài được chọn có điểm Q cao nhất trong các ứng viên, trừ khi app ghi rõ dùng dự phòng.</li>
+      <li>Mở môi trường “Chỉ nhớ bài cũ”: tỷ lệ đúng có thể cao nhưng tiến bộ trên bài mới bằng 0.</li>
+      <li>Kết luận đúng mức: hệ thống hoạt động; hiệu quả với người thật chưa được xác nhận.</li></ol>
+  </details>
+</section>

@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="513.666126pt" height="296.799016pt" viewBox="0 0 513.666126 296.799016" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T23:44:23.683000</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 296.799016 
+L 513.666126 296.799016 
+L 513.666126 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 99.222578 258.003 
+L 251.009282 258.003 
+L 251.009282 20.3725 
+L 99.222578 20.3725 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p3dfd1f2484)">
+    <image xlink:href="data:image/png;base64,
+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" id="imaged85a7d7bb3" transform="scale(1 -1) translate(0 -238.08)" x="99.222578" y="-19.923" width="152.16" height="238.08"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m3d67781a9a" d="M 0 0 
+L 0 3.5 
+" style="stroke: #52514e; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3d67781a9a" x="118.195916" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(107.152166 270.371359)">DKT-A</text>
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(108.605877 279.890266)">(huấn</text>
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(107.983026 288.0205)">luyện)</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m3d67781a9a" x="156.142592" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(145.098842 270.371359)">DKT-A</text>
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(146.762905 278.413703)">(song</text>
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(148.015053 286.543938)">sinh)</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m3d67781a9a" x="194.089268" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 7.5px; font-family: 'Arial'; text-anchor: middle; fill: #52514e" x="194.089268" y="270.371359" transform="rotate(-0 194.089268 270.371359)">DKT-B</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m3d67781a9a" x="232.035944" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 7.5px; font-family: 'Arial'; text-anchor: middle; fill: #52514e" x="232.035944" y="270.371359" transform="rotate(-0 232.035944 270.371359)">SAKT-B</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <defs>
+       <path id="m272f7bf65b" d="M 0 0 
+L -3.5 0 
+" style="stroke: #52514e; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="28.859304" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="32.548835" transform="rotate(-0 92.222578 32.548835)">Ngẫu nhiên</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="45.832911" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="49.352442" transform="rotate(-0 92.222578 49.352442)">Lộ trình dễ → khó</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="62.806518" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="66.597651" transform="rotate(-0 92.222578 66.597651)">Kỹ năng yếu nhất</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="79.780125" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="83.571258" transform="rotate(-0 92.222578 83.571258)">Nhắm P(đúng) = 0,5</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="96.753732" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="100.544865" transform="rotate(-0 92.222578 100.544865)">Nhắm P(đúng) = 0,7</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="113.727339" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="116.76941" transform="rotate(-0 92.222578 116.76941)">Dễ nhất trước</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="130.700946" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="133.743017" transform="rotate(-0 92.222578 133.743017)">Khó nhất trước</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="147.674554" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="150.716624" transform="rotate(-0 92.222578 150.716624)">Tham lam theo tracker</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="164.648161" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="167.862887" transform="rotate(-0 92.222578 167.862887)">DQN (thưởng DKT)</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="181.621768" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="185.412901" transform="rotate(-0 92.222578 185.412901)">DQN (thế giới AFM)</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="198.595375" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="202.386508" transform="rotate(-0 92.222578 202.386508)">DQN (nhiều thế giới)</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="215.568982" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="218.783709" transform="rotate(-0 92.222578 218.783709)">PPO (thưởng DKT)</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="232.542589" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="236.333722" transform="rotate(-0 92.222578 236.333722)">PPO (thế giới AFM)</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="99.222578" y="249.516196" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: end; fill: #52514e" x="92.222578" y="253.307329" transform="rotate(-0 92.222578 253.307329)">PPO (nhiều thế giới)</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Arial'; text-anchor: start; fill: #0b0b0b" x="99.222578" y="14.3725" transform="rotate(-0 99.222578 14.3725)">(a) Thế giới đo bằng dự báo mô hình (DKT / SAKT)</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 306.622578 258.003 
+L 458.409282 258.003 
+L 458.409282 20.3725 
+L 306.622578 20.3725 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pf97d3ce27b)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAT0AAAHwCAYAAADU7bj3AAAH/klEQVR4nO3WzWqcZRyH4Y7JCIrFWheCuNCNioucQNGNtFsPQgQPoEfhCYgbV67UAxBXblyoG/Gj1BaLiwoxaUJImjbN13gOqfjwcF/XfuDHOzP3+1+8ffPn1SUu5PGDvzy5Czo/OfLsnsInH1/z/C7omYt+EGBGogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SsH+9vjd4wrfPT49ETpnXycGf0hKkdHK1GT5iWSw9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9ICUxc5PP6xGj5jVt0evjp4wrSenoxfM7YM3/W0vyqUHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6Qsr77yuujN0xr5/ej0ROm9fIL3rdP487+8j/7Lmr88oAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0hZvPHRN6vRI2Z1fLA9esK0zh7vj54wtffevz56wrRcekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmL3du3VqNHzOr+8uroCdPae3Q+esLU3tm+NXrCtFx6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpKzfPntp9IZpffbdwegJ07r7z+noCVP74sON0ROm5dIDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IWb/59d7oDdN6sPdw9IRp3di4OnrC1J77/NPRE6bl0gNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0hZ3LtxfTV6xKyWa2ujJ0xrcfny6AlT29rcHD1hWi49IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUkQPSBE9IEX0gBTRA1JED0gRPSBF9IAU0QNSRA9IET0gRfSAFNEDUhZ/b26tRo+Y1Z/bp6MnTOuX+yejJ0xt47Xl6AnTcukBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekLHbv3V2NHjGrxXI5esK0VoePRk+Y2vf7L46eMC2XHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASnrT778avSGaZ39+tvoCdNaXLkyesLU3rrzx+gJ03LpASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpCx+fPfaavSIWT27tjZ6wrSeXy5HT5ja1uHh6AnTcukBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6Qstjd3V6NHgHwf3HpASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHpIgekCJ6QIroASmiB6SIHpAiekCK6AEpogekiB6QInpAiugBKaIHXCr5F74ib0BMwPo1AAAAAElFTkSuQmCC" id="imagebd338055d3" transform="scale(1 -1) translate(0 -238.08)" x="306.622578" y="-19.923" width="152.16" height="238.08"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m3d67781a9a" x="325.595916" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(313.930486 270.371359)">AFM-A</text>
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(316.005877 279.890266)">(huấn</text>
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(315.383026 288.0205)">luyện)</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m3d67781a9a" x="363.542592" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 7.5px; font-family: 'Arial'; text-anchor: middle; fill: #52514e" x="363.542592" y="270.371359" transform="rotate(-0 363.542592 270.371359)">AFM-B</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m3d67781a9a" x="401.489268" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 7.5px; font-family: 'Arial'; text-anchor: middle; fill: #52514e" x="401.489268" y="270.371359" transform="rotate(-0 401.489268 270.371359)">PFA-B</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m3d67781a9a" x="439.435944" y="258.003" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(428.185944 270.371359)">ZPD-B</text>
+      <text style="font-size: 7.5px; font-family: 'Arial'; fill: #52514e" transform="translate(423.803718 278.669641)">(giả định)</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_15">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="28.859304" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="45.832911" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="62.806518" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="79.780125" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="96.753732" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="113.727339" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="130.700946" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="147.674554" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="164.648161" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="181.621768" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_33">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="198.595375" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="215.568982" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_35">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="232.542589" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#m272f7bf65b" x="306.622578" y="249.516196" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8px; font-family: 'Arial'; text-anchor: start; fill: #0b0b0b" x="306.622578" y="14.3725" transform="rotate(-0 306.622578 14.3725)">(b) Thế giới trạng thái ẩn (post-test kỳ vọng thật)</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_4">
+    <path d="M 254.666793 222.358425 
+L 262.983861 222.358425 
+L 262.983861 56.017075 
+L 254.666793 56.017075 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABEAAAFbCAYAAAAz2WVEAAAB7ElEQVR4nO2ZUW7EQAhDjcN9KvXqvd7uUPU3+wmRLBcOYHmeGUKS+Pn+KjQro6sAgAMayIhQcQIZJzEhAogcBwPnyYnjpFfEnHECJyY50idwYxITIjrzBH2R2IgfSYcTIrltr/0Y7RfdtseQcQIVEbgxCaPxyBkncGKS2/ZPbY8Bq/0ETkzS6xZzxglE1i26bY/hFDFnnISME6iIQIdJDNwdsG8mcV0qTChynNRhAhUmtIuYMhFfIkzCjQk1nLCtgKF0cubuUIUJNuKnIqZMxJfIPAmd8XiJRJw6qwUmjhO7Peo2G9sKmIuYXpvSNeGEbRF6RZy7KT2TDtsKUIo4zeZJqLyqsK2Ajfh/REyjVxW2FaAUcR6ZvyrvUxMi0BBhXwLIdy0T2T5hXwLI15FhUpAZBZgQKQ0n7EtgmTzWJy+VGcu+BLZPpOcJ+z4wM6hz5u4cGSZnRKQ0nNCNSfWd0I3J6Tuh1wpKoYhrxElZMTkjIuXE5GXGpCZEjheToyNSVkxK5wlYfZH3RnyvZfJZWRhoNgx8tWBbAX/Hmfh+gmXizgQTfVKwOg6WiXvb147Hey0T5VGQOncHKkwo9MiAVcS1TO61TJRHQaKO0zwpr3kCr+PUjsd7bdt/1jKRXrdKZp5gx6M7E+xWgFv9AosfF66fCplYAAAAAElFTkSuQmCC" id="imaged4e82130fe" transform="scale(1 -1) translate(0 -166.56)" x="254.88" y="-55.68" width="8.16" height="166.56"/>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_29">
+     <g id="line2d_37">
+      <defs>
+       <path id="m3338a74e7c" d="M 0 0 
+L 3.5 0 
+" style="stroke: #52514e; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3338a74e7c" x="262.983861" y="200.428056" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="269.983861" y="203.470126" transform="rotate(-0 269.983861 203.470126)">−20</text>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="262.983861" y="169.807903" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="269.983861" y="172.849973" transform="rotate(-0 269.983861 172.849973)">−10</text>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_39">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="262.983861" y="139.18775" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="269.983861" y="142.22982" transform="rotate(-0 269.983861 142.22982)">0</text>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="262.983861" y="108.567597" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="269.983861" y="111.609667" transform="rotate(-0 269.983861 111.609667)">10</text>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="262.983861" y="77.947444" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="269.983861" y="80.989515" transform="rotate(-0 269.983861 80.989515)">20</text>
+     </g>
+    </g>
+    <g id="text_30">
+     <text style="font-size: 7.5px; font-family: 'Arial'; text-anchor: middle; fill: #52514e" x="295.126205" y="139.18775" transform="rotate(-90 295.126205 139.18775)">Tiến bộ trừ ngẫu nhiên (điểm %)</text>
+    </g>
+   </g>
+   <g id="LineCollection_1"/>
+  </g>
+  <g id="axes_4">
+   <g id="patch_5">
+    <path d="M 462.066793 222.358425 
+L 470.383861 222.358425 
+L 470.383861 56.017075 
+L 462.066793 56.017075 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABEAAAFbCAYAAAAz2WVEAAAB7ElEQVR4nO2ZUW7EQAhDjcN9KvXqvd7uUPU3+wmRLBcOYHmeGUKS+Pn+KjQro6sAgAMayIhQcQIZJzEhAogcBwPnyYnjpFfEnHECJyY50idwYxITIjrzBH2R2IgfSYcTIrltr/0Y7RfdtseQcQIVEbgxCaPxyBkncGKS2/ZPbY8Bq/0ETkzS6xZzxglE1i26bY/hFDFnnISME6iIQIdJDNwdsG8mcV0qTChynNRhAhUmtIuYMhFfIkzCjQk1nLCtgKF0cubuUIUJNuKnIqZMxJfIPAmd8XiJRJw6qwUmjhO7Peo2G9sKmIuYXpvSNeGEbRF6RZy7KT2TDtsKUIo4zeZJqLyqsK2Ajfh/REyjVxW2FaAUcR6ZvyrvUxMi0BBhXwLIdy0T2T5hXwLI15FhUpAZBZgQKQ0n7EtgmTzWJy+VGcu+BLZPpOcJ+z4wM6hz5u4cGSZnRKQ0nNCNSfWd0I3J6Tuh1wpKoYhrxElZMTkjIuXE5GXGpCZEjheToyNSVkxK5wlYfZH3RnyvZfJZWRhoNgx8tWBbAX/Hmfh+gmXizgQTfVKwOg6WiXvb147Hey0T5VGQOncHKkwo9MiAVcS1TO61TJRHQaKO0zwpr3kCr+PUjsd7bdt/1jKRXrdKZp5gx6M7E+xWgFv9AosfF66fCplYAAAAAElFTkSuQmCC" id="imagee050f76bf6" transform="scale(1 -1) translate(0 -166.56)" x="462.24" y="-55.68" width="8.16" height="166.56"/>
+   <g id="matplotlib.axis_7"/>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_34">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="470.383861" y="211.766176" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="477.383861" y="214.808247" transform="rotate(-0 477.383861 214.808247)">−1,5</text>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="470.383861" y="187.573368" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="477.383861" y="190.615438" transform="rotate(-0 477.383861 190.615438)">−1,0</text>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="470.383861" y="163.380559" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="477.383861" y="166.422629" transform="rotate(-0 477.383861 166.422629)">−0,5</text>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="470.383861" y="139.18775" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="477.383861" y="142.22982" transform="rotate(-0 477.383861 142.22982)">0,0</text>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="470.383861" y="114.994941" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="477.383861" y="118.037012" transform="rotate(-0 477.383861 118.037012)">0,5</text>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="470.383861" y="90.802132" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="477.383861" y="93.844203" transform="rotate(-0 477.383861 93.844203)">1,0</text>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m3338a74e7c" x="470.383861" y="66.609324" style="fill: #52514e; stroke: #52514e; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_37">
+      <text style="font-size: 8.5px; font-family: 'Arial'; text-anchor: start; fill: #52514e" x="477.383861" y="69.651394" transform="rotate(-0 477.383861 69.651394)">1,5</text>
+     </g>
+    </g>
+    <g id="text_38">
+     <text style="font-size: 7.5px; font-family: 'Arial'; text-anchor: middle; fill: #52514e" x="504.887611" y="139.18775" transform="rotate(-90 504.887611 139.18775)">Tiến bộ trừ ngẫu nhiên (điểm %)</text>
+    </g>
+   </g>
+   <g id="LineCollection_2"/>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3dfd1f2484">
+   <rect x="99.222578" y="20.3725" width="151.786704" height="237.6305"/>
+  </clipPath>
+  <clipPath id="pf97d3ce27b">
+   <rect x="306.622578" y="20.3725" width="151.786704" height="237.6305"/>
+  </clipPath>
+ </defs>
+</svg>

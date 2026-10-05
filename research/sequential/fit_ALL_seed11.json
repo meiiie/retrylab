@@ -1,0 +1,46 @@
+{
+  "mode": "ALL",
+  "seed": 11,
+  "selected_epoch": 5,
+  "selected_validation_first_nll": 0.6137470863452937,
+  "epochs": [
+    {
+      "epoch": 1,
+      "training_target_nll": 0.6713274902048344,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6880885741717437,
+      "elapsed_seconds": 78.80690409999806
+    },
+    {
+      "epoch": 2,
+      "training_target_nll": 0.6499647852192318,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6602566579208518,
+      "elapsed_seconds": 108.49925360000634
+    },
+    {
+      "epoch": 3,
+      "training_target_nll": 0.6314127319139314,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6383130586195261,
+      "elapsed_seconds": 125.84521310000855
+    },
+    {
+      "epoch": 4,
+      "training_target_nll": 0.6172661547289837,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6267959171719897,
+      "elapsed_seconds": 142.0101910000085
+    },
+    {
+      "epoch": 5,
+      "training_target_nll": 0.6073855298010974,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6137470863452937,
+      "elapsed_seconds": 160.31837780000933
+    }
+  ],
+  "runtime_seconds": 160.3767191000079,
+  "checkpoint": "E:\\Sach\\baiThayPhuc\\BaiHong\\research\\sequential\\gru_ALL_seed11.pt",
+  "checkpoint_sha256": "bf1fcece99bae9b05f0a11f1183e44e6ca4f2cd87068c26e65c0e97c5002a460"
+}

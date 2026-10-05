@@ -1,0 +1,1449 @@
+{
+ "version": "c-v1",
+ "note": "Bộ bài C tự biên soạn cho RetryLab. Không chung mã bài với ACcoding; nhãn kỹ năng lấy theo 10 nhóm kỹ năng ACcoding, chưa kiểm chứng chuyển giao.",
+ "skills": [
+  {
+   "id": "basics",
+   "title": "Cơ bản",
+   "description": "Biến, số nguyên và biểu thức số học đơn giản."
+  },
+  {
+   "id": "conditionals",
+   "title": "Điều kiện",
+   "description": "Rẽ nhánh if / else và so sánh."
+  },
+  {
+   "id": "loops",
+   "title": "Vòng lặp",
+   "description": "for / while và tích lũy kết quả qua các lượt lặp."
+  },
+  {
+   "id": "arrays",
+   "title": "Mảng",
+   "description": "Duyệt và xử lý mảng số nguyên."
+  },
+  {
+   "id": "strings",
+   "title": "Chuỗi",
+   "description": "Chuỗi ký tự kết thúc bằng ký tự 0."
+  },
+  {
+   "id": "pointers",
+   "title": "Con trỏ",
+   "description": "Truyền địa chỉ để hàm sửa biến của nơi gọi."
+  },
+  {
+   "id": "bits",
+   "title": "Bit",
+   "description": "Toán tử bit và dịch bit."
+  },
+  {
+   "id": "arithmetic",
+   "title": "Số học",
+   "description": "Chia, chia dư và thuật toán trên số nguyên."
+  },
+  {
+   "id": "recursion",
+   "title": "Đệ quy",
+   "description": "Hàm tự gọi lại với bài toán nhỏ hơn."
+  },
+  {
+   "id": "sorting_search",
+   "title": "Sắp xếp và tìm kiếm",
+   "description": "Sắp xếp và tìm phần tử trong mảng."
+  }
+ ],
+ "exercises": [
+  {
+   "id": "c-seconds",
+   "title": "Đổi ra giây",
+   "skill": 0,
+   "difficulty": 1,
+   "concept": "Biểu thức số học",
+   "description": "Cho số giờ h, số phút m và số giây s. Tính tổng số giây tương ứng.",
+   "rules": [
+    "1 giờ = 3600 giây, 1 phút = 60 giây.",
+    "Chỉ dùng số nguyên không âm."
+   ],
+   "examples": [
+    {
+     "input": "tong_giay(0, 1, 5)",
+     "output": "65"
+    },
+    {
+     "input": "tong_giay(1, 0, 0)",
+     "output": "3600"
+    }
+   ],
+   "function": {
+    "name": "tong_giay",
+    "signature": "int tong_giay(int h, int m, int s)"
+   },
+   "starter": "int tong_giay(int h, int m, int s) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Đổi từng phần ra giây rồi cộng lại.",
+    "Giờ nhân với 3600, phút nhân với 60.",
+    "return h * 3600 + m * 60 + s; là đủ, chỉ cần viết cho đúng."
+   ],
+   "takeaway": "Mỗi đơn vị thời gian quy về giây bằng một phép nhân.",
+   "tests": [
+    {
+     "setup": "",
+     "call": "tong_giay(0, 0, 0)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(0, 0, 0)",
+     "expected": "0"
+    },
+    {
+     "setup": "",
+     "call": "tong_giay(0, 0, 59)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(0, 0, 59)",
+     "expected": "59"
+    },
+    {
+     "setup": "",
+     "call": "tong_giay(0, 1, 0)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(0, 1, 0)",
+     "expected": "60"
+    },
+    {
+     "setup": "",
+     "call": "tong_giay(1, 0, 0)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(1, 0, 0)",
+     "expected": "3600"
+    },
+    {
+     "setup": "",
+     "call": "tong_giay(1, 2, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(1, 2, 3)",
+     "expected": "3723"
+    },
+    {
+     "setup": "",
+     "call": "tong_giay(2, 30, 15)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(2, 30, 15)",
+     "expected": "9015"
+    },
+    {
+     "setup": "",
+     "call": "tong_giay(10, 59, 59)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(10, 59, 59)",
+     "expected": "39599"
+    },
+    {
+     "setup": "",
+     "call": "tong_giay(0, 59, 0)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_giay(0, 59, 0)",
+     "expected": "3540"
+    }
+   ]
+  },
+  {
+   "id": "c-grade",
+   "title": "Xếp loại điểm",
+   "skill": 1,
+   "difficulty": 1,
+   "concept": "if / else",
+   "description": "Cho điểm nguyên từ 0 đến 100. Trả về ký tự xếp loại.",
+   "rules": [
+    "Từ 85 trở lên: 'A'. Từ 70 đến 84: 'B'. Từ 50 đến 69: 'C'. Dưới 50: 'D'.",
+    "Trả về đúng một ký tự (kiểu char)."
+   ],
+   "examples": [
+    {
+     "input": "xep_loai(90)",
+     "output": "'A'"
+    },
+    {
+     "input": "xep_loai(49)",
+     "output": "'D'"
+    }
+   ],
+   "function": {
+    "name": "xep_loai",
+    "signature": "char xep_loai(int diem)"
+   },
+   "starter": "char xep_loai(int diem) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Kiểm tra từ ngưỡng cao xuống thấp.",
+    "Dùng >= để điểm đúng bằng ngưỡng vẫn được loại đó.",
+    "if (diem >= 85) return 'A'; rồi tiếp tục với các ngưỡng còn lại."
+   ],
+   "takeaway": "Ngưỡng nằm ở đúng số biên, nên >= và > cho kết quả khác nhau.",
+   "tests": [
+    {
+     "setup": "",
+     "call": "xep_loai(100)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(100)",
+     "expected": "A"
+    },
+    {
+     "setup": "",
+     "call": "xep_loai(85)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(85)",
+     "expected": "A"
+    },
+    {
+     "setup": "",
+     "call": "xep_loai(84)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(84)",
+     "expected": "B"
+    },
+    {
+     "setup": "",
+     "call": "xep_loai(70)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(70)",
+     "expected": "B"
+    },
+    {
+     "setup": "",
+     "call": "xep_loai(69)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(69)",
+     "expected": "C"
+    },
+    {
+     "setup": "",
+     "call": "xep_loai(50)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(50)",
+     "expected": "C"
+    },
+    {
+     "setup": "",
+     "call": "xep_loai(49)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(49)",
+     "expected": "D"
+    },
+    {
+     "setup": "",
+     "call": "xep_loai(0)",
+     "ret": "char",
+     "show": null,
+     "input": "xep_loai(0)",
+     "expected": "D"
+    }
+   ]
+  },
+  {
+   "id": "c-digit-sum",
+   "title": "Tổng chữ số",
+   "skill": 2,
+   "difficulty": 1,
+   "concept": "while và chia dư",
+   "description": "Cho số nguyên n không âm. Tính tổng các chữ số của n ở hệ thập phân.",
+   "rules": [
+    "n >= 0; tổng chữ số của 0 là 0.",
+    "Không đổi n sang chuỗi."
+   ],
+   "examples": [
+    {
+     "input": "tong_chu_so(123)",
+     "output": "6"
+    },
+    {
+     "input": "tong_chu_so(100)",
+     "output": "1"
+    }
+   ],
+   "function": {
+    "name": "tong_chu_so",
+    "signature": "int tong_chu_so(int n)"
+   },
+   "starter": "int tong_chu_so(int n) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Chữ số cuối của n là n % 10.",
+    "Bỏ chữ số cuối bằng n = n / 10.",
+    "Lặp đến khi n bằng 0 và cộng dần các chữ số."
+   ],
+   "takeaway": "n % 10 lấy chữ số cuối, n / 10 bỏ chữ số đó.",
+   "tests": [
+    {
+     "setup": "",
+     "call": "tong_chu_so(0)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(0)",
+     "expected": "0"
+    },
+    {
+     "setup": "",
+     "call": "tong_chu_so(7)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(7)",
+     "expected": "7"
+    },
+    {
+     "setup": "",
+     "call": "tong_chu_so(10)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(10)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "tong_chu_so(123)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(123)",
+     "expected": "6"
+    },
+    {
+     "setup": "",
+     "call": "tong_chu_so(999)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(999)",
+     "expected": "27"
+    },
+    {
+     "setup": "",
+     "call": "tong_chu_so(100200)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(100200)",
+     "expected": "3"
+    },
+    {
+     "setup": "",
+     "call": "tong_chu_so(2147483647)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(2147483647)",
+     "expected": "46"
+    },
+    {
+     "setup": "",
+     "call": "tong_chu_so(90)",
+     "ret": "int",
+     "show": null,
+     "input": "tong_chu_so(90)",
+     "expected": "9"
+    }
+   ]
+  },
+  {
+   "id": "c-count-div",
+   "title": "Đếm ước",
+   "skill": 2,
+   "difficulty": 2,
+   "concept": "for và điều kiện chia hết",
+   "description": "Cho số nguyên n >= 1. Đếm số ước dương của n, kể cả 1 và chính n.",
+   "rules": [
+    "n >= 1.",
+    "Ước của n là số dương d sao cho n % d == 0."
+   ],
+   "examples": [
+    {
+     "input": "dem_uoc(12)",
+     "output": "6"
+    },
+    {
+     "input": "dem_uoc(13)",
+     "output": "2"
+    }
+   ],
+   "function": {
+    "name": "dem_uoc",
+    "signature": "int dem_uoc(int n)"
+   },
+   "starter": "int dem_uoc(int n) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Thử từng số d từ 1 đến n.",
+    "d là ước khi n % d == 0.",
+    "Cộng vào biến đếm mỗi lần gặp một ước."
+   ],
+   "takeaway": "Ước của n nằm trong đoạn từ 1 đến n; kiểm tra bằng phép chia dư.",
+   "tests": [
+    {
+     "setup": "",
+     "call": "dem_uoc(1)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(1)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "dem_uoc(2)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(2)",
+     "expected": "2"
+    },
+    {
+     "setup": "",
+     "call": "dem_uoc(12)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(12)",
+     "expected": "6"
+    },
+    {
+     "setup": "",
+     "call": "dem_uoc(13)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(13)",
+     "expected": "2"
+    },
+    {
+     "setup": "",
+     "call": "dem_uoc(36)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(36)",
+     "expected": "9"
+    },
+    {
+     "setup": "",
+     "call": "dem_uoc(100)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(100)",
+     "expected": "9"
+    },
+    {
+     "setup": "",
+     "call": "dem_uoc(97)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(97)",
+     "expected": "2"
+    },
+    {
+     "setup": "",
+     "call": "dem_uoc(60)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_uoc(60)",
+     "expected": "12"
+    }
+   ]
+  },
+  {
+   "id": "c-sum-positive",
+   "title": "Tổng số dương",
+   "skill": 3,
+   "difficulty": 1,
+   "concept": "Duyệt mảng",
+   "description": "Cho mảng a có n phần tử. Trả về tổng các phần tử lớn hơn 0.",
+   "rules": [
+    "n có thể bằng 0; khi đó kết quả là 0.",
+    "Số 0 và số âm không được cộng."
+   ],
+   "examples": [
+    {
+     "input": "a = {3, -1, 2}, n = 3",
+     "output": "5"
+    },
+    {
+     "input": "a = {-5, -2}, n = 2",
+     "output": "0"
+    }
+   ],
+   "function": {
+    "name": "tong_duong",
+    "signature": "int tong_duong(int a[], int n)"
+   },
+   "starter": "int tong_duong(int a[], int n) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Duyệt i từ 0 đến n - 1.",
+    "Chỉ cộng a[i] khi a[i] > 0.",
+    "Đặt biến tổng bằng 0 trước vòng lặp."
+   ],
+   "takeaway": "Điều kiện trong vòng lặp quyết định phần tử nào được cộng.",
+   "tests": [
+    {
+     "setup": "int a[3] = {3, -1, 2};",
+     "call": "tong_duong(a, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {3, -1, 2}, n = 3",
+     "expected": "5"
+    },
+    {
+     "setup": "int a[1] = {0};",
+     "call": "tong_duong(a, 0)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {}, n = 0",
+     "expected": "0"
+    },
+    {
+     "setup": "int a[2] = {-5, -2};",
+     "call": "tong_duong(a, 2)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {-5, -2}, n = 2",
+     "expected": "0"
+    },
+    {
+     "setup": "int a[1]; a[0] = 4;",
+     "call": "tong_duong(a, 1)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {4}, n = 1",
+     "expected": "4"
+    },
+    {
+     "setup": "int a[3] = {0, 0, 0};",
+     "call": "tong_duong(a, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {0, 0, 0}, n = 3",
+     "expected": "0"
+    },
+    {
+     "setup": "int a[5] = {1, 2, 3, 4, 5};",
+     "call": "tong_duong(a, 5)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {1, 2, 3, 4, 5}, n = 5",
+     "expected": "15"
+    },
+    {
+     "setup": "int a[5] = {-3, 7, -1, 8, 0};",
+     "call": "tong_duong(a, 5)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {-3, 7, -1, 8, 0}, n = 5",
+     "expected": "15"
+    },
+    {
+     "setup": "int a[3] = {100, -100, 50};",
+     "call": "tong_duong(a, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {100, -100, 50}, n = 3",
+     "expected": "150"
+    }
+   ]
+  },
+  {
+   "id": "c-max-index",
+   "title": "Vị trí lớn nhất đầu tiên",
+   "skill": 3,
+   "difficulty": 2,
+   "concept": "Duyệt mảng và so sánh",
+   "description": "Cho mảng a có n >= 1 phần tử. Trả về chỉ số (tính từ 0) của phần tử lớn nhất; nếu có nhiều phần tử bằng nhau thì lấy vị trí đầu tiên.",
+   "rules": [
+    "n >= 1.",
+    "Chỉ số đầu tiên là 0."
+   ],
+   "examples": [
+    {
+     "input": "a = {1, 3, 2}, n = 3",
+     "output": "1"
+    },
+    {
+     "input": "a = {3, 3, 1}, n = 3",
+     "output": "0"
+    }
+   ],
+   "function": {
+    "name": "vi_tri_lon_nhat",
+    "signature": "int vi_tri_lon_nhat(int a[], int n)"
+   },
+   "starter": "int vi_tri_lon_nhat(int a[], int n) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Giữ chỉ số của phần tử lớn nhất đã thấy, bắt đầu từ 0.",
+    "Duyệt từ 1 đến n - 1 và so sánh với a[vi_tri].",
+    "Chỉ cập nhật khi a[i] lớn hơn hẳn (>), không dùng >=."
+   ],
+   "takeaway": "Dấu > giữ vị trí đầu tiên khi có giá trị bằng nhau, dấu >= chuyển sang vị trí sau.",
+   "tests": [
+    {
+     "setup": "int a[1]; a[0] = 5;",
+     "call": "vi_tri_lon_nhat(a, 1)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {5}, n = 1",
+     "expected": "0"
+    },
+    {
+     "setup": "int a[3] = {1, 3, 2};",
+     "call": "vi_tri_lon_nhat(a, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {1, 3, 2}, n = 3",
+     "expected": "1"
+    },
+    {
+     "setup": "int a[3] = {3, 3, 1};",
+     "call": "vi_tri_lon_nhat(a, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {3, 3, 1}, n = 3",
+     "expected": "0"
+    },
+    {
+     "setup": "int a[3] = {1, 2, 3};",
+     "call": "vi_tri_lon_nhat(a, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {1, 2, 3}, n = 3",
+     "expected": "2"
+    },
+    {
+     "setup": "int a[3] = {-5, -2, -9};",
+     "call": "vi_tri_lon_nhat(a, 3)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {-5, -2, -9}, n = 3",
+     "expected": "1"
+    },
+    {
+     "setup": "int a[4] = {7, 1, 7, 7};",
+     "call": "vi_tri_lon_nhat(a, 4)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {7, 1, 7, 7}, n = 4",
+     "expected": "0"
+    },
+    {
+     "setup": "int a[5] = {2, 9, 9, 4, 9};",
+     "call": "vi_tri_lon_nhat(a, 5)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {2, 9, 9, 4, 9}, n = 5",
+     "expected": "1"
+    },
+    {
+     "setup": "int a[2] = {0, -1};",
+     "call": "vi_tri_lon_nhat(a, 2)",
+     "ret": "int",
+     "show": null,
+     "input": "a = {0, -1}, n = 2",
+     "expected": "0"
+    }
+   ]
+  },
+  {
+   "id": "c-vowels",
+   "title": "Đếm nguyên âm",
+   "skill": 4,
+   "difficulty": 2,
+   "concept": "Duyệt chuỗi",
+   "description": "Cho chuỗi s. Đếm số nguyên âm a, e, i, o, u trong s, cả chữ thường và chữ hoa.",
+   "rules": [
+    "Chuỗi kết thúc bằng ký tự 0; có thể là chuỗi rỗng.",
+    "Chỉ chuỗi không dấu (ASCII)."
+   ],
+   "examples": [
+    {
+     "input": "s = \"hello\"",
+     "output": "2"
+    },
+    {
+     "input": "s = \"AEIOU\"",
+     "output": "5"
+    }
+   ],
+   "function": {
+    "name": "dem_nguyen_am",
+    "signature": "int dem_nguyen_am(char s[])"
+   },
+   "starter": "int dem_nguyen_am(char s[]) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Duyệt s[i] cho đến khi gặp ký tự 0.",
+    "Kiểm tra s[i] có thuộc một trong 10 ký tự a e i o u A E I O U.",
+    "Cộng vào biến đếm khi trùng."
+   ],
+   "takeaway": "Chuỗi C là mảng char kết thúc bằng 0, nên vòng lặp dừng ở s[i] == 0.",
+   "tests": [
+    {
+     "setup": "char s[] = \"hello\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"hello\"",
+     "expected": "2"
+    },
+    {
+     "setup": "char s[4] = \"\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"\"",
+     "expected": "0"
+    },
+    {
+     "setup": "char s[] = \"xyz\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"xyz\"",
+     "expected": "0"
+    },
+    {
+     "setup": "char s[] = \"AEIOU\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"AEIOU\"",
+     "expected": "5"
+    },
+    {
+     "setup": "char s[] = \"Programming\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"Programming\"",
+     "expected": "3"
+    },
+    {
+     "setup": "char s[] = \"aeiouAEIOU\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"aeiouAEIOU\"",
+     "expected": "10"
+    },
+    {
+     "setup": "char s[] = \"Banana Eel\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"Banana Eel\"",
+     "expected": "5"
+    },
+    {
+     "setup": "char s[] = \"rhythm\";",
+     "call": "dem_nguyen_am(s)",
+     "ret": "int",
+     "show": null,
+     "input": "s = \"rhythm\"",
+     "expected": "0"
+    }
+   ]
+  },
+  {
+   "id": "c-reverse",
+   "title": "Đảo xâu tại chỗ",
+   "skill": 4,
+   "difficulty": 2,
+   "concept": "Sửa mảng char",
+   "description": "Đảo ngược chuỗi s ngay trong mảng s, không tạo chuỗi mới. Hàm không trả về giá trị.",
+   "rules": [
+    "Chuỗi có thể rỗng hoặc chỉ một ký tự.",
+    "Dùng strlen(s) hoặc tự đếm độ dài."
+   ],
+   "examples": [
+    {
+     "input": "s = \"abc\"",
+     "output": "\"cba\""
+    },
+    {
+     "input": "s = \"Hello\"",
+     "output": "\"olleH\""
+    }
+   ],
+   "function": {
+    "name": "dao_xau",
+    "signature": "void dao_xau(char s[])"
+   },
+   "starter": "void dao_xau(char s[]) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Tính độ dài n của chuỗi trước.",
+    "Hoán đổi s[i] với s[n - 1 - i].",
+    "Chỉ lặp i từ 0 đến n / 2 - 1; lặp hết n lượt sẽ đảo ngược hai lần."
+   ],
+   "takeaway": "Hoán đổi các cặp đối xứng, chỉ đi đến giữa chuỗi.",
+   "tests": [
+    {
+     "setup": "char s[] = \"abc\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"abc\"",
+     "expected": "cba"
+    },
+    {
+     "setup": "char s[4] = \"\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"\"",
+     "expected": ""
+    },
+    {
+     "setup": "char s[] = \"a\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"a\"",
+     "expected": "a"
+    },
+    {
+     "setup": "char s[] = \"ab\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"ab\"",
+     "expected": "ba"
+    },
+    {
+     "setup": "char s[] = \"level\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"level\"",
+     "expected": "level"
+    },
+    {
+     "setup": "char s[] = \"Hello\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"Hello\"",
+     "expected": "olleH"
+    },
+    {
+     "setup": "char s[] = \"12345\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"12345\"",
+     "expected": "54321"
+    },
+    {
+     "setup": "char s[] = \"abcd efg\";",
+     "call": "dao_xau(s)",
+     "ret": null,
+     "show": {
+      "kind": "str",
+      "var": "s"
+     },
+     "input": "s = \"abcd efg\"",
+     "expected": "gfe dcba"
+    }
+   ]
+  },
+  {
+   "id": "c-swap",
+   "title": "Hoán đổi qua con trỏ",
+   "skill": 5,
+   "difficulty": 2,
+   "concept": "Con trỏ tới int",
+   "description": "Viết hàm hoán đổi giá trị của hai biến int của nơi gọi, thông qua con trỏ.",
+   "rules": [
+    "Hàm nhận địa chỉ của hai biến và không trả về giá trị.",
+    "Dùng *a và *b để đọc và ghi giá trị."
+   ],
+   "examples": [
+    {
+     "input": "x = 3, y = 7",
+     "output": "x = 7, y = 3"
+    },
+    {
+     "input": "x = 0, y = 5",
+     "output": "x = 5, y = 0"
+    }
+   ],
+   "function": {
+    "name": "hoan_doi",
+    "signature": "void hoan_doi(int *a, int *b)"
+   },
+   "starter": "void hoan_doi(int *a, int *b) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Cần một biến tạm để giữ một giá trị.",
+    "int t = *a; lưu giá trị mà a trỏ tới.",
+    "Gán *a = *b; rồi *b = t;."
+   ],
+   "takeaway": "Sửa *a và *b thay đổi biến ở nơi gọi; sửa a và b chỉ đổi bản sao con trỏ.",
+   "tests": [
+    {
+     "setup": "int x = 3, y = 7;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = 3, y = 7",
+     "expected": "7 3"
+    },
+    {
+     "setup": "int x = 0, y = 5;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = 0, y = 5",
+     "expected": "5 0"
+    },
+    {
+     "setup": "int x = -1, y = 1;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = -1, y = 1",
+     "expected": "1 -1"
+    },
+    {
+     "setup": "int x = 4, y = 4;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = 4, y = 4",
+     "expected": "4 4"
+    },
+    {
+     "setup": "int x = 100, y = -100;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = 100, y = -100",
+     "expected": "-100 100"
+    },
+    {
+     "setup": "int x = 0, y = 0;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = 0, y = 0",
+     "expected": "0 0"
+    },
+    {
+     "setup": "int x = 12, y = 34;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = 12, y = 34",
+     "expected": "34 12"
+    },
+    {
+     "setup": "int x = -8, y = -9;",
+     "call": "hoan_doi(&x, &y)",
+     "ret": null,
+     "show": {
+      "kind": "vars",
+      "vars": [
+       "x",
+       "y"
+      ]
+     },
+     "input": "x = -8, y = -9",
+     "expected": "-9 -8"
+    }
+   ]
+  },
+  {
+   "id": "c-bits",
+   "title": "Đếm bit 1",
+   "skill": 6,
+   "difficulty": 2,
+   "concept": "Toán tử & và >>",
+   "description": "Cho số nguyên n không âm. Đếm số bit 1 trong biểu diễn nhị phân của n.",
+   "rules": [
+    "n >= 0; số bit 1 của 0 là 0.",
+    "Dùng phép & và dịch bit >>."
+   ],
+   "examples": [
+    {
+     "input": "dem_bit_1(7)",
+     "output": "3"
+    },
+    {
+     "input": "dem_bit_1(8)",
+     "output": "1"
+    }
+   ],
+   "function": {
+    "name": "dem_bit_1",
+    "signature": "int dem_bit_1(int n)"
+   },
+   "starter": "int dem_bit_1(int n) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "n & 1 cho bit thấp nhất của n.",
+    "n >> 1 bỏ bit thấp nhất.",
+    "Lặp đến khi n bằng 0 và cộng các bit thấp nhất."
+   ],
+   "takeaway": "Bit thấp nhất là n & 1; dịch phải một bit để xét bit kế tiếp.",
+   "tests": [
+    {
+     "setup": "",
+     "call": "dem_bit_1(0)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(0)",
+     "expected": "0"
+    },
+    {
+     "setup": "",
+     "call": "dem_bit_1(1)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(1)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "dem_bit_1(2)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(2)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "dem_bit_1(7)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(7)",
+     "expected": "3"
+    },
+    {
+     "setup": "",
+     "call": "dem_bit_1(8)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(8)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "dem_bit_1(255)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(255)",
+     "expected": "8"
+    },
+    {
+     "setup": "",
+     "call": "dem_bit_1(1023)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(1023)",
+     "expected": "10"
+    },
+    {
+     "setup": "",
+     "call": "dem_bit_1(2147483647)",
+     "ret": "int",
+     "show": null,
+     "input": "dem_bit_1(2147483647)",
+     "expected": "31"
+    }
+   ]
+  },
+  {
+   "id": "c-gcd",
+   "title": "Ước chung lớn nhất",
+   "skill": 7,
+   "difficulty": 2,
+   "concept": "Thuật toán Euclid",
+   "description": "Tính ước chung lớn nhất của hai số nguyên không âm a và b (không đồng thời bằng 0).",
+   "rules": [
+    "a >= 0, b >= 0, a và b không cùng bằng 0.",
+    "ucln(a, 0) = a và ucln(0, b) = b."
+   ],
+   "examples": [
+    {
+     "input": "ucln(12, 18)",
+     "output": "6"
+    },
+    {
+     "input": "ucln(5, 0)",
+     "output": "5"
+    }
+   ],
+   "function": {
+    "name": "ucln",
+    "signature": "int ucln(int a, int b)"
+   },
+   "starter": "int ucln(int a, int b) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "ucln(a, b) bằng ucln(b, a % b).",
+    "Dừng khi b bằng 0; khi đó kết quả là a.",
+    "Dùng while (b != 0) và một biến tạm cho a % b."
+   ],
+   "takeaway": "Thay cặp (a, b) bằng (b, a % b) cho đến khi phần dư bằng 0.",
+   "tests": [
+    {
+     "setup": "",
+     "call": "ucln(12, 18)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(12, 18)",
+     "expected": "6"
+    },
+    {
+     "setup": "",
+     "call": "ucln(7, 13)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(7, 13)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "ucln(0, 5)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(0, 5)",
+     "expected": "5"
+    },
+    {
+     "setup": "",
+     "call": "ucln(5, 0)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(5, 0)",
+     "expected": "5"
+    },
+    {
+     "setup": "",
+     "call": "ucln(100, 75)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(100, 75)",
+     "expected": "25"
+    },
+    {
+     "setup": "",
+     "call": "ucln(17, 17)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(17, 17)",
+     "expected": "17"
+    },
+    {
+     "setup": "",
+     "call": "ucln(48, 18)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(48, 18)",
+     "expected": "6"
+    },
+    {
+     "setup": "",
+     "call": "ucln(1, 1)",
+     "ret": "int",
+     "show": null,
+     "input": "ucln(1, 1)",
+     "expected": "1"
+    }
+   ]
+  },
+  {
+   "id": "c-power",
+   "title": "Lũy thừa đệ quy",
+   "skill": 8,
+   "difficulty": 2,
+   "concept": "Đệ quy",
+   "description": "Tính a mũ n bằng đệ quy. Hàm phải tự gọi lại chính nó.",
+   "rules": [
+    "n >= 0; a mũ 0 bằng 1.",
+    "Kết quả đủ nhỏ để nằm trong int."
+   ],
+   "examples": [
+    {
+     "input": "luy_thua(2, 10)",
+     "output": "1024"
+    },
+    {
+     "input": "luy_thua(5, 0)",
+     "output": "1"
+    }
+   ],
+   "function": {
+    "name": "luy_thua",
+    "signature": "long long luy_thua(int a, int n)"
+   },
+   "starter": "long long luy_thua(int a, int n) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Trường hợp cơ sở: n == 0 thì trả về 1.",
+    "Trường hợp còn lại: a * luy_thua(a, n - 1).",
+    "Mỗi lần gọi phải làm n nhỏ đi."
+   ],
+   "takeaway": "Đệ quy cần một trường hợp dừng và một bước làm bài toán nhỏ hơn.",
+   "tests": [
+    {
+     "setup": "",
+     "call": "luy_thua(2, 10)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(2, 10)",
+     "expected": "1024"
+    },
+    {
+     "setup": "",
+     "call": "luy_thua(5, 0)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(5, 0)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "luy_thua(0, 5)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(0, 5)",
+     "expected": "0"
+    },
+    {
+     "setup": "",
+     "call": "luy_thua(1, 30)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(1, 30)",
+     "expected": "1"
+    },
+    {
+     "setup": "",
+     "call": "luy_thua(3, 4)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(3, 4)",
+     "expected": "81"
+    },
+    {
+     "setup": "",
+     "call": "luy_thua(7, 1)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(7, 1)",
+     "expected": "7"
+    },
+    {
+     "setup": "",
+     "call": "luy_thua(2, 20)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(2, 20)",
+     "expected": "1048576"
+    },
+    {
+     "setup": "",
+     "call": "luy_thua(-2, 3)",
+     "ret": "long long",
+     "show": null,
+     "input": "luy_thua(-2, 3)",
+     "expected": "-8"
+    }
+   ]
+  },
+  {
+   "id": "c-sort",
+   "title": "Sắp xếp tăng dần",
+   "skill": 9,
+   "difficulty": 3,
+   "concept": "Sắp xếp mảng",
+   "description": "Sắp xếp mảng a gồm n số nguyên theo thứ tự tăng dần, ngay trong mảng. Hàm không trả về giá trị.",
+   "rules": [
+    "n có thể bằng 0 hoặc 1.",
+    "Có thể dùng sắp xếp nổi bọt hoặc chèn; không dùng qsort."
+   ],
+   "examples": [
+    {
+     "input": "a = {3, 1, 2}, n = 3",
+     "output": "a = {1, 2, 3}"
+    },
+    {
+     "input": "a = {2, 1}, n = 2",
+     "output": "a = {1, 2}"
+    }
+   ],
+   "function": {
+    "name": "sap_xep",
+    "signature": "void sap_xep(int a[], int n)"
+   },
+   "starter": "void sap_xep(int a[], int n) {\n    // viết code ở đây\n}\n",
+   "hints": [
+    "Nổi bọt: so sánh từng cặp a[j] và a[j + 1] rồi hoán đổi nếu sai thứ tự.",
+    "Vòng ngoài lặp n - 1 lượt; vòng trong đi đến n - 2 - i.",
+    "Hoán đổi bằng một biến tạm."
+   ],
+   "takeaway": "Mỗi lượt của nổi bọt đưa phần tử lớn nhất còn lại về cuối.",
+   "tests": [
+    {
+     "setup": "int a[3] = {3, 1, 2};",
+     "call": "sap_xep(a, 3)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 3
+     },
+     "input": "a = {3, 1, 2}, n = 3",
+     "expected": "1 2 3"
+    },
+    {
+     "setup": "int a[1] = {0};",
+     "call": "sap_xep(a, 0)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 0
+     },
+     "input": "a = {}, n = 0",
+     "expected": ""
+    },
+    {
+     "setup": "int a[1]; a[0] = 5;",
+     "call": "sap_xep(a, 1)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 1
+     },
+     "input": "a = {5}, n = 1",
+     "expected": "5"
+    },
+    {
+     "setup": "int a[2] = {2, 1};",
+     "call": "sap_xep(a, 2)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 2
+     },
+     "input": "a = {2, 1}, n = 2",
+     "expected": "1 2"
+    },
+    {
+     "setup": "int a[4] = {1, 2, 3, 4};",
+     "call": "sap_xep(a, 4)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 4
+     },
+     "input": "a = {1, 2, 3, 4}, n = 4",
+     "expected": "1 2 3 4"
+    },
+    {
+     "setup": "int a[4] = {4, 3, 2, 1};",
+     "call": "sap_xep(a, 4)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 4
+     },
+     "input": "a = {4, 3, 2, 1}, n = 4",
+     "expected": "1 2 3 4"
+    },
+    {
+     "setup": "int a[7] = {5, -2, 9, 0, 3, 3, -7};",
+     "call": "sap_xep(a, 7)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 7
+     },
+     "input": "a = {5, -2, 9, 0, 3, 3, -7}, n = 7",
+     "expected": "-7 -2 0 3 3 5 9"
+    },
+    {
+     "setup": "int a[3] = {2, 2, 2};",
+     "call": "sap_xep(a, 3)",
+     "ret": null,
+     "show": {
+      "kind": "ints",
+      "var": "a",
+      "n": 3
+     },
+     "input": "a = {2, 2, 2}, n = 3",
+     "expected": "2 2 2"
+    }
+   ]
+  }
+ ]
+}

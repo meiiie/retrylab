@@ -1,0 +1,488 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          7
+        ]
+      ],
+      "date-time": "2026-09-07T15:17:33Z",
+      "timestamp": 1788794253099,
+      "version": "build-2803163510"
+    },
+    "reference-count": 23,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              7
+            ]
+          ],
+          "date-time": "2022-03-07T00:00:00Z",
+          "timestamp": 1646611200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              7
+            ]
+          ],
+          "date-time": "2022-03-07T00:00:00Z",
+          "timestamp": 1646611200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100012166",
+        "name": "National Key Research and Development Program of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2018YFB1004502"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2018YFB1004502"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100012166",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100011347",
+        "name": "State Key Laboratory of Software Development Environment",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "SKLSDE-2020ZX-01"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "SKLSDE-2020ZX-01"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100011347",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Sci Rep"
+    ],
+    "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Student cognitive models are playing an essential role in intelligent online tutoring for programming courses. These models capture students’ learning interactions and store them in the form of a set of binary responses, thereby failing to utilize rich educational information in the learning process. Moreover, the recent development of these models has been focused on improving the prediction performance and tended to adopt deep neural networks in building the end-to-end prediction frameworks. Although this approach can provide an improved prediction performance, it may also cause difficulties in interpreting the student’s learning status, which is crucial for providing personalized educational feedback. To address this problem, this paper provides an interpretable cognitive model named HELP-DKT, which can infer how students learn programming based on deep knowledge tracing. HELP-DKT has two major advantages. First, it implements a feature-rich input layer, where the raw codes of students are encoded to vector representations, and the error classifications as concept indicators are incorporated. Second, it can infer meaningful estimation of student abilities while reliably predicting future performance. The experiments confirm that HELP-DKT can achieve good prediction performance and present reasonable interpretability of student skills improvement. In practice, HELP-DKT can personalize the learning experience of novice learners.</jats:p>",
+    "DOI": "10.1038/s41598-022-07956-0",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          3,
+          7
+        ]
+      ],
+      "date-time": "2022-03-07T10:03:28Z",
+      "timestamp": 1646647408000
+    },
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 22,
+    "title": [
+      "HELP-DKT: an interpretable cognitive model of how students learn programming based on deep knowledge tracing"
+    ],
+    "prefix": "10.1038",
+    "volume": "12",
+    "author": [
+      {
+        "given": "Yu",
+        "family": "Liang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tianhao",
+        "family": "Peng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yanjun",
+        "family": "Pu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wenjun",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          3,
+          7
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "7956_CR1",
+        "doi-asserted-by": "publisher",
+        "first-page": "345",
+        "DOI": "10.1111/j.1745-3984.1983.tb00212.x",
+        "volume": "20",
+        "author": "KK Tatsuoka",
+        "year": "1983",
+        "unstructured": "Tatsuoka, K. K. Rule space: An approach for dealing with misconceptions based on item response theory. J. Educ. Meas. 20, 345–354 (1983).",
+        "journal-title": "J. Educ. Meas."
+      },
+      {
+        "key": "7956_CR2",
+        "doi-asserted-by": "publisher",
+        "first-page": "253",
+        "DOI": "10.1007/BF01099821",
+        "volume": "4",
+        "author": "AT Corbett",
+        "year": "1994",
+        "unstructured": "Corbett, A. T. & Anderson, J. R. Knowledge tracing: Modeling the acquisition of procedural knowledge. User Model. User Adapt. Interact. 4, 253–278 (1994).",
+        "journal-title": "User Model. User Adapt. Interact."
+      },
+      {
+        "key": "7956_CR3",
+        "unstructured": "Piech, C. et al. Deep knowledge tracing. In Advances in Neural Information Processing Systems (eds Cortes, C. et al.) 505–513 (Montréal, 2015)."
+      },
+      {
+        "key": "7956_CR4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang, L., Sy, A., Liu, L. & Piech, C. Deep knowledge tracing on programming exercises. In Proceedings of the 4th ACM Conference on Learning @ Scale, 201–204 (ACM Press, 2017).",
+        "DOI": "10.1145/3051457.3053985"
+      },
+      {
+        "key": "7956_CR5",
+        "unstructured": "Huang, E. H., Socher, R., Manning, C. D. & Ng, A. Y. Improving word representations via global context and multiple word prototypes. In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 873–882 (The Association for Computer Linguistics, 2012)."
+      },
+      {
+        "key": "7956_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Berges, M., Mühling, A. & Hubwieser, P. The gap between knowledge and ability. In Proceedings of the 12th Koli Calling International Conference on Computing Education Research, 126–134 (ACM, 2012).",
+        "DOI": "10.1145/2401796.2401812"
+      },
+      {
+        "key": "7956_CR7",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1186/s13638-019-1561-7",
+        "volume": "2019",
+        "author": "H Liu",
+        "year": "2019",
+        "unstructured": "Liu, H., Kou, H., Yan, C. & Qi, L. Link prediction in paper citation network to construct paper correlation graph. EURASIP J. Wirel. Commun. Netw. 2019, 1–12 (2019).",
+        "journal-title": "EURASIP J. Wirel. Commun. Netw."
+      },
+      {
+        "key": "7956_CR8",
+        "doi-asserted-by": "publisher",
+        "first-page": "106942",
+        "DOI": "10.1016/j.asoc.2020.106942",
+        "volume": "100",
+        "author": "H Kou",
+        "year": "2021",
+        "unstructured": "Kou, H. et al. Building trust/distrust relationships on signed social service network through privacy-aware link prediction process. Appl. Soft Comput. 100, 106942 (2021).",
+        "journal-title": "Appl. Soft Comput."
+      },
+      {
+        "key": "7956_CR9",
+        "doi-asserted-by": "publisher",
+        "first-page": "3174",
+        "DOI": "10.1002/int.22412",
+        "volume": "36",
+        "author": "Y Liu",
+        "year": "2021",
+        "unstructured": "Liu, Y. et al. An attention-based category-aware GRU model for the next POI recommendation. Int. J. Intell. Syst. 36, 3174–3189 (2021).",
+        "journal-title": "Int. J. Intell. Syst."
+      },
+      {
+        "key": "7956_CR10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/int.22710",
+        "author": "Y Liu",
+        "year": "2021",
+        "unstructured": "Liu, Y. et al. Bidirectional GRU networks-based next POI category prediction for healthcare. Int. J. Intell. Syst. (2021). https://doi.org/10.1002/int.22710",
+        "journal-title": "Int. J. Intell. Syst."
+      },
+      {
+        "key": "7956_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kasurinen, J. & Nikula, U. Estimating programming knowledge with bayesian knowledge tracing. In Proceedings of the 14th Annual SIGCSE Conference on Innovation and Technology in Computer Science Education, 313–317 (ACM Press, 2009).",
+        "DOI": "10.1145/1595496.1562972"
+      },
+      {
+        "key": "7956_CR12",
+        "unstructured": "Yudelson, M., Hosseini, R., Vihavainen, A. & Brusilovsky, P. Investigating automated student modeling in a java MOOC. In Proceedings of the 7th International Conference on Educational Data Mining, 261–264 (IEDMS, 2014)."
+      },
+      {
+        "key": "7956_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rivers, K., Harpstead, E. & Koedinger, K. R. Learning curve analysis for programming: Which concepts do students struggle with? In Proceedings of the 2016 ACM Conference on International Computing Education Research, 143–151 (ACM Press, 2016).",
+        "DOI": "10.1145/2960310.2960333"
+      },
+      {
+        "key": "7956_CR14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liang, Y., Wu, W., Wu, L. & Wang, M. Inferring how novice students learn to code: Integrating automated program repair with cognitive model. In Proceedings of the 7th CCF Conference on Big Data, 46–56 (Springer, 2019).",
+        "DOI": "10.1007/978-981-15-1899-7_4"
+      },
+      {
+        "key": "7956_CR15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cen, H., Koedinger, K. R. & Junker, B. Comparing two IRT models for conjunctive skills. In Proceedings of the 9th International Conference on Intelligent Tutoring Systems, 796–798 (Springer, 2008).",
+        "DOI": "10.1007/978-3-540-69132-7_111"
+      },
+      {
+        "key": "7956_CR16",
+        "unstructured": "Yeung, C. Deep-IRT: Make deep learning based knowledge tracing explainable using item response theory. In Proceedings of the 12th International Conference on Educational Data Mining (IEDMS, 2019)."
+      },
+      {
+        "key": "7956_CR17",
+        "unstructured": "Piech, C. et al. Learning program embeddings to propagate feedback on student code. In Proceedings of the 32nd International Conference on Machine Learning, 1093–1102 (JMLR.org, 2015)."
+      },
+      {
+        "key": "7956_CR18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Peng, H. et al. Building program vector representations for deep learning. In Proceedings of the 8th International Conference on Knowledge Science, Engineering and Management, 547–553 (Springer, 2015).",
+        "DOI": "10.1007/978-3-319-25159-2_49"
+      },
+      {
+        "key": "7956_CR19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pérez, D. & Chiba, S. Cross-language clone detection by learning over abstract syntax trees. In Proceedings of the 16th International Conference on Mining Software Repositories, 518–528 (IEEE Press, 2019).",
+        "DOI": "10.1109/MSR.2019.00078"
+      },
+      {
+        "key": "7956_CR20",
+        "unstructured": "Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S. & Dean, J. Distributed representations of words and phrases and their compositionality. In Proceedings of the 26th International Conference on Neural Information Processing Systems—Volume 2, 3111–3119 (Curran Associates Inc., 2013)."
+      },
+      {
+        "key": "7956_CR21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "D’Antoni, L., Samanta, R. & Singh, R. Qlose: Program repair with quantitative objectives. In Proceedings of the 28th International Conference on Computer Aided Verification, Part II, 383–401 (Springer, 2016).",
+        "DOI": "10.1007/978-3-319-41540-6_21"
+      },
+      {
+        "key": "7956_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Singh, R., Gulwani, S. & Solar-Lezama, A. Automated feedback generation for introductory programming assignments. In Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation, 15–26 (ACM Press, 2013).",
+        "DOI": "10.1145/2499370.2462195"
+      },
+      {
+        "key": "7956_CR23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gulwani, S., Radicek, I. & Zuleger, F. Automated clustering and program repair for introductory programming assignments. In Proceedings of the 39th ACM SIGPLAN Conference on Programming Language Design and Implementation, 465–480 (ACM Press, 2018).",
+        "DOI": "10.1145/3192366.3192387"
+      }
+    ],
+    "container-title": [
+      "Scientific Reports"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.nature.com/articles/s41598-022-07956-0.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41598-022-07956-0",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41598-022-07956-0.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          11,
+          24
+        ]
+      ],
+      "date-time": "2022-11-24T19:20:27Z",
+      "timestamp": 1669317627000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.nature.com/articles/s41598-022-07956-0"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          3,
+          7
+        ]
+      ]
+    },
+    "references-count": 23,
+    "journal-issue": {
+      "issue": "1",
+      "published-online": {
+        "date-parts": [
+          [
+            2022,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "7956"
+    ],
+    "URL": "https://doi.org/10.1038/s41598-022-07956-0",
+    "relation": {
+      "has-preprint": [
+        {
+          "id-type": "doi",
+          "id": "10.21203/rs.3.rs-1015677/v1",
+          "asserted-by": "object"
+        }
+      ]
+    },
+    "ISSN": [
+      "2045-2322"
+    ],
+    "issn-type": [
+      {
+        "value": "2045-2322",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          3,
+          7
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "25 October 2021",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "28 February 2022",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "7 March 2022",
+        "order": 3,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "The authors declare no competing interests.",
+        "order": 1,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Competing interests"
+        }
+      }
+    ],
+    "article-number": "4012"
+  }
+}

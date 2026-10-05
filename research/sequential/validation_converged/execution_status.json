@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-09-26T02:53:36.6216686Z",
+  "status": "complete",
+  "final_fits": 6,
+  "confirmation_completed": true,
+  "confirmation_pairs": 69825,
+  "confirmation_students": 1500,
+  "final_validation_preserved_exactly": true,
+  "active_owned_training_or_evaluation_processes": 0,
+  "note": "Completed convergence-selected fits and one guarded confirmation evaluation; initial exploratory run was deliberately interrupted after five completed fits"
+}

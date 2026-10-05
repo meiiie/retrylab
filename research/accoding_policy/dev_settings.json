@@ -1,0 +1,27 @@
+{
+  "note": "Development settings used only with --dev on the previously inspected pilot cohort. The locked protocol copies the final values.",
+  "split": "sha256(salt:creator_id) rank: first 40% A, next 40% B, last 20% T; 10% of A and of B by sha256(salt-valid:creator_id) are inner validation",
+  "settings": {
+    "threads": 4,
+    "dev_data_dir": "data/processed/accoding_policy",
+    "min_distinct_problems": 20,
+    "split_salt": "accoding-policy-v3",
+    "min_support": 10,
+    "sigma_theta_grid": [0.4, 0.5, 0.6, 0.75],
+    "sigma_item": 1.0,
+    "sigma_learn": 1.0,
+    "dkt": {"dim": 32, "hidden": 64, "dropout": 0.3, "input_dropout": 0.1},
+    "dkt_weight_decay": 0.0001,
+    "sakt": {"dim": 64, "heads": 4, "window": 200, "dropout": 0.1},
+    "sakt_weight_decay": 0.0,
+    "neural_seed": 17,
+    "dkt_twin_seed": 1017,
+    "max_epochs": 30,
+    "patience": 3,
+    "lr": 0.001,
+    "batch_size": 32,
+    "tree": {"min_leaf": 200, "min_gain": 0.001, "max_depth": 6},
+    "bootstrap_reps": 1000,
+    "bootstrap_seed": 20260928
+  }
+}

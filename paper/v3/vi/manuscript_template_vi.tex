@@ -1,0 +1,126 @@
+% Bản thảo v3 tiếng Việt — bản dịch làm việc của paper/v3/manuscript_template.tex (bản tiếng Anh mới là bản nộp).
+% Sinh bởi paper/v3/build.py từ các run đã xác minh accoding-learner-v3 và accoding-policy-v3;
+% chỉ sửa tệp mẫu này hoặc các tệp trong sections/, không sửa manuscript_vi.tex.
+\documentclass[a4paper,preprint,12pt,authoryear]{elsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\usepackage{microtype}
+\usepackage{float}
+\setlength{\emergencystretch}{3em}
+\pdfpagewidth=\paperwidth \pdfpageheight=\paperheight % khổ A4
+\newtheorem{proposition}{Mệnh đề}
+\crefname{proposition}{Mệnh đề}{Mệnh đề}\Crefname{proposition}{Mệnh đề}{Mệnh đề}
+\crefname{section}{Mục}{Mục}\Crefname{section}{Mục}{Mục}
+\crefname{subsection}{Mục}{Mục}\Crefname{subsection}{Mục}{Mục}
+\crefname{figure}{Hình}{Hình}\Crefname{figure}{Hình}{Hình}
+\crefname{table}{Bảng}{Bảng}\Crefname{table}{Bảng}{Bảng}
+\crefname{equation}{phương trình}{phương trình}\Crefname{equation}{Phương trình}{Phương trình}
+\renewcommand{\appendixname}{Phụ lục}
+\abstracttitle{Tóm tắt}
+\keywordtitle{Từ khóa}
+\AtBeginDocument{\renewcommand{\figurename}{Hình}\renewcommand{\tablename}{Bảng}\renewcommand{\refname}{Tài liệu tham khảo}}
+\makeatletter
+\g@addto@macro\appendix{\@addtoreset{table}{section}\@addtoreset{figure}{section}}
+\makeatother
+\myfooter[L]{Bản dịch tiếng Việt — không dùng để nộp tạp chí\hfill {{build_date_vi}}}
+
+\begin{document}
+\begin{frontmatter}
+
+\title{Bộ mô phỏng truy vết tri thức có thưởng cho việc học? Kiểm định bằng đối chứng âm cho gợi ý bài tập lập trình bằng học tăng cường}
+
+\begin{abstract}
+Các tác tử học tăng cường (RL) chọn bài tập lập trình thường được huấn luyện và đánh giá bên trong một mô hình truy vết tri thức (knowledge tracing, KT) fit từ log người học, và chính mô hình đó cũng đo lợi ích của tác tử. Chúng tôi kiểm định cách làm này trên {{n_interactions}} lần nộp đầu của {{n_learners}} người học trên một hệ thống chấm bài lập trình C trực tuyến; không người học nào trong số đó được dùng trước khi các protocol nghiên cứu được khóa. Sáu mô hình người học, gồm truy vết tri thức sâu (DKT), dự báo người học chưa thấy tốt ngang nhau (AUC {{auc_dkt2}}--{{auc_pfa}}), và một cây định danh dựa trên entropy cho chẩn đoán đọc được. Các tác tử DQN và PPO huấn luyện với phần thưởng DKT vượt chọn ngẫu nhiên {{abs_dqn_kt_insim}} và {{abs_ppo_kt_insim}} điểm phần trăm xác suất làm đúng bài kiểm tra cuối kỳ vọng trong chính bộ mô phỏng huấn luyện, nhưng chỉ tối đa {{abs_max_latent_adv}} điểm trong các thế giới fit độc lập có quá trình học ẩn tường minh. Trong một thế giới đối chứng âm, nơi việc học là không thể, tracker DKT vẫn báo tiến bộ {{abs_phantom_dqn_kt}} và {{abs_phantom_ppo_kt}} điểm cho các tác tử này, và trên {{h3_n}} chính sách, tiến bộ trong mô phỏng tương quan thứ hạng gần như hoàn hảo với tiến bộ ảo đó (Spearman {{h3_rho}}). Chúng tôi chứng minh rằng tiến bộ kỳ vọng của một chính sách bên trong bộ mô phỏng KT bằng tổng thay đổi mà mô hình tự dự đoán cho chính nó (độ trôi), và độ trôi bằng 0 với mô hình Bayes nhất quán không có học; độ trôi của DKT phân tán theo bài gấp {{ratio_sd}} lần so với mô hình nhân tố cộng và ít được tái lập bởi một DKT huấn luyện lại với seed khác. Tác tử huấn luyện trong thế giới có cơ chế học tường minh theo số lần luyện chuyển giao tốt nhất giữa các thế giới ẩn cùng họ, nhưng không sang các thế giới nơ-ron. Chúng tôi khuyến nghị thế giới đối chứng âm, báo cáo độ trôi và các thế giới fit độc lập như những kiểm tra chuẩn cho đánh giá dựa trên mô phỏng của hệ gợi ý thích ứng.
+\end{abstract}
+
+\begin{keyword}
+truy vết tri thức \sep học tăng cường \sep gợi ý bài tập \sep giáo dục lập trình \sep đánh giá dựa trên mô phỏng \sep đối chứng âm
+\end{keyword}
+
+\end{frontmatter}
+
+%%INCLUDE sections/intro.tex
+%%INCLUDE sections/related.tex
+%%INCLUDE sections/methods.tex
+%%INCLUDE sections/results.tex
+%%INCLUDE sections/discussion.tex
+%%INCLUDE sections/conclusion.tex
+
+\appendix
+\section{Chứng minh}\label{app:proofs}
+
+\paragraph{Chứng minh \cref{prop:nodrift}} Đặt $\bar p(\theta)=|\mathcal W|^{-1}\sum_{k\in\mathcal W}p(y=1\mid k,\theta)$ và gọi $\pi_H$ là phân phối hậu nghiệm của $\theta$ sau lịch sử $H$. Dự báo của mô hình là dự báo hậu nghiệm, $\bar P_M(H)=\int\bar p(\theta)\,\pi_H(\mathrm d\theta)$ và $P_M(y\mid j,H)=\int p(y\mid j,\theta)\,\pi_H(\mathrm d\theta)$. Vì $\theta$ không đổi theo luyện tập và các kết quả độc lập có điều kiện khi biết $\theta$, quy tắc Bayes cho $\pi_{H\oplus(j,y)}(\mathrm d\theta)=p(y\mid j,\theta)\,\pi_H(\mathrm d\theta)/P_M(y\mid j,H)$. Do đó
+\begin{align}
+\sum_{y\in\{0,1\}}P_M(y\mid j,H)\,\bar P_M\bigl(H\oplus(j,y)\bigr)
+&=\sum_{y\in\{0,1\}}\int\bar p(\theta)\,p(y\mid j,\theta)\,\pi_H(\mathrm d\theta)\notag\\
+&=\int\bar p(\theta)\,\pi_H(\mathrm d\theta)=\bar P_M(H),
+\end{align}
+tức là $D_M(j,H)=0$. Lập luận đúng với mọi phân phối tiên nghiệm, kể cả lưới hữu hạn dùng cho IRT trong nghiên cứu này; độ trôi theo từng bài của IRT đúng bằng 0 (\cref{sec:res-h4}). $\square$
+
+\paragraph{Chứng minh \cref{prop:insim}} Gọi $S_t=\bar P_M(H_{t+1})-\bar P_M(H_t)-D_M(j_t,H_t)$ là phần bất ngờ ở bước $t$. Nếu $y_t$ được rút từ $P_M(\cdot\mid j_t,H_t)$ thì theo \eqref{eq:drift}
+\begin{align}
+\mathbb E\bigl[S_t\mid H_t,j_t\bigr]
+&=\sum_{y\in\{0,1\}}P_M(y\mid j_t,H_t)\,\bar P_M\bigl(H_t\oplus(j_t,y)\bigr)\notag\\
+&\quad-\bar P_M(H_t)-D_M(j_t,H_t)=0.
+\end{align}
+Lựa chọn $j_t$ chỉ phụ thuộc $H_t$ và vào yếu tố ngẫu nhiên độc lập với các kết quả tương lai, nên theo tính chất kỳ vọng lặp $\mathbb E[S_t]=0$ với mọi $t$. Lấy kỳ vọng hai vế của \eqref{eq:decomposition} ta được kết quả. Kết hợp hai mệnh đề: một bộ mô phỏng nhất quán không có học gán tiến bộ kỳ vọng bằng 0 cho mọi chính sách, còn một bộ mô phỏng có học xếp hạng chính sách theo độ trôi mà chúng tích lũy. $\square$
+
+\section{Chi tiết cài đặt}\label{app:impl}
+
+\paragraph{Mô hình người học} Mô hình logistic: tiên nghiệm $\theta\sim\mathcal N(0,\sigma_\theta^2)$ với $\sigma_\theta\in\{0{,}4;\,0{,}5;\,0{,}6;\,0{,}75\}$ chọn theo NLL trên tập kiểm định trong, tham số riêng của bài $\mathcal N(0,1)$, hệ số học $\mathcal N(0,1)$; tối ưu L-BFGS toàn batch. DKT: embedding 32, LSTM 64, dropout 0,3 (0,1 ở đầu vào), AdamW với weight decay $10^{-4}$, tốc độ học $10^{-3}$, batch 32, dừng sớm với độ kiên nhẫn 3 (tối đa 30 epoch). SAKT: chiều 64, 4 đầu chú ý, cửa sổ 200, dropout 0,1. Bài có ít nhất 10 người học trong tập fit có tham số riêng. ID3: lá tối thiểu 200 mẫu, lợi ích thông tin tối thiểu $10^{-3}$, độ sâu tối đa 6.
+
+\paragraph{Tác tử} Trạng thái: {{pool}} xác suất đúng dự báo, {{pool}} cờ hợp lệ, 10 trung bình theo kỹ năng, dự báo post-test và số bước còn lại. Double DQN: hai lớp ẩn 256, bộ nhớ replay 50.000, batch 256, tốc độ học $5\times10^{-4}$, cập nhật mạng đích mềm $\tau=0{,}01$, $\varepsilon$ giảm từ 1 xuống 0,05 trong nửa đầu huấn luyện, $\gamma=0{,}99$. PPO: hai lớp ẩn 256 (tanh), tốc độ học $3\times10^{-4}$, 4 epoch, minibatch 128, clip 0,2, hệ số entropy 0,01, GAE $\lambda=0{,}95$. Mỗi tác tử: 300 vòng lặp, mỗi vòng 64 lượt song song dài mười bước; dùng checkpoint cuối; seed 11, 23 và 37. Công sức: sau một lần nộp đầu thất bại, số lần nộp thêm theo phân phối hình học với trung bình của bài lấy từ phân vùng của thế giới (co về trung bình chung, chặn trên ở 10).
+
+\section{Dự báo theo kỹ năng}\label{app:skills}
+
+\begin{table}[H]
+\centering
+\caption{AUC theo kỹ năng chính của bài cần dự báo (người học kiểm tra T, mô hình fit trên A).}
+\label{tab:skills}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Kỹ năng & $n$ & Tỉ lệ nền & IRT & PFA & DKT & SAKT & ID3 \\
+\midrule
+{{table_skills}}
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{Tiến bộ mà các mô hình khác tuyên bố trong đối chứng âm}\label{app:observers}
+
+\begin{table}[H]
+\centering
+\caption{Tiến bộ post-test (điểm \%) mà mỗi mô hình fit trên A sẽ báo cáo sau cùng các lượt trong thế giới không học IRT-B (thăm dò). Tiến bộ thật bằng 0.}
+\label{tab:observers}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Chính sách & DKT & SAKT & AFM & PFA & IRT \\
+\midrule
+{{table_observers}}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Khả năng tái lập}\label{app:repro}
+
+Cả hai protocol đã được khóa trước khi nạp quần thể đánh giá; bản ghi khóa liệt kê mã băm SHA-256 của protocol và mã nguồn. Các thí nghiệm chạy qua một harness chỉ-ghi-thêm, chụp lại protocol và mã nguồn, ghi mã băm đầu vào và đầu ra, và từ chối ghi đè một run. Bản ghi run: giai đoạn mô hình người học \texttt{{{learner_run_sha}}}\ldots, giai đoạn chính sách \texttt{{{policy_run_sha}}}\ldots\ (tiền tố SHA-256). Việc phát triển và chọn siêu tham số dùng một cohort đã xem trước, tách rời khỏi quần thể đánh giá. Mọi con số trong bản thảo được chèn tự động từ đầu ra của run.
+
+\section*{Tính sẵn có của dữ liệu}
+Bộ dữ liệu ACcoding được các tác giả công bố công khai \citep{sun2026accodingdata,chen2024accoding}. Mã nguồn, protocol đã khóa, bản ghi run, kết quả tổng hợp và các bảng số liệu đứng sau mọi hình sẽ được lưu ở kho công khai khi bài được chấp nhận (bản ẩn danh cung cấp cho phản biện khi được yêu cầu); các tệp dẫn xuất ở mức người học không được phân phối lại.
+
+\section*{Tuyên bố đạo đức}
+Đây là phân tích thứ cấp trên một bộ dữ liệu công khai đã ẩn danh. Không thu thập dữ liệu mới và không liên hệ hay phân nhóm bất kỳ người học nào.
+
+\section*{Khai báo sử dụng AI tạo sinh và công nghệ hỗ trợ bởi AI trong quá trình chuẩn bị bản thảo}
+Trong quá trình chuẩn bị công trình này, (các) tác giả đã dùng Claude (Anthropic), một trợ lý AI, để viết và chạy mã phân tích, mã vẽ hình, và để soạn thảo, chỉnh sửa văn bản. Sau khi dùng công cụ này, (các) tác giả đã rà soát, chỉnh sửa nội dung khi cần và chịu hoàn toàn trách nhiệm về nội dung bài báo. \emph{[Tác giả: xác nhận hoặc sửa tuyên bố này cho đúng thực tế sử dụng trước khi nộp.]}
+
+%%BIBLIOGRAPHY
+
+\end{document}

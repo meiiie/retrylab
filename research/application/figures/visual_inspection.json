@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-09-26T02:57:31.516112+00:00",
+  "method": "Viewed final exported PNG with view_image after layout adjustment",
+  "png_sha256": "95ae5beceaee811f04672e53a27d3e0e0ee41e29bc3a497296d51de681d7cc3b",
+  "svg_sha256": "77ff68ff66f41ba156c345fa780544586d9791d49db2cad3a78818631df7d124",
+  "png_dimensions": [
+    3360,
+    2130
+  ],
+  "observations": [
+    "All 20 points and confidence intervals visible",
+    "Model labels and rule labels readable, without overlap",
+    "Zero reference lines visible in every panel",
+    "Shared horizontal scale and percentage-point units clear",
+    "Footer states frozen validation thresholds and oracle-target limitation",
+    "No private or row-level data displayed"
+  ],
+  "manifest_output_hashes_verified": true
+}

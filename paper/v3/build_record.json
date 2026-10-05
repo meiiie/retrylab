@@ -1,0 +1,104 @@
+{
+  "learner_record_sha256": "10bf859c0486395fd1aa3b966bf8685e2d5436a29a44adfa4d221c40044b459a",
+  "policy_record_sha256": "167b9e90f3f3477a31e346e60e697047dfe7e7e258f5fa20695c1828a0575f63",
+  "built": "2026-09-28T23:44:27",
+  "tectonic": "tmp\\tectonic\\tectonic.exe",
+  "en": {
+    "template_sha256": "d5ee6b547afa8b4311a275dcb1ae8bc8cb52bd917accbb29f3534f3acf29321c",
+    "tex_sha256": "54d2a789c4dbb5bf52aee02d03a51c672131e3229ce8805b2f5bea4db97bad2c",
+    "tokens_used": 134,
+    "abstract_words": 245,
+    "keywords": 6,
+    "references": 73,
+    "bib_entries_not_cited": [],
+    "highlights": {
+      "count": 5,
+      "max_chars": 83
+    },
+    "compile": {
+      "exit": 0,
+      "issues": {
+        "undefined_references": [],
+        "undefined_citations": [],
+        "missing_glyphs": [],
+        "multiply_defined": [],
+        "overfull_over_5pt": []
+      },
+      "tail": "note: \"version 2\" Tectonic command-line interface activated\nnote: Running TeX ...\nnote: Rerunning TeX because \"manuscript.out\" changed ...\nnote: Rerunning TeX because \"manuscript.aux\" changed ...\nnote: Running xdvipdfmx ...\nnote: Writing `manuscript.log` (17.3095703125 KiB)\nnote: Writing `manuscript.pdf` (399.2109375 KiB)\nnote: Skipped writing 3 intermediate files (use --keep-intermediates to keep them)\nFontconfig error: Cannot load default config file: No such file: (null)\nwarning: manuscript.tex:42: Overfull \\hbox (2.608pt too wide) has occurred while \\output is active\nwarning: manuscript.tex:82: Underfull \\hbox (badness 1270) in paragraph at lines 81--82\nwarning: manuscript.tex:323: Underfull \\hbox (badness 1769) in paragraph at lines 322--323\nwarning: manuscript.tex:323: Underfull \\hbox (badness 4752) in paragraph at lines 322--323\nwarning: manuscript.tex:510: Underfull \\hbox (badness 1147) in paragraph at lines 509--510\nwarning: manuscript.tex:42: Overfull \\hbox (2.608pt too wide) has occurred while \\output is active\nwarning: manuscript.tex:82: Underfull \\hbox (badness 1270) in paragraph at lines 81--82\nwarning: manuscript.tex:323: Underfull \\hbox (badness 1769) in paragraph at lines 322--323\nwarning: manuscript.tex:323: Underfull \\hbox (badness 4752) in paragraph at lines 322--323\nwarning: manuscript.tex:510: Underfull \\hbox (badness 1147) in paragraph at lines 509--510\nwarning: manuscript.tex:42: Overfull \\hbox (2.608pt too wide) has occurred while \\output is active\nwarning: manuscript.tex:82: Underfull \\hbox (badness 1270) in paragraph at lines 81--82\nwarning: manuscript.tex:323: Underfull \\hbox (badness 1769) in paragraph at lines 322--323\nwarning: manuscript.tex:323: Underfull \\hbox (badness 4752) in paragraph at lines 322--323\nwarning: manuscript.tex:510: Underfull \\hbox (badness 1147) in paragraph at lines 509--510\nwarning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.\n",
+      "pdf_sha256": "4c5960aef373eb261f05608e5e71350c61349f5de629774d6442062103021ff2",
+      "pages": 31,
+      "page_size_mm": [
+        210,
+        297
+      ],
+      "ok": true
+    }
+  },
+  "vi": {
+    "template_sha256": "65a5520ab725b97dddf5bf3f318adabfe0b5b22a2a6c328910ade0377352b0f9",
+    "tex_sha256": "3904b6f0e9224eb33c3df9b4838b15682feded079d8d487ee9df4a68b22c8462",
+    "tokens_used": 135,
+    "abstract_words": 393,
+    "keywords": 6,
+    "references": 73,
+    "bib_entries_not_cited": [],
+    "highlights": {
+      "count": 5,
+      "max_chars": 91
+    },
+    "compile": {
+      "exit": 0,
+      "issues": {
+        "undefined_references": [],
+        "undefined_citations": [],
+        "missing_glyphs": [],
+        "multiply_defined": [],
+        "overfull_over_5pt": []
+      },
+      "tail": "note: \"version 2\" Tectonic command-line interface activated\nnote: Running TeX ...\nnote: Rerunning TeX because \"manuscript_vi.aux\" changed ...\nnote: Rerunning TeX because \"manuscript_vi.aux\" changed ...\nnote: Running xdvipdfmx ...\nnote: Writing `manuscript_vi.log` (16.5419921875 KiB)\nnote: Writing `manuscript_vi.pdf` (423.5947265625 KiB)\nnote: Skipped writing 3 intermediate files (use --keep-intermediates to keep them)\nFontconfig error: Cannot load default config file: No such file: (null)\nwarning: manuscript_vi.tex:49: Overfull \\hbox (2.608pt too wide) has occurred while \\output is active\nwarning: manuscript_vi.tex:142: Underfull \\hbox (badness 6332) in paragraph at lines 141--142\nwarning: manuscript_vi.tex:517: Underfull \\hbox (badness 1147) in paragraph at lines 516--517\nwarning: manuscript_vi.tex:49: Overfull \\hbox (2.608pt too wide) has occurred while \\output is active\nwarning: manuscript_vi.tex:142: Underfull \\hbox (badness 6332) in paragraph at lines 141--142\nwarning: manuscript_vi.tex:517: Underfull \\hbox (badness 1147) in paragraph at lines 516--517\nwarning: manuscript_vi.tex:49: Overfull \\hbox (2.608pt too wide) has occurred while \\output is active\nwarning: manuscript_vi.tex:142: Underfull \\hbox (badness 6332) in paragraph at lines 141--142\nwarning: manuscript_vi.tex:517: Underfull \\hbox (badness 1147) in paragraph at lines 516--517\nwarning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.\n",
+      "pdf_sha256": "5a642a2d419717bca9ea4001b89645a953fb94f1f0d9b222bdbb0967c8c6af09",
+      "pages": 32,
+      "page_size_mm": [
+        210,
+        297
+      ],
+      "ok": true
+    }
+  },
+  "submission": {
+    "figures": {
+      "Figure_1.pdf": "figures/fig_forecast.pdf",
+      "Figure_2.pdf": "figures/fig_evaluation_matrix.pdf",
+      "Figure_3.pdf": "figures/fig_phantom_gain.pdf",
+      "Figure_4.pdf": "figures/fig_in_sim_vs_phantom.pdf",
+      "Figure_5.pdf": "figures/fig_implied_learning.pdf",
+      "Figure_6.pdf": "figures/fig_gain_effort.pdf"
+    },
+    "checks": {
+      "manuscript": {
+        "exit": 0,
+        "ok": true,
+        "pages": 31,
+        "issues": {
+          "undefined_references": [],
+          "undefined_citations": [],
+          "missing_glyphs": [],
+          "multiply_defined": [],
+          "overfull_over_5pt": []
+        }
+      },
+      "title_page": {
+        "exit": 0,
+        "ok": true,
+        "pages": 1,
+        "issues": {
+          "undefined_references": [],
+          "undefined_citations": [],
+          "missing_glyphs": [],
+          "multiply_defined": [],
+          "overfull_over_5pt": []
+        }
+      }
+    }
+  }
+}

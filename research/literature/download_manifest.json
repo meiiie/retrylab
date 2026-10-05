@@ -1,0 +1,187 @@
+[
+  {
+    "id": "code_dkt_2022",
+    "requested_url": "https://educationaldatamining.org/edm2022/proceedings/2022.EDM-long-papers.5/2022.EDM-long-papers.5.pdf",
+    "resolved_url": "https://educationaldatamining.org/edm2022/proceedings/2022.EDM-long-papers.5/2022.EDM-long-papers.5.pdf",
+    "local_pdf": "papers\\code_dkt_2022.pdf",
+    "sha256": "bb07cabe8559b071614b4bc15107ca614cad177ed81f32ec1ed6128ba3df2e6a",
+    "bytes": 1029084,
+    "pages": 12,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "code_edit_aied_2025",
+    "requested_url": "https://people.umass.edu/~andrewlan/papers/25aied-codeedit.pdf",
+    "resolved_url": "https://people.umass.edu/~andrewlan/papers/25aied-codeedit.pdf",
+    "local_pdf": "papers\\code_edit_aied_2025.pdf",
+    "sha256": "d4bbf1a87ad1a3f7e17b14d7fc567597455013f988444bde231f8604540f183e",
+    "bytes": 321140,
+    "pages": 7,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "code_edit_arxiv_2025",
+    "requested_url": "https://arxiv.org/pdf/2502.19407v2",
+    "resolved_url": "https://arxiv.org/pdf/2502.19407v2",
+    "local_pdf": "papers\\code_edit_arxiv_2025.pdf",
+    "sha256": "c9dd6b2a6450e987d15dc726f6d95e5bf182d55f5ea18fbce99bb4ec5c1c1a05",
+    "bytes": 716914,
+    "pages": 10,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "reliability_pkt_2026",
+    "requested_url": "https://arxiv.org/pdf/2605.04727v1",
+    "resolved_url": "https://arxiv.org/pdf/2605.04727v1",
+    "local_pdf": "papers\\reliability_pkt_2026.pdf",
+    "sha256": "42c17a15846a049d3486517343ed880e574e71e782bf5356b3aa0d4ae7352002",
+    "bytes": 694912,
+    "pages": 15,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "code_insight_2026",
+    "requested_url": "https://arxiv.org/pdf/2609.00940v1",
+    "resolved_url": "https://arxiv.org/pdf/2609.00940v1",
+    "local_pdf": "papers\\code_insight_2026.pdf",
+    "sha256": "d5100b51652dc545f4934f4bf98bab1ed89999b15de12e1674d2e4346246c0a8",
+    "bytes": 8677709,
+    "pages": 31,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "exrec_2025",
+    "requested_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/13707aad517ddd6c09ea02e0f55e1e7a-Paper-Conference.pdf",
+    "resolved_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/13707aad517ddd6c09ea02e0f55e1e7a-Paper-Conference.pdf",
+    "local_pdf": "papers\\exrec_2025.pdf",
+    "sha256": "ca4a529f292feea765d42a3e4e475c61713f80a73f4c0ab951d62501e14e74a7",
+    "bytes": 1553169,
+    "pages": 41,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "rem_2017",
+    "requested_url": "https://www.cs.cmu.edu/~shayand/papers/L@S2017.pdf",
+    "resolved_url": "https://www.cs.cmu.edu/~shayand/papers/L@S2017.pdf",
+    "local_pdf": "papers\\rem_2017.pdf",
+    "sha256": "fbcef90448baf2cd43f68666ca53729f459d78d5b5e8b7715885ff88399aacec",
+    "bytes": 151901,
+    "pages": 10,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "unier_2026",
+    "requested_url": "https://arxiv.org/pdf/2605.16750v1",
+    "resolved_url": "https://arxiv.org/pdf/2605.16750v1",
+    "local_pdf": "papers\\unier_2026.pdf",
+    "sha256": "55e2953e5aade09196499d9a0ce0e909719965b1d9effd5e2e8cdbdab94a5c8c",
+    "bytes": 2236930,
+    "pages": 18,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "leopard_2015",
+    "requested_url": "https://www.educationaldatamining.org/EDM2015/uploads/papers/paper_113.pdf",
+    "resolved_url": "https://www.educationaldatamining.org/EDM2015/uploads/papers/paper_113.pdf",
+    "local_pdf": "papers\\leopard_2015.pdf",
+    "sha256": "516cb9a37392481fd7211c402ff9892a92e15db5bafca9eeb7786ce973ab5972",
+    "bytes": 675222,
+    "pages": 8,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "grate_2021",
+    "requested_url": "https://chunpai.github.io/assets/paper/umap2021.pdf",
+    "resolved_url": "https://chunpai.github.io/assets/paper/umap2021.pdf",
+    "local_pdf": "papers\\grate_2021.pdf",
+    "sha256": "ba69c12b7c4f098f295070666be770fdcee50168b77eb52a2093ed2982e77ee7",
+    "bytes": 1204660,
+    "pages": 16,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "mooc_bkt_2013",
+    "requested_url": "https://www.educationaldatamining.org/EDM2013/papers/rn_paper_21.pdf",
+    "resolved_url": "https://www.educationaldatamining.org/EDM2013/papers/rn_paper_21.pdf",
+    "local_pdf": "papers\\mooc_bkt_2013.pdf",
+    "sha256": "86ae04d19dbd343b381dd8995f822cc445dc63e89d309ca9059dde4997c6ade7",
+    "bytes": 630581,
+    "pages": 8,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "bkt_pomdp_2021",
+    "requested_url": "https://www.ijcai.org/proceedings/2021/0583.pdf",
+    "resolved_url": "https://www.ijcai.org/proceedings/2021/0583.pdf",
+    "local_pdf": "papers\\bkt_pomdp_2021.pdf",
+    "sha256": "93ddf25e8d0d6f797155cc21fd3c924d9aad387f3ec4b54f42675a3bdb62f62f",
+    "bytes": 1219955,
+    "pages": 7,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "okt_workshop_2022",
+    "requested_url": "https://zenodo.org/api/records/7157118/files/okt_csedm_final%20-%20Andrew%20Lan.pdf/content",
+    "resolved_url": "https://zenodo.org/api/records/7157118/files/okt_csedm_final%20-%20Andrew%20Lan.pdf/content",
+    "local_pdf": "papers\\okt_workshop_2022.pdf",
+    "sha256": "1bda14b8d42f88bace737c83f672d0621cdc83228ac75d283832763937734a67",
+    "bytes": 2731758,
+    "pages": 8,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "self_attention_2022",
+    "requested_url": "https://link.springer.com/content/pdf/10.1007/978-3-031-11644-5_75",
+    "error": "Response was not a PDF"
+  },
+  {
+    "id": "cekt_2026",
+    "requested_url": "https://arxiv.org/pdf/2608.22267v1",
+    "resolved_url": "https://arxiv.org/pdf/2608.22267v1",
+    "local_pdf": "papers\\cekt_2026.pdf",
+    "sha256": "4cfbbac7ad9169603697d03ff50f2e46b960a4c7ba20e65e98957b7ff768b74b",
+    "bytes": 745813,
+    "pages": 24,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "revision_aware_2026",
+    "requested_url": "https://arxiv.org/pdf/2608.26169v1",
+    "resolved_url": "https://arxiv.org/pdf/2608.26169v1",
+    "local_pdf": "papers\\revision_aware_2026.pdf",
+    "sha256": "5540d462ad1dd13d71523f07112d109b187fa5670b651c1f8c15dde9aa203b71",
+    "bytes": 734207,
+    "pages": 14,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "srcml_dkt_2025",
+    "requested_url": "https://learninganalytics.upenn.edu/ryanbaker/EDM2025-srcml-DKT-proceedings-v01.pdf",
+    "resolved_url": "https://learninganalytics.upenn.edu/ryanbaker/EDM2025-srcml-DKT-proceedings-v01.pdf",
+    "local_pdf": "papers\\srcml_dkt_2025.pdf",
+    "sha256": "60021f372921e6d4bfb17c85bf7388e4f67c6cb27e0938c16163c5abb73f2955",
+    "bytes": 294840,
+    "pages": 8,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "error_dkt_2024",
+    "requested_url": "https://aclanthology.org/2024.bea-1.27.pdf",
+    "resolved_url": "https://aclanthology.org/2024.bea-1.27.pdf",
+    "local_pdf": "papers\\error_dkt_2024.pdf",
+    "sha256": "69d653e4a68d4d7d4dacc45af7790fa5f5251c514424ec71593f113163137852",
+    "bytes": 736485,
+    "pages": 13,
+    "retrieved_on": "2026-09-26"
+  },
+  {
+    "id": "help_dkt_2022",
+    "requested_url": "https://www.nature.com/articles/s41598-022-07956-0.pdf",
+    "resolved_url": "https://www.nature.com/articles/s41598-022-07956-0.pdf",
+    "local_pdf": "papers\\help_dkt_2022.pdf",
+    "sha256": "85c46bf8e370db928532e2fd88d1da494354a12e9fdffeaadc55df4051322b3d",
+    "bytes": 2535826,
+    "pages": 11,
+    "retrieved_on": "2026-09-26"
+  }
+]

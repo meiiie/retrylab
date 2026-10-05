@@ -1,0 +1,6 @@
+create table out_users
+(
+    id         bigint unsigned default '0' not null,
+    last_login datetime                    null
+);
+

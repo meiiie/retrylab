@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "777d5d30343575ef007ec92afab4e177969652ba0d730c96aeaa1b8a514d5d13",
+  "uncompressed_regular_file_bytes": 1696520828,
+  "code_file_extensions": {
+    ".py": 29991
+  },
+  "execution_event_total": 321722,
+  "source_page_counts": {
+    "codes": 30140,
+    "tests_and_submissions": 322500,
+    "students": 471
+  },
+  "archive_counts_differ_from_source_summary": true,
+  "reason_for_count_difference": "Unresolved; report measured archive and parser definitions",
+  "semester_label_is_not_actual_event_date_cutoff": true
+}

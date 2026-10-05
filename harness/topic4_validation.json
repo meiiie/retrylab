@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-26",
+  "scope": "Integrated synthetic-model prototype; no human efficacy or SOTA claim",
+  "reports": {
+    "fast": {
+      "path": ".harness/reports/20260926T151424062800/report.json",
+      "sha256": "0ee6002265c7ad1cca9665961d588fc08382a83ced39b3b8d83081d2efec2fdf",
+      "passed": true,
+      "seconds": 3.397
+    },
+    "policy": {
+      "path": ".harness/reports/20260926T145650465779/report.json",
+      "sha256": "87ad475dda652246b23e39f18d68a1e5b5205c5303160ecf0cd04dd9d2b78796",
+      "passed": true,
+      "seconds": 2.363
+    },
+    "backend": {
+      "path": ".harness/reports/20260926T150841118303/report.json",
+      "sha256": "35c8235d00c67786c72e3285ebe4612478106e45809e81f96a64c3be51ac0dff",
+      "passed": true,
+      "seconds": 102.974
+    },
+    "browser": {
+      "path": ".harness/reports/20260926T150038246720/report.json",
+      "sha256": "973eb4611d32c8c038c941756c39709e8b23c63f29291904b1c382022995b36f",
+      "passed": true,
+      "seconds": 347.023
+    }
+  },
+  "unit_tests": {
+    "harness": 11,
+    "policy": 14,
+    "backend": 15
+  },
+  "browser_scripts": 4,
+  "browser_python_cases": 96,
+  "experiment": "catalog-policy-v2",
+  "historical_protected_files": 85,
+  "historical_integrity_passed": true,
+  "native_latex": "failed: platform directories unavailable",
+  "pdf_report": "ReportLab companion report, 5 pages, text and visual inspection",
+  "storage_recovery_followup": {
+    "completed_utc": "2026-09-26T15:11:11.912258+00:00",
+    "passed": true,
+    "checks": [
+      "Correct attempt with a hint receives a learned recommendation; captured output is visible",
+      "Back restores the prior exercise and draft; skip link preserves the current route",
+      "A malformed saved record recovers to usable empty progress",
+      "Blocked browser storage is disclosed and does not prevent real Python execution"
+    ],
+    "page_errors": []
+  },
+  "source_hashes": {
+    "app/static/js/practice.js": "f0268479c8420c2a99bf70859d07cbd683d88af5b086a0b391490cdc45e0bd87",
+    "app/static/js/practice-store.js": "4c14c780fbea8382f80352c08421c60d47e65dbae71899489a443b4725c401aa",
+    "app/static/js/adaptive.js": "ad244d69d3ed2d4b3fc7adf71d0936b0a6a415163208e37225dc7210fdc20bb0",
+    "app/static/js/policy-lab.js": "f8a4c3fc5c8d55e6ca573aefb78ec4a6f177ab33d7344556410d06dfd788a684",
+    "tools/harness.py": "d0ab957604b1cfa4b72c3632df46b8ed208e557d2ea63d24aaa21847eb9924d5",
+    "paper/topic4_policy.tex": "dd7506c962b82a6dd93de587f686659d358d30ba1f40da34f6b3d643ba9fe3ac",
+    "paper/DE_4_BAO_CAO_VA_DEMO.md": "86b61c48fb70ef19146d2a3287b5ced016446fb2c855df09c7c1919d4bab4a02",
+    "output/pdf/retrylab-de4-bao-cao.pdf": "3b4373eb0b6c8fb3d9498d2f3ad3880575d31f531347f564dfdda8e969412ed3"
+  },
+  "app_source_package": {
+    "path": "E:\\Sach\\baiThayPhuc\\BaiHong\\app\\retrylab_source.zip",
+    "bytes": 186376,
+    "members": 53,
+    "sha256": "b9e958f5393c0401729333e3f8125e4fbb014cc886f708c304ce571c794a6886",
+    "crc_and_member_hashes_verified": true
+  }
+}

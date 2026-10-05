@@ -1,0 +1,79 @@
+/* RetryLab studio · session.css — "Phiên học" in the lab-minimal look (docs/specs/2026-09-29-lab-minimal-redesign.md §6, 03).
+ * One control row, one figure, three numbers with one decomposition line, the steps table behind a disclosure.
+ * Sections are separated by space and a hairline above, not by frames. Layout follows @container view.
+ */
+
+.ss-page { display: grid; gap: var(--space-7); }
+.ss-error[hidden] { display: none; }
+
+/* busy: only a light fade after ~150 ms, so a quick answer does not flicker */
+.ss-chart, .ss-summary, .ss-steps-details { transition: opacity 0.1s; }
+.ss-page[data-busy="true"] .ss-chart, .ss-page[data-busy="true"] .ss-summary, .ss-page[data-busy="true"] .ss-steps-details { opacity: 0.6; transition: opacity 0.2s 0.15s; }
+
+/* ---------- control row -------------------------------------------------------------------- */
+.ss-controls { display: grid; gap: var(--space-3); margin-bottom: calc(-1 * var(--space-4)); }
+.ss-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--space-3) var(--space-4); }
+.ss-field { display: grid; gap: var(--space-1); min-width: 0; }
+.ss-label { color: var(--ink-3); font-size: var(--fs-label); }
+.ss-field .select { width: 232px; max-width: 100%; }
+.ss-field:nth-child(-n+2) .select { width: 264px; }
+.ss-actions { display: flex; align-items: center; gap: var(--space-3); margin-inline-start: auto; }
+.ss-run { min-width: 96px; }
+.ss-run .icon { flex: none; }
+.ss-row-sub { align-items: center; gap: var(--space-2) var(--space-5); color: var(--ink-2); font-size: var(--fs-table); }
+.ss-check { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--ink); font-size: var(--fs-ui); cursor: pointer; }
+.ss-check input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.ss-presets { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-4); }
+.ss-presets-label { color: var(--ink-3); font-size: var(--fs-label); }
+.ss-preset { font-size: var(--fs-table); white-space: normal; text-align: left; line-height: 1.4; }
+
+/* ---------- figure ------------------------------------------------------------------------- */
+.ss-chart { display: grid; align-content: start; }
+.ss-world-note { margin-top: 0; }
+.ss-stage { min-height: 44px; margin-bottom: var(--space-3); }
+.ss-stage.is-decide { padding: var(--space-3) var(--space-4); border-radius: var(--r-ctl); background: var(--accent-soft); }
+.ss-stage-line { color: var(--ink); font-size: var(--fs-ui); line-height: 1.45; }
+.ss-stage-line strong, .ss-stage-hint strong { font-weight: 500; font-variant-numeric: tabular-nums; }
+.ss-stage-sub { margin-top: 2px; color: var(--ink-2); font-size: var(--fs-table); line-height: 1.6; font-variant-numeric: tabular-nums; }
+.ss-stage-hint { color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.5; }
+.ss-choices { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-3); }
+.ss-choice { min-width: 96px; }
+.ss-choice.is-ok { color: var(--good); }
+.ss-choice.is-bad { color: var(--bad); }
+.ss-result { font-weight: 500; white-space: nowrap; }
+.ss-result.is-ok { color: var(--good); }
+.ss-result.is-bad { color: var(--bad); }
+.ss-forced, .ss-forced-note { margin-left: var(--space-2); vertical-align: 1px; }
+
+/* what lineChart cannot draw itself: the tinted band between the two lines and the name at the end of each line */
+.chart-line .ss-gap { fill: var(--signal-soft); stroke: none; }
+.chart-line .ss-line-label { fill: var(--ink); font-size: var(--fs-label); font-weight: 500; paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
+
+/* ---------- summary ------------------------------------------------------------------------ */
+.ss-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ss-tile.is-alert .stat-value { color: var(--signal-ink); }
+.ss-decomp { margin-top: var(--space-4); color: var(--ink-2); font-size: var(--fs-read); font-variant-numeric: tabular-nums; }
+.ss-summary-empty { color: var(--ink-3); font-size: var(--fs-ui); }
+
+/* ---------- steps -------------------------------------------------------------------------- */
+.ss-steps-details { border-top: 1px solid var(--rule); }
+.ss-steps-details > summary { padding: var(--space-3) 0; color: var(--ink); font-size: var(--fs-ui); font-weight: 500; }
+.ss-steps-details > summary:hover { color: var(--accent); }
+.ss-steps-empty { padding: var(--space-1) 0 var(--space-2); color: var(--ink-3); font-size: var(--fs-table); }
+.ss-steps th { line-height: 1.25; vertical-align: bottom; white-space: normal; }
+.ss-steps td { padding: 8px var(--space-3); }
+.ss-step-no { color: var(--ink-3); }
+.ss-problem { white-space: nowrap; }
+.ss-problem strong { font-family: var(--mono); font-weight: 500; }
+.ss-result-cell { white-space: nowrap; }
+.ss-return { margin-top: var(--space-3); color: var(--ink-2); font-size: var(--fs-table); font-variant-numeric: tabular-nums; }
+
+/* ---------- responsive by the width of the view -------------------------------------------- */
+@container view (max-width: 900px) {
+  .ss-actions { margin-inline-start: 0; }
+  .ss-field .select, .ss-field:nth-child(-n+2) .select { width: 216px; }
+}
+@container view (max-width: 640px) {
+  .ss-tiles { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-5); }
+  .ss-field, .ss-field .select, .ss-field:nth-child(-n+2) .select { width: 100%; }
+}

@@ -1,0 +1,10 @@
+{
+  "old_fixed_training_SUB_users": 329,
+  "retained_events": 213334,
+  "retained_SUB": 99147,
+  "every_SUB_text_matches_prior_SHA256": true,
+  "source_archive_sha256": "777d5d30343575ef007ec92afab4e177969652ba0d730c96aeaa1b8a514d5d13",
+  "events_sha256": "c52da91e841209b65be6dafb3a9486a8cdd70522e18e48ada1ecb649d8f42875",
+  "source_code_executed": false,
+  "old_validation_or_test_included": false
+}

@@ -1,0 +1,511 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        22
+      ]
+    ],
+    "date-time": "2026-06-22T16:47:33Z",
+    "timestamp": 1782146853740,
+    "version": "3.54.5"
+  },
+  "publisher-location": "New York, NY, USA",
+  "reference-count": 57,
+  "publisher": "ACM",
+  "funder": [
+    {
+      "name": "The University of Hong Kong",
+      "award": [
+        "2401102970"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "2401102970"
+          ]
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        29
+      ]
+    ]
+  },
+  "DOI": "10.1145/3774398.3811597",
+  "type": "proceedings-article",
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        22
+      ]
+    ],
+    "date-time": "2026-06-22T15:50:37Z",
+    "timestamp": 1782143437000
+  },
+  "page": "373-384",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Augmenting Knowledge Tracing With Self-Regulated Learning Indicators for Reliable Skill-Mastery Estimation"
+  ],
+  "prefix": "10.1145",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0009-0009-3324-2501",
+      "authenticated-orcid": false,
+      "given": "Yujing",
+      "family": "Zhang",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "The University of Hong Kong, Hong Kong, China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0009-0000-9421-8243",
+      "authenticated-orcid": false,
+      "given": "Xianghui",
+      "family": "Meng",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "The University of Hong Kong, Hong Kong, China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-3320-3907",
+      "authenticated-orcid": false,
+      "given": "Jionghao",
+      "family": "Lin",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "The University of Hong Kong, Hong Kong, China and Carnegie Mellon University, Pittsburgh, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        28
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_2_1_1_1",
+      "first-page": "2",
+      "article-title": "Toward Meta-cognitive Tutoring: A Model of Help Seeking with a Cognitive",
+      "volume": "16",
+      "author": "Aleven Vincent",
+      "year": "2006",
+      "unstructured": "Vincent Aleven, Bruce Mclaren, Ido Roll, and Kenneth Koedinger. 2006. Toward Meta-cognitive Tutoring: A Model of Help Seeking with a Cognitive Tutor. Int. J. Artif. Intell. Ed., Vol. 16, 2 (April 2006), 101-128.",
+      "journal-title": "Tutor. Int. J. Artif. Intell. Ed."
+    },
+    {
+      "key": "e_1_3_2_1_2_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/985692.985741"
+    },
+    {
+      "key": "e_1_3_2_1_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-69132-7_44"
+    },
+    {
+      "key": "e_1_3_2_1_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s11257-007-9045-6"
+    },
+    {
+      "key": "e_1_3_2_1_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/1562524.1562542"
+    },
+    {
+      "key": "e_1_3_2_1_6_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-39112-5_44"
+    },
+    {
+      "key": "e_1_3_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41562-017-0189-z"
+    },
+    {
+      "key": "e_1_3_2_1_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3386527.3406746"
+    },
+    {
+      "key": "e_1_3_2_1_9_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev-psych-113011-143823"
+    },
+    {
+      "key": "e_1_3_2_1_10_1",
+      "volume-title": "Learning for mastery. Instruction and curriculum. Regional education laboratory for the carolinas and virginia, topical papers and reprints, number 1. Evaluation comment",
+      "author": "Bloom Benjamin S",
+      "year": "1968",
+      "unstructured": "Benjamin S Bloom. 1968. Learning for mastery. Instruction and curriculum. Regional education laboratory for the carolinas and virginia, topical papers and reprints, number 1. Evaluation comment, Vol. 1, 2 (1968), n2."
+    },
+    {
+      "key": "e_1_3_2_1_11_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.29007/dj6b"
+    },
+    {
+      "key": "e_1_3_2_1_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0895-4356(95)00510-2"
+    },
+    {
+      "key": "e_1_3_2_1_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/BF01099821"
+    },
+    {
+      "key": "e_1_3_2_1_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10648-025-10028-0"
+    },
+    {
+      "key": "e_1_3_2_1_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-030-52240-7_16"
+    },
+    {
+      "key": "e_1_3_2_1_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3051457.3051463"
+    },
+    {
+      "key": "e_1_3_2_1_17_1",
+      "volume-title": "The Misidentified Identifiability Problem of Bayesian Knowledge Tracing",
+      "author": "Doroudi Shayan",
+      "year": "2017",
+      "unstructured": "Shayan Doroudi and Emma Brunskill. 2017. The Misidentified Identifiability Problem of Bayesian Knowledge Tracing. International Educational Data Mining Society (2017)."
+    },
+    {
+      "key": "e_1_3_2_1_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-030-52240-7_17"
+    },
+    {
+      "key": "e_1_3_2_1_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5281/zenodo.4143614"
+    },
+    {
+      "key": "e_1_3_2_1_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3386527.3406732"
+    },
+    {
+      "key": "e_1_3_2_1_21_1",
+      "first-page": "36",
+      "article-title": "Decision tree modeling of wheel-spinning and productive persistence in skill builders",
+      "volume": "10",
+      "author": "Kai Shimin",
+      "year": "2018",
+      "unstructured": "Shimin Kai, Ma Victoria Almeda, Ryan S Baker, Cristina Heffernan, Neil Heffernan, et al., 2018. Decision tree modeling of wheel-spinning and productive persistence in skill builders. Journal of Educational Data Mining, Vol. 10, 1 (2018), 36-71.",
+      "journal-title": "Journal of Educational Data Mining"
+    },
+    {
+      "key": "e_1_3_2_1_22_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/07370000802212669"
+    },
+    {
+      "key": "e_1_3_2_1_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/00461520.2016.1155457"
+    },
+    {
+      "key": "e_1_3_2_1_24_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.compedu.2016.10.001"
+    },
+    {
+      "key": "e_1_3_2_1_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/0013164406294779"
+    },
+    {
+      "key": "e_1_3_2_1_26_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1037/0278-7393.31.2.187"
+    },
+    {
+      "key": "e_1_3_2_1_27_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/1948550617697177"
+    },
+    {
+      "key": "e_1_3_2_1_28_1",
+      "volume-title": "Does Practice Make Perfect? Analyzing the Relationship between Higher Mastery and Forgetting in an Adaptive Learning System",
+      "author": "Matayoshi Jeffrey",
+      "year": "2022",
+      "unstructured": "Jeffrey Matayoshi, Eric Cosyn, and Hasan Uzun. 2022. Does Practice Make Perfect? Analyzing the Relationship between Higher Mastery and Forgetting in an Adaptive Learning System. International Educational Data Mining Society (2022)."
+    },
+    {
+      "key": "e_1_3_2_1_29_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1207/s15430421tip4102_10"
+    },
+    {
+      "key": "e_1_3_2_1_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s40593-014-0034-8"
+    },
+    {
+      "key": "e_1_3_2_1_31_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2876034.2893404"
+    },
+    {
+      "key": "e_1_3_2_1_32_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3389/fpsyg.2017.00422"
+    },
+    {
+      "key": "e_1_3_2_1_33_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-22362-4_21"
+    },
+    {
+      "key": "e_1_3_2_1_34_1",
+      "volume-title": "Koedinger",
+      "author": "Pavlik Philip I.",
+      "year": "2009",
+      "unstructured": "Philip I. Pavlik Jr., Hao Cen, and Kenneth R. Koedinger. 2009. Performance Factors Analysis: A New Alternative to Knowledge Tracing. Online submission. https://files.eric.ed.gov/fulltext/ED506305.pdf"
+    },
+    {
+      "key": "e_1_3_2_1_35_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5281/zenodo.12730033"
+    },
+    {
+      "key": "e_1_3_2_1_36_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0895-4356(96)00236-3"
+    },
+    {
+      "key": "e_1_3_2_1_37_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11774303_63"
+    },
+    {
+      "key": "e_1_3_2_1_38_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2876034.2876039"
+    },
+    {
+      "key": "e_1_3_2_1_39_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.learninstruc.2010.07.004"
+    },
+    {
+      "key": "e_1_3_2_1_40_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11527886_48"
+    },
+    {
+      "key": "e_1_3_2_1_41_1",
+      "first-page": "312",
+      "volume-title": "Proceedings of the 7th International Conference on Educational Data Mining (EDM 2014",
+      "author": "Sarah",
+      "year": "2014",
+      "unstructured": "Sarah E. Schultz and Ivon Arroyo. 2014. Tracing Knowledge and Engagement in Parallel in an Intelligent Tutoring System. In Proceedings of the 7th International Conference on Educational Data Mining (EDM 2014). London, United Kingdom, 312-315. https://educationaldatamining.org/EDM2014/uploads/procs2014/short%20papers/312_EDM-2014-Short.pdf"
+    },
+    {
+      "key": "e_1_3_2_1_42_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.18608/jla.2016.31.11"
+    },
+    {
+      "key": "e_1_3_2_1_43_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/aje/kwk052"
+    },
+    {
+      "key": "e_1_3_2_1_44_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-030-52237-7_46"
+    },
+    {
+      "key": "e_1_3_2_1_45_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/00031305.2016.1154108"
+    },
+    {
+      "key": "e_1_3_2_1_46_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.18608/hla17.021"
+    },
+    {
+      "key": "e_1_3_2_1_47_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.chb.2020.106457"
+    },
+    {
+      "key": "e_1_3_2_1_48_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5281/zenodo.3554619"
+    },
+    {
+      "key": "e_1_3_2_1_49_1",
+      "volume-title": "Hadwin",
+      "author": "Winne Philip H.",
+      "year": "1998",
+      "unstructured": "Philip H. Winne and Allyson F. Hadwin. 1998. Studying as Self-Regulated Learning. In Metacognition in Educational Theory and Practice, Douglas J. Hacker, John Dunlosky, and Arthur C. Graesser (Eds.). Lawrence Erlbaum Associates Publishers, Mahwah, NJ, 277-304."
+    },
+    {
+      "key": "e_1_3_2_1_50_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/emip.12165"
+    },
+    {
+      "key": "e_1_3_2_1_51_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41598-025-96540-3"
+    },
+    {
+      "key": "e_1_3_2_1_52_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-39112-5_18"
+    },
+    {
+      "key": "e_1_3_2_1_53_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3636555.3636890"
+    },
+    {
+      "key": "e_1_3_2_1_54_1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Hengyuan Zhang Zitao Liu Chenming Shang Dawei Li and Yong Jiang. 2025a. A question-centric multi-experts contrastive learning framework for improving the accuracy and interpretability of deep sequential knowledge tracing models. ACM Transactions on Knowledge Discovery from Data Vol. 19 2 (2025) 1-25.",
+      "DOI": "10.1145/3674840"
+    },
+    {
+      "key": "e_1_3_2_1_55_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5281/zenodo.15870292"
+    },
+    {
+      "key": "e_1_3_2_1_56_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3051457.3053976"
+    },
+    {
+      "key": "e_1_3_2_1_57_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0361-476X(86)90027-510.1016/0361-476X(86)90027-5"
+    }
+  ],
+  "event": {
+    "name": "L@S '26: Thirteenth ACM Conference on Learning @ Scale",
+    "location": "Seoul Republic of Korea"
+  },
+  "container-title": [
+    "Proceedings of the Thirteenth ACM Conference on Learning @ Scale"
+  ],
+  "original-title": [],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        22
+      ]
+    ],
+    "date-time": "2026-06-22T15:51:45Z",
+    "timestamp": 1782143505000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3774398.3811597"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        28
+      ]
+    ]
+  },
+  "references-count": 57,
+  "alternative-id": [
+    "10.1145/3774398.3811597",
+    "10.1145/3774398"
+  ],
+  "URL": "https://doi.org/10.1145/3774398.3811597",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        6,
+        28
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2026-06-28",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

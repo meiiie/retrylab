@@ -1,0 +1,57 @@
+{
+ "note": "Lời giải tham chiếu và một lời giải sai điển hình cho từng bài C; chỉ dùng trong kiểm thử, không phục vụ cho trình duyệt người học.",
+ "exercises": {
+  "c-seconds": {
+   "solution": "int tong_giay(int h, int m, int s) {\n    return h * 3600 + m * 60 + s;\n}\n",
+   "wrong": "int tong_giay(int h, int m, int s) {\n    return h * 3600 + m * 100 + s;\n}\n"
+  },
+  "c-grade": {
+   "solution": "char xep_loai(int diem) {\n    if (diem >= 85) return 'A';\n    if (diem >= 70) return 'B';\n    if (diem >= 50) return 'C';\n    return 'D';\n}\n",
+   "wrong": "char xep_loai(int diem) {\n    if (diem > 85) return 'A';\n    if (diem > 70) return 'B';\n    if (diem > 50) return 'C';\n    return 'D';\n}\n"
+  },
+  "c-digit-sum": {
+   "solution": "int tong_chu_so(int n) {\n    int tong = 0;\n    while (n > 0) {\n        tong += n % 10;\n        n /= 10;\n    }\n    return tong;\n}\n",
+   "wrong": "int tong_chu_so(int n) {\n    int tong = 0;\n    while (n > 9) {\n        tong += n % 10;\n        n /= 10;\n    }\n    return tong;\n}\n"
+  },
+  "c-count-div": {
+   "solution": "int dem_uoc(int n) {\n    int dem = 0;\n    for (int d = 1; d <= n; d++) {\n        if (n % d == 0) dem++;\n    }\n    return dem;\n}\n",
+   "wrong": "int dem_uoc(int n) {\n    int dem = 0;\n    for (int d = 1; d < n; d++) {\n        if (n % d == 0) dem++;\n    }\n    return dem;\n}\n"
+  },
+  "c-sum-positive": {
+   "solution": "int tong_duong(int a[], int n) {\n    int tong = 0;\n    for (int i = 0; i < n; i++) {\n        if (a[i] > 0) tong += a[i];\n    }\n    return tong;\n}\n",
+   "wrong": "int tong_duong(int a[], int n) {\n    int tong = 0;\n    for (int i = 0; i < n; i++) {\n        tong += a[i];\n    }\n    return tong;\n}\n"
+  },
+  "c-max-index": {
+   "solution": "int vi_tri_lon_nhat(int a[], int n) {\n    int vi_tri = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[vi_tri]) vi_tri = i;\n    }\n    return vi_tri;\n}\n",
+   "wrong": "int vi_tri_lon_nhat(int a[], int n) {\n    int vi_tri = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] >= a[vi_tri]) vi_tri = i;\n    }\n    return vi_tri;\n}\n"
+  },
+  "c-vowels": {
+   "solution": "int dem_nguyen_am(char s[]) {\n    int dem = 0;\n    for (int i = 0; s[i] != 0; i++) {\n        char c = s[i];\n        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') dem++;\n    }\n    return dem;\n}\n",
+   "wrong": "int dem_nguyen_am(char s[]) {\n    int dem = 0;\n    for (int i = 0; s[i] != 0; i++) {\n        char c = s[i];\n        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') dem++;\n    }\n    return dem;\n}\n"
+  },
+  "c-reverse": {
+   "solution": "void dao_xau(char s[]) {\n    int n = strlen(s);\n    for (int i = 0; i < n / 2; i++) {\n        char t = s[i];\n        s[i] = s[n - 1 - i];\n        s[n - 1 - i] = t;\n    }\n}\n",
+   "wrong": "void dao_xau(char s[]) {\n    int n = strlen(s);\n    for (int i = 0; i < n; i++) {\n        char t = s[i];\n        s[i] = s[n - 1 - i];\n        s[n - 1 - i] = t;\n    }\n}\n"
+  },
+  "c-swap": {
+   "solution": "void hoan_doi(int *a, int *b) {\n    int t = *a;\n    *a = *b;\n    *b = t;\n}\n",
+   "wrong": "void hoan_doi(int *a, int *b) {\n    int *t = a;\n    a = b;\n    b = t;\n}\n"
+  },
+  "c-bits": {
+   "solution": "int dem_bit_1(int n) {\n    int dem = 0;\n    while (n > 0) {\n        dem += n & 1;\n        n >>= 1;\n    }\n    return dem;\n}\n",
+   "wrong": "int dem_bit_1(int n) {\n    int dem = 0;\n    while (n > 0) {\n        dem += n & 1;\n        n >>= 2;\n    }\n    return dem;\n}\n"
+  },
+  "c-gcd": {
+   "solution": "int ucln(int a, int b) {\n    while (b != 0) {\n        int r = a % b;\n        a = b;\n        b = r;\n    }\n    return a;\n}\n",
+   "wrong": "int ucln(int a, int b) {\n    return a < b ? a : b;\n}\n"
+  },
+  "c-power": {
+   "solution": "long long luy_thua(int a, int n) {\n    if (n == 0) return 1;\n    return a * luy_thua(a, n - 1);\n}\n",
+   "wrong": "long long luy_thua(int a, int n) {\n    if (n == 0) return a;\n    return a * luy_thua(a, n - 1);\n}\n"
+  },
+  "c-sort": {
+   "solution": "void sap_xep(int a[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 1 - i; j++) {\n            if (a[j] > a[j + 1]) {\n                int t = a[j];\n                a[j] = a[j + 1];\n                a[j + 1] = t;\n            }\n        }\n    }\n}\n",
+   "wrong": "void sap_xep(int a[], int n) {\n    for (int i = 0; i < n - 1; i++) {\n        for (int j = 0; j < n - 2 - i; j++) {\n            if (a[j] > a[j + 1]) {\n                int t = a[j];\n                a[j] = a[j + 1];\n                a[j + 1] = t;\n            }\n        }\n    }\n}\n"
+  }
+ }
+}

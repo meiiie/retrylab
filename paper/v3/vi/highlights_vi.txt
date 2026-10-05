@@ -1,0 +1,5 @@
+Sáu mô hình người học dự báo người học chưa thấy tốt ngang nhau (AUC 0,775–0,776)
+PPO thưởng DKT: +27,2 điểm % trong mô phỏng, chỉ ≤ 0,35 điểm % ở các thế giới có học ẩn
+Ở thế giới đối chứng không học, tracker DKT vẫn báo tiến bộ ảo 25,7 điểm %
+Tiến bộ trong mô phỏng bằng độ trôi tự dự đoán của tracker, không phải việc học
+Thế giới huấn luyện có học tường minh chuyển giao tốt nhất, nhưng chỉ trong cùng họ mô hình

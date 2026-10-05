@@ -1,0 +1,69 @@
+\section{Dữ liệu}\label{sec:data}
+
+\paragraph{Nguồn} Chúng tôi dùng bộ dữ liệu công khai ACcoding, phiên bản 2.0.0 \citep{chen2024accoding,sun2026accodingdata}, do nhóm giảng dạy của Đại học Beihang phát hành cho các môn lập trình C, cấu trúc dữ liệu và phân tích thuật toán. Kho lưu trữ (tiền tố SHA-256 \texttt{26b5637d}) chứa các lượt nộp đã ẩn danh kèm kết quả chấm, siêu dữ liệu bài tập với mức độ khó 1--10 do giảng viên gán, và 96 nhãn điểm kiến thức mà bài báo dữ liệu mô tả là do giảng viên hoặc trợ giảng định nghĩa. Các bảng SQL được phân tích dưới dạng văn bản; không có mã nguồn hay câu lệnh SQL nào được thực thi.
+
+\paragraph{Quần thể và đơn vị phân tích} Hai cohort, mỗi cohort 1.500 người học, đã được dùng trong các phân tích dự báo trước đó (chưa công bố) trên kho dữ liệu này. Để mọi kết quả trong bài đều mang tính khẳng định, nghiên cứu này chỉ dùng {{n_learners}} người học không thuộc cả hai cohort đó và có ít nhất 20 bài khác nhau trong bản chụp dữ liệu. Một \emph{tương tác} là lượt nộp đầu tiên đã được chấm của một người học cho một bài; nhãn bằng 1 khi lượt nộp đó được chấp nhận. Các trạng thái chưa hoàn tất (WT/JG) và các trạng thái lỗi phía hệ thống chấm hoặc không phân loại được (IFNR, OFNR, EFNR, OE) bị loại trước khi dựng chuỗi, và chỉ giữ các lượt nộp C/C++. Dữ liệu thu được gồm {{n_interactions}} tương tác lần gặp đầu trên {{n_problems}} bài. Làm đại diện quan sát được cho công sức giải bài, chúng tôi ghi số lượt nộp cho tới và kể cả lượt được chấp nhận đầu tiên.
+
+\paragraph{Kỹ năng} Chúng tôi gom 96 nhãn của giảng viên thành 15 kỹ năng ở mức môn học (ví dụ vòng lặp, mảng, xâu, con trỏ và danh sách liên kết, đệ quy); các bài không có nhãn tạo thành nhóm thứ mười sáu. Các nhóm này đóng vai trò thành phần tri thức \citep{koedinger2012kli}, nhưng cách gom là một quyết định mô hình hóa tường minh của tác giả, được công bố cùng mã nguồn, chứ không phải một mô hình thành phần tri thức đã được kiểm chứng. Mỗi bài mang trọng số nhãn đã chuẩn hóa, nên bài đa kỹ năng đóng góp cho nhiều kỹ năng.
+
+\paragraph{Phân vùng} Người học được xếp theo mã băm SHA-256 có muối của định danh ẩn danh và chia thành ba phân vùng rời nhau trước khi bất kỳ kết quả nào của quần thể này được xem: A ({{n_A}} người học) dùng để fit tracker triển khai và mọi bộ mô phỏng huấn luyện; B ({{n_B}} người học) dùng để fit các thế giới đánh giá độc lập; T ({{n_T}} người học) chỉ dùng để đánh giá dự báo và làm điểm xuất phát của các lượt đánh giá. Mười phần trăm của A và của B là người học kiểm định trong, dùng cho dừng sớm và chọn mô hình.
+
+\section{Phương pháp}\label{sec:methods}
+
+\subsection{Mô hình người học}\label{sec:learners}
+
+Gọi $H_t=((j_1,y_1),\dots,(j_{t-1},y_{t-1}))$ là lịch sử các bài và kết quả lần nộp đầu của một người học. Mỗi mô hình cho ra $P_M(y=1\mid j,H_t)$ với mọi bài truy vấn $j$ và được cập nhật sau mỗi kết quả quan sát được.
+
+\paragraph{Họ logistic với năng lực trực tuyến} Với IRT, AFM và PFA \citep[xem tổng quan về họ mô hình này ở][]{pelanek2017learner},
+\begin{equation}
+\operatorname{logit} P(y=1\mid j,H_t,\theta) = \theta - \beta_j + \ell_M(j,H_t),
+\label{eq:logistic}
+\end{equation}
+trong đó $\beta_j = b_0 + b_d\,d_j + \sum_k w_{jk} b_k + u_j$ kết hợp độ khó công bố $d_j$, độ lệch theo kỹ năng và một số hạng riêng của bài có điều chuẩn. Số hạng học là $\ell_{\mathrm{IRT}}=0$, $\ell_{\mathrm{AFM}}=\sum_k w_{jk}\gamma_k\log(1+n_k)$ với số lần luyện có trọng số $n_k$ \citep{cen2006lfa}, và $\ell_{\mathrm{PFA}}=\sum_k w_{jk}(\gamma_k\log(1+s_k)+\rho_k\log(1+f_k))$ với số lần đúng và sai \citep{pavlik2009pfa}. Tham số được fit bằng hợp lý cực đại có phạt (tiên nghiệm Gauss cho $\theta$ và $u_j$). Với một người học mới, năng lực được tích phân trên lưới 101 điểm với tiên nghiệm đã fit và cập nhật bằng quy tắc Bayes sau mỗi kết quả, nên dự báo chỉ dùng quá khứ của chính người học đó.
+
+\paragraph{DKT và SAKT} DKT \citep{piech2015dkt} đưa $[e_j; y e_j; y]$ vào một LSTM, trong đó $e_j$ là tổng của embedding bài (với bài có ít nhất mười người học trong tập fit), một phép chiếu kỹ năng và một số hạng độ khó; một bộ giải mã có điều kiện theo câu hỏi với độ lệch vô hướng kiểu Rasch, như trong AKT \citep{ghosh2020akt}, cho ra xác suất ở bước kế tiếp. SAKT \citep{pandey2019sakt} cho mỗi truy vấn chú ý nhân quả vào 200 tương tác gần nhất, với một mức phạt theo khoảng cách cố định trên logit chú ý của từng đầu \citep{press2022alibi}; nhờ vậy huấn luyện theo khối và suy luận từng bước là đồng nhất. Siêu tham số chỉ được chọn trên một cohort phát triển (\cref{sec:protocol}). Một DKT thứ hai với seed ngẫu nhiên khác (\emph{bản song sinh}) được fit trên A với dữ liệu và thiết lập giống hệt.
+
+\paragraph{Cây định danh dựa trên entropy} Theo yêu cầu của đề tài, một cây ID3 \citep{quinlan1986id3} được xây bằng lợi ích thông tin trên tám đặc trưng lịch sử dễ hiểu (ví dụ tỉ lệ đúng trước đó ở kỹ năng của bài, tỉ lệ đúng gần đây, độ khó công bố, tỉ lệ vượt qua của bài trong A) rồi được tỉa bằng phương pháp tỉa giảm lỗi trên người học kiểm định trong. Các lá của cây cho ra những luật chẩn đoán con người đọc được.
+
+\subsection{Gợi ý bài tập như một bài toán quyết định tuần tự}\label{sec:mdp}
+
+Mỗi quyết định được đưa ra sau một tiền tố thật trong lịch sử của người học. Tập hành động là một tập ứng viên gồm {{pool}} bài được chọn bằng một quy tắc cố định chỉ dựa trên số lượt hỗ trợ trong phân vùng A (tối đa 12 bài cho mỗi kỹ năng nền tảng, mỗi bài được ít nhất 5\% người học A thử), loại các bài đã gặp. Một bài kiểm tra cuối (post-test) rời $\mathcal W$ gồm {{post}} bài (hai bài cho mỗi kỹ năng được đánh giá) đo tiến bộ. \emph{Tracker} triển khai là DKT fit trên A; trạng thái của tác tử ghép xác suất đúng mà tracker dự báo cho mọi bài trong tập ứng viên, trung bình theo kỹ năng, mặt nạ hợp lệ, dự báo post-test của tracker và số bước còn lại. Mỗi lượt (episode) dài mười bài. Phần thưởng hiện thực hóa mục tiêu của đề tài là nâng điểm đồng thời hạn chế thời gian giải:
+\begin{equation}
+r_t = 100\,\bigl[\bar Q_W(H_{t+1}) - \bar Q_W(H_t)\bigr] - \lambda\,(e_t-1),
+\label{eq:reward}
+\end{equation}
+trong đó $\bar Q_W$ là xác suất làm đúng post-test kỳ vọng của thế giới huấn luyện, $e_t$ là số lượt nộp dành cho bài được gợi ý và $\lambda={{lam}}$ điểm phần trăm (điểm \%) cho mỗi lượt nộp thêm.
+
+\paragraph{Tác tử và đường cơ sở} Chúng tôi huấn luyện Double DQN \citep{mnih2015dqn,vanhasselt2016ddqn} và PPO \citep{schulman2017ppo} có mặt nạ hành động, mỗi thuật toán với ba seed, trong ba điều kiện huấn luyện trên phân vùng A: bộ mô phỏng DKT-A với thước đo post-test của chính nó (thiết lập KT--RL tiêu chuẩn, \emph{thưởng KT}); một thế giới AFM-A có năng lực ẩn và việc học do luyện tập (\emph{thế giới AFM}); và một hỗn hợp luân phiên DKT-A, SAKT-A, AFM-A và PFA-A (\emph{nhiều thế giới}). Các đường cơ sở không học gồm: chọn ngẫu nhiên, lộ trình dễ$\to$khó theo độ khó IRT, bài dễ nhất của kỹ năng yếu nhất, nhắm xác suất đúng dự báo bằng 0,5 hoặc 0,7 (một cách hiện thực hóa phổ biến của vùng phát triển gần \citep{vygotsky1978mind}; xem thêm \citealp{wilson2019eighty} về tỉ lệ lỗi tối ưu), bài dễ nhất trước và bài khó nhất trước, và một bộ tối đa hóa tham lam một bước thay đổi post-test kỳ vọng của tracker (mục tiêu cận thị được dùng trong các bộ gợi ý dựa trên KT như \citet{ozyurt2025exrec}). Trong các thế giới ẩn, một oracle một bước có đặc quyền nhìn thấy trạng thái thật được dùng làm tham chiếu.
+
+\subsection{Các thế giới đánh giá và đối chứng âm}\label{sec:worlds}
+
+Một \emph{thế giới} sinh ra kết quả lần nộp đầu và sở hữu thước đo tiến bộ. Theo ma trận đánh giá bền vững \citep{doroudi2017rem}, mọi chính sách được đánh giá trong chín thế giới: hai thế giới huấn luyện (DKT-A, AFM-A); bản song sinh của DKT; DKT-B và SAKT-B, fit trên người học khác và đo bằng dự báo của chính chúng, như trong các nghiên cứu dùng bộ mô phỏng KT; AFM-B và PFA-B, trong đó năng lực ẩn được rút từ phân phối hậu nghiệm với tiền tố thật và post-test kỳ vọng thật được biết; ZPD-B, một thế giới độ khó mong muốn \emph{giả định}, giữ AFM-B nhưng cho mỗi lần luyện cộng thêm $6p(1-p)$ cơ hội có trọng số, với $p$ là xác suất đúng hiện tại của người học; và IRT-B, không có số hạng học. Trong IRT-B, tiến bộ post-test thật đúng bằng 0 với mọi chính sách, nên mọi tiến bộ mà tracker báo cáo ở đó đều là giả. Chúng tôi gọi IRT-B là \emph{đối chứng âm}, mượn khái niệm của dịch tễ học về một phân tích mà hiệu ứng thật được biết chắc là không có \citep{lipsitch2010negative,arnold2016negative}. Các lượt đánh giá bắt đầu từ tiền tố thật của mỗi người học T (độ dài tiền tố rút đều trong khoảng 10 đến 60 lần gặp đầu), và các kết quả ngẫu nhiên được dùng chung giữa các chính sách qua luồng số ngẫu nhiên theo từng lượt.
+
+\subsection{Tiến bộ báo cáo, độ trôi và phần bất ngờ}\label{sec:drift}
+
+Với mô hình $M$ có dự báo post-test $\bar P_M(H)=|\mathcal W|^{-1}\sum_{k\in\mathcal W}P_M(y=1\mid k,H)$, định nghĩa \emph{độ trôi} khi luyện bài $j$ sau lịch sử $H$ là
+\begin{equation}
+D_M(j,H) = \sum_{y\in\{0,1\}} P_M(y\mid j,H)\,\bar P_M\bigl(H\oplus(j,y)\bigr) - \bar P_M(H),
+\label{eq:drift}
+\end{equation}
+tức thay đổi dự báo của chính mô hình mà mô hình tự kỳ vọng. Tiến bộ mà tracker báo cáo sau một lượt $T$ bước phân rã chính xác thành độ trôi và \emph{phần bất ngờ}:
+\begin{equation}
+\bar P_M(H_{T}) - \bar P_M(H_0) = \sum_{t<T} D_M(j_t,H_t) + \sum_{t<T} \bigl[\bar P_M(H_{t+1}) - \bar P_M(H_t) - D_M(j_t,H_t)\bigr].
+\label{eq:decomposition}
+\end{equation}
+Hai tính chất khiến phép phân rã có giá trị chẩn đoán (chứng minh ở \ref{app:proofs}).
+
+\begin{proposition}[Không học, không trôi]\label{prop:nodrift}
+Giả sử $M$ có trạng thái ẩn tĩnh $\theta$ với tiên nghiệm $\pi$, các kết quả độc lập có điều kiện khi biết $\theta$, và dự báo là phân phối dự báo hậu nghiệm. Khi đó $D_M(j,H)=0$ với mọi bài $j$ và mọi lịch sử $H$.
+\end{proposition}
+
+\begin{proposition}[Tiến bộ trong mô phỏng là độ trôi tích lũy]\label{prop:insim}
+Nếu kết quả được sinh bởi chính $M$, thì với mọi chính sách chọn $j_t$ dựa trên $H_t$ (có thể ngẫu nhiên), tiến bộ kỳ vọng mà $M$ báo cáo bằng độ trôi tích lũy kỳ vọng, $\mathbb E\bigl[\bar P_M(H_T)-\bar P_M(H_0)\bigr] = \mathbb E\bigl[\sum_{t<T} D_M(j_t,H_t)\bigr]$.
+\end{proposition}
+
+\Cref{prop:nodrift} là tính chất martingale của kỳ vọng hậu nghiệm \citep{williams1991probability}: IRT với phân phối hậu nghiệm trên năng lực không kỳ vọng dự báo của chính nó thay đổi, dù luyện bài nào. Các mô hình có số hạng học (AFM, PFA) có độ trôi khác 0 theo thiết kế, nhưng độ lớn và dấu của nó gắn với các hệ số học diễn giải được; tracker nơ-ron không bị ràng buộc như vậy. \Cref{prop:insim} nói rằng trong thiết lập tiêu chuẩn, nơi một mô hình KT vừa là bộ mô phỏng vừa là thước đo, tác tử tối đa hóa tiến bộ báo cáo chính là tối đa hóa độ trôi tích lũy — mức học mà mô hình ngầm hứa cho các bài được chọn. Khi thế giới không phải là tracker, phần bất ngờ không còn có trung bình bằng 0 và đo mức thế giới bất đồng với những lời hứa đó.
+
+\subsection{Giả thuyết đăng ký trước và phân tích}\label{sec:protocol}
+
+Mọi siêu tham số, quy tắc chọn tập ứng viên, chi phí trong phần thưởng và ngân sách huấn luyện (300 vòng lặp, mỗi vòng 64 lượt song song cho mỗi tác tử) được cố định trên một cohort phát triển gồm những người học đã xem trước, tách rời quần thể chính. Hai protocol sau đó được khóa (\ref{app:repro}) trước khi nạp quần thể chính. Protocol đăng ký trước bốn giả thuyết: \textbf{H1}, lợi thế so với ngẫu nhiên của các tác tử thưởng KT trong bộ mô phỏng huấn luyện DKT-A lớn hơn trong từng thế giới độc lập; \textbf{H2}, trong đối chứng âm IRT-B, tracker báo tiến bộ dương cho các chính sách tối ưu theo tracker dù tiến bộ thật của chúng bằng 0; \textbf{H3}, trên tập các chính sách, tiến bộ trong mô phỏng DKT-A tương quan thứ hạng dương với tiến bộ ảo trong IRT-B; và \textbf{H4}, độ trôi theo bài của DKT-A phân tán hơn của AFM-A fit trên cùng người học. Dự báo được đánh giá bằng AUC, log-likelihood âm (NLL), điểm Brier và sai số hiệu chỉnh kỳ vọng (ECE) trên T với 1.000 lần lấy mẫu bootstrap theo người học. Kết quả chính sách được lấy trung bình qua các seed huấn luyện trong từng lượt, và khoảng 95\% dùng 2.000 lần bootstrap trên {{episodes}} lượt đánh giá \citep{efron1993bootstrap}. H1--H4 là các phân tích khẳng định. Mọi phân tích khác — độ ổn định thứ hạng giữa các thế giới, độ bền trong trường hợp xấu nhất, đánh đổi tiến bộ--công sức, các yếu tố tương quan với độ trôi, độ trôi của các mô hình quan sát khác và dự báo dọc theo chuỗi thật của người học — là thăm dò và được ghi rõ như vậy. Các khoảng tin cậy có điều kiện trên các thế giới đã fit, coi ba seed huấn luyện là cố định và không hiệu chỉnh cho so sánh bội; mọi chính sách, thế giới và phép so sánh đều được báo cáo.

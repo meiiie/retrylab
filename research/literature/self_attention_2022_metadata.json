@@ -1,0 +1,500 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        2,
+        27
+      ]
+    ],
+    "date-time": "2026-02-27T02:29:04Z",
+    "timestamp": 1772159344275,
+    "version": "3.50.1"
+  },
+  "publisher-location": "Cham",
+  "reference-count": 12,
+  "publisher": "Springer International Publishing",
+  "isbn-type": [
+    {
+      "value": "9783031116438",
+      "type": "print"
+    },
+    {
+      "value": "9783031116445",
+      "type": "electronic"
+    }
+  ],
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2022-01-01T00:00:00Z",
+        "timestamp": 1640995200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.springer.com/tdm"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2022-01-01T00:00:00Z",
+        "timestamp": 1640995200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "DOI": "10.1007/978-3-031-11644-5_75",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        7,
+        26
+      ]
+    ],
+    "date-time": "2022-07-26T14:18:49Z",
+    "timestamp": 1658845129000
+  },
+  "page": "731-736",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 9,
+  "title": [
+    "Self-attention in Knowledge Tracing: Why It Works"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0003-4442-8917",
+      "authenticated-orcid": false,
+      "given": "Shi",
+      "family": "Pu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "Lee",
+      "family": "Becker",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        7,
+        27
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "75_CR1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Choi, Y., et al.: Towards an appropriate query, key, and value computation for knowledge tracing. arXiv preprint arXiv:2002.07033 (2020)",
+      "DOI": "10.1145/3386527.3405945"
+    },
+    {
+      "issue": "4",
+      "key": "75_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "253",
+      "DOI": "10.1007/BF01099821",
+      "volume": "4",
+      "author": "AT Corbett",
+      "year": "1994",
+      "unstructured": "Corbett, A.T., Anderson, J.R.: Knowledge tracing: modeling the acquisition of procedural knowledge. User Model. User-Adap. Inter. 4(4), 253–278 (1994)",
+      "journal-title": "User Model. User-Adap. Inter."
+    },
+    {
+      "issue": "3",
+      "key": "75_CR3",
+      "first-page": "31",
+      "volume": "12",
+      "author": "T Gervet",
+      "year": "2020",
+      "unstructured": "Gervet, T., Koedinger, K., Schneider, J., Mitchell, T., et al.: When is deep learning the best approach to knowledge tracing? J. Educ. Data Mining 12(3), 31–54 (2020)",
+      "journal-title": "J. Educ. Data Mining"
+    },
+    {
+      "key": "75_CR4",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ghosh, A., Heffernan, N., Lan, A.S.: Context-aware attentive knowledge tracing. In: Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, pp. 2330–2339 (2020)",
+      "DOI": "10.1145/3394486.3403282"
+    },
+    {
+      "key": "75_CR5",
+      "unstructured": "Pavlik Jr, P.I., Cen, H., Koedinger, K.R.: Performance factors analysis-a new alternative to knowledge tracing. Online Submission (2009)"
+    },
+    {
+      "key": "75_CR6",
+      "doi-asserted-by": "publisher",
+      "first-page": "169",
+      "DOI": "10.1016/j.compedu.2016.03.017",
+      "volume": "98",
+      "author": "R Pelánek",
+      "year": "2016",
+      "unstructured": "Pelánek, R.: Applications of the ELO rating system in adaptive educational systems. Comput. Educ. 98, 169–179 (2016)",
+      "journal-title": "Comput. Educ."
+    },
+    {
+      "key": "75_CR7",
+      "unstructured": "Piech, C., et al.: Deep knowledge tracing. In: Advances in Neural Information Processing Systems, pp. 505–513 (2015)"
+    },
+    {
+      "key": "75_CR8",
+      "series-title": "Lecture Notes in Computer Science (Lecture Notes in Artificial Intelligence)",
+      "doi-asserted-by": "publisher",
+      "first-page": "331",
+      "DOI": "10.1007/978-3-030-78292-4_27",
+      "volume-title": "Artificial Intelligence in Education",
+      "author": "S Pu",
+      "year": "2021",
+      "unstructured": "Pu, S., Converse, G., Huang, Y.: Deep performance factors analysis for knowledge tracing. In: Roll, I., McNamara, D., Sosnovsky, S., Luckin, R., Dimitrova, V. (eds.) AIED 2021. LNCS (LNAI), vol. 12748, pp. 331–341. Springer, Cham (2021). https://doi.org/10.1007/978-3-030-78292-4_27"
+    },
+    {
+      "key": "75_CR9",
+      "series-title": "Lecture Notes in Computer Science (Lecture Notes in Artificial Intelligence)",
+      "doi-asserted-by": "publisher",
+      "first-page": "252",
+      "DOI": "10.1007/978-3-030-52240-7_46",
+      "volume-title": "Artificial Intelligence in Education",
+      "author": "S Pu",
+      "year": "2020",
+      "unstructured": "Pu, S., Yudelson, M., Ou, L., Huang, Y.: Deep knowledge tracing with transformers. In: Bittencourt, I.I., Cukurova, M., Muldner, K., Luckin, R., Millán, E. (eds.) AIED 2020. LNCS (LNAI), vol. 12164, pp. 252–256. Springer, Cham (2020). https://doi.org/10.1007/978-3-030-52240-7_46"
+    },
+    {
+      "key": "75_CR10",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ritter, S., Yudelson, M., Fancsali, S.E., Berman, S.R.: How mastery learning works at scale. In: Proceedings of the Third (2016) ACM Conference on Learning@ Scale, pp. 71–79 (2016)",
+      "DOI": "10.1145/2876034.2876039"
+    },
+    {
+      "key": "75_CR11",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Shin, D., Shim, Y., Yu, H., Lee, S., Kim, B., Choi, Y.: Saint+: integrating temporal features for ednet correctness prediction. In: LAK21: 11th International Learning Analytics and Knowledge Conference, pp. 490–496 (2021)",
+      "DOI": "10.1145/3448139.3448188"
+    },
+    {
+      "key": "75_CR12",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Zhang, J., Shi, X., King, I., Yeung, D.Y.: Dynamic key-value memory networks for knowledge tracing. In: Proceedings of the 26th international conference on World Wide Web, pp. 765–774 (2017)",
+      "DOI": "10.1145/3038912.3052580"
+    }
+  ],
+  "container-title": [
+    "Lecture Notes in Computer Science",
+    "Artificial Intelligence in Education"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-11644-5_75",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        13
+      ]
+    ],
+    "date-time": "2024-03-13T19:56:16Z",
+    "timestamp": 1710359776000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://link.springer.com/10.1007/978-3-031-11644-5_75"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783031116438",
+    "9783031116445"
+  ],
+  "references-count": 12,
+  "URL": "https://doi.org/10.1007/978-3-031-11644-5_75",
+  "relation": {},
+  "ISSN": [
+    "0302-9743",
+    "1611-3349"
+  ],
+  "issn-type": [
+    {
+      "value": "0302-9743",
+      "type": "print"
+    },
+    {
+      "value": "1611-3349",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "27 July 2022",
+      "order": 1,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ChapterHistory",
+        "label": "Chapter History"
+      }
+    },
+    {
+      "value": "AIED",
+      "order": 1,
+      "name": "conference_acronym",
+      "label": "Conference Acronym",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "International Conference on Artificial Intelligence in Education",
+      "order": 2,
+      "name": "conference_name",
+      "label": "Conference Name",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "Durham",
+      "order": 3,
+      "name": "conference_city",
+      "label": "Conference City",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "United Kingdom",
+      "order": 4,
+      "name": "conference_country",
+      "label": "Conference Country",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "2022",
+      "order": 5,
+      "name": "conference_year",
+      "label": "Conference Year",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "27 July 2022",
+      "order": 7,
+      "name": "conference_start_date",
+      "label": "Conference Start Date",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "31 July 2022",
+      "order": 8,
+      "name": "conference_end_date",
+      "label": "Conference End Date",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "23",
+      "order": 9,
+      "name": "conference_number",
+      "label": "Conference Number",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "aied2022",
+      "order": 10,
+      "name": "conference_id",
+      "label": "Conference ID",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "https://aied2022.webspace.durham.ac.uk/",
+      "order": 11,
+      "name": "conference_url",
+      "label": "Conference URL",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "Double-blind",
+      "order": 1,
+      "name": "type",
+      "label": "Type",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "EasyChair",
+      "order": 2,
+      "name": "conference_management_system",
+      "label": "Conference Management System",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "243",
+      "order": 3,
+      "name": "number_of_submissions_sent_for_review",
+      "label": "Number of Submissions Sent for Review",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "40",
+      "order": 4,
+      "name": "number_of_full_papers_accepted",
+      "label": "Number of Full Papers Accepted",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "40",
+      "order": 5,
+      "name": "number_of_short_papers_accepted",
+      "label": "Number of Short Papers Accepted",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "16% - The value is computed by the equation \"Number of Full Papers Accepted / Number of Submissions Sent for Review * 100\" and then rounded to a whole number.",
+      "order": 6,
+      "name": "acceptance_rate_of_full_papers",
+      "label": "Acceptance Rate of Full Papers",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "4",
+      "order": 7,
+      "name": "average_number_of_reviews_per_paper",
+      "label": "Average Number of Reviews per Paper",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "5",
+      "order": 8,
+      "name": "average_number_of_papers_per_reviewer",
+      "label": "Average Number of Papers per Reviewer",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    },
+    {
+      "value": "Yes",
+      "order": 9,
+      "name": "external_reviewers_involved",
+      "label": "External Reviewers Involved",
+      "group": {
+        "name": "ConfEventPeerReviewInformation",
+        "label": "Peer Review Information (provided by the conference organizers)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "run": "catalog-policy-v2",
+  "record_sha256": "51c39f777ac5c794f382c23b7f80b25ed3744e1bfa3c214946681ec27f3634b8",
+  "scope": "synthetic model and aggregate evaluation only; no human events",
+  "files": {
+    "catalog-v2.json": "b1dcac6a74b19b6c6cce65177276e8f32e9f64c75ccaae4b415546d94bb61fbb",
+    "policy-v2.json": "c7886874b66a8e98ac0b6c3601e7b3b700f901c52e96d06e46edc4da3538a94a",
+    "policy-results-v2.json": "300411d8e200c41b37e4d753697c50d16c21c2da87021cefc393ca71bce52acb",
+    "policy-parity-v2.json": "121deaa1e6cd1ce2b67763dc24e24c7424e61038cbfcfe2e7f94ec4c38b06d80"
+  }
+}

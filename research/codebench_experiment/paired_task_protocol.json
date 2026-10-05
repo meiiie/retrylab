@@ -1,0 +1,19 @@
+{
+  "locked_utc": "2026-09-26T02:34:46Z",
+  "recorded_utc": "2026-09-26T02:36:04.449927+00:00",
+  "status": "secondary expanded analysis; no preregistration claim",
+  "protocol_path": "E:\\Sach\\baiThayPhuc\\BaiHong\\research\\codebench_experiment\\paired_task_protocol.md",
+  "protocol_sha256": "5177b5fed445bcb9aa4f01cdf23cec8b3d18e247d0bb4e488f12cadd5aed889f",
+  "base_helper_sha256": "7812f84466c5427eee33488316e0fc350d4e8e3a9c74179e50955a0172830588",
+  "holdout": "original unused validation split,74users",
+  "bootstrap_repetitions": 1000,
+  "frozen_specification": {
+    "training_users": 329,
+    "history_features": 11,
+    "paired_phase_indicator": true,
+    "snapshot_weight": 0.5,
+    "logistic_C": 1,
+    "max_iter": 1000,
+    "seed": 26092026
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "dev-policy",
+  "note": "Development settings for --dev runs on the previously inspected pilot cohort only.",
+  "settings": {
+    "threads": 4,
+    "train_workers": 3,
+    "dev_data_dir": "data/processed/accoding_policy",
+    "scenario": {"min_support_fraction": 0.05, "posttest_per_skill": 2, "pool_per_skill": 12, "horizon": 10},
+    "min_prefix": 10,
+    "max_prefix": 60,
+    "start_seed": 3301,
+    "lam": 0.05,
+    "zpd_share": 1.0,
+    "rl": {"hidden": 256, "envs": 64, "iterations": 300, "dqn_lr": 0.0005, "replay": 50000, "warmup": 2000,
+           "batch": 256, "updates_per_step": 1, "gamma": 0.99, "tau": 0.01, "eps_final": 0.05, "eps_fraction": 0.5,
+           "ppo_lr": 0.0003, "ppo_epochs": 4, "minibatch": 128, "clip": 0.2, "value_coef": 0.5,
+           "entropy_coef": 0.01, "gae_lambda": 0.95},
+    "seeds": [11, 23, 37],
+    "evaluation_worlds": ["dkt_A", "afm_A", "dkt2_A", "dkt_B", "sakt_B", "afm_B", "pfa_B", "zpd_B", "irt_B"],
+    "item_drift_starts": 300,
+    "eval_seed": 777,
+    "bootstrap_reps": 2000,
+    "bootstrap_seed": 4242
+  }
+}

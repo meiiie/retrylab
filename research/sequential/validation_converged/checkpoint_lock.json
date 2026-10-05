@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-09-26T02:44:02.865671+00:00",
+  "checkpoints": {
+    "gru_ALL_seed11.pt": "d6374c33fb5340777a3947539e0f509fb5da3c52f325407bb5c167305240aa61",
+    "gru_ALL_seed29.pt": "7c2f5572bf44c837858168147d34620ecc469f7fd445593fc7b504d075b5ae85",
+    "gru_ALL_seed47.pt": "7d95bafa300d3bc91d5f327f20abe0b56ab39466c314a19766fc22ccb9c5d785",
+    "gru_FIRST_seed11.pt": "e2bc938853082898130e617ad1edeea2b439b7531d4f6c76d36923647d15c0b5",
+    "gru_FIRST_seed29.pt": "3b3a0046f490669a7c163003d9c7efaba65fbfe844e43dffc557daf732948079",
+    "gru_FIRST_seed47.pt": "4ace211414da9cd0e515f6f42edeec7bc3de4fde0cecbbd104d49950337f328e"
+  },
+  "zero_unknown": true,
+  "all_models_selected_by_original_validation_only": true
+}

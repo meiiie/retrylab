@@ -1,0 +1,9 @@
+create table out_problems
+(
+    id           bigint unsigned                       default '0'       not null,
+    access_level enum ('private', 'protect', 'public') default 'private' null,
+    test_setting text                                                    not null,
+    difficulty   decimal(10, 5)                                          null,
+    updated_at   datetime                                                not null
+);
+

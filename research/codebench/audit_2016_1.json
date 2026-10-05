@@ -1,0 +1,1349 @@
+{
+  "manifest": {
+    "source_page": "https://codebench.icomp.ufam.edu.br/dataset/",
+    "download_url": "https://codebench.icomp.ufam.edu.br/dataset/files/cb_dataset_2016_1_v1.81.tar.gz",
+    "dataset": "UFAM CodeBench",
+    "version": "1.81",
+    "semester": "2016-1",
+    "listed_release_date": "2024-10-24",
+    "http_last_modified": "Fri, 12 Aug 2022 10:58:34 GMT",
+    "http_content_length": 174487574,
+    "archive_path": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\raw\\codebench\\cb_dataset_2016_1_v1.81.tar.gz",
+    "archive_size_bytes": 174487574,
+    "sha256": "777d5d30343575ef007ec92afab4e177969652ba0d730c96aeaa1b8a514d5d13",
+    "audit_utc": "2026-09-26T01:56:03.872033+00:00",
+    "access": "Public direct HTTPS download; no login or terms acceptance prompt encountered",
+    "license": "No explicit license found on landing page or named license/readme/terms archive files; redistribution rights not established",
+    "student_code_executed": false,
+    "archive_extracted": false
+  },
+  "counts": {
+    "directory_or_other": 2703,
+    "files": 96880,
+    "codemirror_files": 29991,
+    "user.data_files": 535,
+    "logins.log_files": 535,
+    "executions_files": 29991,
+    "codes_files": 29991,
+    "grades_files": 5701,
+    "assessments_files": 136
+  },
+  "uncompressed_bytes_by_type": {
+    "codemirror": 1464295017,
+    "user.data": 405961,
+    "logins.log": 2058629,
+    "executions": 220114925,
+    "codes": 9043289,
+    "grades": 522102,
+    "assessments": 80905
+  },
+  "class_count_from_paths": 9,
+  "student_class_records_from_paths": 535,
+  "unique_user_ids_from_paths": 471,
+  "unique_exercise_ids_from_paths": 235,
+  "distinct_exercises_per_student_class": {
+    "n": 535,
+    "min": 1,
+    "median": 72,
+    "max": 92,
+    "mean": 55.37943925233645
+  },
+  "execution_events": {
+    "TEST": 167791,
+    "SUBMITION": 153931
+  },
+  "execution_record_field_occurrences": {
+    "CODE": 321722,
+    "OUTPUT": 88470,
+    "EXECUTION TIME": 153931,
+    "GRADE": 105052,
+    "ERROR": 127873
+  },
+  "error_type_mentions": {
+    "SyntaxError": 44445,
+    "TypeError": 9454,
+    "NameError": 26432,
+    "IndexError": 6714,
+    "UnicodeEncodeError": 1714,
+    "IndentationError": 16514,
+    "EOFError": 5279,
+    "ValueError": 9531,
+    "TabError": 4649,
+    "ZeroDivisionError": 435,
+    "AttributeError": 577,
+    "LinAlgError": 354,
+    "ModuleNotFoundError": 169,
+    "ImportError": 209,
+    "OverflowError": 282,
+    "AssertionError": 1,
+    "AxisError": 2
+  },
+  "submission_grade_percent_counts": {
+    "0": 45531,
+    "100": 36395,
+    "missing": 48879,
+    "50": 2933,
+    "67": 13909,
+    "33": 6284
+  },
+  "execution_events_per_log": {
+    "n": 29991,
+    "min": 0,
+    "median": 3,
+    "max": 892,
+    "mean": 10.727284852122303
+  },
+  "submission_events_per_log": {
+    "n": 29991,
+    "min": 0,
+    "median": 2,
+    "max": 892,
+    "mean": 5.132573105264913
+  },
+  "first_execution_timestamp_lexical": "2016-05-25 16:53:47",
+  "last_execution_timestamp_lexical": "2017-10-02 15:03:10",
+  "assessment_types": {
+    "homework": 75,
+    "exam": 61
+  },
+  "assessment_fields": {
+    "assessment title": 136,
+    "class name": 136,
+    "class number": 136,
+    "start": 136,
+    "end": 136,
+    "language": 136,
+    "codemirror mode": 136,
+    "type": 136,
+    "weight": 136,
+    "total_exercises": 136,
+    "exercise 01": 136,
+    "exercise 02": 136,
+    "exercise 03": 73,
+    "exercise 04": 73,
+    "exercise 05": 72,
+    "exercise 06": 72,
+    "exercise 07": 72,
+    "exercise 08": 54,
+    "exercise 09": 54,
+    "exercise 10": 45,
+    "exercise 11": 18
+  },
+  "assessment_windows": [
+    {
+      "path": "2016-1/105/assessments/54.data",
+      "start": "2016-06-09 20:00",
+      "end": "2016-06-23 17:59",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/191.data",
+      "start": "2016-08-18 18:00",
+      "end": "2016-08-18 19:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/105/assessments/112.data",
+      "start": "2016-07-07 18:00",
+      "end": "2016-07-07 20:15",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/105/assessments/192.data",
+      "start": "2016-08-23 20:00",
+      "end": "2016-09-01 18:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/213.data",
+      "start": "2016-09-08 20:00",
+      "end": "2016-09-20 18:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/36.data",
+      "start": "2016-06-02 18:00",
+      "end": "2016-06-06 23:59",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/177.data",
+      "start": "2016-08-11 20:00",
+      "end": "2016-08-18 18:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/83.data",
+      "start": "2016-06-23 18:00",
+      "end": "2016-06-23 19:55",
+      "type": "homework",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/105/assessments/224.data",
+      "start": "2016-09-20 18:00",
+      "end": "2016-09-20 19:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/105/assessments/165.data",
+      "start": "2016-08-04 12:00",
+      "end": "2016-08-08 12:00",
+      "type": "exam",
+      "total_exercises": "4",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/105/assessments/98.data",
+      "start": "2016-06-28 20:00",
+      "end": "2016-07-07 18:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/128.data",
+      "start": "2016-07-14 18:00",
+      "end": "2016-07-14 18:56",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/105/assessments/212.data",
+      "start": "2016-09-01 18:05",
+      "end": "2016-09-01 19:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/105/assessments/120.data",
+      "start": "2016-07-12 20:00",
+      "end": "2016-07-22 23:59",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/144.data",
+      "start": "2016-07-26 20:00",
+      "end": "2016-08-04 18:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/105/assessments/140.data",
+      "start": "2016-07-21 18:00",
+      "end": "2016-07-21 19:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/103/assessments/131.data",
+      "start": "2016-07-19 10:00",
+      "end": "2016-07-28 08:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/174.data",
+      "start": "2016-08-11 08:00",
+      "end": "2016-08-11 09:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/103/assessments/205.data",
+      "start": "2016-08-30 10:00",
+      "end": "2016-09-13 08:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/122.data",
+      "start": "2016-07-14 08:55",
+      "end": "2016-07-14 09:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/103/assessments/103.data",
+      "start": "2016-07-05 10:00",
+      "end": "2016-07-19 08:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/27.data",
+      "start": "2016-05-31 00:00",
+      "end": "2016-07-31 00:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/42.data",
+      "start": "2016-06-07 10:00",
+      "end": "2016-06-21 08:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/94.data",
+      "start": "2016-06-30 09:00",
+      "end": "2016-06-30 09:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/103/assessments/197.data",
+      "start": "2016-08-25 08:00",
+      "end": "2016-08-25 09:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/103/assessments/216.data",
+      "start": "2016-09-13 08:00",
+      "end": "2016-09-13 09:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/103/assessments/163.data",
+      "start": "2016-08-02 10:00",
+      "end": "2016-08-11 08:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/74.data",
+      "start": "2016-06-21 10:00",
+      "end": "2016-06-30 08:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/180.data",
+      "start": "2016-08-16 10:00",
+      "end": "2016-08-25 08:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/103/assessments/48.data",
+      "start": "2016-06-16 08:00",
+      "end": "2016-06-16 09:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/103/assessments/148.data",
+      "start": "2016-07-28 09:01",
+      "end": "2016-07-28 09:58",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/111/assessments/214.data",
+      "start": "2016-09-14 14:00",
+      "end": "2016-09-14 15:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/111/assessments/35.data",
+      "start": "2016-06-15 14:00",
+      "end": "2016-06-15 16:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/111/assessments/88.data",
+      "start": "2016-07-04 16:00",
+      "end": "2016-07-18 14:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/21.data",
+      "start": "2016-05-25 14:00",
+      "end": "2016-07-31 10:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/190.data",
+      "start": "2016-08-24 14:00",
+      "end": "2016-08-24 16:20",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/111/assessments/194.data",
+      "start": "2016-08-29 16:00",
+      "end": "2016-09-14 14:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/89.data",
+      "start": "2016-06-29 14:00",
+      "end": "2016-06-29 15:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/111/assessments/69.data",
+      "start": "2016-06-20 15:00",
+      "end": "2016-06-29 14:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/32.data",
+      "start": "2016-06-06 15:00",
+      "end": "2016-06-20 16:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/168.data",
+      "start": "2016-08-10 14:00",
+      "end": "2016-08-10 15:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/111/assessments/117.data",
+      "start": "2016-07-18 15:12",
+      "end": "2016-07-27 14:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/102.data",
+      "start": "2016-07-13 14:00",
+      "end": "2016-07-13 15:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/111/assessments/154.data",
+      "start": "2016-08-01 16:00",
+      "end": "2016-08-10 14:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/179.data",
+      "start": "2016-08-15 16:00",
+      "end": "2016-08-24 15:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/111/assessments/132.data",
+      "start": "2016-07-27 14:00",
+      "end": "2016-07-27 15:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/76.data",
+      "start": "2016-06-21 17:00",
+      "end": "2016-06-30 16:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/108/assessments/99.data",
+      "start": "2016-06-30 17:00",
+      "end": "2016-06-30 18:02",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/109.data",
+      "start": "2016-07-05 17:00",
+      "end": "2016-07-14 16:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/108/assessments/151.data",
+      "start": "2016-07-28 16:00",
+      "end": "2016-07-28 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/130.data",
+      "start": "2016-07-14 17:00",
+      "end": "2016-07-14 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/141.data",
+      "start": "2016-07-21 00:00",
+      "end": "2016-07-28 16:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/108/assessments/187.data",
+      "start": "2016-08-16 18:00",
+      "end": "2016-08-25 16:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/108/assessments/193.data",
+      "start": "2016-09-15 16:00",
+      "end": "2016-09-15 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/218.data",
+      "start": "2016-09-20 16:00",
+      "end": "2016-09-20 18:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/62.data",
+      "start": "2016-06-16 16:00",
+      "end": "2016-06-23 16:50",
+      "type": "homework",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/209.data",
+      "start": "2016-08-30 17:00",
+      "end": "2016-09-22 16:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/108/assessments/49.data",
+      "start": "2016-06-07 17:41",
+      "end": "2016-06-16 16:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/108/assessments/28.data",
+      "start": "2016-05-31 00:00",
+      "end": "2016-11-30 16:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/108/assessments/169.data",
+      "start": "2016-08-14 18:00",
+      "end": "2016-08-15 18:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/108/assessments/161.data",
+      "start": "2016-08-02 14:00",
+      "end": "2016-08-25 18:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/97.data",
+      "start": "2016-06-30 10:00",
+      "end": "2016-06-30 11:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/102/assessments/75.data",
+      "start": "2016-06-21 12:00",
+      "end": "2016-06-30 09:59",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/136.data",
+      "start": "2016-07-19 12:00",
+      "end": "2016-08-02 08:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/184.data",
+      "start": "2016-08-16 12:00",
+      "end": "2016-08-30 10:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/18.data",
+      "start": "2016-05-31 00:00",
+      "end": "2016-09-08 00:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/106.data",
+      "start": "2016-07-05 12:00",
+      "end": "2016-07-19 08:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/158.data",
+      "start": "2016-08-02 12:00",
+      "end": "2016-08-15 10:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/59.data",
+      "start": "2016-06-16 10:00",
+      "end": "2016-06-16 11:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/102/assessments/208.data",
+      "start": "2016-08-30 12:00",
+      "end": "2016-09-13 09:55",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/126.data",
+      "start": "2016-07-19 09:55",
+      "end": "2016-07-19 13:20",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/102/assessments/149.data",
+      "start": "2016-07-28 10:00",
+      "end": "2016-07-28 12:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/102/assessments/199.data",
+      "start": "2016-08-25 10:00",
+      "end": "2016-08-25 11:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/102/assessments/173.data",
+      "start": "2016-08-11 10:57",
+      "end": "2016-08-11 11:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/102/assessments/44.data",
+      "start": "2016-06-07 12:00",
+      "end": "2016-06-21 10:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/102/assessments/217.data",
+      "start": "2016-09-13 10:00",
+      "end": "2016-09-13 12:45",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/107/assessments/96.data",
+      "start": "2016-06-30 18:00",
+      "end": "2016-06-30 20:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/107/assessments/64.data",
+      "start": "2016-06-16 18:00",
+      "end": "2016-06-16 20:00",
+      "type": "homework",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/107/assessments/47.data",
+      "start": "2016-06-07 19:55",
+      "end": "2016-06-21 18:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/219.data",
+      "start": "2016-09-13 18:00",
+      "end": "2016-09-13 19:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/107/assessments/211.data",
+      "start": "2016-08-30 20:00",
+      "end": "2016-09-13 18:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/127.data",
+      "start": "2016-07-14 18:00",
+      "end": "2016-07-14 20:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/107/assessments/200.data",
+      "start": "2016-08-25 18:00",
+      "end": "2016-08-25 20:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/107/assessments/176.data",
+      "start": "2016-08-11 20:00",
+      "end": "2016-08-12 18:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/107/assessments/46.data",
+      "start": "2016-06-07 18:00",
+      "end": "2016-06-21 18:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/185.data",
+      "start": "2016-08-16 20:00",
+      "end": "2016-08-25 18:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/81.data",
+      "start": "2016-06-21 20:00",
+      "end": "2016-06-30 18:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/160.data",
+      "start": "2016-08-02 20:00",
+      "end": "2016-08-11 20:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/107.data",
+      "start": "2016-07-05 20:00",
+      "end": "2016-07-14 18:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/137.data",
+      "start": "2016-07-19 20:00",
+      "end": "2016-07-28 18:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/107/assessments/150.data",
+      "start": "2016-07-28 18:00",
+      "end": "2016-07-28 20:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/110/assessments/196.data",
+      "start": "2016-08-24 18:00",
+      "end": "2016-08-24 20:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/110/assessments/183.data",
+      "start": "2016-08-16 10:00",
+      "end": "2016-08-25 10:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/73.data",
+      "start": "2016-06-20 19:27",
+      "end": "2016-06-29 18:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/119.data",
+      "start": "2016-09-02 15:59",
+      "end": "2016-09-02 18:57",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/110/assessments/147.data",
+      "start": "2016-09-02 17:00",
+      "end": "2016-09-02 19:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/110/assessments/22.data",
+      "start": "2016-05-25 18:00",
+      "end": "2016-07-31 18:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/223.data",
+      "start": "2016-09-14 18:00",
+      "end": "2016-09-14 20:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/110/assessments/134.data",
+      "start": "2016-07-18 20:00",
+      "end": "2016-07-27 18:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/207.data",
+      "start": "2016-08-30 11:00",
+      "end": "2016-09-19 18:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/40.data",
+      "start": "2016-06-15 18:00",
+      "end": "2016-06-15 19:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/110/assessments/105.data",
+      "start": "2016-07-04 20:00",
+      "end": "2016-07-18 18:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/95.data",
+      "start": "2016-06-29 18:00",
+      "end": "2016-06-29 19:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/110/assessments/156.data",
+      "start": "2016-08-01 19:50",
+      "end": "2016-08-10 18:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/38.data",
+      "start": "2016-06-06 20:00",
+      "end": "2016-06-20 18:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/110/assessments/171.data",
+      "start": "2016-08-10 18:00",
+      "end": "2016-08-10 20:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/106/assessments/129.data",
+      "start": "2016-07-14 20:00",
+      "end": "2016-07-14 22:05",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/106/assessments/111.data",
+      "start": "2016-07-05 22:00",
+      "end": "2016-07-14 20:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/53.data",
+      "start": "2016-06-09 18:00",
+      "end": "2016-06-21 20:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/189.data",
+      "start": "2016-08-16 22:00",
+      "end": "2016-08-25 20:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/135.data",
+      "start": "2016-07-19 22:00",
+      "end": "2016-07-28 20:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/71.data",
+      "start": "2016-06-21 20:00",
+      "end": "2016-06-30 22:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/152.data",
+      "start": "2016-07-28 20:00",
+      "end": "2016-07-28 22:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/106/assessments/201.data",
+      "start": "2016-08-25 20:00",
+      "end": "2016-08-25 22:04",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/106/assessments/175.data",
+      "start": "2016-08-11 22:00",
+      "end": "2016-08-12 18:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/106/assessments/162.data",
+      "start": "2016-08-02 22:00",
+      "end": "2016-08-11 22:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/63.data",
+      "start": "2016-06-16 20:00",
+      "end": "2016-06-16 22:00",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/106/assessments/51.data",
+      "start": "2016-06-07 20:00",
+      "end": "2016-06-21 20:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/93.data",
+      "start": "2016-06-30 20:00",
+      "end": "2016-06-30 22:05",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/106/assessments/210.data",
+      "start": "2016-08-30 22:00",
+      "end": "2016-09-13 20:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/106/assessments/220.data",
+      "start": "2016-09-13 19:59",
+      "end": "2016-09-13 21:59",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/121.data",
+      "start": "2016-07-13 16:00",
+      "end": "2016-07-13 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/170.data",
+      "start": "2016-08-10 17:00",
+      "end": "2016-08-10 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/39.data",
+      "start": "2016-06-06 18:00",
+      "end": "2016-06-20 16:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/109/assessments/181.data",
+      "start": "2016-08-15 18:00",
+      "end": "2016-08-24 16:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/109/assessments/92.data",
+      "start": "2016-06-29 16:00",
+      "end": "2016-06-29 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/155.data",
+      "start": "2016-08-01 18:00",
+      "end": "2016-08-10 16:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/109/assessments/195.data",
+      "start": "2016-08-24 17:00",
+      "end": "2016-08-24 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/23.data",
+      "start": "2016-05-25 16:00",
+      "end": "2016-07-31 18:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/109/assessments/72.data",
+      "start": "2016-06-20 17:00",
+      "end": "2016-06-29 16:00",
+      "type": "homework",
+      "total_exercises": "7",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/109/assessments/145.data",
+      "start": "2016-07-27 16:00",
+      "end": "2016-07-27 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/206.data",
+      "start": "2016-08-30 10:00",
+      "end": "2016-09-14 16:00",
+      "type": "homework",
+      "total_exercises": "10",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/109/assessments/222.data",
+      "start": "2016-09-14 17:00",
+      "end": "2016-09-14 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/41.data",
+      "start": "2016-06-15 16:00",
+      "end": "2016-06-15 17:55",
+      "type": "exam",
+      "total_exercises": "2",
+      "has_alternative_exercises": true
+    },
+    {
+      "path": "2016-1/109/assessments/133.data",
+      "start": "2016-07-18 18:00",
+      "end": "2016-07-27 16:00",
+      "type": "homework",
+      "total_exercises": "11",
+      "has_alternative_exercises": false
+    },
+    {
+      "path": "2016-1/109/assessments/104.data",
+      "start": "2016-07-04 18:00",
+      "end": "2016-07-18 16:00",
+      "type": "homework",
+      "total_exercises": "9",
+      "has_alternative_exercises": false
+    }
+  ],
+  "sample_paths": {
+    "codemirror": [
+      "2016-1/105/users/1509/codemirror/144_1135.log",
+      "2016-1/105/users/1509/codemirror/54_588.log",
+      "2016-1/105/users/1509/codemirror/98_1053.log"
+    ],
+    "user.data": [
+      "2016-1/105/users/1509/user.data",
+      "2016-1/105/users/1512/user.data",
+      "2016-1/105/users/1505/user.data"
+    ],
+    "logins.log": [
+      "2016-1/105/users/1509/logins.log",
+      "2016-1/105/users/1512/logins.log",
+      "2016-1/105/users/1505/logins.log"
+    ],
+    "executions": [
+      "2016-1/105/users/1509/executions/144_1135.log",
+      "2016-1/105/users/1509/executions/54_588.log",
+      "2016-1/105/users/1509/executions/98_1053.log"
+    ],
+    "codes": [
+      "2016-1/105/users/1509/codes/144_1134.py",
+      "2016-1/105/users/1509/codes/144_1132.py",
+      "2016-1/105/users/1509/codes/120_1101.py"
+    ],
+    "grades": [
+      "2016-1/105/users/1509/grades/54.log",
+      "2016-1/105/users/1509/grades/120.log",
+      "2016-1/105/users/1509/grades/144.log"
+    ],
+    "assessments": [
+      "2016-1/105/assessments/54.data",
+      "2016-1/105/assessments/191.data",
+      "2016-1/105/assessments/112.data"
+    ]
+  },
+  "metadata_examples": [
+    {
+      "path": "2016-1/105/assessments/54.data",
+      "fields": {
+        "assessment title": "Laboratório 1 - Variáveis e Estrutura Sequencial de Programação",
+        "class name": "Introdução à Programação de Computadores",
+        "class number": "105",
+        "start": "2016-06-09 20:00",
+        "end": "2016-06-23 17:59",
+        "language": "Python 3",
+        "codemirror mode": "python/python.js",
+        "type": "homework",
+        "weight": "1",
+        "total_exercises": "10",
+        "exercise 01": "835",
+        "exercise 02": "587",
+        "exercise 03": "820",
+        "exercise 04": "588",
+        "exercise 05": "1014",
+        "exercise 06": "1015",
+        "exercise 07": "825",
+        "exercise 08": "1016",
+        "exercise 09": "1017",
+        "exercise 10": "842"
+      }
+    },
+    {
+      "path": "2016-1/105/assessments/191.data",
+      "fields": {
+        "assessment title": "Avaliação Parcial 05 – Vetores e Strings",
+        "class name": "Introdução à Programação de Computadores",
+        "class number": "105",
+        "start": "2016-08-18 18:00",
+        "end": "2016-08-18 19:55",
+        "language": "Python 3",
+        "codemirror mode": "python/python.js",
+        "type": "exam",
+        "weight": "1",
+        "total_exercises": "2",
+        "exercise 01": "1203 or 1204 or 1205 or 1206 or 1207 or 1208 or 1209 or 1210 or 1211 or 1212 or 1213 or 1214",
+        "exercise 02": "1192 or 1193 or 1194 or 1195 or 1196 or 1197 or 1198 or 1199 or 1200 or 1201 or 1202"
+      }
+    },
+    {
+      "path": "2016-1/105/assessments/112.data",
+      "fields": {
+        "assessment title": "Avaliação Parcial 02 – Estrutura Condicional Composta (sem Aninhamento)",
+        "class name": "Introdução à Programação de Computadores",
+        "class number": "105",
+        "start": "2016-07-07 18:00",
+        "end": "2016-07-07 20:15",
+        "language": "Python 3",
+        "codemirror mode": "python/python.js",
+        "type": "exam",
+        "weight": "1",
+        "total_exercises": "2",
+        "exercise 01": "1080 or 1081 or 1082 or 1083 or 1084 or 1085 or 1086 or 1087 or 1088 or 1089 or 1090",
+        "exercise 02": "1091 or 1092 or 1093 or 1094 or 1095 or 1096 or 1097 or 1098"
+      }
+    }
+  ],
+  "named_license_or_readme_files": [],
+  "unsafe_archive_member_paths": [],
+  "editor_event_sample": {
+    "files_sampled": 20,
+    "counts": {
+      "viewportChange": 383,
+      "mousedown": 561,
+      "focus": 273,
+      "blur": 259,
+      "change": 7689,
+      "keyHandled": 2456,
+      "submit": 113,
+      "contextmenu": 48,
+      "copy": 17,
+      "dblclick": 4
+    }
+  },
+  "decoded_text_files_by_encoding": {
+    "utf-8": 30147
+  },
+  "limitations": [
+    "Audit parses text records only; no student code is executed.",
+    "Learner counts are unique semester/class/user paths, not deduplicated people across classes.",
+    "No confirmed randomized logging policy or propensity scores.",
+    "Source page samples show demographic user.data; those files were not read for this audit.",
+    "Assessment availability can be partly reconstructed from start/end and exercise IDs, but this does not identify assignment probabilities.",
+    "No exercise statement, expert misconception label, or KC tag is inferred merely from an exercise ID.",
+    "Named-file scan cannot prove that license text is absent from every data file."
+  ]
+}

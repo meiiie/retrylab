@@ -1,0 +1,31 @@
+{
+  "audit_utc": "2026-09-26T03:13:30.174992+00:00",
+  "frozen_code_hashes_still_match": {
+    "protocol.md": true,
+    "run_experiment.py": true,
+    "features.py": true,
+    "model_pipeline.py": true,
+    "schema_audit.py": true,
+    "extract_semester.py": true,
+    "recover_old_training_code.py": true,
+    "checks.py": true
+  },
+  "protocol_precedes_run": true,
+  "single_completed_run": true,
+  "results_sha256": "a9127f358fd421dcc9bb6d9c054895afefaea1fd694c4a357d2fd95f6dad6f38",
+  "aggregate_output_files": [
+    "results.json",
+    "results.md",
+    "metrics.csv",
+    "contrasts.csv",
+    "pooled_feature_audit.json",
+    "schema_audit.json",
+    "extraction_manifest.json",
+    "old_training_recovery_manifest.json",
+    "protocol.md",
+    "protocol_lock.json"
+  ],
+  "all_per_user_predictions_and_code_confined_to_data_directory": true,
+  "additional_models_after_test": false,
+  "note": "No student-code execution; no raw/per-user data included in aggregate outputs."
+}

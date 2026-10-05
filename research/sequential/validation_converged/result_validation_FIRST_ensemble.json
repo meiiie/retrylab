@@ -1,0 +1,40 @@
+{
+  "population": "validation",
+  "mode": "FIRST",
+  "seed": "mean_probability_11_29_47",
+  "paired": {
+    "pairs": 10734,
+    "students": 211,
+    "target_acceptance_rate": 0.47046767281535307,
+    "nll_h0": 0.6013460144888082,
+    "nll_h1": 0.5941243621950293,
+    "brier_h0": 0.20732876164256972,
+    "brier_h1": 0.2041654919400885,
+    "mean_probability_h0": 0.4870874541718229,
+    "mean_probability_h1": 0.48471218639635416,
+    "nll_difference": -0.007221652293778738,
+    "brier_difference": -0.0031632697024812045,
+    "probability_change": -0.0023752677754687755,
+    "bootstrap": {
+      "repetitions": 1000,
+      "seed": 26092026,
+      "unit": "paired retained student",
+      "interval_type": "percentile 95%; pair-weighted point estimate; fixed fitted models",
+      "intervals": {
+        "nll_difference": {
+          "lower": -0.010927358092695712,
+          "upper": -0.003325578544634402
+        },
+        "brier_difference": {
+          "lower": -0.004778041891930145,
+          "upper": -0.0014917253458662384
+        },
+        "probability_change": {
+          "lower": -0.0040802129898059114,
+          "upper": -0.0005729774324328147
+        }
+      }
+    }
+  },
+  "interval_caveat": "Bootstrap conditions on these three fitted models, not retraining uncertainty."
+}

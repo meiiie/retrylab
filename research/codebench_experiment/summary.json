@@ -1,0 +1,1518 @@
+{
+  "status": "Fixed-future-target predictive diagnostic; no causal learning-gain or recommendation-value estimate.",
+  "input": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\codebench\\events.csv.gz",
+  "input_sha256": "87b4e34fd58d419de3392defd9314ef3acbb7b03ca1e1a900627cb2121be3eaf",
+  "script_sha256": "7812f84466c5427eee33488316e0fc350d4e8e3a9c74179e50955a0172830588",
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.3.2",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0"
+  },
+  "bootstrap_repetitions": 2000,
+  "synthetic_checks": {
+    "missing_outcome_preserved_in_count_and_missing_state": true,
+    "first_observed_before_label_filter": true,
+    "target_and_later_outcome_time_code_mutation_invariance": true,
+    "same_second_strict_prior_prefix_invariance": true
+  },
+  "split_rule": "SHA256(codebench-fixed-probe-v1:<global-user-id>) first16hex modulo100: train<70, validation<85, otherwise test; fixed before labels; validation unused.",
+  "split": {
+    "test": {
+      "users": 63,
+      "submissions": 21723,
+      "numeric_grade_known": 14972
+    },
+    "train": {
+      "users": 329,
+      "submissions": 99147,
+      "numeric_grade_known": 67427
+    },
+    "validation": {
+      "users": 74,
+      "submissions": 33061,
+      "numeric_grade_known": 22653
+    }
+  },
+  "timestamp_tied_submission_rows": 25621,
+  "within_file_backward_timestamp_transitions": 1,
+  "users_with_within_file_backward_timestamps": 1,
+  "clock_anomaly_sensitivity": "Post hoc data-quality sensitivity drops affected users from paired evaluation; frozen model fitting and main results unchanged. Triggered by timestamp audit, not outcome performance.",
+  "first_observed_submission_rows_at_tied_timestamps": 103,
+  "timestamp_range": [
+    "2016-05-25 16:53:47",
+    "2017-10-02 14:53:18"
+  ],
+  "first_observed_definition": "First SUBMITION in all available rows for global user/exercise before any outcome-label filtering; paired target additionally has no prior TEST or SUBMITION exposure at or before H1.",
+  "history": "All SUBMITION rows, including missing GRADE, remain in strict-prior timestamp-batch state. TEST rows are used only for first-exposure eligibility.",
+  "target_timing": "H0 follows first submission of contiguous same-item episode i; H1 follows last; target is first submission of immediate next episode j. Forecasts condition on the same future oracle item identity j.",
+  "timestamp_handling": "States exclude all current-second submissions. Probe boundary timestamps must be unique for the user. Recent windows include whole tied groups at their cutoff; last means previous timestamp group.",
+  "features_forbidden": "No target timestamp, code, grader result, error, grade, execution time, testcase or later observation; no target gap. Target identity only enters train-derived difficulty.",
+  "model": "Frozen StandardScaler + LogisticRegression L2 C=1 max_iter=1000, no tuning or validation selection.",
+  "difficulty": "First-observed labeled training-user records only, 20 pseudo-observations toward training global mean; 5-fold student crossfit for training rows and full training estimates for held-out rows.",
+  "modes": {
+    "numeric_grade_primary": {
+      "outcome": "GRADE=100 versus numeric GRADE<100; missing target GRADE excluded only after first-observed determination.",
+      "labeled_target_rows": 105052,
+      "coverage": {
+        "test_students": 63,
+        "test_submissions": 21723,
+        "test_first_observed_submissions": 3911,
+        "contiguous_episodes": 5265,
+        "multi_submission_episodes": 2485,
+        "structurally_eligible_pairs_before_target_label_filter": 1665,
+        "retained_pairs": 1125,
+        "excluded_no_next_episode": 37,
+        "single_submission_episodes": 2780,
+        "excluded_missing_target_label": 540,
+        "excluded_next_item_previously_submitted": 680,
+        "excluded_target_TEST_or_SUBMITION_exposure_before_H1": 52,
+        "excluded_timestamp_tie_at_boundary": 51,
+        "retained_students": 61,
+        "retained_pairs_with_target_TEST_after_H1_before_SUBMITION": 442,
+        "coverage_multi_submission": 0.45271629778672035,
+        "target_label_coverage_structurally_eligible": 0.6756756756756757
+      },
+      "difficulty": {
+        "labeled_first_training_rows": 14895,
+        "training_items": 235,
+        "full_training_prior": 0.6968781470292045
+      },
+      "difficulty_invariant_to_all_heldout_target_label_mutations": true,
+      "models": {
+        "history_all": {
+          "fit_rows": 67427,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log"
+          ],
+          "first_only_fit": false,
+          "iterations": 15,
+          "summary": {
+            "pairs": 1125,
+            "students": 61,
+            "target_success_rate": 0.5893333333333334,
+            "p0": 0.4583555218290395,
+            "p1": 0.6017846400386972,
+            "probability_change": 0.14342911820965773,
+            "nll0": 0.7235283215662693,
+            "nll1": 0.6795088716725938,
+            "nll_difference": -0.04401944989367556,
+            "brier0": 0.2602884829666245,
+            "brier1": 0.2394626284279387,
+            "brier_difference": -0.020825854538685754
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.07384561214722268,
+                "upper": -0.01211519862832143
+              },
+              "brier_difference": {
+                "lower": -0.03415491428525772,
+                "upper": -0.0072314441756207905
+              },
+              "probability_change": {
+                "lower": 0.12967983936759409,
+                "upper": 0.1565478238919258
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.05086796621247221,
+                "lower": -0.0943612155875162,
+                "upper": -0.008689397019903886
+              },
+              "brier_difference": {
+                "mean": -0.024107733683971694,
+                "lower": -0.043882249315208725,
+                "upper": -0.005139282794375134
+              },
+              "probability_change": {
+                "mean": 0.13792897565328432,
+                "lower": 0.12284546159234618,
+                "upper": 0.15288395795485404
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.5279530900177893,
+            "history_count_log": -0.34101130245288586,
+            "history_known_accuracy": -0.03633981922865246,
+            "history_missing_fraction": 0.06576761118714378,
+            "last_known_accuracy": 0.7051580564957738,
+            "last_missing_fraction": 0.073065560944149,
+            "recent_5_known_accuracy": 0.5654473297104943,
+            "recent_5_missing_fraction": -0.03001368837272251,
+            "recent_20_known_accuracy": 0.15558896630110985,
+            "recent_20_missing_fraction": 0.0010497243815416363,
+            "history_distinct_problems_log": 0.15089517874795644
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 22,
+            "summary": {
+              "pairs": 1103,
+              "students": 60,
+              "target_success_rate": 0.5883952855847688,
+              "p0": 0.45830944076809055,
+              "p1": 0.6002611062408534,
+              "probability_change": 0.14195166547276275,
+              "nll0": 0.7228904441577542,
+              "nll1": 0.681148003285927,
+              "nll_difference": -0.04174244087182716,
+              "brier0": 0.2599332429871837,
+              "brier1": 0.2402132581190292,
+              "brier_difference": -0.019719984868154544
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.07324516824085091,
+                  "upper": -0.010024698794964109
+                },
+                "brier_difference": {
+                  "lower": -0.033741151321444306,
+                  "upper": -0.006022827387418327
+                },
+                "probability_change": {
+                  "lower": 0.1284820072998877,
+                  "upper": 0.15422442127309147
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.04907942561240762,
+                  "lower": -0.09133626499143742,
+                  "upper": -0.005930381397380183
+                },
+                "brier_difference": {
+                  "mean": -0.02323836027079016,
+                  "lower": -0.042157270826437825,
+                  "upper": -0.003867367851058715
+                },
+                "probability_change": {
+                  "mean": 0.1366027381494697,
+                  "lower": 0.12189882485120535,
+                  "upper": 0.15198594709830765
+                }
+              }
+            }
+          }
+        },
+        "history_first": {
+          "fit_rows": 14895,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log"
+          ],
+          "first_only_fit": true,
+          "iterations": 18,
+          "summary": {
+            "pairs": 1125,
+            "students": 61,
+            "target_success_rate": 0.5893333333333334,
+            "p0": 0.6036369728191786,
+            "p1": 0.6082561199787204,
+            "probability_change": 0.00461914715954179,
+            "nll0": 0.632570528200899,
+            "nll1": 0.6272930335306571,
+            "nll_difference": -0.005277494670241757,
+            "brier0": 0.22049750770660753,
+            "brier1": 0.21816584200798167,
+            "brier_difference": -0.002331665698625862
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.016747562136398234,
+                "upper": 0.0062884164132031095
+              },
+              "brier_difference": {
+                "lower": -0.007641517039828705,
+                "upper": 0.0029672132948213473
+              },
+              "probability_change": {
+                "lower": -0.0001704939458692369,
+                "upper": 0.009098401321360838
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.01136810582465769,
+                "lower": -0.0356596638298494,
+                "upper": 0.008262029853698255
+              },
+              "brier_difference": {
+                "mean": -0.003860266888165647,
+                "lower": -0.012193971261434884,
+                "upper": 0.004115569694698357
+              },
+              "probability_change": {
+                "mean": -0.001665329426811339,
+                "lower": -0.00802825832055373,
+                "upper": 0.003917575129210774
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7326453917545284,
+            "history_count_log": -0.6969628998306203,
+            "history_known_accuracy": 0.023100590481330355,
+            "history_missing_fraction": 0.18044338293881657,
+            "last_known_accuracy": 0.0710674622282309,
+            "last_missing_fraction": -0.00038071258580311485,
+            "recent_5_known_accuracy": 0.3097795987318064,
+            "recent_5_missing_fraction": -0.09508736736439007,
+            "recent_20_known_accuracy": -0.01425280218388239,
+            "recent_20_missing_fraction": -0.04517107344829331,
+            "history_distinct_problems_log": 0.5398036973127968
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 22,
+            "summary": {
+              "pairs": 1103,
+              "students": 60,
+              "target_success_rate": 0.5883952855847688,
+              "p0": 0.6028746005914749,
+              "p1": 0.607415109174306,
+              "probability_change": 0.00454050858283105,
+              "nll0": 0.6320310557207821,
+              "nll1": 0.6270194650185261,
+              "nll_difference": -0.005011590702255973,
+              "brier0": 0.22027699435388723,
+              "brier1": 0.21813044366086687,
+              "brier_difference": -0.002146550693020356
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.01620566691084909,
+                  "upper": 0.007013864287279396
+                },
+                "brier_difference": {
+                  "lower": -0.007334830535102666,
+                  "upper": 0.003283891251691819
+                },
+                "probability_change": {
+                  "lower": -0.00011555567561292712,
+                  "upper": 0.008719686569068836
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.0112474250433765,
+                  "lower": -0.03517905959251381,
+                  "upper": 0.008667407136199205
+                },
+                "brier_difference": {
+                  "mean": -0.0037310603540648907,
+                  "lower": -0.012220584734928385,
+                  "upper": 0.004075168231187439
+                },
+                "probability_change": {
+                  "mean": -0.0018357815745474867,
+                  "lower": -0.008497647521265349,
+                  "upper": 0.003723970621433273
+                }
+              }
+            }
+          }
+        },
+        "history_code_all": {
+          "fit_rows": 67427,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log",
+            "prior_code_chars_log",
+            "prior_code_lines_log",
+            "prior_code_ast_valid_fraction",
+            "prior_code_ast_nodes_log",
+            "prior_code_branches_log",
+            "prior_code_loops_log",
+            "prior_code_functions_log"
+          ],
+          "first_only_fit": false,
+          "iterations": 20,
+          "summary": {
+            "pairs": 1125,
+            "students": 61,
+            "target_success_rate": 0.5893333333333334,
+            "p0": 0.4580770478829657,
+            "p1": 0.6014793600085567,
+            "probability_change": 0.14340231212559099,
+            "nll0": 0.7259021938018311,
+            "nll1": 0.6801479586522426,
+            "nll_difference": -0.04575423514958835,
+            "brier0": 0.2611617811098539,
+            "brier1": 0.2395895917756534,
+            "brier_difference": -0.02157218933420046
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.07568634957235017,
+                "upper": -0.014340344042477925
+              },
+              "brier_difference": {
+                "lower": -0.034693496946329755,
+                "upper": -0.008082204982042
+              },
+              "probability_change": {
+                "lower": 0.12955661346269842,
+                "upper": 0.1567356818447442
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.054102398935897425,
+                "lower": -0.09943236542905391,
+                "upper": -0.011934624086400239
+              },
+              "brier_difference": {
+                "mean": -0.025485753548911538,
+                "lower": -0.04533398294068318,
+                "upper": -0.006571650494455862
+              },
+              "probability_change": {
+                "mean": 0.13800303391857593,
+                "lower": 0.12252167403568164,
+                "upper": 0.153129581271479
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.5321909027008768,
+            "history_count_log": -0.34099604626456276,
+            "history_known_accuracy": -0.03762609290506567,
+            "history_missing_fraction": 0.06503900337513353,
+            "last_known_accuracy": 0.7043956067312613,
+            "last_missing_fraction": 0.06315917063428743,
+            "recent_5_known_accuracy": 0.5626082295684716,
+            "recent_5_missing_fraction": -0.03050515049272394,
+            "recent_20_known_accuracy": 0.15329496832226705,
+            "recent_20_missing_fraction": -0.0010198479122695645,
+            "history_distinct_problems_log": 0.13232345447431637,
+            "prior_code_chars_log": 0.11725072177877079,
+            "prior_code_lines_log": -0.13500789144431674,
+            "prior_code_ast_valid_fraction": -0.14579488851499237,
+            "prior_code_ast_nodes_log": 0.17800501024518067,
+            "prior_code_branches_log": -0.06740787780822918,
+            "prior_code_loops_log": 0.0025137885925542616,
+            "prior_code_functions_log": -0.008027126378977909
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 22,
+            "summary": {
+              "pairs": 1103,
+              "students": 60,
+              "target_success_rate": 0.5883952855847688,
+              "p0": 0.4579247207080857,
+              "p1": 0.5998452086062876,
+              "probability_change": 0.1419204878982019,
+              "nll0": 0.725408084513833,
+              "nll1": 0.6816771437569262,
+              "nll_difference": -0.04373094075690672,
+              "brier0": 0.26085747192235126,
+              "brier1": 0.24028529961248166,
+              "brier_difference": -0.02057217230986963
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.07535262108848634,
+                  "upper": -0.011866171420084759
+                },
+                "brier_difference": {
+                  "lower": -0.03462955651217986,
+                  "upper": -0.006986062369667295
+                },
+                "probability_change": {
+                  "lower": 0.12843286221459752,
+                  "upper": 0.154319533634368
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.05255085794208755,
+                  "lower": -0.09692592076216845,
+                  "upper": -0.009015993391721393
+                },
+                "brier_difference": {
+                  "mean": -0.024715359332916638,
+                  "lower": -0.044209450511307966,
+                  "upper": -0.005313503983482309
+                },
+                "probability_change": {
+                  "mean": 0.1366748246432998,
+                  "lower": 0.12173473369958121,
+                  "upper": 0.1523713905167522
+                }
+              }
+            }
+          }
+        },
+        "history_code_first": {
+          "fit_rows": 14895,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log",
+            "prior_code_chars_log",
+            "prior_code_lines_log",
+            "prior_code_ast_valid_fraction",
+            "prior_code_ast_nodes_log",
+            "prior_code_branches_log",
+            "prior_code_loops_log",
+            "prior_code_functions_log"
+          ],
+          "first_only_fit": true,
+          "iterations": 28,
+          "summary": {
+            "pairs": 1125,
+            "students": 61,
+            "target_success_rate": 0.5893333333333334,
+            "p0": 0.6006054744106857,
+            "p1": 0.608365906573705,
+            "probability_change": 0.007760432163019285,
+            "nll0": 0.6387795215275714,
+            "nll1": 0.6302591835686685,
+            "nll_difference": -0.008520337958902951,
+            "brier0": 0.22299563514705958,
+            "brier1": 0.21913896942871117,
+            "brier_difference": -0.0038566657183484437
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.020517713757034137,
+                "upper": 0.0026827033325507246
+              },
+              "brier_difference": {
+                "lower": -0.00919208520919769,
+                "upper": 0.001246149940967358
+              },
+              "probability_change": {
+                "lower": 0.0028684097474146303,
+                "upper": 0.012566640215957282
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.020366909796721084,
+                "lower": -0.05178179491282818,
+                "upper": 0.003337050026494758
+              },
+              "brier_difference": {
+                "mean": -0.006280632129127488,
+                "lower": -0.015230048103011326,
+                "upper": 0.0018271456817948839
+              },
+              "probability_change": {
+                "mean": 0.0014365276376652476,
+                "lower": -0.004601247986251075,
+                "upper": 0.006999000709463956
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7462012025856749,
+            "history_count_log": -0.7598400009010039,
+            "history_known_accuracy": -0.0010340686194679225,
+            "history_missing_fraction": 0.20200114428567117,
+            "last_known_accuracy": 0.07072198944982012,
+            "last_missing_fraction": 0.008005384718216726,
+            "recent_5_known_accuracy": 0.3013761858590778,
+            "recent_5_missing_fraction": -0.09630029111290757,
+            "recent_20_known_accuracy": 0.0012738950896927978,
+            "recent_20_missing_fraction": -0.05325793178310711,
+            "history_distinct_problems_log": 0.45687586716501777,
+            "prior_code_chars_log": 0.3647509367261094,
+            "prior_code_lines_log": -0.3327450684316469,
+            "prior_code_ast_valid_fraction": -0.1946174068171623,
+            "prior_code_ast_nodes_log": 0.25560867272283594,
+            "prior_code_branches_log": 0.014282895660077463,
+            "prior_code_loops_log": 0.05946283790031045,
+            "prior_code_functions_log": 0.0
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 22,
+            "summary": {
+              "pairs": 1103,
+              "students": 60,
+              "target_success_rate": 0.5883952855847688,
+              "p0": 0.5999629798937395,
+              "p1": 0.6073998591662391,
+              "probability_change": 0.007436879272499393,
+              "nll0": 0.6384869573151809,
+              "nll1": 0.6299431138639626,
+              "nll_difference": -0.008543843451218083,
+              "brier0": 0.22287217191044623,
+              "brier1": 0.21906586312360712,
+              "brier_difference": -0.00380630878683909
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.020626692563361835,
+                  "upper": 0.002998043589647177
+                },
+                "brier_difference": {
+                  "lower": -0.00899073961846355,
+                  "upper": 0.0014513671193296454
+                },
+                "probability_change": {
+                  "lower": 0.002520838622754511,
+                  "upper": 0.011872474684852157
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.02058399399252077,
+                  "lower": -0.052502722966201766,
+                  "upper": 0.003679874017641142
+                },
+                "brier_difference": {
+                  "mean": -0.006278953012144398,
+                  "lower": -0.015259367403229999,
+                  "upper": 0.002027893919872423
+                },
+                "probability_change": {
+                  "mean": 0.0010607664726643153,
+                  "lower": -0.005166295434388039,
+                  "upper": 0.006520162740949899
+                }
+              }
+            }
+          }
+        },
+        "difficulty_only_first": {
+          "fit_rows": 14895,
+          "features": [
+            "difficulty_logit"
+          ],
+          "first_only_fit": true,
+          "iterations": 5,
+          "summary": {
+            "pairs": 1125,
+            "students": 61,
+            "target_success_rate": 0.5893333333333334,
+            "p0": 0.665827993367744,
+            "p1": 0.665827993367744,
+            "probability_change": 0.0,
+            "nll0": 0.6488564059088607,
+            "nll1": 0.6488564059088607,
+            "nll_difference": 0.0,
+            "brier0": 0.22671777654861403,
+            "brier1": 0.22671777654861403,
+            "brier_difference": 0.0
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "brier_difference": {
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "probability_change": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": 0.0,
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "brier_difference": {
+                "mean": 0.0,
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "probability_change": {
+                "mean": 0.0,
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7663385547275672
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 22,
+            "summary": {
+              "pairs": 1103,
+              "students": 60,
+              "target_success_rate": 0.5883952855847688,
+              "p0": 0.6660576194423663,
+              "p1": 0.6660576194423663,
+              "probability_change": 0.0,
+              "nll0": 0.6485908677346905,
+              "nll1": 0.6485908677346905,
+              "nll_difference": 0.0,
+              "brier0": 0.22663521742699402,
+              "brier1": 0.22663521742699402,
+              "brier_difference": 0.0
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "brier_difference": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "probability_change": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": 0.0,
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "brier_difference": {
+                  "mean": 0.0,
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "probability_change": {
+                  "mean": 0.0,
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "operational_error_failure": {
+      "outcome": "GRADE=100 versus numeric GRADE<100 or missing GRADE with an ERROR section; other missing targets excluded.",
+      "labeled_target_rows": 153931,
+      "coverage": {
+        "test_students": 63,
+        "test_submissions": 21723,
+        "test_first_observed_submissions": 3911,
+        "contiguous_episodes": 5265,
+        "multi_submission_episodes": 2485,
+        "structurally_eligible_pairs_before_target_label_filter": 1665,
+        "retained_pairs": 1665,
+        "excluded_no_next_episode": 37,
+        "single_submission_episodes": 2780,
+        "excluded_next_item_previously_submitted": 680,
+        "excluded_target_TEST_or_SUBMITION_exposure_before_H1": 52,
+        "excluded_timestamp_tie_at_boundary": 51,
+        "retained_students": 61,
+        "retained_pairs_with_target_TEST_after_H1_before_SUBMITION": 593,
+        "coverage_multi_submission": 0.670020120724346,
+        "target_label_coverage_structurally_eligible": 1.0
+      },
+      "difficulty": {
+        "labeled_first_training_rows": 19474,
+        "training_items": 235,
+        "full_training_prior": 0.5330183834856732
+      },
+      "difficulty_invariant_to_all_heldout_target_label_mutations": true,
+      "models": {
+        "history_all": {
+          "fit_rows": 99147,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log"
+          ],
+          "first_only_fit": false,
+          "iterations": 12,
+          "summary": {
+            "pairs": 1665,
+            "students": 61,
+            "target_success_rate": 0.3981981981981982,
+            "p0": 0.2585496169832356,
+            "p1": 0.43181027332965255,
+            "probability_change": 0.17326065634641688,
+            "nll0": 0.712753444508391,
+            "nll1": 0.6867834698677839,
+            "nll_difference": -0.025969974640606925,
+            "brier0": 0.24983755192648277,
+            "brier1": 0.24100972488737868,
+            "brier_difference": -0.008827827039104064
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.052860403873523254,
+                "upper": 0.0014899179424845647
+              },
+              "brier_difference": {
+                "lower": -0.01957241225614326,
+                "upper": 0.002183791591819098
+              },
+              "probability_change": {
+                "lower": 0.16011979021646766,
+                "upper": 0.18740174215383568
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.027572277119371214,
+                "lower": -0.062004497059001754,
+                "upper": 0.008697960965639613
+              },
+              "brier_difference": {
+                "mean": -0.010607013657415256,
+                "lower": -0.026116061892568505,
+                "upper": 0.005739878681023023
+              },
+              "probability_change": {
+                "mean": 0.16822739930869457,
+                "lower": 0.15529032424385725,
+                "upper": 0.18263265114816415
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.4982205224111357,
+            "history_count_log": -0.37372253085691803,
+            "history_known_accuracy": -0.03676180810476819,
+            "history_missing_fraction": 0.08159437024184261,
+            "last_known_accuracy": 0.4819077123885172,
+            "last_missing_fraction": -0.3998540330612765,
+            "recent_5_known_accuracy": 0.44956254743384993,
+            "recent_5_missing_fraction": -0.22608777145065656,
+            "recent_20_known_accuracy": 0.11678291799231001,
+            "recent_20_missing_fraction": -0.12539172885071287,
+            "history_distinct_problems_log": 0.20321087557370707
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 27,
+            "summary": {
+              "pairs": 1638,
+              "students": 60,
+              "target_success_rate": 0.3962148962148962,
+              "p0": 0.2584270492337852,
+              "p1": 0.43094570386228725,
+              "probability_change": 0.172518654628502,
+              "nll0": 0.7114910824976944,
+              "nll1": 0.6880002266492506,
+              "nll_difference": -0.023490855848443667,
+              "brier0": 0.24923370317866042,
+              "brier1": 0.241459529390084,
+              "brier_difference": -0.007774173788576425
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.05171356392996672,
+                  "upper": 0.005002338971034895
+                },
+                "brier_difference": {
+                  "lower": -0.019373246620615545,
+                  "upper": 0.0034038493126516416
+                },
+                "probability_change": {
+                  "lower": 0.15874023158940664,
+                  "upper": 0.18580372810396284
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.025092317604163323,
+                  "lower": -0.060623455969588805,
+                  "upper": 0.010350857593445511
+                },
+                "brier_difference": {
+                  "mean": -0.009571306258853609,
+                  "lower": -0.025581958747100342,
+                  "upper": 0.0063330180240310395
+                },
+                "probability_change": {
+                  "mean": 0.16739326550995196,
+                  "lower": 0.1538386755747379,
+                  "upper": 0.1808508240275736
+                }
+              }
+            }
+          }
+        },
+        "history_first": {
+          "fit_rows": 19474,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log"
+          ],
+          "first_only_fit": true,
+          "iterations": 15,
+          "summary": {
+            "pairs": 1665,
+            "students": 61,
+            "target_success_rate": 0.3981981981981982,
+            "p0": 0.43526079607052587,
+            "p1": 0.4333615471302488,
+            "probability_change": -0.0018992489402770137,
+            "nll0": 0.6448545628331213,
+            "nll1": 0.6429426655838546,
+            "nll_difference": -0.0019118972492665348,
+            "brier0": 0.22688008869176263,
+            "brier1": 0.22630245252661316,
+            "brier_difference": -0.000577636165149479
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.010907245599452501,
+                "upper": 0.006397690651274251
+              },
+              "brier_difference": {
+                "lower": -0.004428758029156439,
+                "upper": 0.0030952421032629735
+              },
+              "probability_change": {
+                "lower": -0.006459598777235675,
+                "upper": 0.002501110937662916
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.0063917180612416274,
+                "lower": -0.020076732899795793,
+                "upper": 0.00791041663447914
+              },
+              "brier_difference": {
+                "mean": -0.0029698191255845613,
+                "lower": -0.009467739929981565,
+                "upper": 0.0034853459256822894
+              },
+              "probability_change": {
+                "mean": -0.010040774489373417,
+                "lower": -0.016292273977041617,
+                "upper": -0.004320509765944224
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7052200603801436,
+            "history_count_log": -0.7094974674348189,
+            "history_known_accuracy": 0.00701329290024502,
+            "history_missing_fraction": 0.11389031713059884,
+            "last_known_accuracy": 0.04317071495512018,
+            "last_missing_fraction": -0.02209301005618821,
+            "recent_5_known_accuracy": 0.313465674206057,
+            "recent_5_missing_fraction": -0.17805862874647022,
+            "recent_20_known_accuracy": -0.02649444379475393,
+            "recent_20_missing_fraction": -0.10420461861106231,
+            "history_distinct_problems_log": 0.5418783476206308
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 27,
+            "summary": {
+              "pairs": 1638,
+              "students": 60,
+              "target_success_rate": 0.3962148962148962,
+              "p0": 0.4350131385624522,
+              "p1": 0.43300810962633574,
+              "probability_change": -0.0020050289361165582,
+              "nll0": 0.6449445839421285,
+              "nll1": 0.6428937627568811,
+              "nll_difference": -0.0020508211852473587,
+              "brier0": 0.22688727800325262,
+              "brier1": 0.2262621343447716,
+              "brier_difference": -0.000625143658481016
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.011069887851191148,
+                  "upper": 0.0066043542622392796
+                },
+                "brier_difference": {
+                  "lower": -0.00455796320640255,
+                  "upper": 0.003117771480855674
+                },
+                "probability_change": {
+                  "lower": -0.006721209190583481,
+                  "upper": 0.002387115577267665
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.006606849276710711,
+                  "lower": -0.021213064159538286,
+                  "upper": 0.006885176460146674
+                },
+                "brier_difference": {
+                  "mean": -0.0030577241959603664,
+                  "lower": -0.009808021686458952,
+                  "upper": 0.0031594578429275082
+                },
+                "probability_change": {
+                  "mean": -0.010283421910985007,
+                  "lower": -0.016531626559500454,
+                  "upper": -0.00471427033904567
+                }
+              }
+            }
+          }
+        },
+        "history_code_all": {
+          "fit_rows": 99147,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log",
+            "prior_code_chars_log",
+            "prior_code_lines_log",
+            "prior_code_ast_valid_fraction",
+            "prior_code_ast_nodes_log",
+            "prior_code_branches_log",
+            "prior_code_loops_log",
+            "prior_code_functions_log"
+          ],
+          "first_only_fit": false,
+          "iterations": 22,
+          "summary": {
+            "pairs": 1665,
+            "students": 61,
+            "target_success_rate": 0.3981981981981982,
+            "p0": 0.25914384651131683,
+            "p1": 0.4333118919339315,
+            "probability_change": 0.17416804542261471,
+            "nll0": 0.7165217278228334,
+            "nll1": 0.6904190766310905,
+            "nll_difference": -0.026102651191742966,
+            "brier0": 0.2510303940954123,
+            "brier1": 0.24233062349118076,
+            "brier_difference": -0.008699770604231532
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.053503942942253496,
+                "upper": 0.0018333269845073317
+              },
+              "brier_difference": {
+                "lower": -0.019743723700115345,
+                "upper": 0.002487845416246999
+              },
+              "probability_change": {
+                "lower": 0.1603285703605618,
+                "upper": 0.18875278295295714
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.02802965190197126,
+                "lower": -0.063893740486689,
+                "upper": 0.009515377126303905
+              },
+              "brier_difference": {
+                "mean": -0.010761535784490439,
+                "lower": -0.02660380798325528,
+                "upper": 0.006000704798085782
+              },
+              "probability_change": {
+                "mean": 0.16836816336741195,
+                "lower": 0.15542643417828975,
+                "upper": 0.18226102464669525
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.49541811604751335,
+            "history_count_log": -0.3297642816221627,
+            "history_known_accuracy": -0.015465989996392648,
+            "history_missing_fraction": 0.045665712440174686,
+            "last_known_accuracy": 0.4802129619162756,
+            "last_missing_fraction": -0.41930000345368934,
+            "recent_5_known_accuracy": 0.4513736631105313,
+            "recent_5_missing_fraction": -0.22821604460780964,
+            "recent_20_known_accuracy": 0.11646498717894532,
+            "recent_20_missing_fraction": -0.12263971677839618,
+            "history_distinct_problems_log": 0.13195999962396154,
+            "prior_code_chars_log": -0.06258211516577666,
+            "prior_code_lines_log": -0.028693112425025057,
+            "prior_code_ast_valid_fraction": -0.40344426750873263,
+            "prior_code_ast_nodes_log": 0.4256177388485023,
+            "prior_code_branches_log": -0.03885846621828272,
+            "prior_code_loops_log": 0.011462695308220321,
+            "prior_code_functions_log": -0.005530436087848711
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 27,
+            "summary": {
+              "pairs": 1638,
+              "students": 60,
+              "target_success_rate": 0.3962148962148962,
+              "p0": 0.2590714427987208,
+              "p1": 0.43249155184928056,
+              "probability_change": 0.17342010905055988,
+              "nll0": 0.7152949986231268,
+              "nll1": 0.6917711992636587,
+              "nll_difference": -0.02352379935946809,
+              "brier0": 0.2504488575221533,
+              "brier1": 0.24284271564164064,
+              "brier_difference": -0.007606141880512631
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.05192315478373908,
+                  "upper": 0.00454410969614218
+                },
+                "brier_difference": {
+                  "lower": -0.019201494151089325,
+                  "upper": 0.0037788288920435334
+                },
+                "probability_change": {
+                  "lower": 0.15909903217804514,
+                  "upper": 0.18728185645539797
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.02545426283895269,
+                  "lower": -0.06256560793051824,
+                  "upper": 0.010854084772860836
+                },
+                "brier_difference": {
+                  "mean": -0.009690118383512311,
+                  "lower": -0.02621066659267996,
+                  "upper": 0.006474681978501317
+                },
+                "probability_change": {
+                  "mean": 0.16751525189030309,
+                  "lower": 0.15423313114604364,
+                  "upper": 0.18100423638460766
+                }
+              }
+            }
+          }
+        },
+        "history_code_first": {
+          "fit_rows": 19474,
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log",
+            "prior_code_chars_log",
+            "prior_code_lines_log",
+            "prior_code_ast_valid_fraction",
+            "prior_code_ast_nodes_log",
+            "prior_code_branches_log",
+            "prior_code_loops_log",
+            "prior_code_functions_log"
+          ],
+          "first_only_fit": true,
+          "iterations": 26,
+          "summary": {
+            "pairs": 1665,
+            "students": 61,
+            "target_success_rate": 0.3981981981981982,
+            "p0": 0.4315708916831778,
+            "p1": 0.4353333333693592,
+            "probability_change": 0.003762441686181396,
+            "nll0": 0.6502560780715809,
+            "nll1": 0.6466545047039522,
+            "nll_difference": -0.003601573367628862,
+            "brier0": 0.22909462319898874,
+            "brier1": 0.22783884402837193,
+            "brier_difference": -0.001255779170616834
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.013207029812513748,
+                "upper": 0.005224808587164696
+              },
+              "brier_difference": {
+                "lower": -0.005404994023832356,
+                "upper": 0.0025817965455946423
+              },
+              "probability_change": {
+                "lower": -0.001456141070740013,
+                "upper": 0.009016510312655964
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.013188118699550838,
+                "lower": -0.03076443142078069,
+                "upper": 0.003261911530177147
+              },
+              "brier_difference": {
+                "mean": -0.005650569599275438,
+                "lower": -0.013304795815086076,
+                "upper": 0.0015743003941628073
+              },
+              "probability_change": {
+                "mean": -0.005557647770659152,
+                "lower": -0.012719757698641832,
+                "upper": 0.0010610973493945025
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7152396848062271,
+            "history_count_log": -0.6889715414164276,
+            "history_known_accuracy": 0.01198956951487334,
+            "history_missing_fraction": 0.09901268886572015,
+            "last_known_accuracy": 0.0412965827947839,
+            "last_missing_fraction": 0.010048914448573136,
+            "recent_5_known_accuracy": 0.30840913047399227,
+            "recent_5_missing_fraction": -0.17742498163277362,
+            "recent_20_known_accuracy": -0.012477211458107835,
+            "recent_20_missing_fraction": -0.1111173260809016,
+            "history_distinct_problems_log": 0.41116892151716244,
+            "prior_code_chars_log": 0.19145696381873217,
+            "prior_code_lines_log": -0.24916025709939518,
+            "prior_code_ast_valid_fraction": -0.22916761082824214,
+            "prior_code_ast_nodes_log": 0.3490421787787706,
+            "prior_code_branches_log": 0.030254492536930674,
+            "prior_code_loops_log": 0.04363601420543032,
+            "prior_code_functions_log": -0.03970108489907519
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 27,
+            "summary": {
+              "pairs": 1638,
+              "students": 60,
+              "target_success_rate": 0.3962148962148962,
+              "p0": 0.43152901511431946,
+              "p1": 0.43500081193207585,
+              "probability_change": 0.0034717968177563666,
+              "nll0": 0.6502821020044867,
+              "nll1": 0.6467184336463694,
+              "nll_difference": -0.0035636683581172263,
+              "brier0": 0.22908852871068738,
+              "brier1": 0.22785172599353115,
+              "brier_difference": -0.0012368027171562098
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": -0.012951919742095586,
+                  "upper": 0.005318298961977776
+                },
+                "brier_difference": {
+                  "lower": -0.0053733534225959495,
+                  "upper": 0.0026317071034503495
+                },
+                "probability_change": {
+                  "lower": -0.0018660066279594786,
+                  "upper": 0.008410668843764912
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": -0.013309568278798882,
+                  "lower": -0.031238385954026556,
+                  "upper": 0.0024721328388550576
+                },
+                "brier_difference": {
+                  "mean": -0.005704628803476228,
+                  "lower": -0.013700313884312873,
+                  "upper": 0.0013343209723321384
+                },
+                "probability_change": {
+                  "mean": -0.006006856850791803,
+                  "lower": -0.013377593727792006,
+                  "upper": 6.948187934282603e-05
+                }
+              }
+            }
+          }
+        },
+        "difficulty_only_first": {
+          "fit_rows": 19474,
+          "features": [
+            "difficulty_logit"
+          ],
+          "first_only_fit": true,
+          "iterations": 4,
+          "summary": {
+            "pairs": 1665,
+            "students": 61,
+            "target_success_rate": 0.3981981981981982,
+            "p0": 0.5000031394099557,
+            "p1": 0.5000031394099557,
+            "probability_change": 0.0,
+            "nll0": 0.6657250920054768,
+            "nll1": 0.6657250920054768,
+            "nll_difference": 0.0,
+            "brier0": 0.23708794051043602,
+            "brier1": 0.23708794051043602,
+            "brier_difference": 0.0
+          },
+          "bootstrap": {
+            "repetitions": 2000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "brier_difference": {
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "probability_change": {
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": 0.0,
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "brier_difference": {
+                "mean": 0.0,
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "probability_change": {
+                "mean": 0.0,
+                "lower": 0.0,
+                "upper": 0.0
+              }
+            }
+          },
+          "standardized_coefficients": {
+            "difficulty_logit": 0.710522019933637
+          },
+          "h1_matches_frozen_ordinary_target_prediction": true,
+          "clock_anomaly_users_excluded": {
+            "removed_pairs": 27,
+            "summary": {
+              "pairs": 1638,
+              "students": 60,
+              "target_success_rate": 0.3962148962148962,
+              "p0": 0.5005743624983675,
+              "p1": 0.5005743624983675,
+              "probability_change": 0.0,
+              "nll0": 0.6659920739053417,
+              "nll1": 0.6659920739053417,
+              "nll_difference": 0.0,
+              "brier0": 0.23719561750578572,
+              "brier1": 0.23719561750578572,
+              "brier_difference": 0.0
+            },
+            "bootstrap": {
+              "repetitions": 2000,
+              "seed": 26092026,
+              "unit": "held-out student; paired resampling",
+              "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+              "pair_weighted": {
+                "nll_difference": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "brier_difference": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "probability_change": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              },
+              "equal_student_weighted": {
+                "nll_difference": {
+                  "mean": 0.0,
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "brier_difference": {
+                  "mean": 0.0,
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "probability_change": {
+                  "mean": 0.0,
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "The user split is not chronological. Training item difficulty may use later calendar records than a held-out forecast.",
+    "First observed is within the release; earlier unobserved exposure and off-platform help cannot be excluded.",
+    "Target j may be TESTed after H1 and before its first SUBMITION; this is first submitted outcome, not necessarily first execution or unaided cold-task performance. This frequency is reported.",
+    "First training submissions tied at the same second use canonical source-path/within-file ordering; probe boundaries exclude ties, but first-attempt difficulty estimates retain this convention.",
+    "Oracle future item identity, observed continuation, multiattempt episode selection, grade observability and training-known item support induce selection.",
+    "Numerically graded target population excludes submissions ending in execution error and is not the full learner population.",
+    "Operational sensitivity changes the outcome definition to fully-correct judged invocation; missing grade remains null in source and a separate historical state.",
+    "Episode end may be fully correct, graded incorrect, or missing grade; neither success nor code change is required.",
+    "Additional submissions may be identical-code reruns; outcome changes alone do not establish code repair or learning.",
+    "AST features use local Python syntax compatibility and describe prior code only; no semantic correctness or misconception label is inferred.",
+    "Pair-weighted and student-weighted effects address different observed populations. Cluster bootstrap handles within-student dependence, not confounding or selection.",
+    "One 2016-1 archive contains later timestamps through 2017; results are not a cross-semester replication.",
+    "One within-file timestamp transition runs backward by about one hour; main data use chronological order, and a separate sensitivity excludes the affected test learner.",
+    "No student code execution, policy optimization, counterfactual recommendation evaluation or causal learning-gain estimate is performed."
+  ]
+}

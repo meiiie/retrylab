@@ -1,0 +1,12 @@
+# Search noise only. Explicit paths and rg --no-ignore remain available.
+data/raw/
+data/processed/
+tmp/
+.harness/
+app/static/vendor/
+app/runtime/
+app/test_outputs/
+research/runs/
+research/literature/papers/
+research/literature/code/
+__pycache__/

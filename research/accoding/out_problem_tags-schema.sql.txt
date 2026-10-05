@@ -1,0 +1,7 @@
+create table out_problem_tags
+(
+    tag_id     int             default 0   not null,
+    problem_id bigint unsigned default '0' not null,
+    weight     float                       null
+);
+

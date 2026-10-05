@@ -1,0 +1,14 @@
+@inproceedings{2025.EDM.short-papers.83,
+ abstract = {Knowledge Tracing (KT) models predicting student performance in intelligent tutoring systems have been successfully deployed in several educational domains. However, their usage in open-ended programming problems poses multiple challenges due to the complexity of the programming code and a complex interplay between syntax and logic requirements embedded in code development. As a result, traditional Bayesian Knowledge Tracing (BKT) and more advanced Deep Knowledge Tracing (DKT) approaches that use binary correctness data find limited use. Code-DKT [26] is a knowledge tracing approach that uses recurrent neural networks to model learning progress leveraging information extracted from the student-generated code, incorporating abstract syntax tree (AST)-based code features, but its reliance on parsable code limits its effectiveness; unparsable submissions may constitute a substantial part of code submitted for evaluation within platforms for automated assessment of programming assignments. To overcome the ASTs limitations, we propose srcML-DKT, an extension of Code-DKT that utilizes srcML-based code representations, enabling feature extraction from both parsable and unparsable code. By capturing syntactic and structural details directly from the code text, srcML-DKT enables including all student code submissions, regardless of syntax errors. Empirical evaluations on a dataset of 610 students and six programming tasks focused on conditional statements demonstrate that srcML-DKT consistently outperforms both Code-DKT and traditional DKT models, achieving higher AUC and F1-scores across first and all attempts. These results highlight the models ability to track student knowledge progression more accurately, in environments where trial-and-error learning is common.},
+ address = {Palermo, Italy},
+ author = {Maciej Pankiewicz and Yang Shi and Ryan S. Baker},
+ booktitle = {Proceedings of the 18th International Conference on Educational Data Mining},
+ doi = {10.5281/zenodo.15870306},
+ editor = {Caitlin Mills and Giora Alexandron and Davide Taibi and Giosuè Lo Bosco and Luc Paquette},
+ isbn = {978-1-7336736-6-2},
+ month = {July},
+ pages = {541--548},
+ publisher = {International Educational Data Mining Society},
+ title = {srcML-DKT: Enhancing Deep Knowledge Tracing with Robust Code Representations from srcML},
+ year = {2025}
+}

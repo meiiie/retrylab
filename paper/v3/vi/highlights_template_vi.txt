@@ -1,0 +1,5 @@
+Sáu mô hình người học dự báo người học chưa thấy tốt ngang nhau (AUC {{hl_auc_lo}}–{{hl_auc_hi}})
+PPO thưởng DKT: +{{hl_ppo_insim}} điểm % trong mô phỏng, chỉ ≤ {{hl_max_latent}} điểm % ở các thế giới có học ẩn
+Ở thế giới đối chứng không học, tracker DKT vẫn báo tiến bộ ảo {{hl_phantom_ppo}} điểm %
+Tiến bộ trong mô phỏng bằng độ trôi tự dự đoán của tracker, không phải việc học
+Thế giới huấn luyện có học tường minh chuyển giao tốt nhất, nhưng chỉ trong cùng họ mô hình

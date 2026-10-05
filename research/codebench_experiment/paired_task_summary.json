@@ -1,0 +1,805 @@
+{
+  "status": "Secondary expanded paired-future training control on a previously unused holdout; no preregistration claim.",
+  "started_utc": "2026-09-26T02:39:18.137726+00:00",
+  "protocol": {
+    "locked_utc": "2026-09-26T02:34:46Z",
+    "recorded_utc": "2026-09-26T02:36:04.449927+00:00",
+    "status": "secondary expanded analysis; no preregistration claim",
+    "protocol_path": "E:\\Sach\\baiThayPhuc\\BaiHong\\research\\codebench_experiment\\paired_task_protocol.md",
+    "protocol_sha256": "5177b5fed445bcb9aa4f01cdf23cec8b3d18e247d0bb4e488f12cadd5aed889f",
+    "base_helper_sha256": "7812f84466c5427eee33488316e0fc350d4e8e3a9c74179e50955a0172830588",
+    "holdout": "original unused validation split,74users",
+    "bootstrap_repetitions": 1000,
+    "frozen_specification": {
+      "training_users": 329,
+      "history_features": 11,
+      "paired_phase_indicator": true,
+      "snapshot_weight": 0.5,
+      "logistic_C": 1,
+      "max_iter": 1000,
+      "seed": 26092026
+    }
+  },
+  "reporting_amendment": {
+    "recorded_utc": "2026-09-26T02:36:47.135333+00:00",
+    "sha256": "bd842a5aad9aa292446e6fd6704ef23b5eee030e9a991a3e7426d21239e4e627",
+    "amendment": "joint paired difference-in-updates reporting; no model change",
+    "new_holdout_performance_computed": false
+  },
+  "input": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\codebench\\events.csv.gz",
+  "input_sha256": "87b4e34fd58d419de3392defd9314ef3acbb7b03ca1e1a900627cb2121be3eaf",
+  "script_sha256": "da199eeeb75151149bea80035cb2a3833774712d25359e9a9aefa9bfa998faa9",
+  "helper_sha256": "7812f84466c5427eee33488316e0fc350d4e8e3a9c74179e50955a0172830588",
+  "preserved_prior_artifact_hashes": {
+    "fixed_future_probe.py": "7812f84466c5427eee33488316e0fc350d4e8e3a9c74179e50955a0172830588",
+    "extract_events.py": "de46edbf0477c9b26c3bd0d4dbb6f799a0d6561c78a053f3ca6fbb359c97bc38",
+    "summary.json": "670aa2dbb7b3263f5efbb630d7f795abc7e87bfef326d09e4db544e9dd66b934",
+    "aggregates.csv": "2fd6d8aab68729ad2ff24574805ebd07b96329fd409afd732f7d5a71775ee9ad",
+    "results.md": "8710849591da91384997b897e310e27bfbd9711a723887d4fb328d16c3c306a6",
+    "README.md": "5a72e0300f4b77711e559b91141fc2dc595d25affe6f0350c57af9912124c420",
+    "extraction_manifest.json": "ba04d7b6f61e5de5befbb7426fadba74bf4ff75a5e7517e9ea8de058f9d81baa"
+  },
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.3.2",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0"
+  },
+  "checks": {
+    "missing_outcome_preserved_in_count_and_missing_state": true,
+    "first_observed_before_label_filter": true,
+    "target_and_later_outcome_time_code_mutation_invariance": true,
+    "same_second_strict_prior_prefix_invariance": true
+  },
+  "split": {
+    "training_users": 329,
+    "new_holdout_original_validation_users": 74,
+    "old_test_users_excluded_from_this_evaluation": 63
+  },
+  "history_features": [
+    "difficulty_logit",
+    "history_count_log",
+    "history_known_accuracy",
+    "history_missing_fraction",
+    "last_known_accuracy",
+    "last_missing_fraction",
+    "recent_5_known_accuracy",
+    "recent_5_missing_fraction",
+    "recent_20_known_accuracy",
+    "recent_20_missing_fraction",
+    "history_distinct_problems_log"
+  ],
+  "bootstrap_repetitions": 1000,
+  "modes": {
+    "numeric_grade_primary": {
+      "training_pair_coverage": {
+        "train_students": 329,
+        "train_submissions": 99147,
+        "train_first_observed_submissions": 19474,
+        "contiguous_episodes": 26344,
+        "single_submission_episodes": 14396,
+        "multi_submission_episodes": 11948,
+        "structurally_eligible_pairs_before_target_label_filter": 7801,
+        "retained_pairs": 5405,
+        "excluded_no_next_episode": 189,
+        "excluded_target_TEST_or_SUBMITION_exposure_before_H1": 322,
+        "excluded_next_item_previously_submitted": 3384,
+        "excluded_missing_target_label": 2396,
+        "excluded_timestamp_tie_at_boundary": 252,
+        "retained_students": 315,
+        "retained_pairs_with_target_TEST_after_H1_before_SUBMITION": 2217,
+        "coverage_multi_submission": 0.4523769668563776,
+        "target_label_coverage_structurally_eligible": 0.6928598897577234
+      },
+      "holdout_coverage": {
+        "validation_students": 74,
+        "validation_submissions": 33061,
+        "validation_first_observed_submissions": 4621,
+        "contiguous_episodes": 6615,
+        "multi_submission_episodes": 3362,
+        "excluded_target_TEST_or_SUBMITION_exposure_before_H1": 77,
+        "excluded_no_next_episode": 46,
+        "single_submission_episodes": 3253,
+        "structurally_eligible_pairs_before_target_label_filter": 2033,
+        "retained_pairs": 1342,
+        "excluded_missing_target_label": 691,
+        "excluded_next_item_previously_submitted": 1091,
+        "excluded_timestamp_tie_at_boundary": 115,
+        "retained_students": 72,
+        "retained_pairs_with_target_TEST_after_H1_before_SUBMITION": 554,
+        "coverage_multi_submission": 0.39916716240333133,
+        "target_label_coverage_structurally_eligible": 0.6601082144613871
+      },
+      "difficulty": {
+        "labeled_first_training_rows": 14895,
+        "training_items": 235,
+        "full_training_prior": 0.6968781470292045
+      },
+      "difficulty_invariant_to_all_nontraining_label_mutations": true,
+      "ordinary_fit_rows": 14895,
+      "paired_fit_snapshots": 10810,
+      "paired_fit_total_weight": 5405.0,
+      "paired_phase_values": [
+        0,
+        1
+      ],
+      "models": {
+        "ordinary_history_first": {
+          "summary": {
+            "pairs": 1342,
+            "students": 72,
+            "target_success_rate": 0.5491803278688525,
+            "p0": 0.599659046349344,
+            "p1": 0.6058737946210463,
+            "probability_change": 0.0062147482717023125,
+            "nll0": 0.6291367701438444,
+            "nll1": 0.6320389020008773,
+            "nll_difference": 0.002902131857032889,
+            "brier0": 0.2181698275138944,
+            "brier1": 0.21942856177033343,
+            "brier_difference": 0.001258734256439061
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.007075757267397238,
+                "upper": 0.012730953018809502
+              },
+              "brier_difference": {
+                "lower": -0.0031356408260154764,
+                "upper": 0.005333956722203136
+              },
+              "probability_change": {
+                "lower": 0.0018130231056070207,
+                "upper": 0.010103380393651861
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.00629410430520647,
+                "lower": -0.017335391372102646,
+                "upper": 0.00428261264082675
+              },
+              "brier_difference": {
+                "mean": -0.0030169738913983367,
+                "lower": -0.007804576751289576,
+                "upper": 0.001635507152253239
+              },
+              "probability_change": {
+                "mean": 0.002828766975196896,
+                "lower": -0.0030552448539301067,
+                "upper": 0.007983894507794752
+              }
+            }
+          },
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log"
+          ],
+          "iterations": 18,
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7326453917545284,
+            "history_count_log": -0.6969628998306203,
+            "history_known_accuracy": 0.023100590481330355,
+            "history_missing_fraction": 0.18044338293881657,
+            "last_known_accuracy": 0.0710674622282309,
+            "last_missing_fraction": -0.00038071258580311485,
+            "recent_5_known_accuracy": 0.3097795987318064,
+            "recent_5_missing_fraction": -0.09508736736439007,
+            "recent_20_known_accuracy": -0.01425280218388239,
+            "recent_20_missing_fraction": -0.04517107344829331,
+            "history_distinct_problems_log": 0.5398036973127968
+          },
+          "h1_matches_direct_target_prefix_query": true
+        },
+        "paired_future_phase": {
+          "summary": {
+            "pairs": 1342,
+            "students": 72,
+            "target_success_rate": 0.5491803278688525,
+            "p0": 0.5736794148454103,
+            "p1": 0.5755505318480553,
+            "probability_change": 0.0018711170026449967,
+            "nll0": 0.6206725368607708,
+            "nll1": 0.6200428617709706,
+            "nll_difference": -0.000629675089800156,
+            "brier0": 0.21501917660220074,
+            "brier1": 0.21470084745517332,
+            "brier_difference": -0.00031832914702743705
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.005191207131900232,
+                "upper": 0.004364787026225015
+              },
+              "brier_difference": {
+                "lower": -0.0023690532166433416,
+                "upper": 0.0017827569493129335
+              },
+              "probability_change": {
+                "lower": -0.00040194212903714346,
+                "upper": 0.004168527014027378
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.007446491428161018,
+                "lower": -0.015548339539913919,
+                "upper": 0.00015466369963404255
+              },
+              "brier_difference": {
+                "mean": -0.0034318030479659756,
+                "lower": -0.007049663171251677,
+                "upper": 7.482498374106533e-05
+              },
+              "probability_change": {
+                "mean": -0.0010815443761152599,
+                "lower": -0.004554056061947791,
+                "upper": 0.0025343445120899213
+              }
+            }
+          },
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log",
+            "phase"
+          ],
+          "iterations": 14,
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7276140988377561,
+            "history_count_log": -0.3627299000257245,
+            "history_known_accuracy": 0.0867153652670868,
+            "history_missing_fraction": 0.04659586090046159,
+            "last_known_accuracy": 0.059937823757150184,
+            "last_missing_fraction": 0.06703228821255716,
+            "recent_5_known_accuracy": 0.0551536552593531,
+            "recent_5_missing_fraction": -0.018735601513508504,
+            "recent_20_known_accuracy": 0.09392313063180303,
+            "recent_20_missing_fraction": -0.052797005886021306,
+            "history_distinct_problems_log": 0.20403466214419644,
+            "phase": 0.014646113296333063
+          },
+          "h1_matches_direct_target_prefix_query": true,
+          "phase_raw_logit_effect": 0.029292226592666126
+        }
+      },
+      "cross_model_contrasts": {
+        "0": {
+          "direction": "paired_future_phase minus ordinary_history_first",
+          "quantity": "endpoint H0",
+          "means": {
+            "nll_difference": -0.008464233283073589,
+            "brier_difference": -0.0031506509116936295,
+            "probability_change": -0.025979631503933707
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.015841153623471337,
+                "upper": -0.0009098713752675946
+              },
+              "brier_difference": {
+                "lower": -0.006008973708641352,
+                "upper": -0.00028037567869758974
+              },
+              "probability_change": {
+                "lower": -0.030867246357294896,
+                "upper": -0.02027266945562593
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.0066157816334617816,
+                "lower": -0.014106060317030546,
+                "upper": 0.0011724330839664495
+              },
+              "brier_difference": {
+                "mean": -0.002545798568055201,
+                "lower": -0.005490057253950387,
+                "upper": 0.0005999238280407399
+              },
+              "probability_change": {
+                "mean": -0.02378830569083967,
+                "lower": -0.02819891933971497,
+                "upper": -0.019102678609733945
+              }
+            }
+          }
+        },
+        "1": {
+          "direction": "paired_future_phase minus ordinary_history_first",
+          "quantity": "endpoint H1",
+          "means": {
+            "nll_difference": -0.011996040229906635,
+            "brier_difference": -0.004727714315160128,
+            "probability_change": -0.030323262772991032
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.02298637376050858,
+                "upper": -0.0021080789718855896
+              },
+              "brier_difference": {
+                "lower": -0.00887138253711087,
+                "upper": -0.0007967571865966328
+              },
+              "probability_change": {
+                "lower": -0.036217251982643264,
+                "upper": -0.023576183159458673
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.007768168756416329,
+                "lower": -0.017488221000153202,
+                "upper": 0.0010043602888996541
+              },
+              "brier_difference": {
+                "mean": -0.0029606277246228413,
+                "lower": -0.006756574980287092,
+                "upper": 0.00043308355866074024
+              },
+              "probability_change": {
+                "mean": -0.02769861704215183,
+                "lower": -0.03338031345729033,
+                "upper": -0.021464523746527357
+              }
+            }
+          }
+        },
+        "update": {
+          "direction": "paired_future_phase minus ordinary_history_first",
+          "quantity": "difference in H1-minus-H0 updates",
+          "means": {
+            "nll_difference": -0.003531806946833045,
+            "brier_difference": -0.0015770634034664977,
+            "probability_change": -0.004343631269057316
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.010008322289992913,
+                "upper": 0.003341725176957543
+              },
+              "brier_difference": {
+                "lower": -0.0042461277954597,
+                "upper": 0.0011383854979445625
+              },
+              "probability_change": {
+                "lower": -0.006947749059053844,
+                "upper": -0.0013876589173358136
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.0011523871229545486,
+                "lower": -0.006882031210417172,
+                "upper": 0.004948624089846103
+              },
+              "brier_difference": {
+                "mean": -0.00041482915656763995,
+                "lower": -0.002854582097817684,
+                "upper": 0.002121843507137755
+              },
+              "probability_change": {
+                "mean": -0.003910311351312156,
+                "lower": -0.006932678282263559,
+                "upper": -0.0009423530007998156
+              }
+            }
+          }
+        }
+      }
+    },
+    "operational_error_failure": {
+      "training_pair_coverage": {
+        "train_students": 329,
+        "train_submissions": 99147,
+        "train_first_observed_submissions": 19474,
+        "contiguous_episodes": 26344,
+        "single_submission_episodes": 14396,
+        "multi_submission_episodes": 11948,
+        "structurally_eligible_pairs_before_target_label_filter": 7801,
+        "retained_pairs": 7801,
+        "excluded_no_next_episode": 189,
+        "excluded_target_TEST_or_SUBMITION_exposure_before_H1": 322,
+        "excluded_next_item_previously_submitted": 3384,
+        "excluded_timestamp_tie_at_boundary": 252,
+        "retained_students": 317,
+        "retained_pairs_with_target_TEST_after_H1_before_SUBMITION": 2967,
+        "coverage_multi_submission": 0.6529126213592233,
+        "target_label_coverage_structurally_eligible": 1.0
+      },
+      "holdout_coverage": {
+        "validation_students": 74,
+        "validation_submissions": 33061,
+        "validation_first_observed_submissions": 4621,
+        "contiguous_episodes": 6615,
+        "multi_submission_episodes": 3362,
+        "excluded_target_TEST_or_SUBMITION_exposure_before_H1": 77,
+        "excluded_no_next_episode": 46,
+        "single_submission_episodes": 3253,
+        "structurally_eligible_pairs_before_target_label_filter": 2033,
+        "retained_pairs": 2033,
+        "excluded_next_item_previously_submitted": 1091,
+        "excluded_timestamp_tie_at_boundary": 115,
+        "retained_students": 72,
+        "retained_pairs_with_target_TEST_after_H1_before_SUBMITION": 762,
+        "coverage_multi_submission": 0.6046995835812017,
+        "target_label_coverage_structurally_eligible": 1.0
+      },
+      "difficulty": {
+        "labeled_first_training_rows": 19474,
+        "training_items": 235,
+        "full_training_prior": 0.5330183834856732
+      },
+      "difficulty_invariant_to_all_nontraining_label_mutations": true,
+      "ordinary_fit_rows": 19474,
+      "paired_fit_snapshots": 15602,
+      "paired_fit_total_weight": 7801.0,
+      "paired_phase_values": [
+        0,
+        1
+      ],
+      "models": {
+        "ordinary_history_first": {
+          "summary": {
+            "pairs": 2033,
+            "students": 72,
+            "target_success_rate": 0.36251844564682734,
+            "p0": 0.43251620072397906,
+            "p1": 0.43111242689103885,
+            "probability_change": -0.0014037738329401603,
+            "nll0": 0.6170494586723428,
+            "nll1": 0.6208628342640853,
+            "nll_difference": 0.0038133755917424874,
+            "brier0": 0.2144084517697464,
+            "brier1": 0.21617607965927635,
+            "brier_difference": 0.001767627889529976
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.004577235563152008,
+                "upper": 0.012205525709344914
+              },
+              "brier_difference": {
+                "lower": -0.001916045848097506,
+                "upper": 0.005460981581776082
+              },
+              "probability_change": {
+                "lower": -0.004603938525276571,
+                "upper": 0.001818666998793826
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.0018708878112182817,
+                "lower": -0.0106215460555282,
+                "upper": 0.006810064242593361
+              },
+              "brier_difference": {
+                "mean": -0.0008522118392387188,
+                "lower": -0.004704526629541483,
+                "upper": 0.002863818366975115
+              },
+              "probability_change": {
+                "mean": -0.0050719302311605435,
+                "lower": -0.00930396910207142,
+                "upper": -0.001161113570764044
+              }
+            }
+          },
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log"
+          ],
+          "iterations": 15,
+          "standardized_coefficients": {
+            "difficulty_logit": 0.7052200603801436,
+            "history_count_log": -0.7094974674348189,
+            "history_known_accuracy": 0.00701329290024502,
+            "history_missing_fraction": 0.11389031713059884,
+            "last_known_accuracy": 0.04317071495512018,
+            "last_missing_fraction": -0.02209301005618821,
+            "recent_5_known_accuracy": 0.313465674206057,
+            "recent_5_missing_fraction": -0.17805862874647022,
+            "recent_20_known_accuracy": -0.02649444379475393,
+            "recent_20_missing_fraction": -0.10420461861106231,
+            "history_distinct_problems_log": 0.5418783476206308
+          },
+          "h1_matches_direct_target_prefix_query": true
+        },
+        "paired_future_phase": {
+          "summary": {
+            "pairs": 2033,
+            "students": 72,
+            "target_success_rate": 0.36251844564682734,
+            "p0": 0.39555066985582704,
+            "p1": 0.3968199427039111,
+            "probability_change": 0.0012692728480839938,
+            "nll0": 0.6032595499585226,
+            "nll1": 0.6038684048739864,
+            "nll_difference": 0.0006088549154638656,
+            "brier0": 0.20819482283830765,
+            "brier1": 0.20841488398055422,
+            "brier_difference": 0.0002200611422465963
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.00289705400948962,
+                "upper": 0.004335025112378712
+              },
+              "brier_difference": {
+                "lower": -0.0013996417560794957,
+                "upper": 0.001831154532286729
+              },
+              "probability_change": {
+                "lower": -0.00017057927121521597,
+                "upper": 0.00267921602228413
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.003095941346623414,
+                "lower": -0.008926620557611847,
+                "upper": 0.002266442467279345
+              },
+              "brier_difference": {
+                "mean": -0.0015218103368478853,
+                "lower": -0.004194945923186396,
+                "upper": 0.0009150025426465764
+              },
+              "probability_change": {
+                "mean": -0.000300489469065934,
+                "lower": -0.0031081276088825932,
+                "upper": 0.002601547679544376
+              }
+            }
+          },
+          "features": [
+            "difficulty_logit",
+            "history_count_log",
+            "history_known_accuracy",
+            "history_missing_fraction",
+            "last_known_accuracy",
+            "last_missing_fraction",
+            "recent_5_known_accuracy",
+            "recent_5_missing_fraction",
+            "recent_20_known_accuracy",
+            "recent_20_missing_fraction",
+            "history_distinct_problems_log",
+            "phase"
+          ],
+          "iterations": 13,
+          "standardized_coefficients": {
+            "difficulty_logit": 0.6579569064851224,
+            "history_count_log": -0.272403222333297,
+            "history_known_accuracy": 0.1243423211562177,
+            "history_missing_fraction": -0.058828001914044824,
+            "last_known_accuracy": 0.03636299366446811,
+            "last_missing_fraction": -0.0142147862174777,
+            "recent_5_known_accuracy": 0.05399861453504732,
+            "recent_5_missing_fraction": -0.02977949849379901,
+            "recent_20_known_accuracy": 0.08026369921181371,
+            "recent_20_missing_fraction": -0.11804138247137001,
+            "history_distinct_problems_log": 0.16861786256870573,
+            "phase": -0.0007352713056904573
+          },
+          "h1_matches_direct_target_prefix_query": true,
+          "phase_raw_logit_effect": -0.0014705426113809147
+        }
+      },
+      "cross_model_contrasts": {
+        "0": {
+          "direction": "paired_future_phase minus ordinary_history_first",
+          "quantity": "endpoint H0",
+          "means": {
+            "nll_difference": -0.013789908713820262,
+            "brier_difference": -0.006213628931438745,
+            "probability_change": -0.03696553086815198
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.020394144339374684,
+                "upper": -0.0075488678312747755
+              },
+              "brier_difference": {
+                "lower": -0.009111331983065884,
+                "upper": -0.003334594348671071
+              },
+              "probability_change": {
+                "lower": -0.043491953626627625,
+                "upper": -0.029515925289050456
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.008630549366573367,
+                "lower": -0.017108239444146297,
+                "upper": 0.00035789017529728437
+              },
+              "brier_difference": {
+                "mean": -0.003711300282740208,
+                "lower": -0.007453991645741896,
+                "upper": 0.0005135497691380947
+              },
+              "probability_change": {
+                "mean": -0.038302422454546126,
+                "lower": -0.0436078713542933,
+                "upper": -0.032531387129468334
+              }
+            }
+          }
+        },
+        "1": {
+          "direction": "paired_future_phase minus ordinary_history_first",
+          "quantity": "endpoint H1",
+          "means": {
+            "nll_difference": -0.01699442939009888,
+            "brier_difference": -0.007761195678722125,
+            "probability_change": -0.03429248418712782
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.025805459325929758,
+                "upper": -0.008647069128455658
+              },
+              "brier_difference": {
+                "lower": -0.011844773011955906,
+                "upper": -0.003914128664265185
+              },
+              "probability_change": {
+                "lower": -0.040781532113690934,
+                "upper": -0.02656524015008538
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.009855602901978502,
+                "lower": -0.018358521606069766,
+                "upper": -0.0022897737082502806
+              },
+              "brier_difference": {
+                "mean": -0.004380898780349373,
+                "lower": -0.00810939160871428,
+                "upper": -0.0010916327615878233
+              },
+              "probability_change": {
+                "mean": -0.033530981692451514,
+                "lower": -0.03940519390416746,
+                "upper": -0.027036542244971918
+              }
+            }
+          }
+        },
+        "update": {
+          "direction": "paired_future_phase minus ordinary_history_first",
+          "quantity": "difference in H1-minus-H0 updates",
+          "means": {
+            "nll_difference": -0.003204520676278621,
+            "brier_difference": -0.0015475667472833797,
+            "probability_change": 0.002673046681024154
+          },
+          "bootstrap": {
+            "repetitions": 1000,
+            "seed": 26092026,
+            "unit": "held-out student; paired resampling",
+            "interval_type": "percentile 95%, descriptive; no multiplicity correction",
+            "pair_weighted": {
+              "nll_difference": {
+                "lower": -0.008349197311816665,
+                "upper": 0.0022880157190326702
+              },
+              "brier_difference": {
+                "lower": -0.0038916135080008063,
+                "upper": 0.0009501211766697654
+              },
+              "probability_change": {
+                "lower": 0.000584017717235949,
+                "upper": 0.004769735161589126
+              }
+            },
+            "equal_student_weighted": {
+              "nll_difference": {
+                "mean": -0.0012250535354051317,
+                "lower": -0.007019499295501614,
+                "upper": 0.004049042489244535
+              },
+              "brier_difference": {
+                "mean": -0.0006695984976091661,
+                "lower": -0.0031781016969199306,
+                "upper": 0.0016165563357384565
+              },
+              "probability_change": {
+                "mean": 0.00477144076209461,
+                "lower": 0.0023091940211982234,
+                "upper": 0.00734968553159115
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "The control is secondary, specified after exploratory results on the original test users; the new holdout was not used for performance inspection before this fixed specification.",
+    "Same-future training aligns the forecast task, but oracle item identity, observed continuation, multiattempt episode selection and grade observability remain observational conditions.",
+    "An average learned phase difference can absorb calibration patterns and is not a causal learning effect.",
+    "Training pair population and ordinary first-attempt training population differ; absolute losses and direct paired model contrasts are reported.",
+    "The global-user split is not chronological. Training item difficulty can use calendar-future records relative to held-out forecasts.",
+    "First means first observed SUBMITION; TEST on j can occur after H1 and before that SUBMITION.",
+    "Historical missing grades remain missing states; operational error-failure labels change target definition explicitly.",
+    "No new architecture, code-repair model, recommendation optimization or causal policy evaluation is introduced."
+  ],
+  "prior_artifacts_unchanged": true,
+  "completed_utc": "2026-09-26T02:39:54.080212+00:00"
+}

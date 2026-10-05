@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-26",
+  "scope": "Harness functionality, preserved historical artifacts, executed synthetic policy benchmark and existing local app regression checks",
+  "reports": {
+    "fast": {
+      "path": ".harness/reports/20260926T143509415324/report.json",
+      "sha256": "5ccfc3f5feac1e7d373162682bf6927dba648ba466566bf915d88b8b9afb4424",
+      "passed": true,
+      "seconds": 15.555,
+      "commands": 1
+    },
+    "policy": {
+      "path": ".harness/reports/20260926T142813968647/report.json",
+      "sha256": "8b65eace9a5a60f2151d8d4f888035a1a2c98918c1655005344dda4079c419c9",
+      "passed": true,
+      "seconds": 0.842,
+      "commands": 1
+    },
+    "backend": {
+      "path": ".harness/reports/20260926T142859175381/report.json",
+      "sha256": "218f0ad98cbfa9d1a927af3faab46149d30d84669893be669c3aaa54e0b86918",
+      "passed": true,
+      "seconds": 29.516,
+      "commands": 1
+    },
+    "browser": {
+      "path": ".harness/reports/20260926T143232572049/report.json",
+      "sha256": "13857e39770df274850205117abb36fddf726644aa3f021d26ed3b55d930679f",
+      "passed": true,
+      "seconds": 221.441,
+      "commands": 3
+    }
+  },
+  "unit_tests": {
+    "harness": 11,
+    "policy": 6,
+    "backend": 15
+  },
+  "browser_scripts": 3,
+  "practice_python_test_cases": 64,
+  "protected_artifact_count": 85,
+  "historical_integrity_passed": true,
+  "experiment_verified": "policy-controlled-v1",
+  "git_hook": "git hook run pre-commit passed",
+  "skill_validation": "quick_validate.py passed",
+  "prior_failed_browser_check": {
+    "report": ".harness/reports/20260926T142956436005/report.json",
+    "cause": "Local app server not running",
+    "resolution": "Started existing app launcher; added browser preflight; rerun passed"
+  },
+  "source_hashes": {
+    "tools/harness.py": "df2f77d98fb73c3fd7f7a2fbaf07a51b73f71ba251945a76136d8d3de934c410",
+    "tools/tests/test_harness.py": "4dcf2e14605d0810a5db3158c7b156708a5ef155a39955259b933d0d35c5083c",
+    "AGENTS.md": "d4229d424311474bb1027b411546490f79dfdc8a674b3f3a1363ff3ba3753bd8",
+    ".agents/skills/retrylab-experiment/SKILL.md": "1afa7b3ab299a54107dc877a3d90ad63c063e02b6c797909ea6b7d7255631a1c"
+  },
+  "limits": [
+    "No claim of research project completion",
+    "Synthetic policy study only; no live practice integration or human efficacy",
+    "Local hash records are not external preregistration"
+  ]
+}

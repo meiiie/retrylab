@@ -1,0 +1,30 @@
+{
+  "id": "catalog-policy-v2",
+  "question": "In a catalog-matched programming prototype, does repeat-aware state estimation improve transfer-probe value of Double DQN, and does training on practice correctness instead change the answer under simulator mismatch?",
+  "data_scope": "Synthetic binary learner responses on exactly the twelve authored Python item IDs in catalog-v2.json. Statements, reference tests and hand-authored primary skills exist; learners never execute Python in the simulator. No human transfer validation.",
+  "claim_scope": "An operational end-to-end research prototype and controlled simulator benchmark. The historical v1 results informed this design; these new seeds are unseen at lock time. No novel-algorithm, SOTA, human mastery or learning-gain claim.",
+  "primary_metric": "Final minus initial expected success on independent unpractised probes with no item-memory bonus. Primary contrast ddqn_aware minus ddqn_naive, separately by world; weakest-skill and correctness-reward contrasts secondary.",
+  "split": {
+    "test_previously_inspected": false,
+    "prior_inspected": "policy-controlled-v1 on six different virtual tasks; v2 design is informed by its negative policy results",
+    "model_train": "1000000 + fit_seed*10000 + learner_index; 300 learners per fit",
+    "model_validation": "10000000 + fit_seed*10000 + learner_index; 100 learners per fit; descriptive, no selection",
+    "policy_train": "30000000 + fit_seed*10000 + episode; nominal world only; same seed streams paired across policy variants",
+    "evaluation": "90000000 + world_index*100000 + learner_index; 300 paired learners per world, shared across policies and fits; not 31500 independent people"
+  },
+  "selection": "Fixed grid learner fits minimize train NLL; final DDQN checkpoint at 24000 transitions, no best-test checkpoint or tuning. App member fixed to repeat-aware probe-reward seed 101 before evaluation, for demonstration, regardless of rank. Report every world and policy including losses.",
+  "seeds": [101, 203, 307],
+  "inputs": ["app/static/data/catalog-v2.json"],
+  "code": ["research/catalog_policy/core.py", "research/catalog_policy/train.py", "research/catalog_policy/tests/test_catalog_policy.py"],
+  "output_files": ["summary.json", "RESULTS.md", "traces.json", "rollouts.npz", "deployment.json", "parity.json", "ddqn_naive-101.json", "ddqn_aware-101.json", "ddqn_success-101.json", "ddqn_naive-203.json", "ddqn_aware-203.json", "ddqn_success-203.json", "ddqn_naive-307.json", "ddqn_aware-307.json", "ddqn_success-307.json"],
+  "timeout_seconds": 2400,
+  "settings": {"model_train_episodes":300,"model_validation_episodes":100,"training_steps":24000,"evaluation_learners":300,"horizon":12},
+  "learner": "BKT-style three-skill Bayes filter, learning before response, prior .3, forgetting .005 fixed; learn [.04,.10,.16], guess [.16,.24], slip [.08,.16], familiarity [0] naive versus [0,.4,.7] aware. Item difficulty offsets .05 per authored level. Fit observable next-response likelihood only.",
+  "state": "28 floats: 3 beliefs + 12 item counts divided by 3 (capped) + 12 solved flags + remaining horizon/12; approximation to belief state, not proven sufficient under mismatch.",
+  "policy": "Double DQN: 28-64-64-12 ReLU, replay 12000, batch64, warmup512, update each4 transitions, target copy each400, Adam .001, Huber, gradient norm5, gamma .99, epsilon1 to .05 over 75% budget. torch CPU one thread; fixed final checkpoint. Actions exclude solved items or three observations of an item.",
+  "reward": "Probe policies: -.005*authored simulated time cost per step, plus terminal observed 12-probe fraction (four independent Bernoulli responses per skill). Success ablation instead adds current binary correctness/12. No latent mastery reward or feature; latent values used only for held-out evaluator's expected probe metric. Cost is synthetic, never measured student time.",
+  "baselines": ["constrained random", "fixed difficulty curriculum", "estimated weakest-skill rule", "predicted success nearest .7 (heuristic, not empirically validated ZPD)", "DDQN naive/probe", "DDQN aware/probe", "DDQN aware/practice-success"],
+  "worlds": "Nominal (.10 learning,.60 memory,.005 forgetting), repair only (0,.8,0), slow transfer (.025,.60,.005), forgetting (.10,.60,.05), prerequisites (.10,.60,.005, learning*.1 when preceding skill absent). All use same emission/prior; structural shifts limited, not exhaustive.",
+  "uncertainty": "1500 percentile bootstrap replicates over paired simulated learners after averaging over the three fixed trained fits; per-fit means also reported. CI is conditional on those fits, does not estimate all training randomness. No multiplicity correction, exploratory contrasts; simulator worlds and skill mapping are assumptions.",
+  "app_scope": "Same catalog SHA256/action order checked before inference; weights and Bayes updates run in-browser with Python/JS parity fixture. No ACcoding mapping or network upload. App uses fallback clearly labeled when beyond 12 scored observations, no eligible learned action, or model unavailable. Binary task correctness is not fraction of cases or measured knowledge. No online retraining. Repeated identical code per item is one model observation."
+}

@@ -1,0 +1,87 @@
+{
+  "audit_date": "2026-09-26",
+  "search_scope": "Four verified sources supporting the endpoint-controlled intermediate-code-path branch; metadata verification only in this addition.",
+  "sources": [
+    {
+      "id": "revision_aware_2026",
+      "bibkey": "amin2026revisionaware",
+      "title": "Revision-Aware Success Prediction from Multi-Attempt Programming Trajectories",
+      "authors": ["Md Faizul Ibne Amin", "Yutaka Watanobe", "Daniel M. Muepu", "Kenta Nanaumi", "Haruto Suzuki", "Md. Shahajada Mia", "Md Mostafizer Rahman"],
+      "year": 2026,
+      "status": "arXiv version 1 preprint; peer-reviewed venue unverified",
+      "doi": "10.48550/arXiv.2608.26169",
+      "primary_url": "https://arxiv.org/abs/2608.26169v1",
+      "metadata_url": "https://arxiv.org/abs/2608.26169v1",
+      "date_evidence": {"citation_year": 2026, "citation_precision": "year", "reason": "Primary page history reports July while the arXiv identifier and some indexes indicate August; retain year-only in citation."},
+      "evidence": [
+        {"pdf_pages": [3, 4], "section": "III.C–F", "finding": "Same-problem current, next-attempt and short-window acceptance targets; current/pair/multi-snapshot regimes have different eligible sets."},
+        {"pdf_pages": [5, 12, 13], "section": "IV.C–E and VII", "finding": "Trajectory construction, input regimes and limitations; not an endpoint-controlled next-different-problem first-response experiment."}
+      ],
+      "repositories": [],
+      "access": {"full_text_available": true, "relevant_sections_inspected": true, "metadata_inspected": true, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["Citation year only because source dates are not internally consistent; no month/day asserted in bibliography.", "Model comparisons do not hold the eligible cohort constant across all history regimes.", "Human-AI contest setting must not be treated as novice classroom evidence without qualification."]
+    },
+    {
+      "id": "srcml_dkt_2025",
+      "bibkey": "pankiewicz2025srcmldkt",
+      "title": "srcML-DKT: Enhancing Deep Knowledge Tracing with Robust Code Representations from srcML",
+      "authors": ["Maciej Pankiewicz", "Yang Shi", "Ryan S. Baker"],
+      "year": 2025,
+      "status": "EDM 2025 published short paper, proceedings pages 541–548",
+      "doi": "10.5281/zenodo.15870306",
+      "primary_url": "https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.83/index.html",
+      "metadata_url": "https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.83/2025.EDM.short-papers.83.bib",
+      "author_manuscript_url": "https://learninganalytics.upenn.edu/ryanbaker/EDM2025-srcml-DKT-proceedings-v01.pdf",
+      "date_evidence": {"proceedings_year": 2025, "proceedings_month": "July"},
+      "proceedings_pages": "541-548",
+      "evidence": [
+        {"pdf_pages": [4, 5], "section": "3.4 and 4.1", "finding": "Code representation handles unparsable submissions; evaluations distinguish first and all attempts."},
+        {"pdf_pages": [5, 6], "section": "4.2", "finding": "Consecutive-code case study; no endpoint-versus-intermediate nuisance-controlled contrast identified in inspected text."}
+      ],
+      "repositories": [],
+      "access": {"full_text_available": true, "relevant_sections_inspected": true, "metadata_inspected": true, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["Page anchors refer to the archived eight-page author manuscript; bibliographic pages come from the official proceedings BibTeX.", "No source-code reproduction in this audit."]
+    },
+    {
+      "id": "help_dkt_2022",
+      "bibkey": "liang2022helpdkt",
+      "title": "HELP-DKT: an interpretable cognitive model of how students learn programming based on deep knowledge tracing",
+      "authors": ["Yu Liang", "Tianhao Peng", "Yanjun Pu", "Wenjun Wu"],
+      "year": 2022,
+      "status": "Scientific Reports published journal article, volume 12, article 4012",
+      "doi": "10.1038/s41598-022-07956-0",
+      "primary_url": "https://www.nature.com/articles/s41598-022-07956-0",
+      "metadata_url": "https://api.crossref.org/works/10.1038/s41598-022-07956-0",
+      "metadata_local": "help_dkt_2022_metadata.json",
+      "date_evidence": {"published_online": "2022-03-07"},
+      "journal_volume": "12",
+      "journal_issue": "1",
+      "article_number": "4012",
+      "evidence": [
+        {"pdf_pages": [7, 8], "section": "Task definitions and Implementation", "finding": "Next-challenge prediction from code history is prior art; Task A uses a three-attempt criterion, not next-problem first-response correctness."}
+      ],
+      "repositories": ["liangyubuaa/HELP-DKT"],
+      "access": {"full_text_available": true, "relevant_sections_inspected": true, "metadata_inspected": true, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["Article number 4012 is not a page range.", "Repository URL is stated in the article; repository implementation was not inspected in this audit.", "No complete endpoint/count/time/outcome-matched path ablation identified in the inspected article."]
+    },
+    {
+      "id": "okt_workshop_2022",
+      "bibkey": "liu2022oktworkshop",
+      "title": "Open-ended Knowledge Tracing for Programming Exercises",
+      "authors": ["Naiming Liu", "Zichao Wang", "Richard G. Baraniuk", "Andrew S. Lan"],
+      "year": 2022,
+      "status": "6th Educational Data Mining in Computer Science Education (CSEDM) Workshop paper, archived on Zenodo",
+      "doi": "10.5281/zenodo.7157118",
+      "primary_url": "https://zenodo.org/records/7157118",
+      "metadata_url": "https://zenodo.org/api/records/7157118",
+      "metadata_local": "okt_workshop_2022_metadata.json",
+      "date_evidence": {"publication_date": "2022-07-27", "repository_created": "2022-10-07T11:25:39.185696+00:00"},
+      "evidence": [
+        {"pdf_pages": [3, 4], "section": "2.4, 3 and 3.2", "finding": "First-submission training/evaluation and all-submission settings differ; first-only setting excludes revisions, not an intermediate-path increment on fixed first-response targets."}
+      ],
+      "repositories": [],
+      "access": {"full_text_available": true, "relevant_sections_inspected": true, "metadata_inspected": true, "downloads": [], "code_inspection": [], "experiments_reproduced": false},
+      "caveats": ["This record cites the inspected eight-page CSEDM workshop version, not the separately titled EMNLP 2022 full paper mentioned in its footnote.", "No proceedings page range independently verified; omitted.", "Repository creation date is distinct from publication date, not used as the publication year."]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  [
+    "Cheng, X., Zhuang, G., Xie, Y., Wang, J., Liu, Y., Guan, Q., Fang, L., & Pan, S.",
+    "2026",
+    "UniER: A unified benchmark for item-level and path-level exercise recommendation",
+    "arXiv. Preprint",
+    "https://arxiv.org/abs/2605.16750"
+  ],
+  [
+    "Corbett, A. T., & Anderson, J. R.",
+    "1994",
+    "Knowledge tracing: Modeling the acquisition of procedural knowledge",
+    "User Modeling and User-Adapted Interaction, 4, 253-278",
+    "https://doi.org/10.1007/BF01099821"
+  ],
+  [
+    "Girard, S., Minn, S., Bouzeghoub, A., & Vie, J.-J.",
+    "2026",
+    "Counterfactual learning of new adaptive instructional policies using logged data",
+    "arXiv. Preprint version",
+    "https://arxiv.org/abs/2606.23015"
+  ],
+  [
+    "Minn, S.",
+    "2022",
+    "AI-assisted knowledge assessment techniques for adaptive learning environments",
+    "Computers and Education: Artificial Intelligence, 3, Article 100050",
+    "https://doi.org/10.1016/j.caeai.2022.100050"
+  ],
+  [
+    "Ozyurt, Y., Almaci, T., Feuerriegel, S., & Sachan, M.",
+    "2025",
+    "Personalized exercise recommendation with semantically-grounded knowledge tracing",
+    "Advances in Neural Information Processing Systems, 38",
+    "https://proceedings.neurips.cc/paper_files/paper/2025/hash/13707aad517ddd6c09ea02e0f55e1e7a-Abstract-Conference.html"
+  ],
+  [
+    "Piech, C., Spencer, J., Huang, J., Ganguli, S., Sahami, M., Guibas, L., & Sohl-Dickstein, J.",
+    "2015",
+    "Deep knowledge tracing",
+    "Advances in Neural Information Processing Systems, 28",
+    "https://arxiv.org/abs/1506.05908"
+  ],
+  [
+    "Shi, Y., Chi, M., Barnes, T., & Price, T. W.",
+    "2022",
+    "Code-DKT: A code-based knowledge tracing model for programming tasks",
+    "arXiv. Preprint",
+    "https://arxiv.org/abs/2206.03545"
+  ],
+  [
+    "van Hasselt, H., Guez, A., & Silver, D.",
+    "2016",
+    "Deep reinforcement learning with double Q-learning",
+    "Proceedings of the AAAI Conference on Artificial Intelligence, 30(1), 2094-2100",
+    "https://doi.org/10.1609/aaai.v30i1.10295"
+  ]
+]

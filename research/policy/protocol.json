@@ -1,0 +1,29 @@
+{
+  "id": "policy-controlled-v1",
+  "question": "How do fitted repeat-aware versus naive learner-state encoders affect finite-data Q-learning exercise selection under transfer, repair-only and misspecified learning dynamics?",
+  "data_scope": "Entirely synthetic students and six virtual tasks; no human records and no mapping to RetryLab Python exercises.",
+  "claim_scope": "Software validation and descriptive policy performance conditional on declared simulators; no SOTA, human learning efficacy, or validated app integration.",
+  "primary_metric": "Mean final minus initial expected success on three independent unpractised skill probes; compare q_repeat_aware with q_naive separately in each world.",
+  "split": {
+    "test_previously_inspected": false,
+    "learner_model_train_seeds": "seed*100000 + episode",
+    "learner_model_validation_seeds": "(seed+1000)*100000 + episode",
+    "policy_training_seeds": "300000000 + seed*100000 + episode",
+    "evaluation_seeds": "900000000 + world_index*1000000 + episode; same across policies and fitted seeds for paired comparison",
+    "worlds": "Train only transfer_and_repair; evaluate that world plus zero learning, slow learning, stronger forgetting and structurally different prerequisite coupling. All mechanisms specified before first evaluation."
+  },
+  "selection": "Learner parameters minimize training NLL on a fixed grid; validation NLL is descriptive only. Fixed Q-learning budget/configuration, no checkpoint selection or tuning on evaluation outcomes. Report all policies/worlds/seeds, including null or unfavorable results.",
+  "seeds": [11, 29, 47],
+  "inputs": [],
+  "code": ["research/policy/benchmark.py", "research/policy/tests/test_policy.py"],
+  "output_files": ["results.json", "traces.json", "RESULTS.md", "policy_naive_11.json", "policy_repeat_aware_11.json", "policy_naive_29.json", "policy_repeat_aware_29.json", "policy_naive_47.json", "policy_repeat_aware_47.json"],
+  "timeout_seconds": 1200,
+  "settings": {"model_train_episodes": 400, "model_validation_episodes": 100, "policy_train_episodes": 4000, "evaluation_episodes": 400, "horizon": 8},
+  "learner_model": "Approximate BKT-style filter over 3 skills. Grid learn=[.04,.1,.16], guess=[.15,.25], slip=[.08,.16], memory=[0] naive or [0,.35,.65] repeat-aware. Prior .3 and forgetting .005 assumed. All observations precede their updates.",
+  "policy": "Tabular Q-learning, alpha=.15, gamma=1, linear epsilon .3 to .05. State: remaining horizon, 3-bin beliefs and capped per-skill attempt counts. Actions: six virtual exercises, each at most twice. Partial observation/coarse state means this is an approximate state representation, not an established sufficient Markov state.",
+  "reward": "Per-step -.005 * simulated action time cost; terminal observed independent probe fraction. No latent mastery in policy inputs or rewards. Evaluation additionally accesses simulator latent mastery to compute expected probe gain without item-familiarity credit.",
+  "baselines": ["constrained random", "fixed curriculum", "estimated weakest skill", "target predicted success .7", "q_naive", "q_repeat_aware"],
+  "fallback": "Unseen Q states use estimated weakest-skill rule; report fallback fraction for the resulting hybrid policy.",
+  "uncertainty": "Descriptive per-seed results and min/max across 3 fits, with paired mean differences. No confidence interval or significance claim. Shared evaluation learners across fits are not independent replicates.",
+  "limitations": ["Hand-specified educational mechanisms and virtual tasks", "No published recommendation baseline reproduction", "Only one policy training world", "Small fixed parameter grid and coarse observation state", "No human-validated skill mastery", "No proven novelty or venue readiness"]
+}

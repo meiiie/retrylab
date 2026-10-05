@@ -1,0 +1,11 @@
+# Amendment 01: paired-target training control
+
+Locked **2026-09-26 02:13:15 UTC**, before selecting or scoring the new confirmation users. The original `locked_protocol.md` is unchanged. Reason: read-only methodological review identified that fitting immediate-first-attempt outcomes does not remove the horizon mismatch when that predictor is queried at the earlier H0 state.
+
+Add one prespecified third pipeline, **pooled paired-target logistic control**. Construct eligible fixed-target episode pairs from the original 1,054 training users using the same episode/target conditions as evaluation. For every pair, include both H0 and H1 feature rows, each labeled with exactly the same future first-outcome Yj. Give each row equal weight, so H0/H1 stages have equal total weight. Use the original seven no-gap features plus an explicit `phase_indicator` (0 for H0; 1 for H1). The indicator is an oracle-checkpoint context feature, not a newly measured learner trait or online recommendation decision.
+
+Keep the exact StandardScaler + L2 logistic regression C=1, max_iter=500, seed=26092026. Training difficulty at both stages is the crossfitted difficulty of target j from its original training row; it excludes that learner's whole original training fold. Restrict target j to an item observed in the original training population. No new-test outcome enters difficulty, scaler, fitting, phase definitions, or model selection.
+
+Fit once, freeze, evaluate both stages on the same validation pairs, and choose alpha on the original validation-only grid using the original tie rule. Freeze that alpha before opening the new confirmation outcome file for modeling. Evaluate on the identical new-test pairs, metrics, strata, calibration bins, and 1,000 paired student bootstraps as the other two models. Save this control separately in aggregate outputs. No separately fitted stage models, architectural optimization, or target-dependent weighting will be added.
+
+The original primary replication contrast is unchanged; this is a prespecified diagnostic control for transported-predictor mismatch. It does not identify causal learning, solve oracle-item selection/stopping bias, or constitute a novel model. All outcomes and all three pipelines will be reported, including null or adverse findings. The analysis lock is local, not an external registration.

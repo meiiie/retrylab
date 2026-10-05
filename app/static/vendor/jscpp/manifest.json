@@ -1,0 +1,24 @@
+{
+  "package": "JSCPP",
+  "version": "2.0.9",
+  "tarball_sha256": "fa83b3ef9eefb1ee496eb06a70bbb96012d9004bf4529313001fd2ab07d629f6",
+  "patches": "eval-free C escape decoding; system() disabled; util/stream shims",
+  "files": [
+    {
+      "name": "jscpp.js",
+      "sha256": "5abb09b5e9ab107636b6dc4abb47f3ad93cca66feb8d35af995d774915aa0196"
+    },
+    {
+      "name": "LICENSE-JSCPP.txt",
+      "sha256": "3f9c2349b3ce4f4de297c26f86db51b7f45e1d86ec94d87ed8475b1064df2888"
+    },
+    {
+      "name": "LICENSE-lodash.txt",
+      "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+    },
+    {
+      "name": "LICENSE-printf.txt",
+      "sha256": "8f345cebd8ca2b783f61e6c3aa90426de3c9f17c340171c551435bfcbaae0e83"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "within_file_backward_timestamp_transitions": [
+    {
+      "previous": {
+        "row_id": "262403",
+        "user_id": "1692",
+        "problem_id": "1027",
+        "timestamp": "2016-06-16 22:02:30",
+        "event_type": "SUBMITION"
+      },
+      "current": {
+        "row_id": "262404",
+        "user_id": "1692",
+        "problem_id": "1027",
+        "timestamp": "2016-06-16 21:02:38",
+        "event_type": "SUBMITION"
+      },
+      "source_path": "2016-1/106/users/1692/executions/63_1027.log"
+    }
+  ]
+}

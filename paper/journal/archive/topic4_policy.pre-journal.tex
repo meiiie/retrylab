@@ -1,0 +1,183 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,tabularx}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{microtype}
+\title{Separating Repeated-Item Success from Transfer in Adaptive Programming Practice:\\An Auditable Prototype and Simulator Stress Test}
+\author{RetryLab research project\\\small Working manuscript; author information to be supplied}
+\date{26 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An adaptive programming system must distinguish executing a correct solution, predicting a future response, and selecting an exercise that supports learning. We implement an auditable prototype with twelve executable Python exercises, a fitted Bayesian learner-state filter, and a Double DQN exercise-selection policy. A shared, hashed catalog binds training action identities to the application. In a controlled benchmark, we train nine networks and evaluate seven policies in five declared synthetic environments, using 300 paired simulated learners per environment and three training seeds. Modeling repeated-item familiarity improves validation response likelihood in all three fits. This improvement does not consistently translate to better selection: in the nominal environment, the repeat-aware policy yields 17.91 percentage points of expected transfer gain, compared with 18.85 for its naive counterpart and 19.16 for a weakest-skill rule. A repair-only negative control yields zero transfer gain for every policy despite substantial practice correctness. These are conditional simulator results, not estimates of human learning effects. The contribution is an operational, reproducible measurement pipeline and a bounded negative result; neither algorithmic novelty nor state-of-the-art performance is established.
+\end{abstract}
+
+\section{Introduction}
+Programming practice generates repeated submissions on the same exercise. A learner may repair a specific solution without acquiring knowledge that transfers to an unfamiliar task. Consequently, an observed increase in acceptance probability need not represent a comparable increase in transferable skill. A recommender optimized for the wrong quantity may favor immediately successful responses while failing to advance the intended educational objective.
+
+This project addresses an applied requirement: represent learner state, formulate exercise selection as a sequential decision problem, learn a policy, and provide an application in which its decisions can be inspected. An earlier project component predicted the outcome of a fixed next exercise in historical programming logs. That component does not select the exercise and is insufficient by itself to meet the recommendation requirement. We retain its evidence separately instead of repurposing its item identities or predictions for a new Python catalog.
+
+We study three questions. \textbf{RQ1:} Does modeling repeated-item familiarity improve response prediction? \textbf{RQ2:} Does that improvement translate to better exercise selection under an independent transfer objective? \textbf{RQ3:} How do conclusions change when rewards or simulated learning dynamics differ? Our implementation uses established methods, intentionally retains unfavorable comparisons, and exposes the difference between software validity and educational efficacy.
+
+The resulting artifacts comprise a complete local prototype, a fixed-design experiment with source snapshots and checksums, an interactive decision trace, and aggregate reports. We do not claim a new knowledge-tracing or RL algorithm. Human intervention data were unavailable, and the experiment does not manufacture such evidence from simulated responses.
+
+\section{Related work and scope}
+Knowledge tracing estimates changing skill states from practice observations; its original programming-tutor formulation provides a relevant foundation \cite{bkt}. Our filter is a deliberately small BKT-style variant with an explicit familiarity term, fixed skill mapping, and learning-before-response convention. It is not a reproduction of the original tutor.
+
+Code-DKT uses information extracted from program content in addition to correctness histories \cite{codedkt}. Our application executes code for feedback, but the present learner-state model does not encode source code. Code-aware diagnosis remains a distinct unimplemented extension rather than a claimed feature.
+
+ExRec combines semantically grounded knowledge tracing and reinforcement learning for exercise recommendation, including an approach to model-based value estimation \cite{exrec}. Thus, the general combination of KT and RL is established prior art. UniER examines item-level and path-level recommendations under a common evaluation framework and provides a much broader benchmark than our twelve-task experiment \cite{unier}. We reviewed these primary sources and their public code descriptions, but did not reproduce their full pipelines. Our numerical results must not be compared directly with theirs.
+
+Girard et al. study policy learning from logged data using a Rasch representation and a contextual-bandit formulation \cite{girard}. Their observable reward proxy and counterfactual evaluation offer an alternative to an online student intervention. In our data, assignment propensities and matched histories for the authored Python bank have not been established. We therefore do not present inverse-propensity or doubly robust estimates as though those assumptions had been satisfied.
+
+Double DQN decouples action selection from target-network evaluation \cite{ddqn}. We use this published algorithm as a standard learned-policy component. The research question concerns the relationship between response modeling, reward choice, and policy evaluation, not a claim that the architecture itself is novel. Literature verification was performed on 26 September 2026; the search was targeted rather than a complete systematic review.
+
+\section{Data and application contract}
+\subsection{Authored exercise bank}
+The bank contains twelve Python function-writing exercises, with a statement, examples, starter code, three hints, and eight executable tests per exercise. Four exercises are assigned to each of three primary skill groups: selection and accumulation; memory and data structures; and iterative state updates. Examples include summing positive values, detecting the first repeated value, grouping words by length, Fibonacci computation, and prefix sums.
+
+Skill labels and three ordinal difficulty levels are author-assigned. They have not been validated by experts or calibrated from human response data. Several exercises naturally require multiple skills; the single-primary-skill representation is a modeling simplification. Reference solutions pass all 96 authored tests, which establishes consistency with this finite test bank, not universal program correctness.
+
+Training and the browser read the same catalog artifact. A deployed model declares the catalog SHA256 and action order. A mismatch disables learned selection and displays an explicit fallback. This contract prevents silent identity substitution; it does not validate simulator dynamics or transfer to real students.
+
+\subsection{Historical evidence remains separate}
+The frozen ACcoding analysis contains 69,825 paired predictions from 1,500 held-out learners. Its primary first-attempt logistic model had negative log likelihood (NLL) 0.581115 before a retry sequence update and 0.579549 after the update, with paired difference $-0.001566$ and learner-bootstrap 95\% interval $[-0.002300,-0.000756]$. These are previously inspected predictive results, conditional on the next logged exercise being supplied. They do not evaluate changing that exercise.
+
+ACcoding does not supply the complete statements, executable tests, or source-code evidence needed to identify our authored Python tasks with its item IDs. We make no such mapping. The public RoboMission project is another possible source of programming tasks, but its domain is not automatically interchangeable with this catalog. No RoboMission code or logs were incorporated into the present benchmark.
+
+\subsection{Observable history}
+An observation is $(i_t,y_t)$, where $i_t$ is an exercise identity and $y_t$ denotes passing the entire task test set. Partial pass counts remain useful feedback but are not the training target. Predictions precede observations; the state update follows them. Running exactly the same source again on an exercise does not add a new model observation. Syntax/runtime initialization errors, cancelled execution, and timeouts are excluded from the state-model projection. These events can remain in the application journal.
+
+Source text and practice history stay in browser storage unless the user explicitly exports them. Policy inference also runs in the browser. Inference changes the state representation, not network weights; the app does not retrain online.
+
+\section{Methods}
+\subsection{Synthetic learner environments}
+Each simulated learner has three binary latent skill variables $m_k$, initially independent Bernoulli variables with parameter 0.3. Exercise $i$ has primary skill $k(i)$, difficulty $d_i\in\{0,1,2\}$, and synthetic cost $c_i=1+0.2d_i$. Each step first applies independent forgetting, then learning on the selected skill with probability $\ell(1+0.15d_i)$, and finally generates a response. In the prerequisite environment, learning is multiplied by 0.1 when the preceding skill is absent.
+
+Let $n_i$ be the number of previous observations of item $i$ and $h_i=\mu(1-e^{-n_i})$ its familiarity contribution. Conditional response probabilities are
+\begin{align}
+g_i &= 1-s-0.05d_i, & b_i &= g-0.05d_i,\\
+P(y=1\mid m_{k(i)}=1)&=g_i+(1-g_i)h_i, &
+P(y=1\mid m_{k(i)}=0)&=b_i+(1-b_i)h_i.
+\end{align}
+The simulator uses $g=0.20$, $s=0.10$. Table~\ref{tab:worlds} gives the dynamics. Responses are generated from these equations, not by simulated learners writing Python. We use a fixed random-number budget per step to enable paired common-random-number comparisons.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrrl}\toprule
+Environment & Learning $\ell$ & Memory $\mu$ & Forgetting & Additional change\\\midrule
+Nominal & .100 & .60 & .005 & None\\
+Repair only & .000 & .80 & .000 & No learning\\
+Slow transfer & .025 & .60 & .005 & None\\
+Forgetting & .100 & .60 & .050 & None\\
+Prerequisites & .100 & .60 & .005 & Preceding skill required\\\bottomrule
+\end{tabular}
+\caption{Declared synthetic environments. Training uses only nominal dynamics.}\label{tab:worlds}
+\end{table}
+
+\subsection{Fitted learner filter}
+The filter maintains beliefs $b_k=P(m_k=1\mid H_t)$. It applies fixed forgetting of .005, then the assumed learning transition, and updates the selected belief by Bayes' rule after observing correctness. It shares the simulator emission family but fits learning, guess, slip and familiarity parameters by minimizing training NLL. The grids are learning $\{.04,.10,.16\}$, guess $\{.16,.24\}$, slip $\{.08,.16\}$, and memory $\{0,.4,.7\}$. The naive ablation fixes memory to zero. Prior .3, forgetting, skill assignments, and difficulty offsets are assumptions rather than learned quantities.
+
+Learning is modeled before the response, which represents a practice opportunity followed by a submission. The forecast therefore incorporates the modeled opportunity; it is not a direct measurement of current human mastery. Repeated correct responses receive less skill credit when familiarity can explain them. Neither variant is guaranteed to recover identifiable psychological states from correctness alone.
+
+\subsection{Sequential selection and rewards}
+The policy state comprises 28 floats: three beliefs, twelve counts capped at three and divided by three, twelve solved-item indicators, and remaining horizon divided by twelve. It is an approximate observable state for a partially observed process, not a proved sufficient Markov state under all environment shifts. There are twelve item actions. Solved items and items with three observations are masked. Episodes contain twelve decisions.
+
+Double DQN uses a 28--64--64--12 ReLU network with 6,796 parameters. A replay buffer contains up to 12,000 transitions. We use Adam with learning rate .001, batch size 64, Huber loss, gradient norm clipping at 5, discount .99, 512 warmup transitions, one update every four transitions, and a target copy every 400 transitions. Exploration decays linearly from 1 to .05 over the first 75\% of the budget. The final checkpoint at 24,000 transitions is retained without test-set checkpoint selection.
+
+For probe-reward policies, the reward is $-.005c_i$ at each step plus a terminal observed probe score. That score averages twelve independent binary responses, four per skill, on hypothetical unpractised items with success probability $.2+.7m_k$. Training receives sampled probe outcomes, not latent mastery. The correctness-reward ablation replaces the terminal probe reward with $y_t/12$ at every step. Cost is a synthetic proxy, not measured student time.
+
+We compare constrained random selection, a fixed difficulty curriculum, a weakest-estimated-skill rule, a rule selecting predicted success nearest .7, naive-filter Double DQN with probe reward, repeat-aware Double DQN with probe reward, and repeat-aware Double DQN with correctness reward. The .7 rule is a heuristic, not a validated operational definition of the zone of proximal development.
+
+\section{Experimental protocol}
+For each seed (101, 203, 307), 300 nominal-environment random-policy histories train the filter and 100 disjoint histories provide descriptive validation. Each of the three neural configurations receives 24,000 transitions (2,000 episodes), totaling 216,000 transitions across nine networks. Each network performs 5,872 gradient updates. All runs use one CPU Torch thread.
+
+Evaluation uses 300 fresh simulated learner seeds in each of the five environments. Those seeds are shared across policies and fitted models for pairing. Seven policies, five environments, three fits and 300 learners produce 31,500 rollouts, but only 1,500 distinct evaluation learner identities. Treating all rollouts as independent learners would underestimate uncertainty.
+
+The primary metric is expected transfer-probe gain:
+\begin{equation}
+G=\frac{1}{3}\sum_{k=1}^3 (.2+.7m_{k,T})-\frac{1}{3}\sum_{k=1}^3 (.2+.7m_{k,0}).
+\end{equation}
+Only the held-out evaluator uses latent state to compute this low-noise expectation. Practice correctness, final expected probe score, sampled final probe score and cost are also retained. The primary contrast is aware/probe minus naive/probe in each environment. Weakest-skill and correctness-reward contrasts are secondary.
+
+We average over the three fixed fits within each simulated learner, then form percentile intervals using 1,500 bootstrap resamples of learners, paired across policies. These intervals are conditional on the fitted networks and do not capture all training-run uncertainty. Per-fit means are retained. Multiple contrasts are exploratory and unadjusted for multiplicity.
+
+The v2 protocol was recorded before its evaluation. A previous six-virtual-item pilot had already been inspected and informed this design. Thus, new seed partitions do not convert the entire research process into a retrospective claim of independent preregistration. The harness stores code/protocol snapshots, input/output hashes, command, runtime, and exit status under the unique run identifier \texttt{catalog-policy-v2}.
+
+\section{Results}
+\subsection{Prediction and policy value diverge}
+Table~\ref{tab:nll} shows lower validation NLL for the repeat-aware filter in all three fits. Table~\ref{tab:nominal} shows that the corresponding selection policy nevertheless does not dominate its naive counterpart or a simple rule. In nominal dynamics, aware/probe minus naive/probe is $-0.93$ percentage points, with conditional paired interval $[-1.87,-0.05]$. Aware/probe minus weakest skill is $-1.24$ points, interval $[-2.27,-0.21]$. Better response likelihood is therefore insufficient to establish better selection in this implemented setting.
+
+\begin{table}[ht]\centering
+\begin{tabular}{rrr}\toprule Seed & Naive NLL & Repeat-aware NLL\\\midrule
+101 & .637583 & .622301\\203 & .643206 & .631533\\307 & .653636 & .621808\\\bottomrule
+\end{tabular}
+\caption{Descriptive validation NLL on disjoint synthetic histories; lower is better.}\label{tab:nll}
+\end{table}
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{lrrr}\toprule
+Policy & Transfer gain (pp) & Conditional 95\% CI & Practice correct (\%)\\\midrule
+Random & 16.96 & [14.86, 19.13] & 51.69\\
+Curriculum & 16.64 & [14.50, 18.90] & 54.75\\
+Weakest skill & 19.16 & [17.07, 21.40] & 50.76\\
+Target $p=.7$ & 14.16 & [12.13, 16.24] & 59.72\\
+DDQN naive / probe & 18.85 & [16.83, 20.97] & 54.29\\
+DDQN aware / probe & 17.91 & [15.90, 20.03] & 53.61\\
+DDQN aware / correctness & 17.24 & [15.30, 19.37] & 56.16\\\bottomrule
+\end{tabular}
+\caption{Nominal environment. Gain measures unfamiliar probe performance; correctness measures practiced-item responses.}\label{tab:nominal}
+\end{table}
+
+\subsection{Stress tests and reward ablation}
+Table~\ref{tab:all} retains all environments and policies. In repair-only dynamics, transfer gain is identically zero by construction, whereas practice correctness ranges from 43.75\% to 54.86\%. This is an implemented negative-control property, not evidence that real learners do not learn from retries.
+
+Under prerequisites, the aware/probe versus naive/probe contrast reverses direction: $+1.19$ points, interval $[0.16,2.20]$. Against weakest skill, its contrast remains $-0.88$ points, interval $[-2.28,0.47]$. Under increased forgetting, aware/probe exceeds the correctness-reward variant by 2.10 points, interval $[1.18,3.00]$. Other contrasts may include zero. These results support environment-sensitive interpretation rather than a universal ranking. They do not isolate a single causal mechanism inside the learned networks.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{lrrrrr}\toprule
+Policy & Nominal & Repair & Slow & Forget & Prereq.\\\midrule
+Random & 16.96 & 0 & 4.67 & 8.56 & 10.66\\
+Curriculum & 16.64 & 0 & 4.59 & 8.24 & 11.04\\
+Weakest skill & 19.16 & 0 & 5.39 & 8.61 & 12.21\\
+Target $p=.7$ & 14.16 & 0 & 3.89 & 6.33 & 8.89\\
+DDQN naive / probe & 18.85 & 0 & 5.19 & 8.94 & 10.14\\
+DDQN aware / probe & 17.91 & 0 & 5.16 & 9.26 & 11.33\\
+DDQN aware / correctness & 17.24 & 0 & 4.82 & 7.16 & 10.40\\\bottomrule
+\end{tabular}
+\caption{Expected transfer gain in percentage points. Full per-fit outcomes, intervals and paired contrasts are retained in aggregate JSON and the companion report.}\label{tab:all}
+\end{table}
+
+\section{Application and verification}
+The practice flow is statement, code, execution, feedback, and next action. Python executes in a disposable local browser worker with cancellation and a timeout. The interface preserves drafts and labels experimental recommendations. A separate research view can replay personal or hypothetical histories, display before/after beliefs, show predictions made before each observed response, inspect eligible Q values, and export decision traces. Hypothetical changes do not overwrite personal practice records.
+
+The deployed network is aware/probe seed 101, fixed in the protocol before evaluation to illustrate the intended mechanism. It is not selected as the benchmark winner. JavaScript inference is checked against Python fixtures: beliefs and response probabilities agree within $10^{-12}$, and Q values within $2\times10^{-6}$. This checks numerical implementation, not psychological validity.
+
+The learned policy's support is deliberately bounded. After twelve scored observations, a repeated observation of an already solved item, an item observed more than three times, no eligible actions, missing model, or catalog mismatch, the application exposes a named rule fallback. A learner can still open any exercise manually. The evaluation tables concern the trained policies within their declared episode/action constraints; they are not an evaluation of indefinite mixed fallback use by real students.
+
+\section{Limitations and implications}
+\paragraph{Simulator validity.} Latent skills, learning transitions, costs and memory effects are hand specified. The filter shares much of the generator family, and the five environments do not exhaust possible misspecification. A correctly implemented simulator can still be a poor model of programming learning.
+\paragraph{Finite training and uncertainty.} Three fits and a fixed 24,000-transition budget do not establish convergence or optimality. Conditional bootstrap intervals cannot replace a large training-seed study. We did not perform a post-result hyperparameter search to improve the reported ranking.
+\paragraph{Catalog and measurement.} Twelve introductory tasks with author-assigned primary skills provide an executable prototype, not a representative programming curriculum. Passing finite public tests, using hints, copying a solution, and transferring knowledge are distinct phenomena. Hints and elapsed wall time are not modeled in the current filter. No forgetting estimate based on days between sessions is available.
+\paragraph{External comparisons.} We implemented a standard Double DQN and transparent heuristics. We did not reproduce modern recommendation systems such as ExRec or the full UniER suite. Consequently, neither a superiority claim over them nor a SOTA claim is justified.
+\paragraph{Human and counterfactual evidence.} Historical forecast improvements do not identify the value of an alternative exercise policy. No real-student randomized trial or valid human off-policy value estimate was obtained. Future work could pursue matched public exercise/log data, validated skill annotation, and well-supported offline evaluation without assuming that simulator reward equals human learning.
+
+The practical lesson is a measurement requirement: retain separate targets for code correctness, next-response prediction, latent-state estimates and transfer-oriented policy value. The present negative result is useful because it prevents prediction improvements from being automatically promoted to a recommendation claim.
+
+\section{Conclusion}
+RetryLab now implements the full software path from an executable programming exercise to observable learner-state updates and learned next-exercise selection. Its controlled evaluation demonstrates that better familiarity-aware forecasts do not necessarily produce better policy value under a fixed training budget. Catalog integrity, numerical parity and auditable records make the system inspectable. Educational effectiveness and venue-level research novelty remain unestablished; this manuscript is a bounded prototype and simulator study, not a validated human tutoring intervention.
+
+\section*{Reproducibility and artifact statement}
+The run completed with exit code zero in approximately 482 seconds of recorded experiment time on the available Windows CPU environment using Python 3.13.7 and Torch 2.12.0+cpu. Timing includes fitting and evaluation and is not a hardware-comparable benchmark. The command is retained in the run record. The catalog, filter/network source, fixed protocol, all nine checkpoints, 31,500 rollout metrics, aggregate results, and cross-language fixtures are preserved. Raw human records are excluded from the new app model bundle. The original forecast manuscript and historical model artifacts remain unchanged. Source snapshots and hashes provide local provenance, not third-party preregistration or a tamper-proof audit.
+
+\begin{thebibliography}{9}
+\bibitem{bkt} A. T. Corbett and J. R. Anderson. Knowledge tracing: Modeling the acquisition of procedural knowledge. \emph{User Modeling and User-Adapted Interaction}, 4:253--278. \href{https://doi.org/10.1007/BF01099821}{doi:10.1007/BF01099821}. Publisher issue dated 1994; circulated manuscript dated 1995.
+\bibitem{codedkt} Y. Shi, M. Chi, T. Barnes, and T. Price. Code-DKT: A Code-based Knowledge Tracing Model for Programming Tasks. 2022. \url{https://arxiv.org/abs/2206.03545}.
+\bibitem{exrec} Y. Ozyurt, T. Almaci, S. Feuerriegel, and M. Sachan. Personalized Exercise Recommendation with Semantically-Grounded Knowledge Tracing. \emph{NeurIPS}, 2025. \url{https://arxiv.org/abs/2507.11060}.
+\bibitem{unier} X. Cheng et al. UniER: A Unified Benchmark for Item-level and Path-level Exercise Recommendation. 2026. \url{https://arxiv.org/abs/2605.16750}.
+\bibitem{girard} S. Girard, S. Minn, A. Bouzeghoub, and J.-J. Vie. Counterfactual learning of new adaptive instructional policies using logged data. 2026. \url{https://arxiv.org/abs/2606.23015}.
+\bibitem{ddqn} H. van Hasselt, A. Guez, and D. Silver. Deep Reinforcement Learning with Double Q-learning. \emph{AAAI}, 2016. \url{https://arxiv.org/abs/1509.06461}.
+\end{thebibliography}
+\end{document}

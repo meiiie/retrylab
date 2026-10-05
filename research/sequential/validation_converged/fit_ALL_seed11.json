@@ -1,0 +1,134 @@
+{
+  "mode": "ALL",
+  "seed": 11,
+  "selected_epoch": 13,
+  "selected_validation_first_nll": 0.596154295307563,
+  "epochs": [
+    {
+      "epoch": 1,
+      "training_target_nll": 0.6713274902048344,
+      "training_targets": 295788,
+      "validation_first_nll": 0.688525015407635,
+      "elapsed_seconds": 63.55937000000267
+    },
+    {
+      "epoch": 2,
+      "training_target_nll": 0.6499647852192318,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6612121023964423,
+      "elapsed_seconds": 147.93625579999934
+    },
+    {
+      "epoch": 3,
+      "training_target_nll": 0.6314127319139314,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6395055167669828,
+      "elapsed_seconds": 221.04036880000785
+    },
+    {
+      "epoch": 4,
+      "training_target_nll": 0.6172661547289837,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6278777741574624,
+      "elapsed_seconds": 313.2689118999988
+    },
+    {
+      "epoch": 5,
+      "training_target_nll": 0.6073855298010974,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6153257332829376,
+      "elapsed_seconds": 326.2166842000006
+    },
+    {
+      "epoch": 6,
+      "training_target_nll": 0.5980043591780858,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6127724548712487,
+      "elapsed_seconds": 339.3122202999948
+    },
+    {
+      "epoch": 7,
+      "training_target_nll": 0.5922379281683621,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6075724660767335,
+      "elapsed_seconds": 349.69154519999574
+    },
+    {
+      "epoch": 8,
+      "training_target_nll": 0.5908973994397531,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6026913757477668,
+      "elapsed_seconds": 366.5918321000063
+    },
+    {
+      "epoch": 9,
+      "training_target_nll": 0.5844326029897187,
+      "training_targets": 295788,
+      "validation_first_nll": 0.600229073719912,
+      "elapsed_seconds": 384.0896534000058
+    },
+    {
+      "epoch": 10,
+      "training_target_nll": 0.5801739967274936,
+      "training_targets": 295788,
+      "validation_first_nll": 0.5977129715898624,
+      "elapsed_seconds": 396.94179070000246
+    },
+    {
+      "epoch": 11,
+      "training_target_nll": 0.5753430635377217,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6041078461920392,
+      "elapsed_seconds": 407.3127117999975
+    },
+    {
+      "epoch": 12,
+      "training_target_nll": 0.5766004556404226,
+      "training_targets": 295788,
+      "validation_first_nll": 0.5986883203961398,
+      "elapsed_seconds": 413.2757314000046
+    },
+    {
+      "epoch": 13,
+      "training_target_nll": 0.5731425479266844,
+      "training_targets": 295788,
+      "validation_first_nll": 0.596154295307563,
+      "elapsed_seconds": 418.75106350000715
+    },
+    {
+      "epoch": 14,
+      "training_target_nll": 0.5699174734963486,
+      "training_targets": 295788,
+      "validation_first_nll": 0.5974388697378159,
+      "elapsed_seconds": 424.73601969999436
+    },
+    {
+      "epoch": 15,
+      "training_target_nll": 0.5675358872501527,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6012641425572159,
+      "elapsed_seconds": 429.99490619999415
+    },
+    {
+      "epoch": 16,
+      "training_target_nll": 0.5664789216461145,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6056310923490092,
+      "elapsed_seconds": 435.45768570000655
+    },
+    {
+      "epoch": 17,
+      "training_target_nll": 0.5652496675570581,
+      "training_targets": 295788,
+      "validation_first_nll": 0.6022177744198581,
+      "elapsed_seconds": 441.3303154000023
+    }
+  ],
+  "runtime_seconds": 441.3518750999938,
+  "checkpoint": "E:\\Sach\\baiThayPhuc\\BaiHong\\research\\sequential\\validation_converged\\gru_ALL_seed11.pt",
+  "checkpoint_sha256": "d6374c33fb5340777a3947539e0f509fb5da3c52f325407bb5c167305240aa61",
+  "max_epochs": 30,
+  "patience": 4,
+  "min_delta": 0.0001,
+  "zero_unknown": true
+}

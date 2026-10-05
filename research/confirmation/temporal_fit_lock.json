@@ -1,0 +1,54 @@
+{
+  "frozen_at_utc": "2026-09-26T02:33:42.828180+00:00",
+  "elapsed_seconds_before_confirmation_read": 5.040204300006735,
+  "past_training_users": 1054,
+  "past_training_rows": 236631,
+  "first_attempt_fit_rows": 103285,
+  "known_training_items": 2220,
+  "latest_training_event_time": "2025-10-27T08:45:57",
+  "latest_first_target_fit_time": "2025-10-27T08:45:57",
+  "features": [
+    "difficulty_logit",
+    "history_count",
+    "history_accuracy",
+    "last_result",
+    "recent_5_accuracy",
+    "recent_20_accuracy",
+    "history_distinct_problems"
+  ],
+  "coefficients": [
+    1.0795121262884573,
+    0.1523386687049455,
+    0.34564127156511304,
+    0.0711143810428976,
+    0.06936270631964894,
+    0.04511260148562109,
+    -0.001155017589183667
+  ],
+  "intercept": [
+    0.14354406960543767
+  ],
+  "scaler_mean": [
+    0.1664269141002507,
+    4.470484977559333,
+    0.456247669253354,
+    0.8080553807426054,
+    0.5625857255813203,
+    0.48501830926639694,
+    3.7364441515145383
+  ],
+  "scaler_scale": [
+    0.8457767288577187,
+    1.2080310378297394,
+    0.13258641904240973,
+    0.3905773791394433,
+    0.2603694202933617,
+    0.18214320652235394,
+    1.0337396661860316
+  ],
+  "iterations": 16,
+  "model_sha256": "4fcf632c7a13918bb9971460f257ce0d286e227c2459ac65efa3c2f1d44cfc49",
+  "reference_sha256": "0abb0aab1442ee5e3736aedfa7a0aae5a76777f8ae7fea6f42e9bffd73662892",
+  "alpha_tuning": false,
+  "first_observed_preserved_under_truncation": true
+}

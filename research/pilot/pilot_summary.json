@@ -1,0 +1,369 @@
+{
+  "status": "exploratory public-data predictive feasibility pilot; not SOTA, causal learning, or policy evaluation",
+  "input": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\accoding\\submissions_cohort.csv",
+  "input_sha256": "b35ab13da3a80ed9f0db37248fa3638c3cb8a9c55929123e5b963549ccbf304a",
+  "environment": {
+    "python": "3.13.7",
+    "sklearn": "1.9.0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.2"
+  },
+  "raw_rows": 424311,
+  "excluded_pending_rows": 0,
+  "excluded_missing_rows": 0,
+  "duplicate_id_rows_removed": 0,
+  "analyzed_rows": 424311,
+  "result_counts": {
+    "AC": 177441,
+    "WA": 156711,
+    "TLE": 26093,
+    "CE": 19664,
+    "REG": 18169,
+    "PE": 15833,
+    "OE": 6633,
+    "REP": 1885,
+    "MLE": 1777,
+    "IFNR": 102,
+    "OFNR": 3
+  },
+  "cohort_note": "Input extraction selects up to 1500 learners with >=20 distinct problems using complete traces; eligibility uses future information and limits the target population, not feature construction.",
+  "target": "Current submission accepted (AC); all other finalized verdicts are failures.",
+  "ordering": "created_at then numeric submission id within student; timestamps lack timezone; ties use submission id as a proxy for order",
+  "timestamp_tie_rows": 392,
+  "rows_after_prior_acceptance_same_problem": 25800,
+  "split": {
+    "test": {
+      "students": 234,
+      "rows": 64371,
+      "first_seen_rows": 27868
+    },
+    "train": {
+      "students": 1054,
+      "rows": 295788,
+      "first_seen_rows": 127005
+    },
+    "validation": {
+      "students": 212,
+      "rows": 64152,
+      "first_seen_rows": 27097
+    }
+  },
+  "split_rule": "sha256('accoding-pilot-v1:' + user_id), first 16 hex digits modulo 100: train<70, validation<85, test otherwise",
+  "validation_usage": "Reserved, not used for fitting, tuning, calibration, or model selection in this fixed-configuration pilot.",
+  "difficulty": "Train-user first attempts only, empirical-Bayes smoothing with 20 pseudo-observations at training prevalence. Five student folds for train features; full training set for validation/test; unknown item falls back to train prevalence.",
+  "test_rows_with_unseen_item": 139,
+  "features": {
+    "item_difficulty": [
+      "difficulty_logit"
+    ],
+    "history": [
+      "difficulty_logit",
+      "history_count",
+      "history_accuracy",
+      "last_result",
+      "recent_5_accuracy",
+      "recent_20_accuracy",
+      "history_distinct_problems",
+      "gap_seconds"
+    ],
+    "history_plus_same_item": [
+      "difficulty_logit",
+      "history_count",
+      "history_accuracy",
+      "last_result",
+      "recent_5_accuracy",
+      "recent_20_accuracy",
+      "history_distinct_problems",
+      "gap_seconds",
+      "seen_problem",
+      "problem_attempt_count",
+      "problem_accuracy",
+      "problem_last_result",
+      "problem_ever_accepted",
+      "problem_gap_seconds"
+    ]
+  },
+  "current_fields_excluded": [
+    "result",
+    "score",
+    "code_length",
+    "current code"
+  ],
+  "model": "StandardScaler fitted on training rows + L2 logistic regression C=1, max_iter=500; no tuning, class weighting, or per-student sample weighting",
+  "metrics": [
+    {
+      "model": "item_difficulty",
+      "subset": "all",
+      "rows": 64371,
+      "students": 234,
+      "acceptance_rate": 0.4197231672647621,
+      "auc": 0.7072692432807749,
+      "log_loss": 0.6121068357596233,
+      "brier": 0.21157579363089382,
+      "average_precision": 0.6429472116341577
+    },
+    {
+      "model": "item_difficulty",
+      "subset": "first_seen_problem",
+      "rows": 27868,
+      "students": 234,
+      "acceptance_rate": 0.5201664992105641,
+      "auc": 0.7570193453678041,
+      "log_loss": 0.5929162564839998,
+      "brier": 0.20346264771996656,
+      "average_precision": 0.7601282639450619
+    },
+    {
+      "model": "item_difficulty",
+      "subset": "retry",
+      "rows": 36503,
+      "students": 234,
+      "acceptance_rate": 0.34304029805769387,
+      "auc": 0.630065607694629,
+      "log_loss": 0.6267577702924856,
+      "brier": 0.21776972701296438,
+      "average_precision": 0.46735740698902417
+    },
+    {
+      "model": "item_difficulty",
+      "subset": "retry_before_first_acceptance",
+      "rows": 33187,
+      "students": 234,
+      "acceptance_rate": 0.3179558260764757,
+      "auc": 0.625592540285203,
+      "log_loss": 0.6154904312802126,
+      "brier": 0.21274478807251815,
+      "average_precision": 0.43394665786745446
+    },
+    {
+      "model": "item_difficulty",
+      "subset": "after_prior_acceptance",
+      "rows": 3316,
+      "students": 210,
+      "acceptance_rate": 0.5940892641737032,
+      "auc": 0.6107562546669583,
+      "log_loss": 0.7395229029222508,
+      "brier": 0.2680600311796075,
+      "average_precision": 0.6924624955285369
+    },
+    {
+      "model": "history",
+      "subset": "all",
+      "rows": 64371,
+      "students": 234,
+      "acceptance_rate": 0.4197231672647621,
+      "auc": 0.7286215291353461,
+      "log_loss": 0.5961184587821428,
+      "brier": 0.20424458257393016,
+      "average_precision": 0.676381923913335
+    },
+    {
+      "model": "history",
+      "subset": "first_seen_problem",
+      "rows": 27868,
+      "students": 234,
+      "acceptance_rate": 0.5201664992105641,
+      "auc": 0.768662721547083,
+      "log_loss": 0.5793660439419439,
+      "brier": 0.19751879613413614,
+      "average_precision": 0.7755395506716252
+    },
+    {
+      "model": "history",
+      "subset": "retry",
+      "rows": 36503,
+      "students": 234,
+      "acceptance_rate": 0.34304029805769387,
+      "auc": 0.6603094120837464,
+      "log_loss": 0.608907991060768,
+      "brier": 0.20937934455251211,
+      "average_precision": 0.508138794054468
+    },
+    {
+      "model": "history",
+      "subset": "retry_before_first_acceptance",
+      "rows": 33187,
+      "students": 234,
+      "acceptance_rate": 0.3179558260764757,
+      "auc": 0.6470591433288903,
+      "log_loss": 0.5996550942546978,
+      "brier": 0.2052409717572402,
+      "average_precision": 0.45897444170961155
+    },
+    {
+      "model": "history",
+      "subset": "after_prior_acceptance",
+      "rows": 3316,
+      "students": 210,
+      "acceptance_rate": 0.5940892641737032,
+      "auc": 0.6473008953017401,
+      "log_loss": 0.7015122993548123,
+      "brier": 0.25079676854427624,
+      "average_precision": 0.7244524463032471
+    },
+    {
+      "model": "history_plus_same_item",
+      "subset": "all",
+      "rows": 64371,
+      "students": 234,
+      "acceptance_rate": 0.4197231672647621,
+      "auc": 0.7333169871728349,
+      "log_loss": 0.5931124348125691,
+      "brier": 0.20288164104823342,
+      "average_precision": 0.678650858641852
+    },
+    {
+      "model": "history_plus_same_item",
+      "subset": "first_seen_problem",
+      "rows": 27868,
+      "students": 234,
+      "acceptance_rate": 0.5201664992105641,
+      "auc": 0.7698344373956255,
+      "log_loss": 0.5787069434060862,
+      "brier": 0.19717269504526738,
+      "average_precision": 0.7763953322528716
+    },
+    {
+      "model": "history_plus_same_item",
+      "subset": "retry",
+      "rows": 36503,
+      "students": 234,
+      "acceptance_rate": 0.34304029805769387,
+      "auc": 0.6696985899787393,
+      "log_loss": 0.6041102222414344,
+      "brier": 0.2072401021941847,
+      "average_precision": 0.5227422260320302
+    },
+    {
+      "model": "history_plus_same_item",
+      "subset": "retry_before_first_acceptance",
+      "rows": 33187,
+      "students": 234,
+      "acceptance_rate": 0.3179558260764757,
+      "auc": 0.6489663505781921,
+      "log_loss": 0.5987594980831886,
+      "brier": 0.20476053848717488,
+      "average_precision": 0.4603646233071536
+    },
+    {
+      "model": "history_plus_same_item",
+      "subset": "after_prior_acceptance",
+      "rows": 3316,
+      "students": 210,
+      "acceptance_rate": 0.5940892641737032,
+      "auc": 0.6450890399076791,
+      "log_loss": 0.6576610312401387,
+      "brier": 0.2320559287154558,
+      "average_precision": 0.7242905173942381
+    }
+  ],
+  "bootstrap": {
+    "repetitions": 100,
+    "unit": "held-out student",
+    "seed": 26092026,
+    "contrast": "history_plus_same_item minus history; higher AUC / lower log-loss and Brier are better",
+    "interval_type": "paired percentile bootstrap, nominal 95%, exploratory, no multiplicity adjustment",
+    "intervals": {
+      "all": {
+        "auc": {
+          "lower": 0.003933478879821007,
+          "upper": 0.005357334498385543
+        },
+        "log_loss": {
+          "lower": -0.003544017222111845,
+          "upper": -0.0023605421441365015
+        },
+        "brier": {
+          "lower": -0.001596701351193213,
+          "upper": -0.0010866102036702165
+        }
+      },
+      "first_seen_problem": {
+        "auc": {
+          "lower": 0.0007407017777720543,
+          "upper": 0.0016930995537464437
+        },
+        "log_loss": {
+          "lower": -0.0010620463629730903,
+          "upper": -0.0002311709369392016
+        },
+        "brier": {
+          "lower": -0.0005332936343666349,
+          "upper": -0.0001567460537286993
+        }
+      },
+      "retry": {
+        "auc": {
+          "lower": 0.007869361383771211,
+          "upper": 0.010797889374667415
+        },
+        "log_loss": {
+          "lower": -0.0056740333960147325,
+          "upper": -0.0036502296713647807
+        },
+        "brier": {
+          "lower": -0.0024791274801956725,
+          "upper": -0.0016614846284676852
+        }
+      },
+      "retry_before_first_acceptance": {
+        "auc": {
+          "lower": 0.0014576217233601945,
+          "upper": 0.0025677464072480886
+        },
+        "log_loss": {
+          "lower": -0.0014756282038179218,
+          "upper": -0.00047022816249990914
+        },
+        "brier": {
+          "lower": -0.0007013509878427873,
+          "upper": -0.00030759715229512167
+        }
+      }
+    }
+  },
+  "standardized_coefficients": {
+    "item_difficulty": {
+      "difficulty_logit": 0.7883972769265941
+    },
+    "history": {
+      "difficulty_logit": 0.7521950594153587,
+      "history_count": 0.056999928445118066,
+      "history_accuracy": 0.25577131162655353,
+      "last_result": 0.1536242592927926,
+      "recent_5_accuracy": 0.06932288214397188,
+      "recent_20_accuracy": 0.07151431477910208,
+      "history_distinct_problems": 0.024346094027841405,
+      "gap_seconds": 0.026251092233878757
+    },
+    "history_plus_same_item": {
+      "difficulty_logit": 0.7512422090280301,
+      "history_count": -0.0736721728897521,
+      "history_accuracy": 0.23040483369627418,
+      "last_result": 0.09954505742867475,
+      "recent_5_accuracy": 0.06990872897676248,
+      "recent_20_accuracy": 0.06259175692884082,
+      "history_distinct_problems": 0.12931111292708802,
+      "gap_seconds": 0.008382336626723101,
+      "seen_problem": -0.0885868358599207,
+      "problem_attempt_count": -0.10748550752554067,
+      "problem_accuracy": -0.11272428467587664,
+      "problem_last_result": 0.0734483826438648,
+      "problem_ever_accepted": 0.15090299588169273,
+      "problem_gap_seconds": 0.09792367895979236
+    }
+  },
+  "limitations": [
+    "Student split only; does not estimate prospective time/cohort generalization or unseen-item generalization.",
+    "Train-user item parameters can incorporate events later in calendar time than a test prediction; only individual histories are prefix-only.",
+    "First attempt means first observed finalized submission in this public extract, not guaranteed first exposure in the student's life.",
+    "Retries on the same problem include returns after intervening problems and submissions after acceptance.",
+    "All rows have equal training/evaluation weight; retry-heavy students influence point estimates more. Student bootstrap accounts for dependence, not this weighting choice.",
+    "Current code and learning-outcome labels are unavailable; feature improvements cannot establish causal transfer or quality of exercise recommendations.",
+    "Different subset AUCs are not directly comparable measures of problem difficulty or model quality because label distributions and sample compositions differ.",
+    "No propensity or randomized policy assumptions are used or verified.",
+    "Submission-ID ordering within tied student timestamps is a convention, not verified subsecond chronology; a sensitivity analysis should exclude tied blocks or update after the whole block.",
+    "Non-AC verdicts include execution/infrastructure errors; the target is an operational judge outcome, not ground-truth competence.",
+    "Gap features use the current query/submission timestamp. This is submission-time outcome prediction; remove gaps for exercise-selection-time prediction when the future submission timestamp is unknown."
+  ]
+}

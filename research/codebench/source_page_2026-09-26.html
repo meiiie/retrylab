@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeBench Dataset</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <img src="img/dataset_logo.png" width="400px"><br><br>
+
+    <p>CodeBench (<a target="_blank" href="http://codebench.icomp.ufam.edu.br">http://codebench.icomp.ufam.edu.br</a>) is a Programming Online Judge developed by the Institute of Computing (IComp) of the Federal University of Amazonas, Brazil. Through Codebench, teachers can provide lists of programming exercises to their students, who in turn must develop solutions for each exercise through an embedded IDE. Once a student submits a source code for a given exercise, the system instantly notifies the student whether him/her solution is correct or not. </p>
+
+    <p>The CodeBench automatically logs all actions performed by students on embedded IDE during their attempts to solve the proposed exercises. This dataset contains all logs collected from CS1 students during 2016 to 2021.</p>
+
+    <h2>Releases</h2>
+
+    <h4>CodeBench Dataset 1.81</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2024. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that started in 2020, the semesters 1 and 2 of such year occurred throughout 2021. In 2020, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught. </li>
+        <li>Release date: 2024-10-24</li>
+        <li>Download options:</li>
+        <ul>
+        <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.81.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.81.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.81.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.81.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.81.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.81.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.81.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.81.tar.gz">2019-2</a>, <a href="files/cb_dataset_2020_ERE_v1.81.tar.gz">2020-ERE</a>, <a href="files/cb_dataset_2020_1_v1.81.tar.gz">2020-1</a>,  <a href="files/cb_dataset_2020_2_v1.81.tar.gz">2020-2</a>, <a href="files/cb_dataset_2021_1_v1.81.tar.gz">2021-1</a>,  <a href="files/cb_dataset_2021_2_v1.81.tar.gz">2021-2</a>,   <a href="files/cb_dataset_2022_1_v1.81.tar.gz">2022-1</a>, <a href="files/cb_dataset_2022_2_v1.81.tar.gz">2022-2</a>, <a href="files/cb_dataset_2023_1_v1.81.tar.gz">2023-1</a>, <a href="files/cb_dataset_2023_2_v1.81.tar.gz">2023-2</a> and <a href="files/cb_dataset_2024_1_v1.81.tar.gz">2024-1</a>.</li>
+        </ul>
+        <li>Release statistics:</li>
+        <table class="table table-sm statistics" style="width:1600px; margin-top: 10px">
+            <tr>
+                <th></th>
+                <th class="semester">2016-1</th>
+                <th class="semester">2016-2</th>                
+                <th class="semester">2017-1</th>
+                <th class="semester">2017-2</th>
+                <th class="semester">2018-1</th>
+                <th class="semester">2018-2</th>                
+                <th class="semester">2019-1</th>
+                <th class="semester">2019-2</th>
+                <th class="semester" style="white-space:nowrap">2020-ERE</th>
+                <th class="semester">2020-1</th>
+                <th class="semester">2020-2</th>
+                <th class="semester">2021-1</th>
+                <th class="semester">2021-2</th>
+                <th class="semester">2022-1</th>
+                <th class="semester">2022-2</th>
+                <th class="semester">2023-1</th>      
+                <th class="semester">2023-2</th>
+                <th class="semester">2024-1</th>                                                
+                <th class="semester">Total</th>
+            </tr>        
+            <tr>
+                <th>CS1 classes</th>
+                <td>9</td> 
+                <td>5</td>                
+                <td>10</td> 
+                <td>5</td>
+                <td>9</td>
+                <td>5</td>                
+                <td>9</td>
+                <td>7</td>
+                <td>3</td>
+                <td>7</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>8</td>
+                <td>9</td>                
+                <td>7</td>  
+                <td>7</td>                
+                <td>8</td>                        
+                <th class="total">129</th>      
+            </tr>
+            <tr>
+                <th>Total number of students</th>
+                <td>471</td>
+                <td>172</td>                
+                <td>463</td>
+                <td>177</td>
+                <td>465</td>
+                <td>180</td>   
+                <td>489</td>
+                <td>297</td>
+                <td>492</td>
+                <td>228</td>
+                <td>200</td>
+                <td>224</td>
+                <td>219</td>
+                <td>238</td>
+                <td>196</td>
+                <td>255</td>
+                <td>222</td>
+                <td>241</td>
+                <th class="total">5229</th>                  
+            </tr>  
+            <tr>
+                <th>Homework exercises</th>
+                <td>681</td>
+                <td>447</td>                
+                <td>1278</td>
+                <td>556</td>
+                <td>1550</td>
+                <td>893</td>    
+                <td>1559</td>
+                <td>1116</td>
+                <td>420</td>
+                <td>1008</td>
+                <td>882</td>
+                <td>962</td>
+                <td>1180</td>
+                <td>1158</td>
+                <td>1257</td>               
+                <td>1009</td>   
+                <td>1157</td>
+                <td>1192</td>
+                <th class="total">18553</th>
+            </tr> 
+            <tr>
+                <th>Exam exercises</th>
+                <td>124</td>
+                <td>110</td>                
+                <td>163</td>
+                <td>103</td>
+                <td>182</td>
+                <td>107</td>    
+                <td>176</td>
+                <td>138</td>
+                <td>8</td>
+                <td>12</td>
+                <td>8</td>
+                <td>154</td>
+                <td>195</td>
+                <td>188</td>
+                <td>240</td>
+                <td>212</td>
+                <td>208</td>
+                <td>216</td>
+                <th class="total">2544</th>                  
+            </tr> 
+            <tr>
+                <th>Codes (developed by students)</th>
+                <td>30140</td>
+                <td>9501</td>                
+                <td>38304</td>
+                <td>10942</td>
+                <td>47969</td>
+                <td>13458</td>    
+                <td>38417</td>
+                <td>28348</td>
+                <td>45491</td>
+                <td>19246</td>
+                <td>17848</td>
+                <td>19022</td>
+                <td>19627</td>
+                <td>19457</td>
+                <td>17403</td>
+                <td>24834</td>
+                <td>22880</td>
+                <td>26928</td>               
+                <th class="total">449815</th>                  
+            </tr> 
+            <tr>
+                <th>Tests and submissions of codes</th>
+                <td>322500</td>
+                <td>126286</td>                
+                <td>419603</td>
+                <td>125848</td>
+                <td>455484</td>
+                <td>163821</td>    
+                <td>540537</td>
+                <td>308340</td>
+                <td>457404</td>
+                <td>214208</td>
+                <td>177364</td>
+                <td>191238</td>
+                <td>226982</td>
+                <td>210502</td>
+                <td>166694</td>
+                <td>244538</td>
+                <td>213190</td>
+                <td>243025</td>               
+                <th class="total">4561318</th>                  
+            </tr>                                                           
+        </table>     
+ 
+    </ul>    
+
+    <h4>CodeBench Dataset 1.80</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2023. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that started in 2020, the semesters 1 and 2 of such year occurred throughout 2021. In 2020, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught. </li>
+        <li>Release date: 2023-11-27</li>
+        <li>Download options:</li>
+        <ul>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.81.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.81.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.81.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.81.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.81.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.81.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.81.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.81.tar.gz">2019-2</a>, <a href="files/cb_dataset_2020_ERE_v1.81.tar.gz">2020-ERE</a>, <a href="files/cb_dataset_2020_1_v1.81.tar.gz">2020-1</a>,  <a href="files/cb_dataset_2020_2_v1.81.tar.gz">2020-2</a>, <a href="files/cb_dataset_2021_1_v1.81.tar.gz">2021-1</a>,  <a href="files/cb_dataset_2021_2_v1.81.tar.gz">2021-2</a>,   <a href="files/cb_dataset_2022_1_v1.81.tar.gz">2022-1</a>, <a href="files/cb_dataset_2022_2_v1.81.tar.gz">2022-2</a> and <a href="files/cb_dataset_2023_1_v1.81.tar.gz">2023-1</a>.</li>
+        </ul>
+    </ul>    
+
+    <h4>CodeBench Dataset 1.70</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2023. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that started in 2020, the semesters 1 and 2 of such year occurred throughout 2021. In 2020, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught. </li>
+        <li>Release date: 2023-08-05</li>
+        <li>Download options:</li>
+        <ul>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.7.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.7.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.7.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.7.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.7.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.7.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.7.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.7.tar.gz">2019-2</a>, <a href="files/cb_dataset_2020_ERE_v1.7.tar.gz">2020-ERE</a>, <a href="files/cb_dataset_2020_1_v1.7.tar.gz">2020-1</a>,  <a href="files/cb_dataset_2020_2_v1.7.tar.gz">2020-2</a>, <a href="files/cb_dataset_2021_1_v1.7.tar.gz">2021-1</a>,  <a href="files/cb_dataset_2021_2_v1.7.tar.gz">2021-2</a>,   <a href="files/cb_dataset_2022_1_v1.7.tar.gz">2022-1</a> and   <a href="files/cb_dataset_2022_2_v1.7.tar.gz">2022-2</a>.</li>
+        </ul>
+    </ul>    
+    
+    <h4>CodeBench Dataset 1.60</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2021. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that started in 2020, the semesters 1 and 2 of such year occurred throughout 2021. In 2020, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught. </li>
+        <li>Release date: 2022-10-21</li>
+        <li>Download options:</li>
+        <ul>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.6.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.6.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.6.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.6.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.6.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.6.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.6.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.6.tar.gz">2019-2</a>, <a href="files/cb_dataset_2020_ERE_v1.6.tar.gz">2020-ERE</a>, <a href="files/cb_dataset_2020_1_v1.6.tar.gz">2020-1</a>,  <a href="files/cb_dataset_2020_2_v1.6.tar.gz">2020-2</a>, <a href="files/cb_dataset_2021_1_v1.6.tar.gz">2021-1</a> and  <a href="files/cb_dataset_2021_2_v1.6.tar.gz">2021-2</a>.</li>
+        </ul> 
+    </ul>             
+
+    <h4>CodeBench Dataset 1.50</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2021. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that started in 2020, the semesters 1 and 2 of such year occurred throughout 2021. In 2020, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught. </li>
+        <li>Release date: 2022-05-20</li>
+        <li>Download options:</li>
+        <ul>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.50.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.50.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.50.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.50.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.50.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.50.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.50.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.50.tar.gz">2019-2</a>, <a href="files/cb_dataset_2020_ERE_v1.50.tar.gz">2020-ERE</a>, <a href="files/cb_dataset_2020_1_v1.50.tar.gz">2020-1</a>,  <a href="files/cb_dataset_2020_2_v1.50.tar.gz">2020-2</a> and <a href="files/cb_dataset_2021_1_v1.50.tar.gz">2021-1</a>.</li>
+        </ul> 
+    </ul>          
+
+    <h4>CodeBench Dataset 1.40</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2020. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that started in 2020, the semesters 1 and 2 of such year occurred throughout 2021. In 2020, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught. </li>
+        <li>Release date: 2021-12-16</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.40.tar.gz">A single file</a> (2.7 GB compressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.40.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.40.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.40.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.40.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.40.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.40.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.40.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.40.tar.gz">2019-2</a>, <a href="files/cb_dataset_2020_ERE_v1.40.tar.gz">2020-ERE</a>, <a href="files/cb_dataset_2020_1_v1.40.tar.gz">2020-1</a> and  <a href="files/cb_dataset_2020_2_v1.40.tar.gz">2020-2</a>.</li>
+        </ul>   
+ 
+    </ul>          
+
+    <h4>CodeBench Dataset 1.30</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2020. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that started in 2020, the semesters 1 and 2 of such year will occur throughout 2021. In 2020, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught. </li>
+        <li>Release date: 2021-07-29</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.30.tar.gz">A single file</a> (2.3 GB compressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.30.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.30.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.30.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.30.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.30.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.30.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.30.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.30.tar.gz">2019-2</a>, <a href="files/cb_dataset_2020_ERE_v1.30.tar.gz">2020-ERE</a> e <a href="files/cb_dataset_2020_1_v1.30.tar.gz">2020-1</a>.</li>
+        </ul>
+    </ul>          
+
+    <h2>Releases</h2>
+
+    <h4>CodeBench Dataset 1.20</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2020. Each academic year is divided into two semesters. </li>
+        <li>Obs: Because of the COVID-19 pandemic that occurred in 2020, such year had no traditional semesters 1 and 2. Instead, there was a single semester called ERE (Ensino Remoto Emergencial, or Emergency Remote Education), where only 3 classes of IPC were taught.</li>
+        <li>Release date: 2021-03-03</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.20.tar.gz">A single file</a> (2.0 GB compressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.20.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.20.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.20.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.20.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.20.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.20.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.20.tar.gz">2019-1</a>, <a href="files/cb_dataset_2019_2_v1.20.tar.gz">2019-2</a> and <a href="files/cb_dataset_2020_ERE_v1.20.tar.gz">2020-ERE</a>.</li>
+        </ul>
+    </ul>          
+
+    <h4>CodeBench Dataset 1.11</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2019. Each academic year is divided into two semesters. </li>
+        <li>Release date: 2020-01-12</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.11.tar.gz">A single file</a> (1.4 GB compressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.11.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.11.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.11.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.11.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.11.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.11.tar.gz">2018-2</a>,  <a href="files/cb_dataset_2019_1_v1.11.tar.gz">2019-1</a> and <a href="files/cb_dataset_2019_2_v1.11.tar.gz">2019-2</a>.</li>
+        </ul> 
+    </ul>          
+
+    <h4>CodeBench Dataset 1.10</h4>
+    <ul>
+        <li>This release of the dataset contains all logs collected from CS1 students during the years 2016 to 2019 (first semester). Each academic year is divided into two semesters. </li>
+        <li>Release date: 2019-08-17</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.10.tar.gz">A single file</a> (812 MB compressed, 9.27GB uncompressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.10.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.10.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.10.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.10.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.10.tar.gz">2018-1</a>, <a href="files/cb_dataset_2018_2_v1.10.tar.gz">2018-2</a> and  <a href="files/cb_dataset_2019_1_v1.10.tar.gz">2019-1</a>.</li>
+        </ul> 
+    </ul>          
+
+    <h4>CodeBench Dataset 1.03</h4>
+    <ul>
+        <li>This version of the dataset contains all logs collected from CS1 students during the years 2016 to 2018. Each academic year is divided into two semesters. </li>
+        <li>Release date: 2019-05-22</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.03.tar.gz">A single file</a> (812 MB compressed, 9.27GB uncompressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.03.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.03.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.03.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.03.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.03.tar.gz">2018-1</a> and <a href="files/cb_dataset_2018_2_v1.03.tar.gz">2018-2</a>.</li>
+        </ul> 
+    </ul>        
+
+    <h4>CodeBench Dataset 1.02</h4>
+    <ul>
+        <li>This version of the dataset contains all logs collected from CS1 students during the years 2016 to 2018. Each academic year is divided into two semesters. </li>
+        <li>Release date: 2019-05-02</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.02.tar.gz">A single file</a> (812 MB compressed, 9.27GB uncompressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.02.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.02.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.02.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.02.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.02.tar.gz">2018-1</a> and <a href="files/cb_dataset_2018_2_v1.02.tar.gz">2018-2</a>.</li>
+        </ul> 
+    </ul>    
+
+    <h4>CodeBench Dataset 1.01</h4>
+    <ul>
+        <li>This version of the dataset contains all logs collected from CS1 students during the years 2016 to 2018. Each academic year is divided into two semesters. </li>
+        <li>Release date: 2019-02-19</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.01.tar.gz">A single file</a> (812 MB compressed, 9.24GB uncompressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2016_1_v1.01.tar.gz">2016-1</a>, <a href="files/cb_dataset_2016_2_v1.01.tar.gz">2016-2</a>, <a href="files/cb_dataset_2017_1_v1.01.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.01.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.01.tar.gz">2018-1</a> and <a href="files/cb_dataset_2018_2_v1.01.tar.gz">2018-2</a>.</li>
+        </ul>
+    </ul>   
+
+    <h4>CodeBench Dataset 1.00</h4>
+    <ul>
+        <li>This version of the dataset contains all logs collected from CS1 students during the years 2017 and 2018. Each academic year is divided into two semesters. </li>
+        <li>Release date: 2018-12-31</li>
+        <li>Download options:</li>
+        <ul>
+            <li><a href="files/cb_dataset_v1.00.tar.gz">A single file</a> (598 MB compressed, 7.23GB uncompressed).</li>
+            <li>A file per semester: <a href="files/cb_dataset_2017_1_v1.00.tar.gz">2017-1</a>, <a href="files/cb_dataset_2017_2_v1.00.tar.gz">2017-2</a>, <a href="files/cb_dataset_2018_1_v1.00.tar.gz">2018-1</a> and <a href="files/cb_dataset_2018_2_v1.00.tar.gz">2018-2</a>.</li>
+        </ul>
+    </ul>
+
+    <h2>How to Extract the Data</h2>
+
+    <p>The entire dataset is compressed in a <code>.tar.gz</code> file, which can be extracted using auxiliary software. If you use a Unix or a Linux system, you can extract the dataset by using the command <code>tar xfz cb_dataset_x.yz.tar.gz</code> (see Figure 1).</p>
+
+    <figure>
+        <img src="img/tar.png">
+        <figcaption><b>Figure 1: </b>How to extract the data.</figcaption>
+    </figure>    
+
+    <h2>Dataset Schema</h2>
+
+    The following widget illustrates the schema of the entire dataset. Please, navigate through the hierarchy of nodes to get a complete overview of the data.
+
+    <ul class="treeView">
+        <li>
+            <a>Root</a> 
+            <ul class="collapsibleList">
+                <li class="collapsibleListClosed" style="user-select: none;">
+                    <a class="year-folder" data-semester="the first semester of 2017">2017-1</a>
+                    <ul class="collapsibleList" style="display: block;">            
+                        <li class="collapsibleListClosed" style="user-select: none;">
+                            <a class="class-folder">136</a>
+                            <ul class="collapsibleList" style="display: block;">
+                                <li class="collapsibleListClosed" style="user-select: none;">
+                                    <a class="users-folder" data-class="136">users</a>
+                                    <ul class="collapsibleList" style="display: none;">
+                                        <li class="collapsibleListClosed" style="user-select: none;">
+                                            <a class="user-folder">1098</a> 
+                                            <ul class="collapsibleList" style="display: none;">
+                                                <li class="collapsibleListOpened" style="user-select: none;">
+                                                    <a class="codemirror-folder" data-user="1098">codemirror</a>
+                                                    <ul class="collapsibleList" style="display: none;">
+                                                        <li style="user-select: none;"><a class="cm-log" data-user="1098" data-assignment="407" data-exercise="1326">407_1326.log</a></li>
+                                                        <li style="user-select: none;"><a class="cm-log" data-user="1098" data-assignment="407" data-exercise="1327">407_1327.log</a></li>
+                                                        <li class="lastChild" style="user-select: none;">...</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="collapsibleListOpened" style="user-select: none;">
+                                                    <a class="codes-folder" data-user="1098">codes</a>
+                                                    <ul class="collapsibleList" style="display: none;">
+                                                        <li style="user-select: none;"><a class="code-log" data-user="1098" data-assignment="407" data-exercise="1326">407_1326.py</a></li>
+                                                        <li style="user-select: none;"><a class="code-log" data-user="1098" data-assignment="407" data-exercise="1327">407_1327.py</a></li>
+                                                        <li class="lastChild" style="user-select: none;">...</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="collapsibleListOpened" style="user-select: none;">
+                                                    <a class="executions-folder" data-user="1098">executions</a>
+                                                    <ul class="collapsibleList" style="display: none;">
+                                                        <li style="user-select: none;"><a class="execution-log" data-user="1098" data-assignment="407" data-exercise="1326">407_1326.log</a></li>
+                                                        <li style="user-select: none;"><a class="execution-log" data-user="1098" data-assignment="407" data-exercise="1327">407_1327.log</a></li>
+                                                        <li class="lastChild" style="user-select: none;">...</li>
+                                                    </ul>
+                                                </li>
+                                                <li style="user-select: none;"><a class="logins-log" data-user="1098">logins.log</a></li>
+                                                <li class="collapsibleListOpened" style="user-select: none;">
+                                                    <a class="scores-folder" data-user="1098">grades</a>
+                                                    <ul class="collapsibleList" style="display: none;">
+                                                            <li style="user-select: none;"><a class="score-log" data-user="1098" data-assignment="407">407.log</a></li>
+                                                            <li style="user-select: none;"><a class="score-log" data-user="1098" data-assignment="455">455.log</a></li>
+                                                            <li style="user-select: none;"><a>...</a></li>
+                                                            <li style="user-select: none;"><a class="final-grade lastChild" data-user="1098" data-assignment="455">final_grade.data</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="lastChild" style="user-select: none;"><a class="user-data" data-user="1098">user.data</a></li>
+                                            </ul>
+                                        </li>
+                                        <li style="user-select: none;"><a>1099</a></li>
+                                        <li class="lastChild" style="user-select: none;">...</li>
+                                    </ul>
+                                </li>
+                                <li class="lastChild collapsibleListOpen" style="user-select: none;">
+                                    <a class="assignment-folder" data-class="136">assignments</a>
+                                    <ul class="collapsibleList" style="display: block;">
+                                        <li style="user-select: none;"><a class="assignment-file" data-semester="the first semester of 2017">407.log</a></li>
+                                        <li style="user-select: none;"><a class="assignment-file" data-semester="the first semester of 2017">455.log</a></li>
+                                        <li class="lastChild" style="user-select: none;">...</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="collapsibleListOpened" style="user-select: none;">
+                    <a class="year-folder" data-semester="the second semester of 2017">2017-2</a>
+                    <ul class="collapsibleList" style="display: block;">
+                    <li class="collapsibleListOpened" style="user-select: none;">
+                        <a class="class-folder">165</a>
+                        <ul class="collapsibleList" style="display: block;">
+                        <li class="collapsibleListClosed" style="user-select: none;">
+                            <a class="users-folder" data-class="165">users</a>
+                            <ul class="collapsibleList" style="display: none;">
+                                <li class="collapsibleListClosed" style="user-select: none;">
+                                    <a class="user-folder">2531</a> 
+                                    <ul class="collapsibleList" style="display: none;">
+                                        <li class="collapsibleListOpened" style="user-select: none;">
+                                            <a class="codemirror-folder" data-user="2531">codemirror</a>
+                                            <ul class="collapsibleList" style="display: none;">
+                                                <li style="user-select: none;"><a class="cm-log" data-user="2531" data-assignment="798" data-exercise="1326">798_1329.log</a></li>
+                                                <li style="user-select: none;"><a class="cm-log" data-user="2531" data-assignment="798" data-exercise="1327">798_1330.log</a></li>
+                                                <li class="lastChild" style="user-select: none;">...</li>
+                                            </ul>
+                                        </li>
+                                        <li class="collapsibleListOpened" style="user-select: none;">
+                                            <a class="codes-folder" data-user="2531">codes</a>
+                                            <ul class="collapsibleList" style="display: none;">
+                                                <li style="user-select: none;"><a class="code-log" data-user="2531" data-assignment="798" data-exercise="1326">798_1329.py</a></li>
+                                                <li style="user-select: none;"><a class="code-log" data-user="2531" data-assignment="798" data-exercise="1327">798_1330.py</a></li>
+                                                <li class="lastChild" style="user-select: none;">...</li>
+                                            </ul>
+                                        </li>
+                                        <li class="collapsibleListOpened" style="user-select: none;">
+                                            <a class="executions-folder" data-user="2531">executions</a>
+                                            <ul class="collapsibleList" style="display: none;">
+                                                <li style="user-select: none;"><a class="execution-log" data-user="2531" data-assignment="798" data-exercise="1326">798_1329.log</a></li>
+                                                <li style="user-select: none;"><a class="execution-log" data-user="2531" data-assignment="798" data-exercise="1327">798_1330.log</a></li>
+                                                <li class="lastChild" style="user-select: none;">...</li>
+                                            </ul>
+                                        </li>
+                                        <li style="user-select: none;"><a class="logins-log" data-user="2531">logins.log</a></li>
+                                        <li class="collapsibleListOpened" style="user-select: none;">
+                                            <a class="scores-folder" data-user="2531">grades</a>
+                                            <ul class="collapsibleList" style="display: none;">
+                                                    <li style="user-select: none;"><a class="score-log" data-user="2531" data-assignment="798">798.log</a></li>
+                                                    <li style="user-select: none;"><a class="score-log" data-user="2531" data-assignment="816">816.log</a></li>
+                                                    <li style="user-select: none;"><a>...</a></li>
+                                                    <li style="user-select: none;"><a class="final-grade lastChild">final_grade.data</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="lastChild" style="user-select: none;"><a class="user-data" data-user="2531">user.data</a></li>
+                                    </ul>
+                                </li>
+                                <li style="user-select: none;"><a>2535</a></li>
+                                <li class="lastChild" style="user-select: none;">...</li>
+                            </ul>
+                        </li>                        
+                        <li class="lastChild collapsibleListOpen" style="user-select: none;">
+                            <a class="assignment-folder" data-class="165">assignments</a>
+                            <ul class="collapsibleList" style="display: block;">
+                                <li style="user-select: none;"><a class="assignment-file" data-semester="the second semester of 2017">798.log</a></li>
+                                <li style="user-select: none;"><a class="assignment-file" data-semester="the second semester of 2017">816.log</a></li>
+                                <li class="lastChild" style="user-select: none;">...</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>    
+                </ul>
+                </li>                               
+                <li class="lastChild collapsibleListClosed" style="user-select: none;">...</li>
+            </ul>
+        </li>
+    </ul>    
+
+    <h2>Sample Files</h2>
+    <h4>File <code>2017-1/136/users/1098/codes/407_1326.py</code></h4>
+    <code>
+        <pre>
+total = 40 + 35
+print(total)
+        </pre>
+    </code>
+
+    <h4>File <code>2017-1/136/users/1098/codemirror/407_1326.log</code></h4>
+    <code>
+        <pre>
+2017-3-13 17:27:27.798#viewportChange#0
+2017-3-13 17:27:59.597#mousedown#{"isTrusted":true}
+2017-3-13 17:27:59.602#focus#
+2017-3-13 17:28:14.346#change#{"from":{"line":0,"ch":0},"to":{"line":0,"ch":0},"text":["a"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:14.733#change#{"from":{"line":0,"ch":1},"to":{"line":0,"ch":1},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:14.901#change#{"from":{"line":0,"ch":2},"to":{"line":0,"ch":2},"text":["="],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:15.021#change#{"from":{"line":0,"ch":3},"to":{"line":0,"ch":3},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:21.341#change#{"from":{"line":0,"ch":4},"to":{"line":0,"ch":4},"text":["4"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:22.229#change#{"from":{"line":0,"ch":5},"to":{"line":0,"ch":5},"text":["0"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:35.149#change#{"from":{"line":0,"ch":6},"to":{"line":0,"ch":6},"text":["",""],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:35.149#keyHandled#"Enter"
+2017-3-13 17:28:35.159#viewportChange#0
+2017-3-13 17:28:38.517#change#{"from":{"line":1,"ch":0},"to":{"line":1,"ch":0},"text":["b"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:38.869#change#{"from":{"line":1,"ch":1},"to":{"line":1,"ch":1},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:39.125#change#{"from":{"line":1,"ch":2},"to":{"line":1,"ch":2},"text":["="],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:39.245#change#{"from":{"line":1,"ch":3},"to":{"line":1,"ch":3},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:40.949#change#{"from":{"line":1,"ch":4},"to":{"line":1,"ch":4},"text":["2"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:41.889#change#{"from":{"line":1,"ch":4},"to":{"line":1,"ch":5},"text":[""],"removed":["2"],"origin":"+delete"}
+2017-3-13 17:28:41.889#keyHandled#"Backspace"
+2017-3-13 17:28:42.525#change#{"from":{"line":1,"ch":4},"to":{"line":1,"ch":4},"text":["3"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:42.853#change#{"from":{"line":1,"ch":5},"to":{"line":1,"ch":5},"text":["5"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:44.953#change#{"from":{"line":1,"ch":6},"to":{"line":1,"ch":6},"text":["",""],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:44.954#keyHandled#"Enter"
+2017-3-13 17:28:44.965#viewportChange#0
+2017-3-13 17:28:46.733#change#{"from":{"line":2,"ch":0},"to":{"line":2,"ch":0},"text":["p"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:46.885#change#{"from":{"line":2,"ch":1},"to":{"line":2,"ch":1},"text":["r"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:47.109#change#{"from":{"line":2,"ch":2},"to":{"line":2,"ch":2},"text":["i"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:47.373#change#{"from":{"line":2,"ch":3},"to":{"line":2,"ch":3},"text":["n"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:47.605#change#{"from":{"line":2,"ch":4},"to":{"line":2,"ch":4},"text":["t"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:50.369#change#{"from":{"line":2,"ch":5},"to":{"line":2,"ch":5},"text":["()"],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:50.369#keyHandled#"'('"
+2017-3-13 17:28:52.083#change#{"from":{"line":2,"ch":6},"to":{"line":2,"ch":6},"text":["\"\""],"removed":[""],"origin":"+input"}
+2017-3-13 17:28:52.083#keyHandled#"'\"'"
+2017-3-13 17:30:31.907#viewportChange#0
+2017-3-13 17:30:56.332#mousedown#{"isTrusted":true}
+2017-3-13 17:30:56.349#focus#
+2017-3-13 17:30:57.249#change#{"from":{"line":1,"ch":6,"xRel":1},"to":{"line":1,"ch":6,"xRel":1},"text":["",""],"removed":[""],"origin":"+input"}
+2017-3-13 17:30:57.249#keyHandled#"Enter"
+2017-3-13 17:30:57.262#viewportChange#0
+2017-3-13 17:30:59.048#change#{"from":{"line":2,"ch":0},"to":{"line":2,"ch":0},"text":["s"],"removed":[""],"origin":"+input"}
+2017-3-13 17:30:59.246#change#{"from":{"line":2,"ch":1},"to":{"line":2,"ch":1},"text":["o"],"removed":[""],"origin":"+input"}
+2017-3-13 17:30:59.710#change#{"from":{"line":2,"ch":3},"to":{"line":2,"ch":3},"text":["a"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:00.878#change#{"from":{"line":2,"ch":4},"to":{"line":2,"ch":4},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:01.129#change#{"from":{"line":2,"ch":5},"to":{"line":2,"ch":5},"text":["="],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:01.295#change#{"from":{"line":2,"ch":6},"to":{"line":2,"ch":6},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:03.646#change#{"from":{"line":2,"ch":7},"to":{"line":2,"ch":7},"text":["a"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:04.166#change#{"from":{"line":2,"ch":8},"to":{"line":2,"ch":8},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:05.193#change#{"from":{"line":2,"ch":10},"to":{"line":2,"ch":10},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:06.452#change#{"from":{"line":2,"ch":11},"to":{"line":2,"ch":11},"text":["b"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:07.922#mousedown#{"isTrusted":true}
+2017-3-13 17:31:09.877#change#{"from":{"line":3,"ch":7,"xRel":1},"to":{"line":3,"ch":7,"xRel":1},"text":["s"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:10.100#change#{"from":{"line":3,"ch":8},"to":{"line":3,"ch":8},"text":["o"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:10.333#change#{"from":{"line":3,"ch":9},"to":{"line":3,"ch":9},"text":["m"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:10.468#change#{"from":{"line":3,"ch":10},"to":{"line":3,"ch":10},"text":["a"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:13.480#blur#
+2017-3-13 17:31:13.480#blur#
+2017-3-13 17:31:27.260#submit#Your code did not produce the correct output. Please, correct your code and try again.
+2017-3-13 17:31:40.528#mousedown#{"isTrusted":true}
+2017-3-13 17:31:40.543#focus#
+2017-3-13 17:31:42.336#change#{"from":{"line":2,"ch":0,"xRel":1},"to":{"line":2,"ch":0,"xRel":1},"text":["\t"],"removed":[""],"origin":"+input"}
+2017-3-13 17:31:42.338#keyHandled#"Tab"
+2017-3-13 17:31:46.674#blur#
+2017-3-13 17:31:51.662#mousedown#{"isTrusted":true}
+2017-3-13 17:31:51.671#focus#
+2017-3-13 17:31:53.514#change#{"from":{"line":2,"ch":0},"to":{"line":2,"ch":1},"text":[""],"removed":["\t"],"origin":"+delete"}
+2017-3-13 17:31:53.514#keyHandled#"Backspace"
+2017-3-13 17:32:52.018#mousedown#{"isTrusted":true}
+2017-3-13 17:32:52.772#change#{"from":{"line":0,"ch":0,"xRel":-1},"to":{"line":0,"ch":0,"xRel":-1},"text":["",""],"removed":[""],"origin":"+input"}
+2017-3-13 17:32:52.772#keyHandled#"Enter"
+2017-3-13 17:32:52.790#viewportChange#0
+2017-3-13 17:32:53.105#keyHandled#"Up"
+2017-3-13 17:32:56.150#change#{"from":{"line":0,"ch":0,"xRel":0},"to":{"line":0,"ch":0,"xRel":0},"text":["t"],"removed":[""],"origin":"+input"}
+2017-3-13 17:32:56.372#change#{"from":{"line":0,"ch":1},"to":{"line":0,"ch":1},"text":["o"],"removed":[""],"origin":"+input"}
+2017-3-13 17:32:56.677#change#{"from":{"line":0,"ch":2},"to":{"line":0,"ch":2},"text":["t"],"removed":[""],"origin":"+input"}
+2017-3-13 17:32:57.133#change#{"from":{"line":0,"ch":3},"to":{"line":0,"ch":3},"text":["a"],"removed":[""],"origin":"+input"}
+2017-3-13 17:32:57.276#change#{"from":{"line":0,"ch":4},"to":{"line":0,"ch":4},"text":["l"],"removed":[""],"origin":"+input"}
+2017-3-13 17:32:58.388#change#{"from":{"line":0,"ch":5},"to":{"line":0,"ch":5},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:32:59.798#change#{"from":{"line":0,"ch":7},"to":{"line":0,"ch":7},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:04.430#change#{"from":{"line":0,"ch":8},"to":{"line":0,"ch":8},"text":["4"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:04.662#change#{"from":{"line":0,"ch":9},"to":{"line":0,"ch":9},"text":["0"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:06.165#change#{"from":{"line":0,"ch":10},"to":{"line":0,"ch":10},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:07.500#change#{"from":{"line":0,"ch":11},"to":{"line":0,"ch":11},"text":["+"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:08.379#change#{"from":{"line":0,"ch":12},"to":{"line":0,"ch":12},"text":[" "],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:08.619#change#{"from":{"line":0,"ch":13},"to":{"line":0,"ch":13},"text":["3"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:08.828#change#{"from":{"line":0,"ch":14},"to":{"line":0,"ch":14},"text":["5"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:19.193#mousedown#{"isTrusted":true}
+2017-3-13 17:33:20.888#change#{"from":{"line":1,"ch":0,"xRel":1},"to":{"line":3,"ch":12,"xRel":1},"text":[""],"removed":["a = 40","b = 35","soma = a + b"],"origin":"+delete"}
+2017-3-13 17:33:20.888#keyHandled#"Backspace"
+2017-3-13 17:33:20.901#viewportChange#0
+2017-3-13 17:33:22.497#mousedown#{"isTrusted":true}
+2017-3-13 17:33:23.527#change#{"from":{"line":1,"ch":0},"to":{"line":2,"ch":0,"xRel":-1},"text":[""],"removed":["",""],"origin":"+delete"}
+2017-3-13 17:33:23.527#keyHandled#"Backspace"
+2017-3-13 17:33:23.537#viewportChange#0
+2017-3-13 17:33:26.038#change#{"from":{"line":1,"ch":7,"xRel":1},"to":{"line":1,"ch":11,"xRel":-1},"text":["t"],"removed":["soma"],"origin":"+input"}
+2017-3-13 17:33:26.371#change#{"from":{"line":1,"ch":8},"to":{"line":1,"ch":8},"text":["o"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:26.659#change#{"from":{"line":1,"ch":9},"to":{"line":1,"ch":9},"text":["t"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:26.779#change#{"from":{"line":1,"ch":10},"to":{"line":1,"ch":10},"text":["a"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:27.098#change#{"from":{"line":1,"ch":11},"to":{"line":1,"ch":11},"text":["l"],"removed":[""],"origin":"+input"}
+2017-3-13 17:33:30.800#blur#
+2017-3-13 17:33:50.594#mousedown#{"isTrusted":true}
+2017-3-13 17:33:50.602#focus#
+2017-3-13 17:34:00.653#mousedown#{"isTrusted":true}
+2017-3-13 17:34:01.598#change#{"from":{"line":1,"ch":12},"to":{"line":1,"ch":13,"xRel":0},"text":[""],"removed":["\""],"origin":"+delete"}
+2017-3-13 17:34:01.598#keyHandled#"Backspace"
+2017-3-13 17:34:02.989#mousedown#{"isTrusted":true}
+2017-3-13 17:34:03.279#change#{"from":{"line":1,"ch":6},"to":{"line":1,"ch":7,"xRel":-1},"text":[""],"removed":["\""],"origin":"+delete"}
+2017-3-13 17:34:03.279#keyHandled#"Backspace"
+2017-3-13 17:34:06.014#blur#
+2017-3-13 17:34:10.177#mousedown#{"isTrusted":true}
+2017-3-13 17:34:10.189#focus#
+2017-3-13 17:34:10.177#mousedown#{"isTrusted":true}
+2017-3-13 17:34:10.189#focus#
+2017-3-13 17:34:14.023#submit#Congratulations, your code is correct!
+        </pre>
+    </code>    
+    <h4>File <code>2017-1/136/users/1098/executions/407_1326.log</code></h4>
+    <code>
+        <pre>
+== TEST (2017-03-13 17:31:14) 
+-- CODE:
+a = 40
+b = 35
+soma = a + b
+print("soma")
+-- OUTPUT:
+soma
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2017-03-13 17:31:26) 
+-- CODE:
+a = 40
+b = 35
+soma = a + b
+print("soma")
+-- EXECUTION TIME:
+
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+soma
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2017-03-13 17:31:46) 
+-- CODE:
+a = 40
+b = 35
+	soma = a + b
+print("soma")
+-- ERROR:
+File "XXXX", line 3
+    soma = a + b
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2017-03-13 17:33:30) 
+-- CODE:
+total = 40 + 35
+print("total")
+-- OUTPUT:
+total
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2017-03-13 17:34:05) 
+-- CODE:
+total = 40 + 35
+print(total)
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2017-03-13 17:34:12) 
+-- CODE:
+total = 40 + 35
+print(total)
+-- EXECUTION TIME:
+
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+75
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+        </pre>
+    </code>
+
+    <h4>File <code>2017-1/136/assessments/407.data</code> &mdash; example of homework data</h4></h4>
+    <code>
+        <pre>
+-- ASSESSMENT DATA:
+---- assessment title: Laboratório de Codificação 0 – Primeiros passos com o Python
+---- class name: Introdução à Ciência dos Computadores
+---- class number: 136
+---- start: 2017-03-13 16:00
+---- end: 2017-05-15 23:59
+---- language: Python 3
+---- codemirror mode: python/python.js
+---- type: homework
+---- weight: 1
+---- total_exercises: 14
+-- EXERCISES:
+---- exercise 01: 994
+---- exercise 02: 996
+---- exercise 03: 1326
+---- exercise 04: 1327
+---- exercise 05: 1328
+---- exercise 06: 1329
+---- exercise 07: 1330
+---- exercise 08: 1331
+---- exercise 09: 1332
+---- exercise 10: 1333
+---- exercise 11: 1334
+---- exercise 12: 579
+---- exercise 13: 1559
+---- exercise 14: 1560
+        </pre>
+    </code>
+
+    <h4>File <code>2017-1/137/assessments/476.data</code> &mdash; example of exam data</h4>
+    <code>
+        <pre>
+-- ASSESSMENT DATA:
+---- assessment title: Trabalho Prático 01: Variáveis e Estrutura Sequencial de Programação
+---- class name: Introdução à Ciência dos Computadores
+---- class number: 137
+---- start: 2017-04-03 18:00
+---- end: 2017-04-03 19:55
+---- language: Python 3
+---- codemirror mode: python/python.js
+---- type: exam
+---- weight: 1
+---- total_exercises: 2
+-- EXERCISES:
+---- exercise 01: 1367 or 1361 or 1370 or 1371 or 1368 or 1362 or 1372 or 1369 or 1365 or 1364 or 1366 or 1363
+---- exercise 02: 1833 or 1834 or 1835 or 1836 or 1837 or 1838 or 1839 or 1840 or 1841 or 1842
+        </pre>
+    </code>
+
+    <h4>File <code>2017-1/136/users/1098/grades/407.log</code></h4>
+    <code>
+        <pre>
+---- final score  (0-10): 10
+---- number of exercises: 14
+---- correct: 14
+---- incorrect: 0
+---- blank: 0
+        </pre>
+    </code>
+
+    <h4>File <code>2017-1/136/users/1098/grades/final_grade.data</code></h4>
+    <code>
+        <pre>
+5.57
+        </pre>
+    </code>    
+
+    <h4>File <code>2017-1/136/users/1098/user.data</code></h4>
+    <code>
+        <pre>
+-- CURRENT DEGREE COURSE: 
+---- course id: 13
+---- course name: Física - Bacharelado
+---- institution id: 1
+---- institution name: Universidade Federal do Amazonas
+-- HIGH SCHOOL: 
+---- high school name: Maria da Luz Calderaro
+---- school type: public school
+---- shift: afternoon shift
+---- graduation year: 2014
+-- PERSONAL COMPUTER: 
+---- has a PC at home: yes
+---- share this PC with other people at home: yes
+---- this PC has access to Internet: yes (high-speed Internet)
+---- previous experience of any computer language: yes (Python)
+-- WORK: 
+---- worked or interned before the degree: yes
+---- company name: Conselho Municipal de Saúde
+---- year started working: 2013
+---- year stopped working: 2014
+-- PREVIOUS DEGREE: 
+---- started other degree programmes: no
+---- degree course: n/a
+---- institution name: n/a
+---- year started this degree: n/a
+---- year stopped this degree: n/a
+-- OTHER INFORMATION: 
+---- sex: male
+---- year of birth: 1997
+---- civil status: single
+---- have kids: no
+        </pre>
+    </code>  
+    
+    <h4>File <code>2017-1/136/users/1098/logins.log</code></h4>
+    <code>
+        <pre>
+2017-03-13 16:02:10#user/login.
+2017-03-13 16:03:41#user/logout.
+2017-03-13 16:58:08#user/login.
+2017-03-13 17:45:09#user/logout.
+2017-03-14 20:08:00#user/login.
+2017-03-14 20:11:01#user/logout.
+2017-03-14 20:12:08#user/login.
+2017-03-14 20:14:48#user/logout.
+2017-03-14 20:30:10#user/login.
+2017-03-14 20:31:39#user/logout.
+2017-03-15 11:09:42#user/login.
+2017-03-15 11:39:25#user/logout.
+2017-03-15 16:05:53#user/login.
+2017-03-15 16:22:10#user/login.
+2017-03-15 17:05:31#user/login.
+2017-03-15 17:20:03#user/logout.
+2017-03-16 21:43:48#user/login.
+2017-03-18 19:57:05#user/login.
+2017-03-19 15:59:22#user/login.
+2017-03-20 16:01:34#user/login.
+2017-03-20 17:40:03#user/logout.
+2017-03-22 16:04:38#user/login.
+2017-03-22 17:50:45#user/logout.
+2017-03-26 16:43:21#user/login.
+2017-03-26 17:48:23#user/logout.
+2017-03-26 19:01:02#user/login.
+2017-03-26 19:03:50#user/logout.
+2017-03-26 23:03:44#user/login.
+2017-03-26 23:09:21#user/logout.
+2017-03-27 14:09:09#user/login.
+2017-03-27 15:01:54#user/logout.
+2017-03-27 15:44:54#user/login.
+2017-03-27 16:39:17#user/login.
+2017-03-27 22:37:38#user/login.
+2017-03-27 22:40:44#user/logout.
+2017-03-27 23:03:02#user/login.
+2017-03-27 23:03:48#user/logout.
+2017-03-27 23:45:02#user/login.
+2017-03-27 23:49:50#user/logout.
+2017-03-28 21:26:53#user/login.
+2017-03-28 21:28:38#user/logout.
+2017-03-28 21:31:08#user/login.
+2017-03-28 21:32:09#user/logout.
+2017-03-28 21:38:12#user/login.
+2017-03-28 21:39:17#user/logout.
+2017-03-28 22:36:39#user/login.
+2017-03-28 22:36:39#user/login.
+2017-03-28 22:38:41#user/logout.
+2017-04-02 19:28:23#user/login.
+2017-04-02 20:58:03#user/logout.
+2017-04-03 16:01:51#user/login.
+2017-04-03 16:09:34#user/logout.
+2017-04-03 16:27:13#user/login.
+2017-04-03 16:33:14#user/logout.
+2017-04-03 16:58:32#user/login.
+2017-04-03 17:19:40#user/logout.
+2017-04-03 17:19:49#user/login.
+2017-04-03 17:20:09#user/logout.
+2017-04-05 16:05:31#user/login.
+2017-04-05 16:31:10#user/logout.
+2017-04-05 16:32:25#user/login.
+2017-04-05 17:30:07#user/login.
+2017-04-05 17:30:07#user/logout.
+2017-04-05 17:30:17#user/login.
+2017-04-05 17:36:53#user/logout.
+2017-04-06 17:31:52#user/login.
+2017-04-06 17:36:10#user/logout.
+2017-04-06 19:59:39#user/login.
+2017-04-09 16:10:34#user/login.
+2017-04-09 16:43:00#user/logout.
+2017-04-10 06:37:10#user/login.
+2017-04-10 07:55:41#user/logout.
+2017-04-11 23:38:38#user/login.
+2017-04-11 23:40:40#user/logout.
+2017-04-13 12:53:27#user/login.
+2017-04-13 13:03:54#user/logout.
+2017-04-13 21:11:42#user/login.
+2017-04-13 21:14:04#user/logout.
+2017-04-14 17:52:24#user/login.
+2017-04-14 18:09:09#user/logout.
+2017-04-17 11:21:38#user/login.
+2017-04-17 11:33:49#user/logout.
+2017-04-17 14:07:15#user/login.
+2017-04-17 14:23:51#user/logout.
+2017-04-17 16:59:06#user/login.
+2017-04-17 17:54:58#user/logout.
+2017-04-19 16:01:16#user/login.
+2017-04-19 16:03:42#user/login.
+2017-04-19 16:03:45#user/logout.
+2017-04-19 16:06:00#user/login.
+2017-04-19 17:40:20#user/logout.
+2017-04-20 12:40:18#user/login.
+2017-04-20 12:40:29#user/logout.
+2017-04-20 12:40:43#user/login.
+2017-04-23 20:38:53#user/login.
+2017-04-23 21:09:58#user/logout.
+2017-04-23 22:15:42#user/login.
+2017-04-23 22:16:31#user/login.
+2017-04-23 22:16:33#user/logout.
+2017-04-25 19:57:45#user/login.
+2017-04-25 20:04:28#user/logout.
+2017-04-26 11:11:51#user/login.
+2017-04-26 11:16:25#user/logout.
+2017-04-26 13:03:09#user/login.
+2017-04-26 13:11:11#user/logout.
+2017-04-26 15:17:02#user/login.
+2017-04-26 15:17:28#user/logout.
+2017-04-27 20:31:41#user/login.
+2017-04-27 20:35:15#user/logout.
+2017-04-28 20:54:05#user/login.
+2017-04-28 20:56:38#user/logout.
+2017-04-29 09:05:17#user/login.
+2017-04-29 09:06:53#user/logout.
+2017-05-02 19:45:43#user/login.
+2017-05-03 05:16:00#user/login.
+2017-05-03 05:39:59#user/logout.
+2017-05-03 14:07:40#user/login.
+2017-05-03 16:58:31#user/login.
+2017-05-03 17:46:14#user/logout.
+2017-05-06 10:25:07#user/login.
+2017-05-06 10:45:47#user/logout.
+2017-05-08 16:11:04#user/login.
+2017-05-08 16:18:12#user/logout.
+2017-05-08 16:18:19#user/login.
+2017-05-08 17:03:44#user/login.
+2017-05-08 17:44:43#user/logout.
+2017-05-10 12:18:56#user/login.
+2017-05-10 14:11:13#user/logout.
+2017-05-10 20:39:17#user/login.
+2017-05-10 20:58:29#user/logout.
+2017-05-10 21:00:21#user/login.
+2017-05-10 21:32:28#user/logout.
+2017-05-12 11:35:11#user/login.
+2017-05-12 11:36:00#user/logout.
+2017-05-16 13:57:10#user/login.
+2017-05-16 13:58:01#user/logout.
+2017-05-16 21:21:34#user/login.
+2017-05-16 21:25:57#user/logout.
+2017-05-16 22:16:07#user/login.
+2017-05-16 22:28:15#user/logout.
+2017-05-17 10:50:43#user/login.
+2017-05-17 10:54:49#user/logout.
+2017-05-17 16:11:34#user/login.
+2017-05-17 16:14:50#user/logout.
+2017-05-17 16:58:39#user/login.
+2017-05-17 17:54:41#user/logout.
+2017-05-17 17:55:04#user/login.
+2017-05-17 17:55:16#user/logout.
+2017-05-22 16:06:25#user/login.
+2017-05-22 16:42:24#user/logout.
+2017-05-22 16:42:35#user/login.
+2017-05-22 17:45:17#user/logout.
+2017-05-22 20:57:28#user/login.
+2017-05-22 21:49:22#user/logout.
+2017-05-24 16:18:55#user/login.
+2017-05-24 16:50:33#user/logout.
+2017-05-27 10:17:43#user/login.
+2017-05-27 10:20:58#user/logout.
+2017-05-30 20:52:14#user/login.
+2017-05-30 20:53:02#user/logout.
+2017-05-31 14:13:43#user/login.
+2017-05-31 14:14:41#user/logout.
+2017-05-31 14:50:41#user/login.
+2017-05-31 15:25:18#user/logout.
+2017-05-31 15:26:31#user/login.
+2017-05-31 15:26:32#user/login.
+2017-05-31 15:37:59#user/logout.
+2017-05-31 15:54:57#user/login.
+2017-05-31 16:54:19#user/logout.
+2017-05-31 16:54:35#user/login.
+2017-05-31 16:54:47#user/logout.
+2017-06-05 16:09:03#user/login.
+2017-06-05 17:37:14#user/logout.
+2017-06-07 15:08:39#user/login.
+2017-06-07 15:19:36#user/logout.
+2017-06-08 16:48:54#user/login.
+2017-06-08 17:44:56#user/logout.
+2017-06-12 13:03:34#user/login.
+2017-06-12 13:04:22#user/logout.
+2017-06-14 16:26:15#user/login.
+2017-06-14 16:29:11#user/logout.
+2017-06-15 13:30:07#user/login.
+2017-06-15 13:30:53#user/logout.
+2017-06-17 12:27:49#user/login.
+2017-06-17 12:28:21#user/logout.
+2017-06-18 22:47:02#user/login.
+2017-06-18 22:51:16#user/logout.
+2017-06-19 15:01:10#user/login.
+2017-06-19 15:07:13#user/logout.
+2017-06-19 15:57:37#user/login.
+2017-06-19 16:44:01#user/logout.
+2017-06-21 16:04:20#user/login.
+2017-06-21 17:34:41#user/logout.
+2017-07-02 22:59:40#user/login.
+2017-07-02 23:17:20#user/logout.
+2017-07-03 12:13:56#user/login.
+2017-07-03 12:52:17#user/logout.
+2017-07-03 15:32:42#user/login.
+2017-07-03 15:40:17#user/login.
+2017-07-03 15:46:59#user/login.
+2017-07-03 15:55:36#user/logout.
+2017-07-03 16:03:37#user/login.
+2017-07-03 16:20:15#user/logout.
+2017-07-03 16:26:53#user/login.
+2017-07-03 16:28:59#user/logout.
+2017-07-03 16:41:22#user/login.
+2017-07-03 16:44:13#user/logout.
+2017-07-03 16:45:16#user/login.
+2017-07-03 16:46:30#user/logout.
+2017-07-05 12:54:34#user/login.
+2017-07-05 13:00:07#user/logout.
+2017-07-05 13:01:32#user/login.
+2017-07-05 13:13:04#user/logout.
+        </pre>
+    </code>  
+    
+    <h2>Release History</h2>
+     
+    <h4>CodeBench Dataset 1.20 (released 2021-03-03)</h4>
+    <p>Inclusion of the 2020/ERE data.</p>     
+    <h4>CodeBench Dataset 1.11 (released 2020-01-12)</h4>
+    <p>Inclusion of the 2019/2 data.</p>  
+    <h4>CodeBench Dataset 1.10 (released 2019-08-17)</h4>
+    <p>Inclusion of the 2019/1 data.</p>     
+    <h4>CodeBench Dataset 1.03 (released 2019-05-22)</h4>
+    <p>This is a small bug fix release.</p>            
+    <h4>CodeBench Dataset 1.02 (released 2019-05-03)</h4>
+    <p>This is a small bug fix release.</p>        
+    <h4>CodeBench Dataset 1.01 (released 2019-02-14)</h4>
+    <p>Inclusion of the 2016 data.</p>    
+    <h4>CodeBench Dataset 1.00 (released 2018-12-31)</h4>
+    <p>Initial version.</p>
+
+
+
+</body>
+<script src="js/CollapsibleLists.src.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js?v=2.0"></script>
+</html>

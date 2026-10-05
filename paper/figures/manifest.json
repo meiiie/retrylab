@@ -1,0 +1,29 @@
+{
+  "description": "Aggregate-only figures; generated from completed saved outputs, with no manually invented measurements.",
+  "matplotlib": "3.10.8",
+  "inputs": [
+    {
+      "path": "research\\confirmation\\paired_contrasts.csv",
+      "sha256": "3def0f23889f96feab50205d51a92213783299bc83cf8e183c0f74f96bc9332f"
+    },
+    {
+      "path": "research\\codebench_experiment\\summary.json",
+      "sha256": "670aa2dbb7b3263f5efbb630d7f795abc7e87bfef326d09e4db544e9dd66b934"
+    },
+    {
+      "path": "research\\confirmation\\aggregate_metrics.csv",
+      "sha256": "ed0f4e9e03e89ca9b114448d3fe9e41f8bc0ecc8dc83cbc95f14b4694a62dd5e"
+    }
+  ],
+  "outputs": [
+    "paired_log_loss.png",
+    "paired_log_loss.svg",
+    "revision_and_predictive_value.png",
+    "revision_and_predictive_value.svg"
+  ],
+  "notes": [
+    "Intervals are conditional on fitted models and splits, not full retraining uncertainty.",
+    "CodeBench label definitions differ from ACcoding accepted verdicts.",
+    "Probability revision is not an estimate of learning gain."
+  ]
+}

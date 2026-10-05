@@ -1,0 +1,21 @@
+{
+  "recorded_date_utc": "2026-09-26",
+  "platform": "Windows; 64-bit AMD64; CPU experiments",
+  "python": "3.13.7",
+  "python_build": "tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11; MSC v.1944 64 bit (AMD64)",
+  "packages": {
+    "numpy": "2.3.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3",
+    "torch": "2.12.0+cpu",
+    "matplotlib": "3.10.8",
+    "requests": "2.32.4",
+    "PyMuPDF": "1.26.6",
+    "Pillow": "12.0.0",
+    "reportlab": "5.0.0"
+  },
+  "evidence": "Read from the local Python distribution via importlib.metadata; model artifacts separately record runtime package versions.",
+  "limitations": "An inventory of the actual environment, not a portable dependency lock or a claim of bitwise numerical reproducibility on other hardware. No package installation is performed by the builder."
+}

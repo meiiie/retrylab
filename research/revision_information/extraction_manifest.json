@@ -1,0 +1,61 @@
+{
+  "archive_sha256": "a7792403accd6aadbe47b04f48858a2da42574b98a78a3c245b7eaec4a92075f",
+  "events_sha256": "680a4f8e7cb6752475eb2e62741813488ff32fbcb30cdbc5d5186335497758a8",
+  "script_sha256": "7bae17db2a0a0f66321ea4073d84ee5d209c05fb8b8ae8e801bf9e82d9d56fb9",
+  "base_parser_sha256": "de46edbf0477c9b26c3bd0d4dbb6f799a0d6561c78a053f3ca6fbb359c97bc38",
+  "counts": {
+    "regular_files": 30685,
+    "uncompressed_regular_bytes": 573604420,
+    "execution_logs": 9489,
+    "raw_events": 126180,
+    "retained_events": 126180,
+    "TEST": 87299,
+    "SUBMITION": 38881,
+    "submission_ast_valid": 34939,
+    "submission_one_CODE": 38881,
+    "submission_nonempty_code": 38881,
+    "empty_or_no_header_logs": 266
+  },
+  "unique_archive_ids": 172,
+  "class_count": 5,
+  "user_class_enrollments": 176,
+  "grades": {
+    "missing": 10888,
+    "0.0": 14105,
+    "100.0": 10248,
+    "67.0": 1913,
+    "50.0": 568,
+    "33.0": 1159
+  },
+  "grade_error": {
+    "missing|error=1": 10888,
+    "known|error=0": 27993
+  },
+  "event_years": {
+    "TEST|2017": 25474,
+    "SUBMITION|2017": 8933,
+    "SUBMITION|2016": 29948,
+    "TEST|2016": 61825
+  },
+  "min_time": "2016-10-17 09:12:21",
+  "max_time": "2017-02-25 14:23:12",
+  "languages": {
+    "Python 3": 85
+  },
+  "section_shapes": {
+    "TEST|CODE|ERROR": 33581,
+    "SUBMITION|CODE|EXECUTION TIME|ERROR": 10888,
+    "TEST|CODE|OUTPUT": 46294,
+    "SUBMITION|CODE|EXECUTION TIME|TEST CASE 1|TEST CASE 2|TEST CASE 3|GRADE": 15948,
+    "TEST|CODE|OUTPUT|ERROR": 3045,
+    "SUBMITION|CODE|EXECUTION TIME|TEST CASE 1|GRADE": 6874,
+    "SUBMITION|CODE|EXECUTION TIME|TEST CASE 1|TEST CASE 2|GRADE": 4913,
+    "TEST|CODE": 4379,
+    "SUBMITION|CODE|EXECUTION TIME|TEST CASE 1|TEST CASE 3|GRADE": 258
+  },
+  "within_file_backward_transitions": 0,
+  "backward_transition_users": 0,
+  "code_handling": "Actual CODE for each SUBMITION retained locally; TEST code omitted from text column, hash retained; no final.py used, no execution.",
+  "performance_evaluated": false,
+  "created_utc": "2026-09-26T02:58:59.724097+00:00"
+}

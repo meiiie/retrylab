@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-09-26T15:41:30.043779+00:00",
+  "passed": true,
+  "scope": "Local Windows demo operation; not scientific efficacy or guaranteed future availability",
+  "unit_policy_backend_checks": 40,
+  "browser_reference_cases": 96,
+  "existing_browser_scripts": 4,
+  "additional_rehearsal_groups": 10,
+  "restart_groups": 4,
+  "reports": [
+    {
+      "path": ".harness/reports/20260926T152931373126/report.json",
+      "sha256": "e8bd2512a3c67a000ca3c30d6ff199a8ab85b7f8ce0385f40bb88cbe3f3d6ca0",
+      "passed": true
+    },
+    {
+      "path": ".harness/reports/20260926T153815799504/report.json",
+      "sha256": "932d209e76c60ce2f162fa4ed036348e83d5ccc7880d685dfb58b61161513ea9",
+      "passed": true
+    },
+    {
+      "path": "app/test_outputs/demo/20260926T153357380490-restart/report.json",
+      "sha256": "e54db491c638f1826c5e1e5848325dd5cfaef73cbc2f3f96474dcaf216083a50",
+      "passed": true
+    },
+    {
+      "path": "app/test_outputs/demo/20260926T153557818155-msedge/report.json",
+      "sha256": "5e83eb0645d91c6c57c9e04a95ae8b5182ff92c5b6d8251efc858bb4093e2710",
+      "passed": true
+    },
+    {
+      "path": "app/test_outputs/demo/20260926T153611974426-msedge/report.json",
+      "sha256": "1e501dc8f247d7b3a5b57bc23abf7cf3ed686ead5bbcc84bb355fd366023cd62",
+      "passed": true
+    },
+    {
+      "path": "app/test_outputs/demo/20260926T153738550288-chrome/report.json",
+      "sha256": "c708fb60c41a2971c9e8ae9a71c628beea95124a8895a1ce3be1683921f6bfcd",
+      "passed": true
+    },
+    {
+      "path": "app/test_outputs/demo/20260926T153816331681-chromium/report.json",
+      "sha256": "cbaac045b98b3b43897df28797356bd1d6018897f191e8057c1167c4046ba00c",
+      "passed": true
+    },
+    {
+      "path": "app/test_outputs/demo/20260926T153853466865-restart/report.json",
+      "sha256": "2709c7f44419f26885287f026eda6794423dff8b2821cbd3eee8883c68e1926e",
+      "passed": true
+    },
+    {
+      "path": ".harness/reports/20260926T154150596444/report.json",
+      "sha256": "6b8ec072493a0e75184181d778789902dfbd93b1e2a8cdc9d707ec1615e931d6",
+      "passed": true
+    }
+  ],
+  "retained_initial_failure": {
+    "path": "app/test_outputs/demo/20260926T153238123999-msedge/report.json",
+    "reason": "networkidle timeout after intentionally failed worker initialization; the test wait was corrected and function assertions passed on Edge/Chromium"
+  },
+  "protected_artifacts": 85,
+  "protected_integrity_passed": true,
+  "live_health": {
+    "status": "ready",
+    "app": "RetryLab",
+    "pairs": 69825,
+    "read_only_study": true
+  },
+  "user_storage_preserved": true,
+  "user_server_restarted": false,
+  "source_sha256": {
+    "app/demo_check.py": "73e42ae3593ad8817317ee08678759b8a101370f7334b8d961b6b8d95a92c45a",
+    "app/check_demo.cmd": "b124c4e8e5cdd39a35881b538d8544a567192b7daf339b7d85965eb2ab8fb363",
+    "app/tests/demo_readiness_check.py": "33ad48365c7c9d3bcf6eb09651ccb1135e87b763d33aa108613257e34cce6c48",
+    "app/tests/launch_recovery_check.py": "246adda7b1a46ea767e25daae61f449784a76f9c50931e42d780c2ddf4a4c172",
+    "tools/harness.py": "fac4c233a9be5d500f58024be56598af3d114428e905d928a07955f9ad2837dd",
+    "app/DEMO_READY.md": "589a8337f3e1edfef67d28a0ea24847f3352105f63ff4b4733443a644adbf783",
+    "app/DEMO_VALIDATION.md": "cc3a5c6f3b2a108dedc3eaaa92b7f2fdd7c8c3cce18aa627df9df4925e19a9e7",
+    "app/server.py": "dc430cfc5c7169b6d6f303261b66e39fcfbc78d035f29b5782be00bc5d2951e6",
+    "app/launch.py": "8895d2e44e419f3a2c954ca9e5d74df103c998e534c5289c100b489132aaaf07",
+    "app/static/js/adaptive.js": "ad244d69d3ed2d4b3fc7adf71d0936b0a6a415163208e37225dc7210fdc20bb0",
+    "app/static/js/app.js": "ce86bc316836c98e438aab6a692e9d77f8b771e87469ab07b17bacac8fd34b8e",
+    "app/static/js/charts.js": "21607fadc817ce55369490c2f537af3910f28422e685a0ac58132afcc6bd1728",
+    "app/static/js/curriculum.js": "aae23b4a932bec80f103023cd195c2301b164354a51ad7942120a736c0657eda",
+    "app/static/js/policy-lab.js": "f8a4c3fc5c8d55e6ca573aefb78ec4a6f177ab33d7344556410d06dfd788a684",
+    "app/static/js/practice-store.js": "4c14c780fbea8382f80352c08421c60d47e65dbae71899489a443b4725c401aa",
+    "app/static/js/practice.js": "f0268479c8420c2a99bf70859d07cbd683d88af5b086a0b391490cdc45e0bd87",
+    "app/static/js/python-runner.js": "94c955083244d6db349690b9111ad21eb9f824e261e9e95c840048e31a26f93d",
+    "app/static/js/python-worker.js": "40ad078adaed51be2eb3418f0956fe13b55d3aec2876166b46e1aa83053d372d",
+    "app/static/js/research.js": "cbc0880d70f472fefcc45420aa195b76c9a5e907191d78d0411344ea2e2c31bd",
+    "app/static/js/shared.js": "b97415bc07baad17e9e1123a84a1ba90a0b758913581144149d6b7555906ebf3"
+  },
+  "catalog_policy_run_verified": true,
+  "source_package": {
+    "path": "E:\\Sach\\baiThayPhuc\\BaiHong\\app\\retrylab_source.zip",
+    "bytes": 201674,
+    "members": 59,
+    "sha256": "d34f926ceae2313b3cc6e4462388243555a845508a0e45f026f0e296dce09c9d",
+    "crc_and_member_hashes_verified": true
+  },
+  "test_servers_stopped_verified": true
+}

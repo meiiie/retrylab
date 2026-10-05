@@ -1,0 +1,27 @@
+{
+  "endpoint_selection": "Literal positional head(1)/tail(1), preserves missing first/last grades.",
+  "validation": "Minimum-two counts match separately audited loop: 11499 structural, 7872 numeric.",
+  "correction": "Supersedes preliminary unreported vectorized counts that used null-skipping groupby.first/last.",
+  "minimum_submission_count": {
+    "2": {
+      "all_episodes": 17795,
+      "structural_pairs": 11499,
+      "structural_users": 450,
+      "numeric_known_train_target_pairs": 7872,
+      "same_endpoint_source_path": 11492,
+      "both_code_nonempty": 11499,
+      "both_AST_valid": 8769,
+      "endpoint_code_text_changed": 10440
+    },
+    "3": {
+      "all_episodes": 12614,
+      "structural_pairs": 8070,
+      "structural_users": 446,
+      "numeric_known_train_target_pairs": 5346,
+      "same_endpoint_source_path": 8064,
+      "both_code_nonempty": 8070,
+      "both_AST_valid": 5992,
+      "endpoint_code_text_changed": 7728
+    }
+  }
+}

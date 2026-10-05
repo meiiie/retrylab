@@ -1,0 +1,117 @@
+{
+  "created": "2022-05-05T18:15:14.421286+00:00",
+  "modified": "2022-05-06T01:49:55.313082+00:00",
+  "id": 6522395,
+  "conceptrecid": "6522355",
+  "doi": "10.5281/zenodo.6522395",
+  "conceptdoi": "10.5281/zenodo.6522355",
+  "doi_url": "https://doi.org/10.5281/zenodo.6522395",
+  "metadata": {
+    "title": "ACcoding-Dataset: v1.0.0",
+    "doi": "10.5281/zenodo.6522395",
+    "publication_date": "2022-05-05",
+    "description": "<p>Data as of May 6, 2022</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Zejing Liu",
+        "affiliation": null
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/lapopo233/ACcoding-Dataset/tree/v1.0.0",
+        "relation": "isSupplementTo",
+        "scheme": "url"
+      }
+    ],
+    "version": "v1.0.0",
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "other-open"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 1,
+          "is_last": false,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "6522355"
+          }
+        }
+      ]
+    }
+  },
+  "title": "ACcoding-Dataset: v1.0.0",
+  "links": {
+    "self": "https://zenodo.org/api/records/6522395",
+    "self_html": "https://zenodo.org/records/6522395",
+    "preview_html": "https://zenodo.org/records/6522395?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.6522395",
+    "self_doi": "https://doi.org/10.5281/zenodo.6522395",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6522395",
+    "reserve_doi": "https://zenodo.org/api/records/6522395/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/6522355",
+    "parent_html": "https://zenodo.org/records/6522355",
+    "parent_doi": "https://doi.org/10.5281/zenodo.6522355",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.6522355",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:6522395/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:6522395/sequence/default",
+    "files": "https://zenodo.org/api/records/6522395/files",
+    "media_files": "https://zenodo.org/api/records/6522395/media-files",
+    "archive": "https://zenodo.org/api/records/6522395/files-archive",
+    "archive_media": "https://zenodo.org/api/records/6522395/media-files-archive",
+    "latest": "https://zenodo.org/api/records/6522395/versions/latest",
+    "latest_html": "https://zenodo.org/records/6522395/latest",
+    "versions": "https://zenodo.org/api/records/6522395/versions",
+    "draft": "https://zenodo.org/api/records/6522395/draft",
+    "access_links": "https://zenodo.org/api/records/6522395/access/links",
+    "access_grants": "https://zenodo.org/api/records/6522395/access/grants",
+    "access_users": "https://zenodo.org/api/records/6522395/access/users",
+    "access_request": "https://zenodo.org/api/records/6522395/access/request",
+    "access": "https://zenodo.org/api/records/6522395/access",
+    "communities": "https://zenodo.org/api/records/6522395/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/6522395/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/6522395/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/6522395/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/6522395/quota-increase",
+    "requests": "https://zenodo.org/api/records/6522395/requests"
+  },
+  "updated": "2022-05-06T01:49:55.313082+00:00",
+  "recid": "6522395",
+  "revision": 4,
+  "files": [
+    {
+      "id": "a775a823-a7c8-4ea6-b936-cb4d19c0976f",
+      "key": "lapopo233/ACcoding-Dataset-v1.0.0.zip",
+      "size": 169590310,
+      "checksum": "md5:ef913bf653aedf4ec3c310a7b0a2f5f8",
+      "links": {
+        "self": "https://zenodo.org/api/records/6522395/files/lapopo233/ACcoding-Dataset-v1.0.0.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "345813"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 460,
+    "unique_downloads": 356,
+    "views": 1216,
+    "unique_views": 1107,
+    "version_downloads": 434,
+    "version_unique_downloads": 334,
+    "version_unique_views": 970,
+    "version_views": 1069
+  },
+  "state": "done",
+  "submitted": true
+}

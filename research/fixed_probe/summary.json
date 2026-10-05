@@ -1,0 +1,271 @@
+{
+  "status": "Exploratory diagnostic of predictive state update, not causal learning gain or recommendation evaluation.",
+  "input": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\accoding\\submissions_cohort.csv",
+  "input_sha256": "b35ab13da3a80ed9f0db37248fa3638c3cb8a9c55929123e5b963549ccbf304a",
+  "baseline_helper": "E:\\Sach\\baiThayPhuc\\BaiHong\\research\\pilot\\first_vs_retry.py",
+  "baseline_helper_sha256": "0dcc83c01cf09d9a89f12a2680c06aa1281b976401fef7689aea7c45439e73c1",
+  "environment": {
+    "python": "3.13.7",
+    "sklearn": "1.9.0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.2"
+  },
+  "raw_rows": 424311,
+  "cleaned_rows": 424311,
+  "split": {
+    "test": {
+      "students": 234,
+      "rows": 64371
+    },
+    "train": {
+      "students": 1054,
+      "rows": 295788
+    },
+    "validation": {
+      "students": 212,
+      "rows": 64152
+    }
+  },
+  "model": "One frozen StandardScaler + L2 logistic regression C=1 max_iter=500; identical mainpilot split and fitting configuration, history features with gap_seconds removed globally. No tuning or validation use.",
+  "features": [
+    "difficulty_logit",
+    "history_count",
+    "history_accuracy",
+    "last_result",
+    "recent_5_accuracy",
+    "recent_20_accuracy",
+    "history_distinct_problems"
+  ],
+  "difficulty": "Import mainpilot: train-user first outcomes, 20 pseudo-observations; 5-fold student crossfit training features, full training first outcomes for held-out items.",
+  "state_h0": "History ending immediately after first submission of contiguous same-problem episode i.",
+  "state_h1": "History ending immediately after last submission of the same episode i.",
+  "target": "Exactly the same observed AC outcome on first submission of immediate next episode j, conditional on oracle identity j; j first observed for learner, differs from i, and is known in training.",
+  "timing": "No target timestamp, elapsed gap, current target code/result/score, or later event enters either feature vector. Both queries use identical training-derived difficulty of j.",
+  "coverage": {
+    "test_students": 234,
+    "test_submissions": 64371,
+    "test_first_observed_problem_attempts": 27868,
+    "contiguous_episodes": 32810,
+    "single_submission_episodes": 20017,
+    "episodes_with_at_least_two_submissions": 12793,
+    "excluded_no_observed_next_episode": 117,
+    "excluded_next_problem_previously_observed": 1703,
+    "excluded_next_problem_unknown_in_training": 23,
+    "retained_pairs": 10950,
+    "retained_students": 233,
+    "coverage_of_multi_submission_episodes": 0.8559368404596264,
+    "coverage_of_test_first_observed_targets": 0.39292378355102625
+  },
+  "synthetic_checks": {
+    "manual_prefix_feature_match": true,
+    "same_target_difficulty": true,
+    "target_and_later_label_score_time_mutation_invariance": true,
+    "appended_future_invariance": true
+  },
+  "h1_matches_ordinary_frozen_target_prediction": true,
+  "aggregates": [
+    {
+      "group": "all",
+      "value": "all",
+      "pairs": 10950,
+      "students": 233,
+      "target_acceptance_rate": 0.473972602739726,
+      "mean_probability_h0": 0.4382715946944933,
+      "mean_probability_h1": 0.4886815707298664,
+      "mean_probability_change": 0.05040997603537319,
+      "nll_h0": 0.5888087713521256,
+      "nll_h1": 0.5856596953571973,
+      "nll_difference_h1_minus_h0": -0.003149075994928289,
+      "brier_h0": 0.2019156175997106,
+      "brier_h1": 0.20025503603578274,
+      "brier_difference_h1_minus_h0": -0.0016605815639278135
+    },
+    {
+      "group": "episode_first_ac",
+      "value": "0",
+      "pairs": 10710,
+      "students": 233,
+      "target_acceptance_rate": 0.4727357609710551,
+      "mean_probability_h0": 0.4357538580489892,
+      "mean_probability_h1": 0.4873471226339885,
+      "mean_probability_change": 0.05159326458499924,
+      "nll_h0": 0.5892206594904593,
+      "nll_h1": 0.5859692045838963,
+      "nll_difference_h1_minus_h0": -0.0032514549065630095,
+      "brier_h0": 0.20208629719772367,
+      "brier_h1": 0.20037771704985077,
+      "brier_difference_h1_minus_h0": -0.001708580147872899
+    },
+    {
+      "group": "episode_first_ac",
+      "value": "1",
+      "pairs": 240,
+      "students": 128,
+      "target_acceptance_rate": 0.5291666666666667,
+      "mean_probability_h0": 0.5506255925001103,
+      "mean_probability_h1": 0.5482313170084211,
+      "mean_probability_change": -0.002394275491689247,
+      "nll_h0": 0.5704282631789834,
+      "nll_h1": 0.5718478461157546,
+      "nll_difference_h1_minus_h0": 0.001419582936771116,
+      "brier_h0": 0.194299040538378,
+      "brier_h1": 0.1947803957829996,
+      "brier_difference_h1_minus_h0": 0.00048135524462163614
+    },
+    {
+      "group": "episode_end_ac",
+      "value": "0",
+      "pairs": 2473,
+      "students": 232,
+      "target_acceptance_rate": 0.45289122523251113,
+      "mean_probability_h0": 0.44369217474262895,
+      "mean_probability_h1": 0.421770080630253,
+      "mean_probability_change": -0.02192209411237611,
+      "nll_h0": 0.583676492473321,
+      "nll_h1": 0.5841757602596764,
+      "nll_difference_h1_minus_h0": 0.0004992677863553984,
+      "brier_h0": 0.19944505991643172,
+      "brier_h1": 0.1996462241413543,
+      "brier_difference_h1_minus_h0": 0.00020116422492258795
+    },
+    {
+      "group": "episode_end_ac",
+      "value": "1",
+      "pairs": 8477,
+      "students": 233,
+      "target_acceptance_rate": 0.4801226849121151,
+      "mean_probability_h0": 0.4366902458141063,
+      "mean_probability_h1": 0.5082016975455258,
+      "mean_probability_change": 0.07151145173141946,
+      "nll_h0": 0.5903060139694766,
+      "nll_h1": 0.5860926045817071,
+      "nll_difference_h1_minus_h0": -0.004213409387769454,
+      "brier_h0": 0.20263635478866288,
+      "brier_h1": 0.2004326450737587,
+      "brier_difference_h1_minus_h0": -0.002203709714904225
+    },
+    {
+      "group": "retry_count_group",
+      "value": "1",
+      "pairs": 4982,
+      "students": 233,
+      "target_acceptance_rate": 0.5040144520272982,
+      "mean_probability_h0": 0.45093676961262735,
+      "mean_probability_h1": 0.5127946606479626,
+      "mean_probability_change": 0.06185789103533538,
+      "nll_h0": 0.5924665598818908,
+      "nll_h1": 0.5845932887133211,
+      "nll_difference_h1_minus_h0": -0.007873271168569704,
+      "brier_h0": 0.20359174168902916,
+      "brier_h1": 0.1999629962140811,
+      "brier_difference_h1_minus_h0": -0.0036287454749480827
+    },
+    {
+      "group": "retry_count_group",
+      "value": "2-3",
+      "pairs": 3782,
+      "students": 233,
+      "target_acceptance_rate": 0.46192490745637227,
+      "mean_probability_h0": 0.4334445105629457,
+      "mean_probability_h1": 0.4833270059546569,
+      "mean_probability_change": 0.04988249539171121,
+      "nll_h0": 0.5875366118004965,
+      "nll_h1": 0.5888789008308386,
+      "nll_difference_h1_minus_h0": 0.0013422890303421752,
+      "brier_h0": 0.20111432090290898,
+      "brier_h1": 0.2012643546875527,
+      "brier_difference_h1_minus_h0": 0.00015003378464368587
+    },
+    {
+      "group": "retry_count_group",
+      "value": "4+",
+      "pairs": 2186,
+      "students": 231,
+      "target_acceptance_rate": 0.4263494967978042,
+      "mean_probability_h0": 0.41775838826419537,
+      "mean_probability_h1": 0.44299060550017155,
+      "mean_probability_change": 0.025232217235976146,
+      "nll_h0": 0.5826734579802004,
+      "nll_h1": 0.582520538357417,
+      "nll_difference_h1_minus_h0": -0.00015291962278343737,
+      "brier_h0": 0.19948197345255528,
+      "brier_h1": 0.1991743861047325,
+      "brier_difference_h1_minus_h0": -0.00030758734782279515
+    },
+    {
+      "group": "episode_i_first_observed",
+      "value": "False",
+      "pairs": 1219,
+      "students": 223,
+      "target_acceptance_rate": 0.4971287940935193,
+      "mean_probability_h0": 0.4251693231995404,
+      "mean_probability_h1": 0.4734725946853142,
+      "mean_probability_change": 0.048303271485773826,
+      "nll_h0": 0.5991615511279988,
+      "nll_h1": 0.5886172590930342,
+      "nll_difference_h1_minus_h0": -0.010544292034964679,
+      "brier_h0": 0.20620630801163536,
+      "brier_h1": 0.20165723509635597,
+      "brier_difference_h1_minus_h0": -0.0045490729152793926
+    },
+    {
+      "group": "episode_i_first_observed",
+      "value": "True",
+      "pairs": 9731,
+      "students": 233,
+      "target_acceptance_rate": 0.4710718322885623,
+      "mean_probability_h0": 0.43991291305358765,
+      "mean_probability_h1": 0.49058679545479805,
+      "mean_probability_change": 0.05067388240121038,
+      "nll_h0": 0.5875118811510374,
+      "nll_h1": 0.5852892020683284,
+      "nll_difference_h1_minus_h0": -0.0022226790827091585,
+      "brier_h0": 0.20137812385681303,
+      "brier_h1": 0.20007938290097252,
+      "brier_difference_h1_minus_h0": -0.0012987409558405073
+    }
+  ],
+  "primary_bootstrap": {
+    "unit": "retained held-out student; paired resampling",
+    "repetitions": 100,
+    "seed": 26092026,
+    "interval_type": "exploratory paired percentile 95%; no multiplicity adjustment",
+    "point_weighting": "Each retained episode-target pair has equal weight; bootstrap clusters by student.",
+    "intervals": {
+      "nll_difference": {
+        "lower": -0.006545315718018366,
+        "upper": 0.00021344438264094112
+      },
+      "brier_difference": {
+        "lower": -0.003246944226611071,
+        "upper": -0.0001658638306976792
+      },
+      "probability_change": {
+        "lower": 0.04941200714871782,
+        "upper": 0.051669792924649724
+      }
+    }
+  },
+  "standardized_coefficients": {
+    "difficulty_logit": 0.7543218903832098,
+    "history_count": 0.054068801214935555,
+    "history_accuracy": 0.25556538484325775,
+    "last_result": 0.1626051337196543,
+    "recent_5_accuracy": 0.06972197255360167,
+    "recent_20_accuracy": 0.07058331397284781,
+    "history_distinct_problems": 0.029545698698770672
+  },
+  "limitations": [
+    "Future target identity j is observed after the episode: the diagnostic conditions on it and does not solve item-selection bias.",
+    "Only episodes with a subsequently observed first attempt on a training-known item are scored; dropout, switching to an old item, and unseen items cause selection/censoring.",
+    "Episode end can be wrong; success at episode end is not required. End-AC and retry strata are descriptive post-episode variables, not randomized groups.",
+    "Pair-weighted means give retry-rich learners more influence; student bootstrap handles dependence but not selection or causal identification.",
+    "A smaller paired prediction error shows that added observations help this frozen model forecast this target, not that the extra attempts caused learning.",
+    "The model is trained for submission-level prediction, including retries; applying it to conditional future new-item probes may be misspecified.",
+    "First observed means within the released extract; prior unobserved exposure remains possible.",
+    "Student split is not chronological; training item difficulty may use later calendar observations than a test forecast.",
+    "Timestamp ties use submission id; exact subsecond ordering is unverified. Non-AC includes operational errors, not solely conceptual mistakes.",
+    "The 1500-user input cohort was selected for >=20 distinct problems using full future history; findings target that selected population.",
+    "No policy optimization, reward selection, architecture tuning, or propensity-based evaluation is performed."
+  ]
+}

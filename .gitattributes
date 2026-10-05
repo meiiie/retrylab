@@ -1,0 +1,2 @@
+# Preserve exact source/artifact bytes: historical study locks hash these files.
+* -text

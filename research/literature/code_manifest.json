@@ -1,0 +1,127 @@
+[
+  {
+    "repository": "oezyurty/ExRec",
+    "sha": "234955079f936de876c476bebd4b51468694356d",
+    "committer_date": "2025-12-25T09:53:25Z",
+    "files": [
+      {
+        "path": "README.md",
+        "local_path": "code\\oezyurty__ExRec\\README.md",
+        "sha256": "09fba41104ab91c6b971df339c9dd7938c2d4fa5cc1ac9a60f8aac343788dc6a",
+        "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/README.md"
+      },
+      {
+        "path": "exercise_recommender/envs/cluster_vector_env.py",
+        "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\cluster_vector_env.py",
+        "sha256": "b95a6d7c86f27195306660e161ead35dda4e3e766b2d0c792cdf2331e8c11ae7",
+        "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/cluster_vector_env.py"
+      },
+      {
+        "path": "exercise_recommender/envs/all_kc_envs.py",
+        "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\all_kc_envs.py",
+        "sha256": "79e2c3e5afc9574dc7bf119b5923779447168bfddec9efacf72a8b1841e0d330",
+        "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/all_kc_envs.py"
+      },
+      {
+        "path": "exercise_recommender/envs/kc_evolution_envs.py",
+        "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\kc_evolution_envs.py",
+        "sha256": "0dfbe4c4a620a0eeb7e4def78131b2a3a81da9c33e8d38686a6ff0bca1c7836a",
+        "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/kc_evolution_envs.py"
+      },
+      {
+        "path": "exercise_recommender/envs/worst_kc_envs.py",
+        "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\worst_kc_envs.py",
+        "sha256": "0ed351a9ba36eb75abd96e6c425bec79759c98756294aabd016277eeffacfc0f",
+        "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/worst_kc_envs.py"
+      },
+      {
+        "path": "exercise_recommender/envs/ground_truth_env.py",
+        "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\ground_truth_env.py",
+        "sha256": "41997ac9aaa53f8832e94b4cb80e06afea46603efd2ffe60b893b0b505d3fb59",
+        "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/ground_truth_env.py"
+      },
+      {
+        "path": "exercise_recommender/wrappers/calibrationqdkt_wrapper.py",
+        "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\wrappers\\calibrationqdkt_wrapper.py",
+        "sha256": "a0293874e1e1012301485d36c2e26da1abdac44326b0e61163325a51427ff6ae",
+        "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/wrappers/calibrationqdkt_wrapper.py"
+      }
+    ]
+  },
+  {
+    "repository": "chanllon/UniER",
+    "sha": "6cd226b267f12a2500dc7dc7d3ceef9a696472b8",
+    "committer_date": "2026-05-08T07:17:30Z",
+    "files": [
+      {
+        "path": "README.md",
+        "local_path": "code\\chanllon__UniER\\README.md",
+        "sha256": "24c81288a07c7792f94ad03c67f832bff4da48bd021db0703f34864a1395a620",
+        "url": "https://github.com/chanllon/UniER/blob/6cd226b267f12a2500dc7dc7d3ceef9a696472b8/README.md"
+      },
+      {
+        "path": "Path-level Exercise Recommendation/DLPR/EduSim/metrics/promotion.py",
+        "local_path": "code\\chanllon__UniER\\Path-level Exercise Recommendation\\DLPR\\EduSim\\metrics\\promotion.py",
+        "sha256": "64201ca4f94734897551db2991fb10f264ab32de8e94889908c56f34fa29238a",
+        "url": "https://github.com/chanllon/UniER/blob/6cd226b267f12a2500dc7dc7d3ceef9a696472b8/Path-level Exercise Recommendation/DLPR/EduSim/metrics/promotion.py"
+      }
+    ]
+  },
+  {
+    "repository": "aims-foundations/dynamic-irt",
+    "sha": "9f091ea59c339cb76e0aabfa94843f1ee0670496",
+    "committer_date": "2026-08-17T19:30:02Z",
+    "files": [
+      {
+        "path": "README.md",
+        "local_path": "code\\aims-foundations__dynamic-irt\\README.md",
+        "sha256": "67f49b145063278c42a0956cde8bbc5c43caabf7c8a9766cd3aa91777d351c64",
+        "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/README.md"
+      },
+      {
+        "path": "dynamic_models/temporal_eval/harness.py",
+        "local_path": "code\\aims-foundations__dynamic-irt\\dynamic_models\\temporal_eval\\harness.py",
+        "sha256": "5a5ade6b6de08bc96d7caf19661247e9e25546e2aec781899fff707ee964e170",
+        "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/dynamic_models/temporal_eval/harness.py"
+      },
+      {
+        "path": "dynamic_models/temporal_eval/student_split.py",
+        "local_path": "code\\aims-foundations__dynamic-irt\\dynamic_models\\temporal_eval\\student_split.py",
+        "sha256": "1f06cbc4aabab5a796a5cb30f714a8b7a173bc83f2b351b750b32314aa0975db",
+        "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/dynamic_models/temporal_eval/student_split.py"
+      },
+      {
+        "path": "dynamic_models/temporal_eval/metrics.py",
+        "local_path": "code\\aims-foundations__dynamic-irt\\dynamic_models\\temporal_eval\\metrics.py",
+        "sha256": "f4565fce576102af048ff232659a49b920ffeca73f2bf6bc201a3926db5104a2",
+        "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/dynamic_models/temporal_eval/metrics.py"
+      }
+    ]
+  },
+  {
+    "repository": "umass-ml4ed/code-edit-representation",
+    "sha": "141f5d8d91b43414017bd745beb026c7314c07ed",
+    "committer_date": "2025-02-18T02:34:12Z",
+    "files": [
+      {
+        "path": "README.md",
+        "local_path": "code\\umass-ml4ed__code-edit-representation\\README.md",
+        "sha256": "37c853434bb41fcff1526bce8523b48bae1a92216669db24ea36ebfb89caddfd",
+        "url": "https://github.com/umass-ml4ed/code-edit-representation/blob/141f5d8d91b43414017bd745beb026c7314c07ed/README.md"
+      }
+    ]
+  },
+  {
+    "repository": "YangAzure/Code-DKT",
+    "sha": "8ddd13e27853267e1b9bc721cdeb4756822aeec6",
+    "committer_date": "2022-04-25T17:10:02Z",
+    "files": [
+      {
+        "path": "README.md",
+        "local_path": "code\\YangAzure__Code-DKT\\README.md",
+        "sha256": "2c8217daac083d987999c865e6d27d17f450bc6bf0351aa1e3e04487908a53d1",
+        "url": "https://github.com/YangAzure/Code-DKT/blob/8ddd13e27853267e1b9bc721cdeb4756822aeec6/README.md"
+      }
+    ]
+  }
+]

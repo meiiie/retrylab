@@ -1,0 +1,17 @@
+{
+  "reviewer": "Codex assistant visual inspection, not human-author approval",
+  "recorded_utc": "2026-09-26T17:11:16.616744+00:00",
+  "pages": {
+    "en": 12,
+    "vi": 11
+  },
+  "pdf_sha256": {
+    "en": "af77f679637cdf6dd565179816d54f478777bf29b42085d683aa4e2fb1f566cb",
+    "vi": "cd348201cbf125d06c9aba86e855d0eb7e7ca232d547c49b34b29621b46caa3e"
+  },
+  "review": "All 23 final pages rendered and reviewed in contact sheets. Title, architecture labels, fixed-size equations, aligned tables, results charts, references and complete appendix also inspected at larger scale. Layout revision uses a common 25 mm content frame, preserves figure/caption pairing and fits all 35 appendix rows on one page.",
+  "geometry_audit": "paper/journal/report_qa.json",
+  "layout_revision": "paper/journal/LAYOUT_REVISION.md",
+  "known_limitation": "Standalone elsarticle source compilation not verified due to native compiler environment failure. PDFs are rendered separately with ReportLab and PyMuPDF.",
+  "passed": true
+}

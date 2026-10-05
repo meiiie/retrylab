@@ -1,0 +1,18 @@
+{
+  "latex_source": "paper/topic4_policy.tex",
+  "native_latex_compilation": "failed: Unable to find standard directories for platform",
+  "current_journal_pdfs": [
+    "output/pdf/retrylab-journal-en.pdf",
+    "output/pdf/retrylab-journal-vi.pdf"
+  ],
+  "pdf_renderer": "ReportLab + PyMuPDF, not compiled LaTeX",
+  "report_sources": [
+    "paper/journal/manuscript_en.md",
+    "paper/journal/manuscript_vi.md"
+  ],
+  "legacy_demo_pdf": "output/pdf/retrylab-de4-bao-cao.pdf",
+  "layout_revision": "paper/journal/LAYOUT_REVISION.md",
+  "source_class": "elsarticle",
+  "source_sha256": "6d21ccc3e3217ef8e8852796ede0b54e1cbe0b96c9202e8288d9e963c91af6e2",
+  "source_compilation_confirmed": false
+}

@@ -1,0 +1,955 @@
+{
+  "schema_version": 1,
+  "purpose": "Explicit, manually selected authored source and aggregate evidence; no recursive file inclusion.",
+  "pending_extension": null,
+  "exclusions": [
+    "All data/ files including raw archives, extracted histories and private predictions",
+    "Serialized models and checkpoints, item vocabularies and reference dictionaries",
+    "Downloaded literature PDFs/full text, third-party code and raw publisher exports",
+    "CodeBench inventory/examples/anomaly records containing learner identifiers",
+    "Old five-epoch GRU outputs",
+    "Preview images/text; unlisted files"
+  ],
+  "files": [
+    {
+      "source": "research/revision_information/final_audit.json",
+      "destination": "reference_results/research/revision_information/final_audit.json",
+      "kind": "aggregate final audit"
+    },
+    {
+      "source": "research/review/scientific_readiness_addendum.md",
+      "kind": "authored scientific review"
+    },
+    {
+      "source": "research/revision_information/checks.py",
+      "kind": "authored synthetic checks"
+    },
+    {
+      "source": "research/revision_information/README.md",
+      "kind": "authored revision-extension documentation"
+    },
+    {
+      "source": "research/revision_information/download_ranges.py",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/extract_semester.py",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/recover_old_training_code.py",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/schema_audit.py",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/features.py",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/model_pipeline.py",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/run_experiment.py",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/protocol.md",
+      "kind": "authored revision-extension source or protocol"
+    },
+    {
+      "source": "research/revision_information/source_manifest_2016_2.json",
+      "destination": "reference_results/research/revision_information/source_manifest_2016_2.json",
+      "kind": "revision-extension aggregate or historical provenance"
+    },
+    {
+      "source": "research/revision_information/extraction_manifest.json",
+      "destination": "reference_results/research/revision_information/extraction_manifest.json",
+      "kind": "revision-extension aggregate or historical provenance"
+    },
+    {
+      "source": "research/revision_information/old_training_recovery_manifest.json",
+      "destination": "reference_results/research/revision_information/old_training_recovery_manifest.json",
+      "kind": "revision-extension aggregate or historical provenance"
+    },
+    {
+      "source": "research/revision_information/schema_audit.json",
+      "destination": "reference_results/research/revision_information/schema_audit.json",
+      "kind": "revision-extension aggregate or historical provenance"
+    },
+    {
+      "source": "research/revision_information/pooled_feature_audit.json",
+      "destination": "reference_results/research/revision_information/pooled_feature_audit.json",
+      "kind": "revision-extension aggregate or historical provenance"
+    },
+    {
+      "source": "research/revision_information/protocol_lock.json",
+      "destination": "reference_results/research/revision_information/protocol_lock.json",
+      "kind": "revision-extension aggregate or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/revision_information/results.json",
+      "destination": "reference_results/research/revision_information/results.json",
+      "kind": "revision-extension aggregate or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/revision_information/metrics.csv",
+      "destination": "reference_results/research/revision_information/metrics.csv",
+      "kind": "revision-extension aggregate or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/revision_information/contrasts.csv",
+      "destination": "reference_results/research/revision_information/contrasts.csv",
+      "kind": "revision-extension aggregate or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/revision_information/results.md",
+      "destination": "reference_results/research/revision_information/results.md",
+      "kind": "revision-extension aggregate or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "START_HERE.md",
+      "kind": "authored Vietnamese study entry point"
+    },
+    {
+      "source": "research/application/figures/plot_screening_changes.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/application/figures/screening_changes.png",
+      "kind": "authored aggregate figure"
+    },
+    {
+      "source": "research/application/figures/screening_changes.svg",
+      "kind": "authored aggregate figure"
+    },
+    {
+      "source": "research/application/figures/caption.md",
+      "kind": "authored aggregate figure caption"
+    },
+    {
+      "source": "research/application/figures/screening_changes_data.csv",
+      "destination": "reference_results/research/application/figures/screening_changes_data.csv",
+      "kind": "aggregate figure data"
+    },
+    {
+      "source": "research/application/figures/figure_manifest.json",
+      "destination": "reference_results/research/application/figures/figure_manifest.json",
+      "kind": "aggregate figure provenance"
+    },
+    {
+      "source": "research/application/figures/visual_inspection.json",
+      "destination": "reference_results/research/application/figures/visual_inspection.json",
+      "kind": "aggregate figure visual inspection"
+    },
+    {
+      "source": "research/application/audit_pair_coverage.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/application/cross_family_coverage.json",
+      "destination": "reference_results/research/application/cross_family_coverage.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/reproducibility/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/reproducibility/build_package.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/reproducibility/download_public_data.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/reproducibility/environment.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/reproducibility/requirements-core.txt",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/reproducibility/requirements-optional.txt",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/reproducibility/allowlist.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/accoding/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/accoding/source_manifest.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/accoding/extract_cohort.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/accoding/audit_accoding.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/accoding/manifest.json",
+      "destination": "reference_results/research/accoding/manifest.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/accoding/audit_summary.json",
+      "destination": "reference_results/research/accoding/audit_summary.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/pilot/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/pilot/first_vs_retry.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/pilot/metrics.csv",
+      "destination": "reference_results/research/pilot/metrics.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/pilot/pilot_summary.json",
+      "destination": "reference_results/research/pilot/pilot_summary.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/fixed_probe/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/fixed_probe/fixed_future_probe.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/fixed_probe/summary.json",
+      "destination": "reference_results/research/fixed_probe/summary.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/fixed_probe/first_attempt_summary.json",
+      "destination": "reference_results/research/fixed_probe/first_attempt_summary.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/fixed_probe/aggregates.csv",
+      "destination": "reference_results/research/fixed_probe/aggregates.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/fixed_probe/first_attempt_aggregates.csv",
+      "destination": "reference_results/research/fixed_probe/first_attempt_aggregates.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/locked_protocol.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/protocol_amendment_01.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/protocol_amendment_02.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/METHODS.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/extract_confirmatory.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/confirmatory_study.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/temporal_protocol.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/temporal_check.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/record_temporal_repair.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/write_results_note.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/write_temporal_note.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/confirmation/RESULTS.md",
+      "destination": "reference_results/research/confirmation/RESULTS.md",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/results.json",
+      "destination": "reference_results/research/confirmation/results.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/aggregate_metrics.csv",
+      "destination": "reference_results/research/confirmation/aggregate_metrics.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/paired_contrasts.csv",
+      "destination": "reference_results/research/confirmation/paired_contrasts.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/calibration_bins.csv",
+      "destination": "reference_results/research/confirmation/calibration_bins.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/validation_lock.json",
+      "destination": "reference_results/research/confirmation/validation_lock.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/implementation_integrity.json",
+      "destination": "reference_results/research/confirmation/implementation_integrity.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/cohort_selection_lock.json",
+      "destination": "reference_results/research/confirmation/cohort_selection_lock.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_RESULTS.md",
+      "destination": "reference_results/research/confirmation/temporal_RESULTS.md",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_results.json",
+      "destination": "reference_results/research/confirmation/temporal_results.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_aggregate_metrics.csv",
+      "destination": "reference_results/research/confirmation/temporal_aggregate_metrics.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_paired_contrasts.csv",
+      "destination": "reference_results/research/confirmation/temporal_paired_contrasts.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_calibration_bins.csv",
+      "destination": "reference_results/research/confirmation/temporal_calibration_bins.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_cutoff_lock.json",
+      "destination": "reference_results/research/confirmation/temporal_cutoff_lock.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_fit_lock.json",
+      "destination": "reference_results/research/confirmation/temporal_fit_lock.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/confirmation/temporal_repair_01.json",
+      "destination": "reference_results/research/confirmation/temporal_repair_01.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench/audit_codebench.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/extract_events.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/audit_population.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/fixed_future_probe.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_control.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_protocol.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_protocol_amendment01.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_protocol.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_protocol_amendment01.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/codebench_experiment/results.md",
+      "destination": "reference_results/research/codebench_experiment/results.md",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/summary.json",
+      "destination": "reference_results/research/codebench_experiment/summary.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/aggregates.csv",
+      "destination": "reference_results/research/codebench_experiment/aggregates.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_results.md",
+      "destination": "reference_results/research/codebench_experiment/paired_task_results.md",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_summary.json",
+      "destination": "reference_results/research/codebench_experiment/paired_task_summary.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_aggregates.csv",
+      "destination": "reference_results/research/codebench_experiment/paired_task_aggregates.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/paired_task_contrasts.csv",
+      "destination": "reference_results/research/codebench_experiment/paired_task_contrasts.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/population_audit.json",
+      "destination": "reference_results/research/codebench_experiment/population_audit.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/codebench_experiment/extraction_manifest.json",
+      "destination": "reference_results/research/codebench_experiment/extraction_manifest.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/sequential/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/sequential/run_gru.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/sequential/plot_curves.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/sequential/summarize_final.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/sequential/protocol.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/sequential/convergence_amendment.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/sequential/implementation_notes.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/sequential/validation_converged/summary.json",
+      "destination": "reference_results/research/sequential/validation_converged/summary.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/aggregates.csv",
+      "destination": "reference_results/research/sequential/validation_converged/aggregates.csv",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/checkpoint_lock.json",
+      "destination": "reference_results/research/sequential/validation_converged/checkpoint_lock.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/amendment_lock.json",
+      "destination": "reference_results/research/sequential/validation_converged/amendment_lock.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/confirmation_run_lock.json",
+      "destination": "reference_results/research/sequential/validation_converged/confirmation_run_lock.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/validation_integrity.json",
+      "destination": "reference_results/research/sequential/validation_converged/validation_integrity.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/seed_variation.json",
+      "destination": "reference_results/research/sequential/validation_converged/seed_variation.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/final_results.md",
+      "destination": "reference_results/research/sequential/validation_converged/final_results.md",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/fit_ALL_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/fit_ALL_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/fit_ALL_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/fit_ALL_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/fit_ALL_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/fit_ALL_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_ALL_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_ALL_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_ALL_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_ALL_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_ALL_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_ALL_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_ALL_ensemble.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_ALL_ensemble.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_ALL_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_ALL_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_ALL_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_ALL_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_ALL_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_ALL_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_ALL_ensemble.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_ALL_ensemble.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_ALL_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_ALL_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_ALL_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_ALL_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_ALL_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_ALL_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_ALL_ensemble.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_ALL_ensemble.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/fit_FIRST_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/fit_FIRST_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/fit_FIRST_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/fit_FIRST_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/fit_FIRST_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/fit_FIRST_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_FIRST_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_FIRST_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_FIRST_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_FIRST_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_FIRST_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_FIRST_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_validation_FIRST_ensemble.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_validation_FIRST_ensemble.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_FIRST_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_FIRST_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_FIRST_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_FIRST_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_FIRST_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_FIRST_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_exploratory_FIRST_ensemble.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_exploratory_FIRST_ensemble.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_FIRST_seed11.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_FIRST_seed11.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_FIRST_seed29.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_FIRST_seed29.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_FIRST_seed47.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_FIRST_seed47.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/result_confirmation_FIRST_ensemble.json",
+      "destination": "reference_results/research/sequential/validation_converged/result_confirmation_FIRST_ensemble.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/validation_learning_curves.png",
+      "kind": "authored aggregate figure",
+      "optional": true
+    },
+    {
+      "source": "research/sequential/validation_converged/confirmation_paired_nll.png",
+      "kind": "authored aggregate figure",
+      "optional": true
+    },
+    {
+      "source": "research/application/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/application/locked_protocol.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/application/risk_screening.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/application/summarize_results.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/application/implementation_audit.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/application/threshold_lock_logistic.json",
+      "destination": "reference_results/research/application/threshold_lock_logistic.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/application/threshold_lock_gru.json",
+      "destination": "reference_results/research/application/threshold_lock_gru.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/application/results_logistic.json",
+      "destination": "reference_results/research/application/results_logistic.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/application/results_gru.json",
+      "destination": "reference_results/research/application/results_gru.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/application/screening_metrics.csv",
+      "destination": "reference_results/research/application/screening_metrics.csv",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/application/results_table.md",
+      "destination": "reference_results/research/application/results_table.md",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "research/diagnostics/README.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/diagnostics/reward_audit.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/diagnostics/reward_audit_summary.json",
+      "destination": "reference_results/research/diagnostics/reward_audit_summary.json",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/diagnostics/reward_audit_results.csv",
+      "destination": "reference_results/research/diagnostics/reward_audit_results.csv",
+      "kind": "aggregate result or historical provenance"
+    },
+    {
+      "source": "research/review/reviewer_report.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/review/paired_estimand.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/review/offline_application_evaluation.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/review/trajectory_design_review.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/venues/venue_strategy.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/gap_audit.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/supplementary_gap_audit.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/revision_information_gap.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/REPRODUCIBILITY.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/references.bib",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/sources.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/supplementary_sources.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/revision_sources.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/build_sources.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/fetch_primary.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/fetch_code_evidence.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/download_manifest.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "research/literature/code_manifest.json",
+      "kind": "authored source"
+    },
+    {
+      "source": "paper/manuscript.tex",
+      "kind": "authored source"
+    },
+    {
+      "source": "paper/BAO_CAO_NGHIEN_CUU.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "paper/make_figures.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "paper/render_paper.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "paper/check_forecast_identities.py",
+      "kind": "authored source"
+    },
+    {
+      "source": "paper/identity_notes.md",
+      "kind": "authored source"
+    },
+    {
+      "source": "paper/identity_check_results.json",
+      "destination": "reference_results/paper/identity_check_results.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "paper/render_manifest.json",
+      "destination": "reference_results/paper/render_manifest.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "paper/figures/paired_log_loss.png",
+      "kind": "authored aggregate figure",
+      "optional": true
+    },
+    {
+      "source": "paper/figures/paired_log_loss.svg",
+      "kind": "authored aggregate figure",
+      "optional": true
+    },
+    {
+      "source": "paper/figures/revision_and_predictive_value.png",
+      "kind": "authored aggregate figure",
+      "optional": true
+    },
+    {
+      "source": "paper/figures/revision_and_predictive_value.svg",
+      "kind": "authored aggregate figure",
+      "optional": true
+    },
+    {
+      "source": "paper/figures/manifest.json",
+      "destination": "reference_results/paper/figures/manifest.json",
+      "kind": "aggregate result or historical provenance",
+      "optional": true
+    },
+    {
+      "source": "paper/manuscript.pdf",
+      "kind": "optional authored manuscript PDF",
+      "optional": true
+    }
+  ]
+}

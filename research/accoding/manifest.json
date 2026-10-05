@@ -1,0 +1,90 @@
+{
+  "record_url": "https://zenodo.org/records/11395043",
+  "download_url": "https://zenodo.org/api/records/11395043/files/ACcoding-Dataset%20v2.0.0.zip/content",
+  "retrieved_for_cutoff": "2026-09-26",
+  "publication_date": "2026-07-14",
+  "record_title": "ACcoding-Dataset: v2.0.0",
+  "record_version": null,
+  "description": "<p>v1:Data as of May 6, 2022;<br>v2:Data as of May 12, 2025;</p>",
+  "local_file": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\raw\\accoding\\ACcoding-Dataset-v2.0.0.zip",
+  "bytes": 96056846,
+  "md5": "abcf3517565312d0e6e2a1aba36b1236",
+  "sha256": "26b5637d2a912ce6ae4824e49e055a060c1162422c4a47508e3eb1017762ac1d",
+  "zenodo_license": {
+    "id": "other-open"
+  },
+  "paper_dataset_license_statement": "CC BY 4.0",
+  "paper_url": "https://www.nature.com/articles/s41597-024-03392-z",
+  "license_note": "Zenodo uses other-open whereas the 2024 paper explicitly states CC BY 4.0 for the original dataset. Record both; do not assume the original paper resolves all terms of the 2026 update.",
+  "access": "public_unauthenticated",
+  "verification": "download size and official Zenodo MD5 match",
+  "archive_members": [
+    {
+      "name": "out_contests.sql",
+      "bytes": 38738
+    },
+    {
+      "name": "__MACOSX/._out_contests.sql",
+      "bytes": 260
+    },
+    {
+      "name": "out_problem_tags.sql",
+      "bytes": 378188
+    },
+    {
+      "name": "__MACOSX/._out_problem_tags.sql",
+      "bytes": 260
+    },
+    {
+      "name": "out_problems.sql",
+      "bytes": 3813002
+    },
+    {
+      "name": "__MACOSX/._out_problems.sql",
+      "bytes": 260
+    },
+    {
+      "name": "out_submissions.sql",
+      "bytes": 1132680454
+    },
+    {
+      "name": "__MACOSX/._out_submissions.sql",
+      "bytes": 260
+    },
+    {
+      "name": "out_users.sql",
+      "bytes": 828874
+    },
+    {
+      "name": "__MACOSX/._out_users.sql",
+      "bytes": 260
+    },
+    {
+      "name": "out_tags.sql",
+      "bytes": 6650
+    },
+    {
+      "name": "__MACOSX/._out_tags.sql",
+      "bytes": 260
+    },
+    {
+      "name": "relationship.sql",
+      "bytes": 353
+    },
+    {
+      "name": "__MACOSX/._relationship.sql",
+      "bytes": 260
+    }
+  ],
+  "data_capabilities": {
+    "submission_source_code": false,
+    "full_problem_text": false,
+    "raw_test_case_inputs_outputs": false,
+    "per_test_case_outcomes": false,
+    "student_problem_timestamp_verdict": true,
+    "code_length": true,
+    "compiler_diagnostic_text_in_detail": true,
+    "problem_tags_and_difficulty": true,
+    "notes": "Compiler diagnostics can contain fragments of source code, but no complete source-code field/files are released. test_setting references files/configuration absent from this archive."
+  }
+}

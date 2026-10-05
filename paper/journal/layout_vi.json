@@ -1,0 +1,81 @@
+{
+  "page_size_pt": [
+    595.2755905511812,
+    841.8897637795277
+  ],
+  "margins_mm": [
+    25,
+    25,
+    25,
+    25
+  ],
+  "frame_padding_pt": 0,
+  "body_font_pt": 11,
+  "body_leading_pt": 14.5,
+  "vector_placements": [
+    {
+      "page": 3,
+      "x": 70.86614173228344,
+      "y_from_top": 77.86614173228338,
+      "width": 453.5433070866142,
+      "height": 253.76827951001803,
+      "source": "figure_1_architecture.pdf"
+    },
+    {
+      "page": 3,
+      "x": 70.86614173228344,
+      "y_from_top": 517.1344212423015,
+      "width": 453.5433070866142,
+      "height": 52.00000030305652,
+      "source": "equation_emission.pdf"
+    },
+    {
+      "page": 3,
+      "x": 70.86614173228344,
+      "y_from_top": 625.6344215453579,
+      "width": 453.5433070866142,
+      "height": 30.0000001748403,
+      "source": "equation_bayes.pdf"
+    },
+    {
+      "page": 4,
+      "x": 70.86614173228344,
+      "y_from_top": 155.36614173228335,
+      "width": 453.5433070866142,
+      "height": 52.00000030305652,
+      "source": "equation_ddqn.pdf"
+    },
+    {
+      "page": 5,
+      "x": 70.86614173228344,
+      "y_from_top": 275.3661417322834,
+      "width": 453.5433070866142,
+      "height": 205.1743619240677,
+      "source": "figure_2_protocol.pdf"
+    },
+    {
+      "page": 5,
+      "x": 70.86614173228344,
+      "y_from_top": 732.0405036563511,
+      "width": 453.5433070866142,
+      "height": 30.0000001748403,
+      "source": "equation_gain.pdf"
+    },
+    {
+      "page": 7,
+      "x": 70.86614173228344,
+      "y_from_top": 77.86614173228338,
+      "width": 453.5433070866142,
+      "height": 273.7788291950381,
+      "source": "figure_3_prediction_policy.pdf"
+    },
+    {
+      "page": 7,
+      "x": 70.86614173228344,
+      "y_from_top": 492.64497092732154,
+      "width": 453.5433070866142,
+      "height": 236.58619218669583,
+      "source": "figure_4_stress_contrasts.pdf"
+    }
+  ]
+}

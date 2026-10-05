@@ -1,0 +1,277 @@
+{
+  "objective": "Đề 4: hoàn tất prototype nghiên cứu mô hình người học → policy học được → app → thực nghiệm có giới hạn minh bạch",
+  "completion_scope": "Prototype, benchmark mô phỏng và bản thảo đã hoàn tất; chưa xác lập hiệu quả với người thật, tính mới đủ mạnh hoặc mức công bố Q1/Q2/A*.",
+  "next_action": "Demo: run app/check_demo.cmd, open RetryLab.cmd, follow app/DEMO_GIA_SU_AI.md (Python and C practice). Authors: complete paper/v3/SUBMISSION_CHECKLIST.md; for a stronger Q1 case replicate on CodeBench, sensitivity analyses and a disagreement-penalty remedy under new locked protocols.",
+  "tasks": [
+    {
+      "id": "requirements",
+      "title": "Đối chiếu nguyên văn đề 4",
+      "status": "complete",
+      "evidence": [
+        "DOI_CHIEU_DE_4_VA_HUONG_TRIEN_KHAI.md"
+      ]
+    },
+    {
+      "id": "forecast",
+      "title": "Dự báo trên log thật (thành phần đã có)",
+      "status": "complete",
+      "evidence": [
+        "research/confirmation/RESULTS.md",
+        "research/sequential/validation_converged/final_results.md"
+      ]
+    },
+    {
+      "id": "harness",
+      "title": "Hướng dẫn, checks, run provenance và handoff",
+      "status": "complete",
+      "depends_on": [
+        "requirements"
+      ],
+      "evidence": [
+        "harness/validation.json",
+        "harness/README.md",
+        "tools/harness.py"
+      ],
+      "acceptance": "Lean scoped instructions, command runner, negative-case tests, integrity checks, working Git hook, successful selected backend/browser checks, and recoverable run evidence."
+    },
+    {
+      "id": "data-contract",
+      "title": "Đặc tả nguồn dữ liệu và ranh giới ngân hàng bài",
+      "status": "complete",
+      "depends_on": [
+        "requirements"
+      ],
+      "evidence": [
+        "research/policy/data_contract.md"
+      ]
+    },
+    {
+      "id": "policy-simulation",
+      "title": "Pipeline mô phỏng v1: mô hình được fit, policy được train và đánh giá độc lập",
+      "status": "complete",
+      "depends_on": [
+        "requirements"
+      ],
+      "evidence": [
+        "research/policy/protocol.json",
+        "research/policy/INTERPRETATION.md",
+        "research/runs/policy-controlled-v1/record.json",
+        "research/policy/summary.json"
+      ],
+      "runs": [
+        "policy-controlled-v1"
+      ],
+      "acceptance": "A completed, auditable controlled run with fixed design, trained checkpoints, all baseline/world results and honest limitations; no requirement that the proposed policy wins."
+    },
+    {
+      "id": "catalog-transfer",
+      "title": "Ngân hàng bài và model tương thích về định danh/lược đồ, huấn luyện mô phỏng",
+      "status": "complete",
+      "depends_on": [
+        "data-contract"
+      ],
+      "evidence": [
+        "app/static/data/catalog-v2.json",
+        "app/static/data/policy-manifest-v2.json",
+        "research/catalog_policy/LITERATURE_AND_DATA.md",
+        "app/test_outputs/policy_browser_report.json"
+      ],
+      "acceptance": "Same twelve item IDs/action order and SHA256 in train/app; full statements/reference tests/author-assigned skills; Python/JS parity. Does not claim validated simulator-to-human transfer."
+    },
+    {
+      "id": "live-integration",
+      "title": "Model và policy điều khiển luồng luyện tập thực",
+      "status": "complete",
+      "depends_on": [
+        "catalog-transfer",
+        "policy-simulation"
+      ],
+      "evidence": [
+        "app/TOPIC4_VALIDATION.md",
+        "app/static/js/adaptive.js",
+        "app/test_outputs/practice_browser_report.json",
+        "research/runs/catalog-policy-v2/record.json"
+      ],
+      "runs": [
+        "catalog-policy-v2"
+      ],
+      "acceptance": "Trained catalog-matched policy controls next exercise, explicit support/fallback and simulation scope, preserved old practice records, actual browser execution and independent held-out simulator evaluation."
+    },
+    {
+      "id": "paper-extension",
+      "title": "Đánh giá prior art và bài báo chính sách với kết luận có căn cứ",
+      "status": "complete",
+      "depends_on": [
+        "policy-simulation",
+        "live-integration"
+      ],
+      "evidence": [
+        "research/catalog_policy/RESULTS.md",
+        "research/catalog_policy/COMPLETION_REVIEW.md",
+        "paper/topic4_policy.tex",
+        "paper/DE_4_BAO_CAO_VA_DEMO.md",
+        "output/pdf/retrylab-de4-bao-cao.pdf",
+        "paper/topic4_render_status.json"
+      ],
+      "acceptance": "Separate editable manuscript with primary-source positioning, actual methods/results/negative findings/limits; Vietnamese report and demo script. Native English LaTeX PDF not claimed compiled; Vietnamese PDF separately rendered and inspected."
+    },
+    {
+      "id": "realdata-policy-v3",
+      "title": "Nghiên cứu v3: mô hình người học fit trên log ACcoding thật, DQN/PPO, ma trận đánh giá độc lập có đối chứng âm",
+      "status": "complete",
+      "depends_on": [
+        "forecast",
+        "policy-simulation",
+        "data-contract"
+      ],
+      "evidence": [
+        "research/accoding_policy/RESULTS.md",
+        "research/accoding_policy/PROTOCOL_LOCK.md",
+        "research/accoding_policy/protocol_learner.json",
+        "research/accoding_policy/protocol_policy.json",
+        "research/accoding_policy/results/tables/hypotheses.csv",
+        "research/accoding_policy/results/figures/fig_phantom_gain.svg",
+        "research/accoding_policy/source_audit.json",
+        "research/accoding_policy/dev_tuning_results.json"
+      ],
+      "acceptance": "Protocols locked before the never-used population is loaded; harness runs accoding-learner-v3 and accoding-policy-v3 complete and verify; forecast metrics with learner-bootstrap CIs on unseen learners; robust evaluation matrix with no-learning negative control, drift decomposition and pre-specified contrasts H1-H4 reported including unfavourable results; simulation scope explicit; no human-efficacy claim.",
+      "runs": [
+        "accoding-learner-v3",
+        "accoding-policy-v3"
+      ]
+    },
+    {
+      "id": "paper-app-v3",
+      "title": "Bản thảo v3 (elsarticle, biên dịch Tectonic), app #realdata và slide thuyết trình từ run đã khóa",
+      "status": "complete",
+      "depends_on": [
+        "realdata-policy-v3"
+      ],
+      "evidence": [
+        "paper/v3/manuscript.tex",
+        "paper/v3/build_record.json",
+        "output/pdf/retrylab-v3-manuscript.pdf",
+        "paper/v3/highlights.txt",
+        "paper/v3/SUBMISSION_CHECKLIST.md",
+        "output/slides/retrylab-v3-thuyet-trinh.pptx",
+        "app/realdata_engine.py",
+        "app/tests/test_realdata.py",
+        "app/tests/realdata_browser_check.py"
+      ],
+      "acceptance": "All manuscript/slide numbers generated from verified runs; LaTeX compiles without undefined references; app view verifies run hashes and passes backend+browser suites; human author metadata, declarations and venue decision remain with the authors; no acceptance or human-efficacy claim."
+    },
+    {
+      "id": "paper-v3-readiness",
+      "title": "Bản thảo v3: bản dịch tiếng Việt, chuẩn hóa định dạng theo Guide C&E:AI và đánh giá mức sẵn sàng nộp",
+      "status": "complete",
+      "depends_on": [
+        "paper-app-v3"
+      ],
+      "evidence": [
+        "paper/v3/DANH_GIA_SAN_SANG_NOP.md",
+        "paper/v3/SUBMISSION_CHECKLIST.md",
+        "paper/v3/vi/manuscript_vi.tex",
+        "output/pdf/retrylab-v3-ban-thao-tieng-viet.pdf",
+        "output/pdf/retrylab-v3-manuscript.pdf",
+        "paper/v3/submission/manuscript.tex",
+        "paper/v3/submission/title_page.tex",
+        "paper/v3/apa_refs.py",
+        "paper/v3/references.bib",
+        "paper/v3/build_record.json"
+      ],
+      "acceptance": "English and Vietnamese manuscripts build from the verified v3 runs with no undefined references/citations or missing glyphs; APA 7 references (73, each verified, matched 1-1 to citations); A4; appendix numbering; separate title page and Figure_N files; abstract <= 250 words, 1-7 keywords, 3-5 highlights <= 85 characters checked by build.py; readiness assessment states verified SJR 2024 quartiles only, no acceptance or venue promise. Author details, declarations, repository and human review remain with the authors; second dataset, sensitivity analyses and a remedy experiment remain open (publication-validation)."
+    },
+    {
+      "id": "studio-desktop",
+      "title": "App desktop \"Gia sư AI lập trình\": dữ liệu thật v3 (chẩn đoán → gợi ý RL → phiên học → đối chứng âm), luyện Python, bảng thuyết trình",
+      "status": "complete",
+      "depends_on": [
+        "realdata-policy-v3",
+        "paper-app-v3"
+      ],
+      "evidence": [
+        "docs/specs/2026-09-29-gia-su-ai-desktop-design.md",
+        "docs/plans/2026-09-29-gia-su-ai-desktop.md",
+        "docs/specs/2026-09-29-lab-minimal-redesign.md",
+        "app/tests/test_tutor.py",
+        "app/tests/studio_shell_check.py",
+        "app/tests/studio_learners_session_check.py",
+        "app/tests/studio_practice_eval_check.py",
+        "app/tests/studio_tour_check.py",
+        "app/tests/desktop_launch_check.py",
+        "app/DEMO_GIA_SU_AI.md",
+        "app/README.md"
+      ],
+      "acceptance": "Double-click launcher opens a chromeless app window; learner diagnosis (DKT/ID3), policy explanations and step-by-step sessions reproduce the frozen v3 study exactly (test_tutor.py); negative-control session shows zero true gain; 8-step presentation tour; Python practice keeps the existing local storage; old UI kept at /classic; fast/policy/backend/browser/demo suites pass. Simulated scope stated in the UI."
+    },
+    {
+      "id": "c-practice",
+      "title": "Luyện C trong app: ~12 bài C tự soạn có test, trình thông dịch C trong trình duyệt, gắn kỹ năng ACcoding (thử nghiệm)",
+      "status": "complete",
+      "depends_on": [
+        "studio-desktop"
+      ],
+      "evidence": [
+        "docs/specs/2026-09-29-c-practice.md",
+        "app/vendor_src/build_jscpp.py",
+        "app/static/vendor/jscpp/manifest.json",
+        "app/static/data/catalog-c-v1.json",
+        "app/tests/studio_c_practice_check.py",
+        "app/THIRD_PARTY.md"
+      ],
+      "acceptance": "Authored C exercises with tests run in a browser C interpreter (no server-side execution); exercises mapped to the 10 ACcoding skills with borrowed difficulty and an explicit untested-transfer label; no link to the frozen DKT; practice storage in its own namespace."
+    },
+    {
+      "id": "publication-validation",
+      "title": "Nâng cấp bằng chứng để đánh giá khả năng công bố mạnh",
+      "status": "planned",
+      "depends_on": [
+        "paper-extension",
+        "realdata-policy-v3"
+      ],
+      "evidence": [
+        "research/catalog_policy/COMPLETION_REVIEW.md"
+      ],
+      "acceptance": "Actually run modern published recommendation baselines in a comparable external benchmark, audit matched real data or externally validated simulation, expand fit/budget sensitivity and establish contribution. No real-student trial is assumed; no venue tier guaranteed."
+    },
+    {
+      "id": "demo-readiness",
+      "title": "Kiem thu dau cuoi va dien tap van hanh tren may hien tai",
+      "status": "complete",
+      "depends_on": [
+        "live-integration"
+      ],
+      "evidence": [
+        "app/DEMO_READY.md",
+        "app/DEMO_VALIDATION.md",
+        "harness/demo_validation.json",
+        "app/tests/demo_readiness_check.py",
+        "app/tests/launch_recovery_check.py"
+      ],
+      "acceptance": "Execute regression, all 96 Python cases, installed Edge/Chrome and Chromium rehearsal, failure recovery, private-server cold start/restart, preserved user storage, and a tested one-click preflight. Local operational readiness only."
+    },
+    {
+      "id": "journal-format",
+      "title": "Chuẩn hóa bản thảo theo hướng dẫn tạp chí Q1 đã kiểm chứng",
+      "status": "complete",
+      "depends_on": [
+        "paper-extension",
+        "demo-readiness"
+      ],
+      "evidence": [
+        "paper/journal/README.md",
+        "paper/journal/JOURNAL_ALIGNMENT.md",
+        "paper/journal/references/SOURCES.md",
+        "paper/journal/report_build.json",
+        "paper/journal/report_qa.json",
+        "paper/journal/visual_review.json",
+        "paper/topic4_policy.tex",
+        "output/pdf/retrylab-journal-en.pdf",
+        "output/pdf/retrylab-journal-vi.pdf",
+        "paper/journal/LAYOUT_REVISION.md",
+        "paper/journal/native_compile_status.json"
+      ],
+      "acceptance": "Official guide and ranking year verified; real frozen data populate EN/VI reports and editable figures/tables. Layout revision: 25 mm shared content frame, consistent type and equation scale, figure/caption pairing, complete appendix; all 23 pages visually reviewed and geometry audited. Elsevier elsarticle source retained but native compilation fails in the environment. Neither publication readiness nor scientific Q1 quality is certified."
+    }
+  ]
+}

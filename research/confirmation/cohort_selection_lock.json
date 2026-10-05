@@ -1,0 +1,16 @@
+{
+  "selection_locked_at_utc": "2026-09-26T02:16:07.622682+00:00",
+  "eligible_nonpilot_users": 6134,
+  "selected_users": 1500,
+  "excluded_pilot_users": 1500,
+  "overlap_with_pilot": 0,
+  "source_rows_parsed_for_eligibility": 2181602,
+  "rule": "Smallest 1500 SHA256('confirm-v1:'+creator_id) among nonpilot users with >=20 distinct released problem IDs; all languages/verdicts count.",
+  "user_file": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\accoding\\confirmatory_users.csv",
+  "user_file_sha256": "9c382a4c810ccbed6f5fc1c54b9c1367e32d19ce72df489b24a9e40b53926388",
+  "excluded_user_file": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\accoding\\cohort_users.csv",
+  "excluded_user_file_sha256": "35401fb8a3804e9f6aed280433852eecf7d6ec9251a83f1a85f2b512b3e9275a",
+  "protocol_sha256": "4754859330cfde139d1b7d739422669a0b72a09d550df92593f6c508fa104ca1",
+  "amendment_01_sha256": "030abff8907a9f65599e074d46053754f6a5522b30d32f740e4724dda29409cb",
+  "outcomes_at_selection": "No outcome statistics, predictions, or model metrics calculated for the new cohort."
+}

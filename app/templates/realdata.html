@@ -1,0 +1,70 @@
+<section id="view-realdata" class="view" hidden>
+  <div class="page-heading">
+    <div>
+      <span class="eyebrow">ĐỀ 4 · DỮ LIỆU THẬT ACCODING (LẬP TRÌNH C) · NGHIÊN CỨU V3</span>
+      <h1>Tác tử chọn bài học từ log thật — và cách kiểm tra nó có “dạy” thật không</h1>
+      <p>Mô hình nhận thức (DKT, IRT/AFM/PFA, SAKT, cây định danh) học từ lượt nộp thật; DQN và PPO chọn bài tiếp theo; mọi chính sách được đánh giá trên nhiều thế giới mô phỏng độc lập, kể cả một thế giới không hề có học.</p>
+    </div>
+  </div>
+  <div id="rd-unavailable" class="policy-scope" hidden></div>
+  <div id="rd-body" hidden>
+    <div class="policy-scope"><strong>Đọc đúng phạm vi.</strong>
+      Dự báo được kiểm tra trên người học thật chưa từng dùng khi huấn luyện. Tiến bộ của chính sách là <em>mô phỏng</em> trong các thế giới fit từ log thật, không phải kết quả học của sinh viên thật. Mã học viên L001… là mã ẩn danh cục bộ.</div>
+    <div class="research-stats rd-stats" id="rd-stats"></div>
+
+    <section class="rd-step">
+      <div class="section-head"><div><span class="eyebrow">BƯỚC 1 · QUAN SÁT</span><h2>Một học viên thật (ẩn danh)</h2></div>
+        <label class="rd-label">Học viên<select id="rd-learner"></select></label></div>
+      <p class="small muted">Lịch sử thật trước thời điểm gợi ý. Bấm vào ô kết quả để <strong>giả định</strong> đảo đúng/sai và xem mô hình, chính sách thay đổi ra sao. Không lưu vào tiến độ của bạn.</p>
+      <div class="table-scroll rd-history"><table><thead><tr><th>#</th><th>Mã bài</th><th>Kỹ năng</th><th>Độ khó (1–10)</th><th>Lần nộp đầu</th></tr></thead><tbody id="rd-history"></tbody></table></div>
+      <button class="text-button" id="rd-reset-flips" hidden>Bỏ mọi giả định</button>
+    </section>
+
+    <section class="rd-step">
+      <div class="section-head"><div><span class="eyebrow">BƯỚC 2 · CHẨN ĐOÁN</span><h2>DKT ước lượng kỹ năng nào đang yếu?</h2></div>
+        <p id="rd-posttest" class="small muted"></p></div>
+      <div id="rd-skills" class="rd-skill-grid"></div>
+      <p class="small muted">Mỗi thanh là xác suất đúng ngay lần đầu mà DKT dự báo, trung bình trên các bài của kỹ năng đó trong ngân hàng bài. Đây là dự báo, chưa phải điểm năng lực được kiểm định.</p>
+    </section>
+
+    <section class="rd-step">
+      <div class="section-head"><div><span class="eyebrow">BƯỚC 3 · QUYẾT ĐỊNH</span><h2>Mỗi chính sách chọn bài nào tiếp theo?</h2></div>
+        <p id="rd-eligible" class="small muted"></p></div>
+      <div class="table-scroll"><table><thead><tr><th>Chính sách</th><th>Bài chọn</th><th>Kỹ năng</th><th>DKT dự báo đúng</th><th>“Học” mà DKT tự tin sẽ có*</th></tr></thead><tbody id="rd-decisions"></tbody></table></div>
+      <p class="small muted">* Kỳ vọng thay đổi dự báo của chính DKT trên bài kiểm tra sau một lần luyện bài đó (điểm phần trăm). Mô hình không-học đúng nghĩa (IRT) luôn cho 0; DKT có thể “tin” vào mức học rất lớn — đó là thứ các tác tử RL khai thác.</p>
+    </section>
+
+    <section class="rd-step">
+      <div class="section-head"><div><span class="eyebrow">BƯỚC 4 · MÔ PHỎNG 10 BÀI</span><h2>Tiến bộ thật trong thế giới mô phỏng so với tiến bộ tracker tự báo</h2></div></div>
+      <div class="policy-controls">
+        <label>Thế giới mô phỏng<select id="rd-world"></select></label>
+        <label>Chính sách<select id="rd-policy"></select></label>
+        <button class="button primary" id="rd-run">Chạy 10 bước</button>
+      </div>
+      <div id="rd-sim-result" class="rd-sim-cards" hidden></div>
+      <div class="table-scroll" id="rd-sim-table" hidden><table><thead><tr><th>Bước</th><th>Bài</th><th>Kỹ năng</th><th>Kết quả</th><th>Số lần nộp</th><th>DKT dự báo</th><th>Thế giới: xác suất đúng</th><th>“Học” DKT tin*</th></tr></thead><tbody id="rd-sim-steps"></tbody></table></div>
+      <p id="rd-sim-note" class="small muted"></p>
+    </section>
+
+    <section class="rd-step">
+      <div class="section-head"><div><span class="eyebrow">KẾT QUẢ ĐÃ KHÓA</span><h2>Bốn giả thuyết đăng ký trước</h2></div></div>
+      <div id="rd-hypotheses" class="rd-hypotheses"></div>
+    </section>
+
+    <section class="rd-step">
+      <div class="section-head"><div><span class="eyebrow">MA TRẬN ĐÁNH GIÁ</span><h2>Tiến bộ bài kiểm tra (điểm phần trăm) của từng chính sách trong từng thế giới</h2></div></div>
+      <p class="small muted">Xanh: nhiều hơn chọn ngẫu nhiên trong cùng thế giới; đỏ: ít hơn. Thế giới DKT/SAKT đo bằng dự báo của chính mô hình; AFM/PFA/ZPD đo trạng thái ẩn thật của người học mô phỏng; IRT-B không có học nên tiến bộ thật luôn bằng 0.</p>
+      <div class="table-scroll"><table class="rd-matrix"><thead id="rd-matrix-head"></thead><tbody id="rd-matrix"></tbody></table></div>
+    </section>
+
+    <section class="rd-step">
+      <div class="section-head"><div><span class="eyebrow">MÔ HÌNH NGƯỜI HỌC</span><h2>Dự báo lần nộp đầu trên người học chưa thấy</h2></div></div>
+      <div class="table-scroll"><table><thead><tr><th>Mô hình</th><th>AUC</th><th>CI 95%</th><th>NLL</th><th>CI 95%</th></tr></thead><tbody id="rd-forecast"></tbody></table></div>
+      <details class="quiet-details"><summary>Luật từ cây định danh (entropy, đã rút gọn)</summary><ul id="rd-rules" class="rd-rules"></ul></details>
+    </section>
+
+    <details class="quiet-details"><summary>Phương pháp, nguồn dữ liệu và giới hạn</summary>
+      <ul class="rd-method" id="rd-method"></ul>
+    </details>
+  </div>
+</section>

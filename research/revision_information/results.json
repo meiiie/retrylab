@@ -1,0 +1,745 @@
+{
+  "status": "Completed one frozen experiment; no architecture/hyperparameter/subgroup search.",
+  "started_utc": "2026-09-26T03:10:54.142588+00:00",
+  "fit_completed_before_test_prediction_utc": "2026-09-26T03:12:14.481413+00:00",
+  "completed_utc": "2026-09-26T03:12:15.397200+00:00",
+  "protocol_lock_sha256": "6161f923d56fcc30b528cf62b2daedd1eeced0be828dea7b9659a0cb568dfef5",
+  "protocol_locked_utc": "2026-09-26T03:10:41.666759+00:00",
+  "coverage": {
+    "train": {
+      "episodes_total": 31701,
+      "less_than_three_snapshots": 21592,
+      "at_least_three_snapshots": 10109,
+      "excluded_target_previously_SUBmitted": 2769,
+      "structural_before_target_label": 5709,
+      "numeric_before_training_support": 3906,
+      "eligible_pairs": 3906,
+      "excluded_missing_target_numeric_grade": 1803,
+      "excluded_source_or_target_timestamp_tie": 1178,
+      "excluded_no_target": 181,
+      "excluded_target_exposed_before_H1": 266,
+      "excluded_multiple_source_paths": 6,
+      "users_with_SUB": 408,
+      "eligible_users": 380,
+      "eligible_target_TEST_after_H1": 1863
+    },
+    "validation": {
+      "episodes_total": 1704,
+      "less_than_three_snapshots": 1217,
+      "at_least_three_snapshots": 487,
+      "structural_before_target_label": 284,
+      "numeric_before_training_support": 214,
+      "eligible_pairs": 208,
+      "excluded_target_previously_SUBmitted": 114,
+      "excluded_source_or_target_timestamp_tie": 48,
+      "excluded_missing_target_numeric_grade": 70,
+      "excluded_target_exposed_before_H1": 31,
+      "excluded_target_without_first_labeled_train_support": 6,
+      "excluded_no_target": 10,
+      "users_with_SUB": 23,
+      "eligible_users": 20,
+      "eligible_target_TEST_after_H1": 173
+    },
+    "test": {
+      "episodes_total": 2190,
+      "less_than_three_snapshots": 1500,
+      "at_least_three_snapshots": 690,
+      "structural_before_target_label": 398,
+      "numeric_before_training_support": 281,
+      "eligible_pairs": 274,
+      "excluded_no_target": 13,
+      "excluded_missing_target_numeric_grade": 117,
+      "excluded_source_or_target_timestamp_tie": 62,
+      "excluded_target_previously_SUBmitted": 192,
+      "excluded_target_exposed_before_H1": 25,
+      "excluded_target_without_first_labeled_train_support": 7,
+      "users_with_SUB": 30,
+      "eligible_users": 28,
+      "eligible_target_TEST_after_H1": 211
+    }
+  },
+  "training_pairs_by_semester": {
+    "2016-1": 3177,
+    "2016-2": 729
+  },
+  "training_users_by_semester": {
+    "2016-1": 309,
+    "2016-2": 71
+  },
+  "metrics": {
+    "raw": {
+      "M0": {
+        "NLL": 0.6235341179965284,
+        "Brier": 0.2176217004138213,
+        "ECE_10_equal_width": 0.05606235606597264,
+        "mean_probability": 0.5100881874882003,
+        "target_success_rate": 0.5036496350364964
+      },
+      "M1": {
+        "NLL": 0.6259412684600357,
+        "Brier": 0.21774932548393156,
+        "ECE_10_equal_width": 0.0764713330860755,
+        "mean_probability": 0.5170026175812212,
+        "target_success_rate": 0.5036496350364964
+      },
+      "M2": {
+        "NLL": 0.6338668808719681,
+        "Brier": 0.22032552476133208,
+        "ECE_10_equal_width": 0.08095538256282103,
+        "mean_probability": 0.515238237496981,
+        "target_success_rate": 0.5036496350364964
+      },
+      "M1_endpoint_redundant": {
+        "NLL": 0.6303229525949459,
+        "Brier": 0.21898782085362806,
+        "ECE_10_equal_width": 0.07581169427690354,
+        "mean_probability": 0.5180389513327958,
+        "target_success_rate": 0.5036496350364964
+      }
+    },
+    "calibrated": {
+      "M0": {
+        "NLL": 0.6263706625350722,
+        "Brier": 0.21867829339161002,
+        "ECE_10_equal_width": 0.05886865087542426,
+        "mean_probability": 0.5592741764253183,
+        "target_success_rate": 0.5036496350364964
+      },
+      "M1": {
+        "NLL": 0.6279584652212632,
+        "Brier": 0.21904836862993732,
+        "ECE_10_equal_width": 0.05535330718183633,
+        "mean_probability": 0.5531529639302369,
+        "target_success_rate": 0.5036496350364964
+      },
+      "M2": {
+        "NLL": 0.6268643996115842,
+        "Brier": 0.2185679182889169,
+        "ECE_10_equal_width": 0.07070393062148873,
+        "mean_probability": 0.5509461266262887,
+        "target_success_rate": 0.5036496350364964
+      },
+      "M1_endpoint_redundant": {
+        "NLL": 0.6297480564335717,
+        "Brier": 0.21980411521943818,
+        "ECE_10_equal_width": 0.07080503007208064,
+        "mean_probability": 0.5534471525008091,
+        "target_success_rate": 0.5036496350364964
+      }
+    }
+  },
+  "contrasts": {
+    "raw": {
+      "M2_minus_M1": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": 0.007925612411932346,
+            "lower": -0.002875919956628449,
+            "upper": 0.018106659084895515
+          },
+          "equal_student_weighted": {
+            "mean": 0.012445006477487303,
+            "lower": -0.0014710547718712972,
+            "upper": 0.02682316416063758
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": 0.0025761992774005486,
+            "lower": -0.0014872581882673607,
+            "upper": 0.006477077768164177
+          },
+          "equal_student_weighted": {
+            "mean": 0.004589979242458396,
+            "lower": -0.0008725653566788942,
+            "upper": 0.010003300000698895
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": -0.001764380084240231,
+            "lower": -0.00671336352353177,
+            "upper": 0.0035690158984897575
+          },
+          "equal_student_weighted": {
+            "mean": 0.0008588364701892903,
+            "lower": -0.006476469629446851,
+            "upper": 0.008634338191532392
+          }
+        }
+      },
+      "M1_minus_M0": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": 0.00240715046350734,
+            "lower": -0.02974916647644116,
+            "upper": 0.03770917477360788
+          },
+          "equal_student_weighted": {
+            "mean": -0.0058223637528661545,
+            "lower": -0.047984002334154445,
+            "upper": 0.03930266106452619
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": 0.00012762507011021955,
+            "lower": -0.012969108391469364,
+            "upper": 0.014080507053948182
+          },
+          "equal_student_weighted": {
+            "mean": -0.0021128812670177773,
+            "lower": -0.018568698410295143,
+            "upper": 0.015880551167601165
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": 0.006914430093020944,
+            "lower": -0.0030644195819631366,
+            "upper": 0.016961100554081468
+          },
+          "equal_student_weighted": {
+            "mean": 0.011007733245426029,
+            "lower": -0.00393220295583196,
+            "upper": 0.0270843298516027
+          }
+        }
+      },
+      "M2_minus_M1_endpoint_redundant": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": 0.003543928277022236,
+            "lower": -0.0038430859775469665,
+            "upper": 0.01126235669574153
+          },
+          "equal_student_weighted": {
+            "mean": 0.007759039604306269,
+            "lower": -0.0051318480714472765,
+            "upper": 0.020345617912902198
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": 0.0013377039077040473,
+            "lower": -0.0016566492573747919,
+            "upper": 0.0044803854327938545
+          },
+          "equal_student_weighted": {
+            "mean": 0.002977299681380037,
+            "lower": -0.002162667745687525,
+            "upper": 0.008132483599045216
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": -0.0028007138358147783,
+            "lower": -0.0074186468796271846,
+            "upper": 0.0022285619289237188
+          },
+          "equal_student_weighted": {
+            "mean": 0.0001386133527102506,
+            "lower": -0.007672587840277864,
+            "upper": 0.008858439604589149
+          }
+        }
+      },
+      "M1_endpoint_redundant_minus_M1": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": 0.0043816841349101085,
+            "lower": -0.0012500425256237629,
+            "upper": 0.009693418354290408
+          },
+          "equal_student_weighted": {
+            "mean": 0.004685966873181032,
+            "lower": -0.0025710669740999247,
+            "upper": 0.01298056629442165
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": 0.001238495369696501,
+            "lower": -0.000991121419080236,
+            "upper": 0.0031429712480636413
+          },
+          "equal_student_weighted": {
+            "mean": 0.0016126795610783607,
+            "lower": -0.0007995030086429258,
+            "upper": 0.004217187344027621
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": 0.0010363337515745471,
+            "lower": -0.0010927249616565604,
+            "upper": 0.003002342897829553
+          },
+          "equal_student_weighted": {
+            "mean": 0.0007202231174790396,
+            "lower": -0.0018581931307610799,
+            "upper": 0.0034231742318635208
+          }
+        }
+      }
+    },
+    "calibrated": {
+      "M2_minus_M1": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": -0.0010940656096788688,
+            "lower": -0.006666014976288905,
+            "upper": 0.00434616986732627
+          },
+          "equal_student_weighted": {
+            "mean": 0.0006931347710459992,
+            "lower": -0.006256033841750416,
+            "upper": 0.007407513180301241
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": -0.0004804503410204178,
+            "lower": -0.002888501790058693,
+            "upper": 0.0020081371146814225
+          },
+          "equal_student_weighted": {
+            "mean": 0.000611627208687488,
+            "lower": -0.002352400620813728,
+            "upper": 0.0035958649387590044
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": -0.002206837303948106,
+            "lower": -0.005831885273757914,
+            "upper": 0.0017051936684061094
+          },
+          "equal_student_weighted": {
+            "mean": 0.00016859169969137645,
+            "lower": -0.005206710672824817,
+            "upper": 0.005674933254499864
+          }
+        }
+      },
+      "M1_minus_M0": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": 0.0015878026861908632,
+            "lower": -0.017127079673619088,
+            "upper": 0.02177266067176794
+          },
+          "equal_student_weighted": {
+            "mean": 0.010595880261670285,
+            "lower": -0.015451601594946221,
+            "upper": 0.0380896168397857
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": 0.00037007523832730937,
+            "lower": -0.00789105922644852,
+            "upper": 0.008563893731096414
+          },
+          "equal_student_weighted": {
+            "mean": 0.0024151309356389805,
+            "lower": -0.008336494187868557,
+            "upper": 0.014428850313217287
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": -0.006121212495081504,
+            "lower": -0.01752107612242551,
+            "upper": 0.005164093236499019
+          },
+          "equal_student_weighted": {
+            "mean": -0.016612442740282934,
+            "lower": -0.031181715933398114,
+            "upper": -0.0037721608938656565
+          }
+        }
+      },
+      "M2_minus_M1_endpoint_redundant": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": -0.0028836568219873745,
+            "lower": -0.00932558798647311,
+            "upper": 0.003391389668694991
+          },
+          "equal_student_weighted": {
+            "mean": -0.002096430102349927,
+            "lower": -0.01001779916148407,
+            "upper": 0.005468938412807907
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": -0.001236196930521257,
+            "lower": -0.004059037016469897,
+            "upper": 0.0015753750571781823
+          },
+          "equal_student_weighted": {
+            "mean": -0.00048005097457283475,
+            "lower": -0.0039933238889555255,
+            "upper": 0.002722829111805371
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": -0.002501025874520212,
+            "lower": -0.006574689974166804,
+            "upper": 0.001976791297403225
+          },
+          "equal_student_weighted": {
+            "mean": 0.0016262796522405305,
+            "lower": -0.004134444543219729,
+            "upper": 0.00800357192031929
+          }
+        }
+      },
+      "M1_endpoint_redundant_minus_M1": {
+        "NLL": {
+          "pair_weighted": {
+            "mean": 0.0017895912123085044,
+            "lower": -0.0005543239212376259,
+            "upper": 0.004257290790311946
+          },
+          "equal_student_weighted": {
+            "mean": 0.002789564873395926,
+            "lower": 0.00015125844443481976,
+            "upper": 0.005430188017157863
+          }
+        },
+        "Brier": {
+          "pair_weighted": {
+            "mean": 0.0007557465895008394,
+            "lower": -0.00034757515825089327,
+            "upper": 0.0019525210840263321
+          },
+          "equal_student_weighted": {
+            "mean": 0.001091678183260323,
+            "lower": -6.450533827971563e-05,
+            "upper": 0.0022862158091532265
+          }
+        },
+        "mean_probability": {
+          "pair_weighted": {
+            "mean": 0.00029418857057210635,
+            "lower": -0.001016244554504144,
+            "upper": 0.001406086564876428
+          },
+          "equal_student_weighted": {
+            "mean": -0.0014576879525491548,
+            "lower": -0.0030489908197260025,
+            "upper": -3.921530870486555e-05
+          }
+        }
+      }
+    }
+  },
+  "primary": {
+    "definition": "Validation-calibrated M2 minus M1 mean test NLL",
+    "estimate_and_CI": {
+      "mean": -0.0010940656096788688,
+      "lower": -0.006666014976288905,
+      "upper": 0.00434616986732627
+    },
+    "practical_threshold_nats": 0.005,
+    "CI_entirely_below_zero": false,
+    "CI_entirely_below_minus_threshold": false,
+    "CI_lower_bound_above_minus_threshold": false
+  },
+  "bootstrap": {
+    "repetitions": 1000,
+    "seed": 26092026,
+    "clusters": 28,
+    "type": "paired student-cluster percentile95, common draws for all contrasts"
+  },
+  "calibration_parameters": {
+    "M0": {
+      "slope": 0.7749021510222673,
+      "intercept": 0.2396896990768697
+    },
+    "M1": {
+      "slope": 0.4522473758884441,
+      "intercept": 0.19516538187754326
+    },
+    "M2": {
+      "slope": 0.45828320072566026,
+      "intercept": 0.19035980113909048
+    },
+    "M1_endpoint_redundant": {
+      "slope": 0.41810032744254555,
+      "intercept": 0.19570981379582364
+    }
+  },
+  "pipeline_manifest": {
+    "config": {
+      "numeric_columns": {
+        "M0": [
+          "history_count_log",
+          "history_known_accuracy",
+          "history_missing_fraction",
+          "last_known_accuracy",
+          "last_missing_fraction",
+          "recent_5_known_accuracy",
+          "recent_5_missing_fraction",
+          "recent_20_known_accuracy",
+          "recent_20_missing_fraction",
+          "history_distinct_problems_log",
+          "source_difficulty_logit",
+          "target_difficulty_logit",
+          "semester_is_2016_2",
+          "source_is_first_SUB",
+          "source_submission_count_log",
+          "source_elapsed_seconds_log",
+          "source_gap_mean_log",
+          "source_gap_max_log",
+          "source_gap_std_log",
+          "first_grade",
+          "first_missing",
+          "first_error",
+          "first_fully_correct",
+          "final_grade",
+          "final_missing",
+          "final_error",
+          "final_fully_correct",
+          "all_known_mean",
+          "all_known_min",
+          "all_known_max",
+          "all_missing_fraction",
+          "all_error_fraction",
+          "all_full_correct_fraction",
+          "middle_known_mean",
+          "middle_known_min",
+          "middle_known_max",
+          "middle_missing_fraction",
+          "middle_error_fraction",
+          "middle_full_correct_fraction",
+          "outcome_state_transition_fraction",
+          "known_adjacent_grade_increase_fraction",
+          "known_adjacent_grade_decrease_fraction",
+          "known_adjacent_grade_pair_fraction",
+          "source_TEST_count_log",
+          "other_item_TEST_count_log",
+          "source_TEST_error_fraction"
+        ],
+        "endpoint": [
+          "first_code_code_chars",
+          "final_code_code_chars",
+          "endpoint_delta_code_chars",
+          "first_code_code_lines",
+          "final_code_code_lines",
+          "endpoint_delta_code_lines",
+          "first_code_code_ast_valid",
+          "final_code_code_ast_valid",
+          "endpoint_delta_code_ast_valid",
+          "first_code_code_ast_nodes",
+          "final_code_code_ast_nodes",
+          "endpoint_delta_code_ast_nodes",
+          "first_code_code_branches",
+          "final_code_code_branches",
+          "endpoint_delta_code_branches",
+          "first_code_code_loops",
+          "final_code_code_loops",
+          "endpoint_delta_code_loops",
+          "first_code_code_functions",
+          "final_code_code_functions",
+          "endpoint_delta_code_functions",
+          "endpoint_token_Jaccard_distance",
+          "endpoint_exact_text_changed"
+        ],
+        "intermediate": [
+          "middle_code_code_chars_mean",
+          "middle_code_code_chars_min",
+          "middle_code_code_chars_max",
+          "middle_code_code_lines_mean",
+          "middle_code_code_lines_min",
+          "middle_code_code_lines_max",
+          "middle_code_code_ast_valid_mean",
+          "middle_code_code_ast_valid_min",
+          "middle_code_code_ast_valid_max",
+          "middle_code_code_ast_nodes_mean",
+          "middle_code_code_ast_nodes_min",
+          "middle_code_code_ast_nodes_max",
+          "middle_code_code_branches_mean",
+          "middle_code_code_branches_min",
+          "middle_code_code_branches_max",
+          "middle_code_code_loops_mean",
+          "middle_code_code_loops_min",
+          "middle_code_code_loops_max",
+          "middle_code_code_functions_mean",
+          "middle_code_code_functions_min",
+          "middle_code_code_functions_max",
+          "path_token_Jaccard_distance_mean",
+          "middle_token_distance_from_first_mean",
+          "middle_token_distance_from_final_mean",
+          "path_exact_text_change_fraction"
+        ]
+      },
+      "numeric_scaling": "Train-only StandardScaler separately per disjoint feature family; no imputation.",
+      "items": {
+        "columns": [
+          "source_item",
+          "target_item"
+        ],
+        "encoding": "train-only OneHotEncoder",
+        "handle_unknown": "ignore"
+      },
+      "tokenizer": "python-token-content-with-whole-document-fallback-v1",
+      "token_content": "Identifier/literal values preserved; comments/spaces omitted; standard token layout markers retained; lexical fallback on tokenizer exception.",
+      "tfidf": {
+        "max_features": 2048,
+        "ngram": "unigrams",
+        "sublinear_tf": true,
+        "norm": "l2",
+        "use_idf": true,
+        "smooth_idf": true,
+        "fit_corpus": "Every source submission snapshot in training episodes, including first, final, and strictly intermediate snapshots; occurrence-weighted, not deduplicated."
+      },
+      "intermediate_pooling": "Arithmetic mean of individually L2-normalized snapshot TFIDF vectors; no second normalization.",
+      "base_logistic": {
+        "C": 1.0,
+        "solver": "liblinear",
+        "max_iter": 2000,
+        "random_state": 1729,
+        "class_weight": null,
+        "sample_weight": null
+      },
+      "platt_logistic": {
+        "C": 1000000.0,
+        "solver": "lbfgs",
+        "max_iter": 2000,
+        "random_state": 1729,
+        "input": "one validation decision score",
+        "sample_weight": null
+      },
+      "primary_predictions": "Validation-calibrated probabilities; sole primary contrast M2 minus M1.",
+      "secondary_control": "M1_endpoint_redundant appends (first TFIDF + final TFIDF) / 2 to M1; it adds no new source information. This is a partial capacity/penalty-geometry control because it does not match the intermediate numeric block.",
+      "scope": "One common cohort, separate fits, no tuning or architecture search; no program execution."
+    },
+    "config_sha256": "014a71d69d02a4c4b95ae7bd37ef80ae1b33d0770cf9f4e40f0b678c5ae4db4c",
+    "script_sha256": "b5f902b6f1a937c65c33c3a62fc928657a0edcea9b09fefd5c5db53490a34bd2",
+    "fitted": true,
+    "environment": {
+      "python": "3.13.7",
+      "numpy": "2.3.2",
+      "pandas": "2.3.3",
+      "scipy": "1.17.0",
+      "sklearn": "1.9.0"
+    },
+    "fit_counts": {
+      "train_episodes": 3906,
+      "validation_episodes": 208,
+      "train_users": 380,
+      "validation_users": 20,
+      "training_source_snapshots": 25962
+    },
+    "arm_feature_counts": {
+      "M0": 812,
+      "M1": 4931,
+      "M2": 7004,
+      "M1_endpoint_redundant": 6979
+    },
+    "vocabulary_size": 2048,
+    "vocabulary_sha256": "782091d10133b9ba4fce6e940589fc930148c0e3ca824f7667e7fb522b424eed",
+    "idf_sha256": "fccbff351fdf2a58b05ec13d0030691f5ea42e4957f40ccdaeef0fa860958e9a",
+    "item_category_counts": [
+      385,
+      381
+    ],
+    "numeric_scaler_hashes": {
+      "M0": {
+        "mean": "feb97753683bafcbe6e1dbb87fa0405db8666c14b8d511ea0555d2cdce7ca449",
+        "scale": "ca019b758ac56c7feae6706f7d3399f1570cc525a2163f7c225ca1465b82b132"
+      },
+      "endpoint": {
+        "mean": "90341afcb1e6dac5f987812eefb456b7c871f34e273d978a6288be7efeae5338",
+        "scale": "872400334913fb95a4cc828ee885162e750a289b7cad1f0d99b27280685347a8"
+      },
+      "intermediate": {
+        "mean": "b8010b3410a89b74ccac258ed02e41ced81d14e037ed7b8930ee2f2ee96da4c2",
+        "scale": "394af5886819aea826c3d07ee4a0ef3309527af0c1dadb387089b07de7922cbe"
+      }
+    },
+    "model_hashes": {
+      "M0": {
+        "coef": "133d4c6f57d7968f1ce2f65e925e0937074f1136fd36836ea10c5ad5039cb96d",
+        "intercept": "009f4234202648063553e9a03f6facb8f2428cb0870928c5ff6ef2d1a3730497",
+        "iterations": [
+          13
+        ],
+        "platt_coef": "86e5c24d34656cad2ec790e0af669e60c866a4b58a47aeded4f53da40d4788cf",
+        "platt_intercept": "164486327e003f9c83825297e4b870f2a535b97d9fa2d95442dc41ab8fe52417",
+        "platt_iterations": [
+          4
+        ]
+      },
+      "M1": {
+        "coef": "a205b0daf0a9a89909030750b2438673c5a9d20f1513fe6f4d97238f7b15fec2",
+        "intercept": "777570f69398c72b4b2715ca701fd4bff03f292d710d03c1a288d35006b18f36",
+        "iterations": [
+          6
+        ],
+        "platt_coef": "b7e273905042b5157a7af69854a5ccabcf31db33f7e81c2e279104db6743b162",
+        "platt_intercept": "c3efad6df86ea85e8da2b41bc89523563d5b18f996d9452468d2f56b1b688b44",
+        "platt_iterations": [
+          5
+        ]
+      },
+      "M2": {
+        "coef": "1242b052112c63985ba270080f97e59986c94fbebc70802feca509251989e8fe",
+        "intercept": "ca2b73df12c7934a58ba812bfe3f4e0d71c941ae8d30cc7a7ce100c058c773ac",
+        "iterations": [
+          7
+        ],
+        "platt_coef": "8848a9d4d83ecd2ae550ec6d8e570db5fa69e4647e67220f77ffe05f9d9cd5ef",
+        "platt_intercept": "a2f81b098bf33ace960f9f60498ce4ea560dc255a83694d64bf1e3be82aeed51",
+        "platt_iterations": [
+          5
+        ]
+      },
+      "M1_endpoint_redundant": {
+        "coef": "bce6e4d200b8e52a2f72962cd54d2ae9fddefab1fa79ea86af12c5017ca336d8",
+        "intercept": "1a5f460c54da8dd194f6d6536a8ea5b60996ada4841f66ab51a471fe6e869f55",
+        "iterations": [
+          6
+        ],
+        "platt_coef": "eee99c01e4e561927c0e32f71f76c75b3a77ead2bb3bbeb45b0b42e038e5221f",
+        "platt_intercept": "20e6c9b0308c24805b019eae9b40dbe2b29f0d8773ee3deb22f6e938e76206ca",
+        "platt_iterations": [
+          3
+        ]
+      }
+    }
+  },
+  "synthetic_checks": {
+    "synthetic_checks_passed": true,
+    "checks": [
+      "TESTs at/after H1 and before H0 do not alter source features",
+      "TEST strictly inside source window affects intended nuisance summaries",
+      "Target code/time/label mutation does not alter source features or prehistory",
+      "Missing-grade and AST-invalid source snapshots remain represented",
+      "Intermediate code mutation changes intermediate features only",
+      "Episode, code, subset, and label index alignment enforced",
+      "Finite clipped-log loss and paired/equal-student arithmetic verified"
+    ],
+    "real_data_read": false,
+    "model_fit": false,
+    "source_program_execution": false
+  },
+  "checks": {
+    "partition_users_disjoint": true,
+    "prediction_did_not_mutate_fitted_pipeline": true,
+    "frozen_code_and_data_hashes_match": true,
+    "all_arms_share_identical_test_rows": true
+  },
+  "limitations": [
+    "Retrospective pooled training, not calendar-forward evaluation or causal learning.",
+    "Only 28 held-out contributors; intervals condition on fitted pipeline and split; shared-class dependence is not resampled.",
+    "Lossy finite representations; this does not estimate raw conditional mutual information.",
+    "First submitted grade can follow TESTs after H1; target missing grades are selection, not failures.",
+    "Endpoint-redundant control matches extra token block only, not intermediate numeric block."
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "population": "pilot cohort (previously inspected); partition A train/valid only",
+  "runs": [
+    {
+      "model": "dkt",
+      "min_support": 10,
+      "config": {
+        "dim": 64,
+        "hidden": 128,
+        "dropout": 0.1,
+        "input_dropout": 0.0
+      },
+      "weight_decay": 0.0,
+      "valid_nll": 0.617827654717657,
+      "valid_auc": 0.7192265553205139,
+      "selected_epoch": 9,
+      "seconds": 12.064487899999222
+    },
+    {
+      "model": "dkt",
+      "min_support": 10,
+      "config": {
+        "dim": 32,
+        "hidden": 64,
+        "dropout": 0.3,
+        "input_dropout": 0.1
+      },
+      "weight_decay": 0.0001,
+      "valid_nll": 0.6021826756811696,
+      "valid_auc": 0.7372458010391922,
+      "selected_epoch": 22,
+      "seconds": 16.37845170000037
+    },
+    {
+      "model": "dkt",
+      "min_support": 10,
+      "config": {
+        "dim": 64,
+        "hidden": 128,
+        "dropout": 0.3,
+        "input_dropout": 0.2
+      },
+      "weight_decay": 0.001,
+      "valid_nll": 0.6050891966109445,
+      "valid_auc": 0.7333544292823331,
+      "selected_epoch": 13,
+      "seconds": 21.95381400000042
+    },
+    {
+      "model": "dkt",
+      "min_support": 30,
+      "config": {
+        "dim": 32,
+        "hidden": 64,
+        "dropout": 0.3,
+        "input_dropout": 0.1
+      },
+      "weight_decay": 0.0001,
+      "valid_nll": 0.6022021152710508,
+      "valid_auc": 0.7341307620116865,
+      "selected_epoch": 22,
+      "seconds": 16.728586999999607
+    },
+    {
+      "model": "dkt",
+      "min_support": 10,
+      "config": {
+        "dim": 16,
+        "hidden": 64,
+        "dropout": 0.2,
+        "input_dropout": 0.0
+      },
+      "weight_decay": 0.0001,
+      "valid_nll": 0.6125601248899064,
+      "valid_auc": 0.7231055097272554,
+      "selected_epoch": 29,
+      "seconds": 15.191001200000755
+    },
+    {
+      "model": "sakt",
+      "min_support": 10,
+      "config": {
+        "dim": 64,
+        "heads": 4,
+        "window": 200,
+        "dropout": 0.1
+      },
+      "weight_decay": 0.0,
+      "valid_nll": 0.5914747891392655,
+      "valid_auc": 0.7487666636323178,
+      "selected_epoch": 13,
+      "seconds": 32.3519140999997
+    },
+    {
+      "model": "sakt",
+      "min_support": 10,
+      "config": {
+        "dim": 32,
+        "heads": 4,
+        "window": 200,
+        "dropout": 0.2
+      },
+      "weight_decay": 0.0001,
+      "valid_nll": 0.5970840283344337,
+      "valid_auc": 0.743039691450072,
+      "selected_epoch": 25,
+      "seconds": 47.1456720999995
+    },
+    {
+      "model": "afm",
+      "sigma_theta": 0.4,
+      "valid_nll": 0.5890723063703608
+    },
+    {
+      "model": "afm",
+      "sigma_theta": 0.5,
+      "valid_nll": 0.5890097754179813
+    },
+    {
+      "model": "afm",
+      "sigma_theta": 0.6,
+      "valid_nll": 0.5893349155344321
+    },
+    {
+      "model": "afm",
+      "sigma_theta": 0.75,
+      "valid_nll": 0.5901218267296545
+    },
+    {
+      "model": "afm",
+      "sigma_theta": 1.0,
+      "valid_nll": 0.5916581932545915
+    }
+  ]
+}

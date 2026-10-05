@@ -1,0 +1,161 @@
+/* RetryLab studio · learners.css — "Học viên" in the lab-minimal look (docs/specs/2026-09-29-lab-minimal-redesign.md §6, 02).
+ * A compact list on the left; on the right the learner header, then four tabs of which one shows at a time.
+ * Groups are separated by space and a hairline, not by frames. Only the selected row, the chosen candidate and the selected
+ * policy row carry a fill (--accent-soft). Layout follows @container view. CSP: bar widths and marker positions are set by
+ * views/learners.js through the CSSOM.
+ */
+
+.lv-page { display: grid; gap: var(--space-4); }
+.lv-error[hidden] { display: none; }
+
+.lv { display: grid; align-items: start; gap: var(--space-6); grid-template-columns: 240px minmax(0, 1fr); }
+.lv-detail { min-width: 0; }
+
+/* busy: only a light fade after ~150 ms, so a quick answer does not flicker */
+.lv-detail { transition: opacity 0.1s; }
+.lv-page[data-busy="true"] .lv-detail { opacity: 0.6; transition: opacity 0.2s 0.15s; }
+
+.lv-loading { min-width: 0; }
+.lv-lead { max-width: var(--measure); margin-bottom: var(--space-4); color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.55; text-wrap: pretty; }
+
+/* ---------- learner list ------------------------------------------------------------------- */
+.lv-list { position: sticky; top: 0; display: flex; flex-direction: column; gap: var(--space-2); max-height: calc(100dvh - 164px); min-height: 320px; }
+.lv-search { width: 100%; }
+.lv-cols, .lv-row { display: grid; grid-template-columns: minmax(0, 1fr) 40px 76px; align-items: baseline; gap: var(--space-2); padding: 0 var(--space-2); }
+.lv-cols { padding-top: var(--space-2); padding-bottom: var(--space-1); border-bottom: 1px solid var(--rule); color: var(--ink-3); font-size: var(--fs-label); }
+.lv-rows { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--rule-strong) transparent; }
+.lv-row { position: relative; height: 32px; align-items: center; border-radius: var(--r-ctl); font-size: var(--fs-table); font-variant-numeric: tabular-nums; cursor: pointer; outline: none; transition: background-color var(--ease); }
+.lv-row:hover { background: var(--paper-2); }
+.lv-row[aria-selected="true"] { background: var(--accent-soft); }
+.lv-row:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.lv-row-id { font: 500 var(--fs-table)/1 var(--mono); }
+.lv-row-meta, .lv-row-success { color: var(--ink-2); }
+.lv-empty { padding: var(--space-5) var(--space-2); color: var(--ink-3); font-size: var(--fs-table); }
+
+/* ---------- learner header ----------------------------------------------------------------- */
+.lv-profile { display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-3) var(--space-6); }
+.lv-profile-title { padding-top: 17px; font: 600 var(--fs-title)/1.2 var(--mono); letter-spacing: -0.01em; }
+.lv-figures { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); }
+.lv-stat { min-width: 0; }
+.lv-stat-label { color: var(--ink-3); font-size: var(--fs-label); line-height: 1.4; }
+.lv-stat-value { font: 500 var(--fs-title)/1.2 var(--display); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.lv-stat-note { color: var(--ink-3); font-size: var(--fs-label); line-height: 1.4; }
+.lv-run { margin-inline-start: auto; margin-top: 22px; }
+
+.lv-whatif { margin-top: var(--space-4); padding: 2px 0 2px var(--space-3); border-inline-start: 2px solid var(--accent); color: var(--ink-2); font-size: var(--fs-table); line-height: 1.55; }
+.lv-whatif-text { color: var(--ink); font-weight: 500; }
+.lv-whatif .btn-link { font-size: var(--fs-table); }
+
+.lv-tabs { margin-top: var(--space-5); display: flex; width: 100%; }
+.lv-panel { padding-top: var(--space-5); }
+
+/* ---------- Gợi ý --------------------------------------------------------------------------- */
+.lv-rec { display: grid; gap: var(--space-5); }
+.lv-rec-body { display: grid; gap: var(--space-5); }
+.lv-field { display: grid; gap: var(--space-1); }
+.lv-label { color: var(--ink-3); font-size: var(--fs-label); }
+.lv-policy-row { display: flex; align-items: center; gap: var(--space-3); }
+.lv-policy { width: 320px; max-width: 100%; }
+.lv-kind-tag { color: var(--ink-3); font-size: var(--fs-label); }
+.lv-kind-tag:empty { display: none; }
+
+.lv-chosen { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.lv-problem-id { font-family: var(--mono); letter-spacing: -0.03em; }
+
+.lv-block { display: grid; gap: var(--space-3); }
+.lv-block h3 { font-size: var(--fs-read); font-weight: 600; }
+.lv-why { display: grid; gap: var(--space-2); max-width: var(--measure); }
+.lv-why li { color: var(--ink-2); font-size: var(--fs-ui); line-height: 1.55; text-wrap: pretty; }
+.lv-why li strong { color: var(--ink); font-weight: 500; }
+.lv-honest { max-width: var(--measure); color: var(--ink-3); font-size: var(--fs-label); line-height: 1.5; }
+.lv-hint { max-width: var(--measure); margin-bottom: var(--space-3); color: var(--ink-3); font-size: var(--fs-table); line-height: 1.5; }
+
+/* disclosure blocks: a hairline above, the summary in ink */
+.lv-more { border-top: 1px solid var(--rule); }
+.lv-more > summary { padding: var(--space-3) 0; color: var(--ink); font-size: var(--fs-ui); font-weight: 500; }
+.lv-more > summary:hover { color: var(--accent); }
+.lv-more[open] { padding-bottom: var(--space-2); }
+.lv-policies-summary { max-width: var(--measure); margin-bottom: var(--space-3); color: var(--ink-2); font-size: var(--fs-table); line-height: 1.5; }
+
+.lv-cands th, .lv-cands td { padding: 6px var(--space-3); }
+.lv-cands tbody tr.is-chosen { background: var(--accent-soft); }
+.lv-cand-name strong { font-family: var(--mono); font-weight: 500; }
+.lv-cand-skill { color: var(--ink-2); }
+.lv-cand-p { color: var(--ink-3); }
+
+.lv-table th, .lv-table td { padding: 6px var(--space-3); }
+.lv-table tbody tr { cursor: pointer; }
+.lv-table tbody tr.is-same { background: var(--paper-2); }
+.lv-table tbody tr.is-selected { background: var(--accent-soft); }
+.lv-table tbody tr.group-start > * { border-top: 1px solid var(--rule-strong); }
+.lv-link { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.lv-link:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.lv-table tbody tr.is-selected .lv-link { font-weight: 600; }
+.lv-kind { margin-left: var(--space-2); color: var(--ink-3); font-size: var(--fs-label); }
+.lv-code { font-family: var(--mono); font-weight: 500; }
+.lv-same { margin-left: var(--space-2); color: var(--ink-3); font-size: var(--fs-label); white-space: nowrap; }
+.lv-table tbody tr.is-selected .lv-same { display: none; }
+
+/* ---------- Kỹ năng ------------------------------------------------------------------------- */
+.lv-skill-head, .lv-skill { display: grid; align-items: center; gap: var(--space-4); grid-template-columns: minmax(150px, 300px) minmax(120px, 1fr) 44px 84px; }
+.lv-skill-head { padding-bottom: var(--space-2); border-bottom: 1px solid var(--rule); color: var(--ink-3); font-size: var(--fs-label); }
+.lv-skill-head-gap { grid-column: 3 / -1; text-align: right; }
+.lv-skill-list { display: grid; }
+.lv-skill { padding: var(--space-2) 0; border-bottom: 1px solid var(--rule); }
+.lv-skill:last-child { border-bottom: 0; }
+.lv-skill-namebox { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--space-2); min-width: 0; }
+.lv-skill-name { color: var(--ink); font-size: var(--fs-ui); }
+.lv-skill.is-weak .lv-skill-name { font-weight: 600; }
+.lv-tag { color: var(--ink-3); font-size: var(--fs-label); line-height: 1.5; white-space: nowrap; }
+.lv-tag.is-weak { color: var(--ink); font-weight: 500; }
+.lv-tag.is-rec { color: var(--accent); }
+.lv-skill-val { color: var(--ink); font-size: var(--fs-table); font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+.lv-skill-gap { font-size: var(--fs-table); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lv-skill-gap.is-up { color: var(--ink-2); }
+.lv-skill-gap.is-down { color: var(--signal-ink); }
+.lv-skill-gap.is-muted { color: var(--ink-3); }
+.lv-skill-track { position: relative; height: 8px; border-radius: 4px; background: var(--rule); }
+.lv-skill-fill { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 4px; background: var(--ink-2); }
+.lv-skill.is-rec .lv-skill-fill { background: var(--accent); }
+.lv-skill.is-thin .lv-skill-fill { background: repeating-linear-gradient(135deg, var(--ink-3) 0 3px, var(--rule-strong) 3px 6px); }
+.lv-skill-class { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; border-radius: 1px; background: var(--ink); }
+.lv-skill-orig { position: absolute; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; border: 2px solid var(--ink-2); border-radius: 50%; background: var(--paper); box-sizing: border-box; }
+.lv-origkey { display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-3); color: var(--ink-3); font-size: var(--fs-label); }
+.lv-key-orig { display: inline-block; width: 10px; height: 10px; border: 2px solid var(--ink-2); border-radius: 50%; background: var(--paper); box-sizing: border-box; }
+
+/* ---------- Lịch sử ------------------------------------------------------------------------- */
+/* When dots sit 9-10 px apart, the invisible hit ring and the selection ring of the next dot cover the previous dot, so a click
+   between two dots would flip the wrong one. Only the dot's own circle takes the pointer; the event still bubbles to .tl-dot. */
+.lv-timeline .tl-hit, .lv-timeline .tl-select-ring, .lv-timeline .tl-flip-ring { pointer-events: none; }
+
+/* ---------- Luật ID3 ------------------------------------------------------------------------ */
+.lv-id3-body { display: grid; gap: var(--space-5); }
+.lv-id3-body .lv-lead { margin-bottom: 0; }
+.lv-rule { display: grid; max-width: 560px; }
+.lv-rule-step { display: grid; grid-template-columns: 24px minmax(0, 1fr); align-items: baseline; gap: var(--space-2); padding: var(--space-2) 0; border-bottom: 1px solid var(--rule); font-size: var(--fs-ui); }
+.lv-rule-num { color: var(--ink-3); font: 400 var(--fs-label)/1 var(--mono); }
+.lv-rule-cond { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--space-2); }
+.lv-rule-feature { color: var(--ink-2); }
+.lv-rule-op { color: var(--ink-3); }
+.lv-rule-value { font-weight: 500; }
+.lv-leaf { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 560px; }
+.lv-explain { max-width: var(--measure); color: var(--ink-3); font-size: var(--fs-table); line-height: 1.55; text-wrap: pretty; }
+
+/* ---------- responsive by the width of the view -------------------------------------------- */
+@container view (max-width: 1099px) {
+  .lv { grid-template-columns: 216px minmax(0, 1fr); gap: var(--space-5); }
+  .lv-skill-head, .lv-skill { grid-template-columns: minmax(130px, 220px) minmax(90px, 1fr) 40px 96px; gap: var(--space-3); }
+}
+@container view (max-width: 780px) {
+  .lv { grid-template-columns: minmax(0, 1fr); }
+  .lv-list { position: static; height: 300px; min-height: 0; max-height: none; }
+  .lv-chosen { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-5); }
+  .lv-skill-head { display: none; }
+  .lv-skill { grid-template-columns: minmax(0, 1fr) 40px 96px; row-gap: var(--space-2); }
+  .lv-skill-track { grid-column: 1 / -1; grid-row: 2; }
+  .lv-run { margin-inline-start: 0; }
+}
+@container view (max-width: 520px) {
+  .lv-chosen, .lv-leaf { grid-template-columns: minmax(0, 1fr); }
+  .lv-tabs { gap: var(--space-4); }
+}

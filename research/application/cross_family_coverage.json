@@ -1,0 +1,255 @@
+{
+  "by_model": [
+    {
+      "model": "all_submissions",
+      "split": "confirmation",
+      "pairs": 69825,
+      "students": 1500,
+      "failure_prevalence": 0.5322878625134264
+    },
+    {
+      "model": "all_submissions",
+      "split": "validation",
+      "pairs": 10734,
+      "students": 211,
+      "failure_prevalence": 0.5295323271846469
+    },
+    {
+      "model": "first_attempt",
+      "split": "confirmation",
+      "pairs": 69825,
+      "students": 1500,
+      "failure_prevalence": 0.5322878625134264
+    },
+    {
+      "model": "first_attempt",
+      "split": "validation",
+      "pairs": 10734,
+      "students": 211,
+      "failure_prevalence": 0.5295323271846469
+    },
+    {
+      "model": "gru_ALL",
+      "split": "confirmation",
+      "pairs": 69825,
+      "students": 1500,
+      "failure_prevalence": 0.5322878625134264
+    },
+    {
+      "model": "gru_ALL",
+      "split": "validation",
+      "pairs": 10734,
+      "students": 211,
+      "failure_prevalence": 0.5295323271846469
+    },
+    {
+      "model": "gru_FIRST",
+      "split": "confirmation",
+      "pairs": 69825,
+      "students": 1500,
+      "failure_prevalence": 0.5322878625134264
+    },
+    {
+      "model": "gru_FIRST",
+      "split": "validation",
+      "pairs": 10734,
+      "students": 211,
+      "failure_prevalence": 0.5295323271846469
+    },
+    {
+      "model": "paired_target",
+      "split": "confirmation",
+      "pairs": 69825,
+      "students": 1500,
+      "failure_prevalence": 0.5322878625134264
+    },
+    {
+      "model": "paired_target",
+      "split": "validation",
+      "pairs": 10734,
+      "students": 211,
+      "failure_prevalence": 0.5295323271846469
+    }
+  ],
+  "pair_intersections": [
+    {
+      "split": "confirmation",
+      "model_a": "all_submissions",
+      "model_b": "first_attempt",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "all_submissions",
+      "model_b": "gru_ALL",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "all_submissions",
+      "model_b": "gru_FIRST",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "all_submissions",
+      "model_b": "paired_target",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "first_attempt",
+      "model_b": "gru_ALL",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "first_attempt",
+      "model_b": "gru_FIRST",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "first_attempt",
+      "model_b": "paired_target",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "gru_ALL",
+      "model_b": "gru_FIRST",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "gru_ALL",
+      "model_b": "paired_target",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "confirmation",
+      "model_a": "gru_FIRST",
+      "model_b": "paired_target",
+      "intersection": 69825,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "all_submissions",
+      "model_b": "first_attempt",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "all_submissions",
+      "model_b": "gru_ALL",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "all_submissions",
+      "model_b": "gru_FIRST",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "all_submissions",
+      "model_b": "paired_target",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "first_attempt",
+      "model_b": "gru_ALL",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "first_attempt",
+      "model_b": "gru_FIRST",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "first_attempt",
+      "model_b": "paired_target",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "gru_ALL",
+      "model_b": "gru_FIRST",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "gru_ALL",
+      "model_b": "paired_target",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    },
+    {
+      "split": "validation",
+      "model_a": "gru_FIRST",
+      "model_b": "paired_target",
+      "intersection": 10734,
+      "only_a": 0,
+      "only_b": 0
+    }
+  ],
+  "all_cross_model_pairs_match": true,
+  "cross_model_labels_agree": true,
+  "student_disjoint_validation_confirmation": true,
+  "inputs": [
+    {
+      "path": "data\\processed\\private_predictions\\accoding_logistic_pairs.csv",
+      "sha256": "e0245c103c3aa487fdefb431591ebd6de331eca0623408a28b15b4d7a3783078"
+    },
+    {
+      "path": "data\\processed\\private_predictions\\accoding_gru_pairs.csv",
+      "sha256": "de32e2f12e484625b082abeb44b390aabfa3b7c4d20f876fd172d4a230f6d872"
+    }
+  ],
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.3.2",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0"
+  }
+}

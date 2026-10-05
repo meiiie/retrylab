@@ -1,0 +1,1152 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        15
+      ]
+    ],
+    "date-time": "2026-09-15T12:10:12Z",
+    "timestamp": 1789474212510,
+    "version": "build-2803163510"
+  },
+  "reference-count": 104,
+  "publisher": "Elsevier BV",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2022-01-01T00:00:00Z",
+        "timestamp": 1640995200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2022-01-01T00:00:00Z",
+        "timestamp": 1640995200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            1,
+            21
+          ]
+        ],
+        "date-time": "2022-01-21T00:00:00Z",
+        "timestamp": 1642723200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 20,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Computers and Education: Artificial Intelligence"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.caeai.2022.100050",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        2,
+        7
+      ]
+    ],
+    "date-time": "2022-02-07T02:13:06Z",
+    "timestamp": 1644199986000
+  },
+  "page": "100050",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 121,
+  "special_numbering": "C",
+  "title": [
+    "AI-assisted knowledge assessment techniques for adaptive learning environments"
+  ],
+  "prefix": "10.1016",
+  "volume": "3",
+  "author": [
+    {
+      "family": "Sein Minn",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib1",
+      "series-title": "Proceedings of the 42nd international ACM SIGIR conference on research and development in information retrieval",
+      "first-page": "175",
+      "article-title": "Knowledge tracing with sequential key-value memory networks",
+      "author": "Abdelrahman",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib2",
+      "first-page": "1",
+      "article-title": "Covid-19 pandemic and online learning: The challenges and opportunities",
+      "author": "Adedoyin",
+      "year": "2020",
+      "journal-title": "Interactive Learning Environments"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib3",
+      "first-page": "159",
+      "article-title": "The LISP tutor",
+      "volume": "10",
+      "author": "Anderson",
+      "year": "1985",
+      "journal-title": "Byte"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.caeai.2022.100050_bib4",
+      "doi-asserted-by": "crossref",
+      "first-page": "600",
+      "DOI": "10.1007/s40593-016-0105-0",
+      "article-title": "Stupid tutoring systems, intelligent humans",
+      "volume": "26",
+      "author": "Baker",
+      "year": "2016",
+      "journal-title": "International Journal of Artificial Intelligence in Education"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib5",
+      "series-title": "International conference on intelligent tutoring systems",
+      "first-page": "406",
+      "article-title": "More accurate student modeling through contextual estimation of slip and guess probabilities in bayesian knowledge tracing",
+      "author": "d Baker",
+      "year": "2008"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib6",
+      "first-page": "3",
+      "article-title": "The state of educational data mining in 2009: A review and future visions",
+      "volume": "1",
+      "author": "Baker",
+      "year": "2009",
+      "journal-title": "JEDM—Journal of Educational Data Mining"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib7",
+      "first-page": "5",
+      "article-title": "Formative assessment: A critical review",
+      "volume": "18",
+      "author": "Bennett",
+      "year": "2011",
+      "journal-title": "Assessment in Education: Principles, Policy & Practice"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib9",
+      "series-title": "International conference on intelligent tutoring systems",
+      "first-page": "164",
+      "article-title": "Learning factors analysis – a general method for cognitive model evaluation and improvement",
+      "author": "Cen",
+      "year": "2006"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib10",
+      "doi-asserted-by": "crossref",
+      "first-page": "1247",
+      "DOI": "10.5194/gmd-7-1247-2014",
+      "article-title": "Root mean square error (RMSE) or mean absolute error (MAE)?–Arguments against avoiding RMSE in the literature",
+      "volume": "7",
+      "author": "Chai",
+      "year": "2014",
+      "journal-title": "Geoscientific Model Development"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib8",
+      "unstructured": "D. C. Briggs, M. Wilson (2003) An introduction to multidimensional measurement using Rasch models, Applied Measurement, 4(1), 87-100."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib11",
+      "unstructured": "M. X. Chen, O. Firat, A. Bapna, M. Johnson, W. Macherey, G. Foster, L. Jones, N. Parmar, M. Schuster, Z. Chen, et al., The best of both worlds: Combining recent advances in neural machine translation, Proceedings of the 56th annual meeting of the association for computational linguistics."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib12",
+      "series-title": "2018 IEEE international conference on data mining (ICDM)",
+      "first-page": "39",
+      "article-title": "Prerequisite-driven deep knowledge tracing",
+      "author": "Chen",
+      "year": "2018"
+    },
+    {
+      "issue": "8",
+      "key": "10.1016/j.caeai.2022.100050_bib13",
+      "doi-asserted-by": "crossref",
+      "first-page": "598",
+      "DOI": "10.1177/0146621613488436",
+      "article-title": "Statistical refinement of the Q-matrix in cognitive diagnosis",
+      "volume": "37",
+      "author": "Chiu",
+      "year": "2013",
+      "journal-title": "Applied Psychological Measurement"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib14",
+      "series-title": "The international conference on educational data mining",
+      "article-title": "DAS3H: Modeling student learning and forgetting for optimally scheduling distributed practice of skills",
+      "author": "Choffin",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib15",
+      "series-title": "International conference on user modeling, adaptation, and personalization",
+      "first-page": "137",
+      "article-title": "Cognitive computer tutors: Solving the two-sigma problem",
+      "author": "Corbett",
+      "year": "2001"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib16",
+      "doi-asserted-by": "crossref",
+      "first-page": "253",
+      "DOI": "10.1007/BF01099821",
+      "article-title": "Knowledge tracing: Modeling the acquisition of procedural knowledge",
+      "volume": "4",
+      "author": "Corbett",
+      "year": "1994",
+      "journal-title": "User Modeling and User-Adapted Interaction"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib17",
+      "doi-asserted-by": "crossref",
+      "first-page": "343",
+      "DOI": "10.1111/j.1745-3984.2008.00069.x",
+      "article-title": "An empirically based method of Q-matrix validation for the DINA model: Development and applications",
+      "volume": "45",
+      "author": "De La Torre",
+      "year": "2008",
+      "journal-title": "Journal of Educational Measurement"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib18",
+      "doi-asserted-by": "crossref",
+      "first-page": "115",
+      "DOI": "10.3102/1076998607309474",
+      "article-title": "DINA model and parameter estimation: A didactic",
+      "volume": "34",
+      "author": "De La Torre",
+      "year": "2009",
+      "journal-title": "Journal of Educational and Behavioral Statistics"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib19",
+      "doi-asserted-by": "crossref",
+      "first-page": "8",
+      "DOI": "10.1177/0146621610377081",
+      "article-title": "On the analysis of fraction subtraction data: The DINA model, classification, latent class sizes, and the Q-matrix",
+      "volume": "35",
+      "author": "DeCarlo",
+      "year": "2011",
+      "journal-title": "Applied Psychological Measurement"
+    },
+    {
+      "issue": "1–2",
+      "key": "10.1016/j.caeai.2022.100050_bib20",
+      "doi-asserted-by": "crossref",
+      "first-page": "9",
+      "DOI": "10.1007/s11257-011-9106-8",
+      "article-title": "A review of recent advances in learner and skill modeling in intelligent learning environments",
+      "volume": "22",
+      "author": "Desmarais",
+      "year": "2012",
+      "journal-title": "User Modeling and User-Adapted Interaction"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib21",
+      "series-title": "International conference on artificial intelligence in education",
+      "first-page": "441",
+      "article-title": "A matrix factorization method for mapping items to skills and for enhancing expert-based Q-matrices",
+      "author": "Desmarais",
+      "year": "2013"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib22",
+      "series-title": "Proceedings of NAACL-HLT",
+      "first-page": "4171",
+      "article-title": "BERT: Pre-training of deep bidirectional transformers for language understanding",
+      "author": "Devlin",
+      "year": "2018"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib23",
+      "unstructured": "B. Dhingra, H. Liu, Z. Yang, W. W. Cohen, R. Salakhutdinov, Gated-attention readers for text comprehension, Proceedings of the 55th annual meeting of the association for computational linguistics."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib24",
+      "doi-asserted-by": "crossref",
+      "unstructured": "S. Edunov, M. Ott, M. Auli, D. Grangier, Understanding back-translation at scale, Proceedings of the 2018 conference on empirical methods in natural language processing.",
+      "DOI": "10.18653/v1/D18-1045"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib25",
+      "series-title": "Fifth conference on applied natural language processing: Descriptions of system demonstrations and videos",
+      "first-page": "13",
+      "article-title": "CIRCSIM-Tutor: An intelligent tutoring system using natural language dialogue",
+      "author": "Evens",
+      "year": "1997"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib26",
+      "series-title": "2018 IEEE international conference on agents (ICA)",
+      "first-page": "56",
+      "article-title": "Artificial intelligence powered MOOCs: A brief survey",
+      "author": "Fauvel",
+      "year": "2018"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib27",
+      "doi-asserted-by": "crossref",
+      "first-page": "243",
+      "DOI": "10.1007/s11257-009-9063-7",
+      "article-title": "Addressing the assessment challenge with an online system that tutors as it assesses",
+      "volume": "19",
+      "author": "Feng",
+      "year": "2009",
+      "journal-title": "User Modeling and User-Adapted Interaction"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib28",
+      "series-title": "International conference on innovative techniques and applications of artificial intelligence",
+      "first-page": "277",
+      "article-title": "Designing a feedback component of an intelligent tutoring system for foreign language",
+      "author": "Ferreira",
+      "year": "2008"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib29",
+      "series-title": "Eighth international conference on technological ecosystems for enhancing multiculturality",
+      "first-page": "34",
+      "article-title": "Intelligent tutoring systems approach to introductory programming courses",
+      "author": "Figueiredo",
+      "year": "2020"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib30",
+      "first-page": "215",
+      "article-title": "On the recommender system for university library",
+      "volume": "e-Learning",
+      "author": "Fu",
+      "year": "2013",
+      "journal-title": "IADIS International Conference"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.caeai.2022.100050_bib31",
+      "doi-asserted-by": "crossref",
+      "first-page": "125",
+      "DOI": "10.1046/j.0266-4909.2001.00220.x",
+      "article-title": "A web-based learning and assessment system to support flexible education",
+      "volume": "18",
+      "author": "Gardner",
+      "year": "2002",
+      "journal-title": "Journal of Computer Assisted Learning"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.caeai.2022.100050_bib32",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.18637/jss.v074.i02",
+      "article-title": "The R package CDM for cognitive diagnosis models",
+      "volume": "74",
+      "author": "George",
+      "year": "2016",
+      "journal-title": "Journal of Statistical Software"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib33",
+      "first-page": "31",
+      "article-title": "When is deep learning the best approach to knowledge tracing?",
+      "volume": "12",
+      "author": "Gervet",
+      "year": "2020",
+      "journal-title": "JEDM—Journal of Educational Data Mining"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib34",
+      "series-title": "The 7th international conference on educational data mining",
+      "first-page": "84",
+      "article-title": "General features in knowledge tracing to model multiple subskills, temporal item response theory, and expert knowledge",
+      "author": "González-Brenes",
+      "year": "2014"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib35",
+      "series-title": "Deep learning",
+      "author": "Goodfellow",
+      "year": "2016"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib36",
+      "doi-asserted-by": "crossref",
+      "first-page": "301",
+      "DOI": "10.1111/j.1745-3984.1989.tb00336.x",
+      "article-title": "Using restricted latent class models to map the skill structure of achievement items",
+      "volume": "26",
+      "author": "Haertel",
+      "year": "1989",
+      "journal-title": "Journal of Educational Measurement"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib37",
+      "series-title": "Fundamentals of item response theory",
+      "author": "Hambleton",
+      "year": "1991"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib38",
+      "doi-asserted-by": "crossref",
+      "first-page": "29",
+      "DOI": "10.1148/radiology.143.1.7063747",
+      "article-title": "The meaning and use of the area under a receiver operating characteristic (ROC) curve",
+      "volume": "143",
+      "author": "Hanley",
+      "year": "1982",
+      "journal-title": "Radiology"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib39",
+      "doi-asserted-by": "crossref",
+      "first-page": "116",
+      "DOI": "10.1034/j.1600-0579.2003.00310.x",
+      "article-title": "Use of Web-based formative assessment to support student learning in a metabolism/nutrition unit",
+      "volume": "7",
+      "author": "Henly",
+      "year": "2003",
+      "journal-title": "European Journal of Dental Education"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib40",
+      "doi-asserted-by": "crossref",
+      "first-page": "76",
+      "DOI": "10.1016/j.compedu.2009.12.004",
+      "article-title": "Development of a reading material recommendation system based on a knowledge engineering approach",
+      "volume": "55",
+      "author": "Hsu",
+      "year": "2010",
+      "journal-title": "Computers & Education"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib41",
+      "doi-asserted-by": "crossref",
+      "first-page": "1023",
+      "DOI": "10.1016/j.compedu.2010.12.002",
+      "article-title": "A formative assessment-based mobile learning approach to improving the learning attitudes and achievements of students",
+      "volume": "56",
+      "author": "Hwang",
+      "year": "2011",
+      "journal-title": "Computers & Education"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib42",
+      "doi-asserted-by": "crossref",
+      "first-page": "1058",
+      "DOI": "10.1016/j.compedu.2007.10.006",
+      "article-title": "An innovative parallel test sheet composition approach to meet multiple assessment criteria for national tests",
+      "volume": "51",
+      "author": "Hwang",
+      "year": "2008",
+      "journal-title": "Computers & Education"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib43",
+      "series-title": "Proceedings of the international conference on artificial intelligence in education",
+      "article-title": "How deep is knowledge tracing?",
+      "author": "Khajah",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib44",
+      "unstructured": "M. N. Khalid, reportIRT model fit from different perspectives, (Ph.D. Thesis)."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib45",
+      "first-page": "1",
+      "article-title": "Emergency remote learning during COVID-19 crisis: Students' engagement",
+      "author": "Khlaif",
+      "year": "2021",
+      "journal-title": "Education and Information Technologies"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib46",
+      "doi-asserted-by": "crossref",
+      "first-page": "161",
+      "DOI": "10.1080/1049482980050111",
+      "article-title": "Illustrating principled design: The early evolution of a cognitive tutor for Algebra symbolization",
+      "volume": "5",
+      "author": "Koedinger",
+      "year": "1998",
+      "journal-title": "Interactive Learning Environments"
+    },
+    {
+      "issue": "5",
+      "key": "10.1016/j.caeai.2022.100050_bib47",
+      "doi-asserted-by": "crossref",
+      "first-page": "757",
+      "DOI": "10.1111/j.1551-6709.2012.01245.x",
+      "article-title": "The knowledge-learning-instruction framework: Bridging the science-practice chasm to enhance robust student learning",
+      "volume": "36",
+      "author": "Koedinger",
+      "year": "2012",
+      "journal-title": "Cognitive Science"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib48",
+      "first-page": "1959",
+      "article-title": "Sparse factor Analysis for learning and content analytics",
+      "volume": "15",
+      "author": "Lan",
+      "year": "2014",
+      "journal-title": "Journal of Machine Learning Research"
+    },
+    {
+      "issue": "7553",
+      "key": "10.1016/j.caeai.2022.100050_bib49",
+      "first-page": "436",
+      "volume": "521",
+      "author": "LeCun",
+      "year": "2015",
+      "journal-title": "Deep Learning, Nature"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib50",
+      "series-title": "Handbook of modern item response theory",
+      "author": "van der Linden",
+      "year": "2013"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib51",
+      "doi-asserted-by": "crossref",
+      "first-page": "639",
+      "DOI": "10.1177/0956797613504302",
+      "article-title": "Improving students' long-term knowledge retention through personalized review",
+      "volume": "25",
+      "author": "Lindsey",
+      "year": "2014",
+      "journal-title": "Psychological Science"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib52",
+      "series-title": "Proceedings of the international conference on artificial intelligence in education",
+      "first-page": "185",
+      "article-title": "Towards interpretable deep learning models for knowledge tracing",
+      "author": "Lu",
+      "year": "2020"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib53",
+      "doi-asserted-by": "crossref",
+      "first-page": "523",
+      "DOI": "10.1007/BF02294327",
+      "article-title": "Psychometric latent response models",
+      "volume": "60",
+      "author": "Maris",
+      "year": "1995",
+      "journal-title": "Psychometrika"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.caeai.2022.100050_bib54",
+      "doi-asserted-by": "crossref",
+      "first-page": "187",
+      "DOI": "10.1007/BF02294535",
+      "article-title": "Estimating multiple classification latent class models",
+      "volume": "64",
+      "author": "Maris",
+      "year": "1999",
+      "journal-title": "Psychometrika"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib55",
+      "unstructured": "S. Minn, BKT-LSTM: Efficient Student Modeling for knowledge tracing and student performance prediction, arXiv preprint arXiv:2012.12218."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib56",
+      "series-title": "European conference on technology enhanced learning",
+      "first-page": "165",
+      "article-title": "Refinement of a Q-matrix with an ensemble technique based on multi-label classification algorithms",
+      "author": "Minn",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib57",
+      "series-title": "Pacific-asia conference on knowledge discovery and data mining",
+      "first-page": "163",
+      "article-title": "Dynamic student classification on memory networks for knowledge tracing",
+      "author": "Minn",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib58",
+      "series-title": "Twelfth AAAI symposium on educational advances in artificial intelligence",
+      "article-title": "Interpretable knowledge tracing: Simple and efficient student modeling with causal relations",
+      "author": "Minn",
+      "year": "2022"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib59",
+      "series-title": "2018 IEEE international conference on data mining (ICDM)",
+      "first-page": "1182",
+      "article-title": "Deep knowledge tracing and dynamic student classification for knowledge tracing",
+      "author": "Minn",
+      "year": "2018"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib60",
+      "series-title": "2018 IEEE international conference on data mining workshops (ICDMW)",
+      "first-page": "1505",
+      "article-title": "Improving knowledge tracing model by integrating problem difficulty",
+      "author": "Minn",
+      "year": "2018"
+    },
+    {
+      "issue": "2–4",
+      "key": "10.1016/j.caeai.2022.100050_bib61",
+      "doi-asserted-by": "crossref",
+      "first-page": "173",
+      "DOI": "10.3233/IRG-2003-13(2-4)03",
+      "article-title": "An intelligent SQL tutor on the web",
+      "volume": "13",
+      "author": "Mitrovic",
+      "year": "2003",
+      "journal-title": "International Journal of Artificial Intelligence in Education"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib62",
+      "series-title": "Advancing formative assessment in every classroom: A guide for instructional leaders",
+      "author": "Moss",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib63",
+      "series-title": "International conference on user modeling, adaptation, and personalization",
+      "first-page": "255",
+      "article-title": "Modeling individualization in a Bayesian networks implementation of knowledge tracing",
+      "author": "Pardos",
+      "year": "2010"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib64",
+      "series-title": "International conference on user modeling, adaptation, and personalization",
+      "first-page": "243",
+      "article-title": "KT-IDEM: Introducing item difficulty to the knowledge tracing model",
+      "author": "Pardos",
+      "year": "2011"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib65",
+      "series-title": "International conference on intelligent tutoring systems",
+      "first-page": "405",
+      "article-title": "Clustered knowledge tracing",
+      "author": "Pardos",
+      "year": "2012"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib66",
+      "unstructured": "P. I. Pavlik Jr, H. Cen, K. R. Koedinger, Performance factors analysis–A new alternative to knowledge tracing., Online Submission."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib67",
+      "series-title": "Advances in neural information processing systems",
+      "first-page": "505",
+      "article-title": "Deep knowledge tracing",
+      "author": "Piech",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib68",
+      "first-page": "321",
+      "article-title": "On general laws and the meaning of measurement in psychology",
+      "volume": "Vol. 4",
+      "author": "Rasch",
+      "year": "1961"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib69",
+      "series-title": "Probabilistic models for some intelligence and attainment tests",
+      "author": "Rasch",
+      "year": "1993"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib70",
+      "series-title": "International conference on artificial intelligence in education",
+      "first-page": "555",
+      "article-title": "The Assistment project: Blending assessment and assisting",
+      "author": "Razzaq",
+      "year": "2005"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib71",
+      "series-title": "Multidimensional item response theory",
+      "first-page": "79",
+      "article-title": "Multidimensional item response theory models",
+      "author": "Reckase",
+      "year": "2009"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib72",
+      "doi-asserted-by": "crossref",
+      "first-page": "361",
+      "DOI": "10.1177/014662169101500407",
+      "article-title": "The discriminating power of items that measure more than one dimension",
+      "volume": "15",
+      "author": "Reckase",
+      "year": "1991",
+      "journal-title": "Applied Psychological Measurement"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib73",
+      "series-title": "CDM: Cognitive diagnosis modeling",
+      "author": "Robitzsch",
+      "year": "2015"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib74",
+      "first-page": "e1355",
+      "article-title": "Educational data mining and learning analytics: An updated survey",
+      "volume": "10",
+      "author": "Romero",
+      "year": "2020",
+      "journal-title": "Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib75",
+      "doi-asserted-by": "crossref",
+      "first-page": "95",
+      "DOI": "10.1080/15305050701193454",
+      "article-title": "The answer is in the question: A guide for investigating the theoretical potentials and practical limitations of cognitive psychometric models",
+      "volume": "7",
+      "author": "Rupp",
+      "year": "2007",
+      "journal-title": "International Journal of Testing"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib76",
+      "doi-asserted-by": "crossref",
+      "first-page": "205",
+      "DOI": "10.1017/CBO9780511611186.008",
+      "article-title": "Cognitive foundations of structured item response models",
+      "author": "Rupp",
+      "year": "2007",
+      "journal-title": "Cognitive Diagnostic Assessment for Education: Theory and Applications"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib77",
+      "doi-asserted-by": "crossref",
+      "first-page": "153",
+      "DOI": "10.3102/0034654307313795",
+      "article-title": "Focus on formative feedback",
+      "volume": "78",
+      "author": "Shute",
+      "year": "2008",
+      "journal-title": "Review of Educational Research"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib78",
+      "doi-asserted-by": "crossref",
+      "first-page": "310",
+      "DOI": "10.1080/15305058.2016.1145683",
+      "article-title": "Grain size and parameter recovery with TIMSS and the general diagnostic model",
+      "volume": "16",
+      "author": "Skaggs",
+      "year": "2016",
+      "journal-title": "International Journal of Testing"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib79",
+      "series-title": "2015 38th international convention on information and communication technology, electronics and microelectronics (MIPRO)",
+      "first-page": "814",
+      "article-title": "Intelligent tutoring systems for language learning",
+      "author": "Slavuj",
+      "year": "2015"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib80",
+      "series-title": "Thirty-second AAAI conference on artificial intelligence",
+      "article-title": "Exercise-enhanced sequential modeling for student performance prediction",
+      "author": "Su",
+      "year": "2018"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib81",
+      "volume": "Vol. 80",
+      "author": "Swartz",
+      "year": "2012"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib82",
+      "series-title": "Proceedings of the IASTED international conference on computers and advanced technology in education",
+      "first-page": "78",
+      "article-title": "A prototype for an intelligent tutoring system for students learning to program in Java(TM)",
+      "author": "Sykes",
+      "year": "2003"
+    },
+    {
+      "issue": "4",
+      "key": "10.1016/j.caeai.2022.100050_bib83",
+      "doi-asserted-by": "crossref",
+      "first-page": "345",
+      "DOI": "10.1111/j.1745-3984.1983.tb00212.x",
+      "article-title": "Rule space: An approach for dealing with misconceptions based on item response theory",
+      "volume": "20",
+      "author": "Tatsuoka",
+      "year": "1983",
+      "journal-title": "Journal of Educational Measurement"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib84",
+      "doi-asserted-by": "crossref",
+      "first-page": "287",
+      "DOI": "10.1037/1082-989X.11.3.287",
+      "article-title": "Measurement of psychological disorders using cognitive diagnosis models",
+      "volume": "11",
+      "author": "Templin",
+      "year": "2006",
+      "journal-title": "Psychological Methods"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib85",
+      "series-title": "Diagnostic measurement: Theory, methods, and applications",
+      "author": "Templin",
+      "year": "2010"
+    },
+    {
+      "issue": "2",
+      "key": "10.1016/j.caeai.2022.100050_bib86",
+      "doi-asserted-by": "crossref",
+      "first-page": "37",
+      "DOI": "10.1111/emip.12010",
+      "article-title": "Obtaining diagnostic classification model estimates using mplus",
+      "volume": "32",
+      "author": "Templin",
+      "year": "2013",
+      "journal-title": "Educational Measurement: Issues and Practice"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib87",
+      "doi-asserted-by": "crossref",
+      "first-page": "259",
+      "DOI": "10.1016/j.compedu.2014.10.013",
+      "article-title": "The evaluation of different gaming modes and feedback types on game-based formative assessment in an online learning environment",
+      "volume": "81",
+      "author": "Tsai",
+      "year": "2015",
+      "journal-title": "Computers & Education"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib88",
+      "series-title": "Proceedings of the 33th AAAI conference on artificial intelligence",
+      "first-page": "750",
+      "article-title": "Knowledge tracing machines: Factorization machines for knowledge tracing",
+      "author": "Vie",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib89",
+      "series-title": "Proceedings of the IEEE conference on computer vision and pattern recognition",
+      "first-page": "3156",
+      "article-title": "Show and tell: A neural image caption generator",
+      "author": "Vinyals",
+      "year": "2015"
+    },
+    {
+      "issue": "3",
+      "key": "10.1016/j.caeai.2022.100050_bib90",
+      "doi-asserted-by": "crossref",
+      "first-page": "171",
+      "DOI": "10.1111/j.1365-2729.2006.00211.x",
+      "article-title": "What strategies are effective for formative assessment in an e-learning environment?",
+      "volume": "23",
+      "author": "Wang",
+      "year": "2007",
+      "journal-title": "Journal of Computer Assisted Learning"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib91",
+      "series-title": "Proceedings of the 12th international conference on educational data mining",
+      "article-title": "Deep hierarchical knowledge tracing",
+      "author": "Wang",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib92",
+      "series-title": "International conference on artificial intelligence in education",
+      "first-page": "583",
+      "article-title": "The PHP intelligent tutoring system",
+      "author": "Weragama",
+      "year": "2013"
+    },
+    {
+      "issue": "23",
+      "key": "10.1016/j.caeai.2022.100050_bib93",
+      "doi-asserted-by": "crossref",
+      "first-page": "7",
+      "DOI": "10.1002/cd.23219842303",
+      "article-title": "The zone of proximal development: Some conceptual issues",
+      "volume": "1984",
+      "author": "Wertsch",
+      "year": "1984",
+      "journal-title": "New Directions for Child and Adolescent Development"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib94",
+      "series-title": "Proceedings of the international conference on educational data mining",
+      "article-title": "Back to the Basics: Bayesian extensions of IRT outperform neural networks for proficiency estimation",
+      "author": "Wilson",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib95",
+      "series-title": "International conference on educational data mining",
+      "article-title": "Going deeper with deep knowledge tracing",
+      "author": "Xiong",
+      "year": "2016"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib96",
+      "series-title": "International conference on machine learning",
+      "first-page": "2048",
+      "article-title": "Show, attend and tell: Neural image caption generation with visual attention",
+      "author": "Xu",
+      "year": "2015"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib97",
+      "doi-asserted-by": "crossref",
+      "first-page": "i",
+      "DOI": "10.1002/j.2333-8504.2008.tb02113.x",
+      "article-title": "Fitting the structured general diagnostic model to NAEP data",
+      "volume": "2008",
+      "author": "Xu",
+      "year": "2008",
+      "journal-title": "ETS Research Report Series"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib98",
+      "unstructured": "Y. Yang, J. Shen, Y. Qu, Y. Liu, K. Wang, Y. Zhu, W. Zhang, Y. Yu, GIKT: A graph-based interaction model for knowledge tracing, machine learning and knowledge discovery in databases."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib99",
+      "unstructured": "S. Yang, M. Zhu, J. Hou, X. Lu, Deep knowledge tracing with convolutions, arXiv preprint arXiv:2008.01169."
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib100",
+      "series-title": "Proceedings of the 12th international conference on educational data mining",
+      "first-page": "683",
+      "article-title": "Deep-IRT: Make deep learning based knowledge tracing explainable using item response theory",
+      "author": "Yeung",
+      "year": "2019"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib101",
+      "series-title": "International conference on artificial intelligence in education",
+      "first-page": "171",
+      "article-title": "Individualized bayesian knowledge tracing models",
+      "author": "Yudelson",
+      "year": "2013"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib102",
+      "series-title": "Proceedings of the 58th annual meeting of the association for computational linguistics",
+      "first-page": "3135",
+      "article-title": "MOOCCube: A large-scale data repository for NLP applications in MOOCs",
+      "author": "Yu",
+      "year": "2020"
+    },
+    {
+      "issue": "1",
+      "key": "10.1016/j.caeai.2022.100050_bib103",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1038/s41539-017-0016-3",
+      "article-title": "Towards AI-powered personalization in MOOC learning",
+      "volume": "2",
+      "author": "Yu",
+      "year": "2017",
+      "journal-title": "Npj Science of Learning"
+    },
+    {
+      "key": "10.1016/j.caeai.2022.100050_bib104",
+      "series-title": "Proceedings of the 26th international conference on world wide web",
+      "first-page": "765",
+      "article-title": "Dynamic key-value memory networks for knowledge tracing",
+      "author": "Zhang",
+      "year": "2017"
+    }
+  ],
+  "container-title": [
+    "Computers and Education: Artificial Intelligence"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2666920X22000054?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S2666920X22000054?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        11,
+        13
+      ]
+    ],
+    "date-time": "2025-11-13T06:45:31Z",
+    "timestamp": 1763016331000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2666920X22000054"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "references-count": 104,
+  "alternative-id": [
+    "S2666920X22000054"
+  ],
+  "URL": "https://doi.org/10.1016/j.caeai.2022.100050",
+  "relation": {},
+  "ISSN": [
+    "2666-920X"
+  ],
+  "issn-type": [
+    {
+      "value": "2666-920X",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "AI-assisted knowledge assessment techniques for adaptive learning environments",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Computers and Education: Artificial Intelligence",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.caeai.2022.100050",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2022 The Author. Published by Elsevier Ltd.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ],
+  "article-number": "100050"
+}

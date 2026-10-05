@@ -1,0 +1,20 @@
+{
+  "verified_utc": "2026-09-26T03:20:55.118994+00:00",
+  "archive": "research/reproducibility/study_source.zip",
+  "bytes": 1583337,
+  "sha256": "2722ebb2c129cf47c01cb8fbc1bdccf79510fb020c73069c94e1742e1f09811b",
+  "file_count_including_manifest": 197,
+  "artifact_count": 196,
+  "all_member_hashes_match": true,
+  "all_source_hashes_still_match": true,
+  "zip_crc_test_passed": true,
+  "excluded_paths_and_extensions_absent": true,
+  "entrypoint_and_guide_local_links_checked": 34,
+  "all_entrypoint_and_guide_local_links_resolve": true,
+  "final_manuscript_pdf_hash_verified": true,
+  "rendering_status_preserved": {
+    "status": "final",
+    "latex_compiled": false
+  },
+  "limitations": "Conservative allowlist and structural checks, not a general anonymization or public-release certification."
+}

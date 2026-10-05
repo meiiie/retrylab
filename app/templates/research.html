@@ -1,0 +1,600 @@
+<div class="research-topline">
+  <a href="#research" data-route="research">Không gian nghiên cứu</a
+  ><span id="system-status">Dữ liệu và mô hình đã khóa</span>
+</div>
+<nav
+  id="research-nav"
+  class="research-nav"
+  aria-label="Điều hướng nghiên cứu"
+  hidden
+>
+  <a href="#replay" data-route="replay">Một trường hợp</a
+  ><a href="#evidence" data-route="evidence">Kết quả toàn tập</a
+  ><a href="#method" data-route="method">Phương pháp</a>
+  <a href="#policy" data-route="policy">Chọn bài bằng AI</a>
+  <a href="#realdata" data-route="realdata">Dữ liệu thật · v3</a>
+</nav>
+<section id="view-research" class="view research-hub">
+  <span class="eyebrow">KIỂM CHỨNG TRƯỚC KHI KẾT LUẬN</span>
+  <h1>Từ kết quả làm bài<br />đến bài học tiếp theo.</h1>
+  <p>
+    Thử mô hình theo dõi kỹ năng và chính sách chọn bài.<br />Đối chiếu riêng
+    bằng chứng mô phỏng và dự báo trên log thật.
+  </p>
+  <div class="hub-actions">
+    <a class="button primary large" href="#policy" data-route="policy"
+      >Mở bàn thử nghiệm chọn bài →</a
+    ><a class="button secondary large" href="#realdata" data-route="realdata"
+      >Nghiên cứu v3 trên dữ liệu thật →</a
+    ><a class="text-button" href="#evidence" data-route="evidence"
+      >Xem kết quả toàn tập ↗</a
+    >
+  </div>
+  <div class="research-stats">
+    <div><strong>69.825</strong><span>cặp dự báo</span></div>
+    <div><strong>1.500</strong><span>người học ở tập kiểm tra</span></div>
+    <div><strong>5</strong><span>cấu hình đã đánh giá</span></div>
+  </div>
+  <div class="research-route-cards">
+    <div>
+      <span>01</span>
+      <h2>Xem mô hình dự báo</h2>
+      <p>
+        Giữ nguyên bài đích. Quan sát dự báo thay đổi khi thêm lịch sử nộp bài.
+      </p>
+    </div>
+    <div>
+      <span>02</span>
+      <h2>Mở kết quả thật</h2>
+      <p>
+        Đối chiếu dự báo với phán quyết đã xảy ra, kể cả trường hợp mô hình sai.
+      </p>
+    </div>
+    <div>
+      <span>03</span>
+      <h2>Đọc bằng chứng toàn tập</h2>
+      <p>
+        Xem độ lớn cải thiện và khoảng tin cậy để tránh kết luận từ một ví dụ.
+      </p>
+    </div>
+  </div>
+  <div class="research-scope">
+    <strong>Dữ liệu này là gì?</strong>
+    <p>
+      Đây là hồ sơ ACcoding đã được dùng trong nghiên cứu, không phải các bài
+      Python bạn vừa luyện. Các mô hình đã khóa được dùng để tái hiện dự báo.
+      Chính sách chọn bài mới có đánh giá mô phỏng riêng. App chưa chứng minh tác động học tập với sinh viên thật.
+    </p>
+    <a href="#method" data-route="method">Đọc phương pháp và giới hạn →</a>
+  </div>
+</section>
+{% include 'policy.html' %}
+{% include 'realdata.html' %}
+<div id="loading" class="initial-loading" hidden>
+  <div class="spinner"></div>
+  <h2>Đang mở hồ sơ nghiên cứu…</h2>
+  <p>Nạp dự báo từ mô hình đã khóa.</p>
+</div>
+<div id="workspace">
+  <section class="view" id="view-replay">
+    <div class="page-heading">
+      <div>
+        <div class="eyebrow">QUAN SÁT · DỰ BÁO · ĐỐI CHIẾU</div>
+        <h1>Kiểm chứng một dự báo.</h1>
+        <p>
+          Quan sát cùng một bài đích trước và sau khi mô hình nhận thêm lịch sử,
+          rồi đối chiếu với kết quả thật.
+        </p>
+      </div>
+    </div>
+    <div class="research-guide">
+      <div>
+        <span class="eyebrow">ĐI TỪ MỘT TRƯỜNG HỢP</span>
+        <h2 id="research-step-title">1. Xem dự báo ban đầu.</h2>
+        <p id="research-step-copy">
+          Mô hình mới quan sát lần nộp đầu của bài đang làm.
+        </p>
+      </div>
+      <button class="button primary" id="research-next">
+        Xem sau các lần sửa →
+      </button>
+    </div>
+
+    <div class="replay-layout">
+      <details aria-label="Chọn hồ sơ" class="case-browser quiet-details">
+        <summary>Đổi hồ sơ hoặc tìm một trường hợp khác</summary>
+        <div class="section-head">
+          <h2>Chọn một hồ sơ</h2>
+          <span class="small muted" id="case-total"></span>
+        </div>
+        <label class="search-box"
+          ><span>⌕</span
+          ><input
+            aria-label="Tìm hồ sơ"
+            id="case-search"
+            placeholder="Mã hồ sơ hoặc mã bài"
+            type="search"
+        /></label>
+        <div class="filter-row">
+          <label
+            ><span class="sr-only">Số lần nộp lại</span
+            ><select id="retry-filter">
+              <option value="all">Mọi số lần nộp lại</option>
+              <option value="1">1 lần nộp lại</option>
+              <option value="2-3">2–3 lần nộp lại</option>
+              <option value="4+">4+ lần nộp lại</option>
+            </select></label
+          ><button
+            aria-label="Chọn hồ sơ ngẫu nhiên"
+            class="icon-button"
+            id="random-case"
+            title="Chọn ngẫu nhiên trong toàn bộ tập"
+          >
+            ⤨
+          </button>
+        </div>
+        <div aria-live="polite" class="case-list" id="case-list"></div>
+        <div class="pagination">
+          <button
+            aria-label="Trang hồ sơ trước"
+            class="icon-button"
+            id="prev-cases"
+          >
+            ←</button
+          ><span class="small" id="case-page"></span
+          ><button
+            aria-label="Trang hồ sơ sau"
+            class="icon-button"
+            id="next-cases"
+          >
+            →
+          </button>
+        </div>
+        <p class="micro muted">
+          Sắp theo mã cố định, không chọn theo kết quả tốt. Hồ sơ chỉ mang mã
+          đại diện.
+        </p>
+      </details>
+      <div class="replay-main" id="replay-main">
+        <section class="card trajectory-card">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">
+                HỒ SƠ <span id="active-case-id">—</span>
+              </div>
+              <h2>Dự báo cho cùng một bài tiếp theo</h2>
+            </div>
+            <span class="status-pill" id="parity-badge">Đang đối chiếu</span>
+          </div>
+          <div class="episode-flow">
+            <div>
+              <span class="small muted">BÀI ĐANG LÀM</span
+              ><strong id="source-problem">—</strong
+              ><span class="small muted" id="source-meta"></span>
+            </div>
+            <span class="flow-arrow">→</span>
+            <div>
+              <span class="small muted">BÀI TIẾP THEO CỐ ĐỊNH</span
+              ><strong id="target-problem">—</strong
+              ><span class="small muted">Dự báo lần nộp đầu tiên</span>
+            </div>
+          </div>
+          <div class="chart-toolbar">
+            <label class="select-label"
+              >Mô hình
+              <select id="replay-model"></select
+            ></label>
+            <div class="legend">
+              <span class="legend-dot"></span>Xác suất được chấp nhận
+            </div>
+          </div>
+          <div class="forecast-summary">
+            <div>
+              <span class="muted small">Sau lần nộp đang chọn</span
+              ><strong id="current-probability">—</strong>
+            </div>
+            <div>
+              <span class="muted small">Thay đổi so với H0</span
+              ><strong class="delta-number" id="current-delta">—</strong>
+            </div>
+            <div class="forecast-context" id="forecast-context"></div>
+          </div>
+          <div
+            aria-label="Đường dự báo qua các lần nộp"
+            class="chart"
+            id="trajectory-chart"
+            role="img"
+          ></div>
+          <div class="playback">
+            <button
+              aria-label="Phát lại từng lần nộp"
+              class="play-button"
+              id="play-replay"
+            >
+              ▶</button
+            ><input
+              aria-label="Lần nộp đang quan sát"
+              id="step-slider"
+              max="1"
+              min="0"
+              type="range"
+              value="0"
+            /><span id="step-label"></span>
+          </div>
+          <div
+            aria-label="Các lần nộp trong chuỗi"
+            class="attempt-list"
+            id="attempt-list"
+          ></div>
+          <p class="micro muted chart-footnote">
+            Cùng một bài đích tại mọi bước. Xác suất là dự báo lần nộp đầu được
+            chấp nhận, không phải phần trăm thành thạo.
+          </p>
+        </section>
+        <div class="outcome-row">
+          <section class="card outcome-card">
+            <div class="eyebrow">ĐỐI CHIẾU VỚI QUAN SÁT</div>
+            <div id="outcome-content">
+              <h3>Kết quả bài tiếp theo đang ẩn</h3>
+              <p class="small muted">
+                Xem dự báo trước, rồi mở phán quyết thực tế.
+              </p>
+            </div>
+            <button class="button secondary" id="reveal-outcome">
+              Mở kết quả thực tế <span>↗</span>
+            </button>
+          </section>
+        </div>
+        <details class="card comparison-card advanced-details">
+          <summary>So sánh mô hình và xuất số liệu</summary>
+          <div class="section-head">
+            <div>
+              <h2>Đối chiếu năm mô hình</h2>
+              <p class="small muted">
+                Suy luận lại từ lịch sử thật, kiểm tra với dự báo đã lưu.
+              </p>
+            </div>
+            <button class="button text-button" id="open-sandbox">
+              Thử sửa chuỗi này →
+            </button>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mô hình</th>
+                  <th>H0</th>
+                  <th>H1</th>
+                  <th>Thay đổi</th>
+                  <th>NLL H1</th>
+                </tr>
+              </thead>
+              <tbody id="comparison-body"></tbody>
+            </table>
+          </div>
+          <p class="micro muted" id="parity-detail"></p>
+          <button class="button secondary" id="export-case">
+            Xuất hồ sơ <span>↓</span>
+          </button>
+          <section class="card risk-card">
+            <div class="eyebrow">TÍN HIỆU CẦN XEM XÉT</div>
+            <h3 id="risk-title">—</h3>
+            <div id="risk-detail"></div>
+            <p class="micro muted">
+              Dùng ngưỡng khóa từ validation. Đây là sàng lọc hồi cứu, chưa đo
+              tác dụng của hỗ trợ.
+            </p>
+          </section>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="view" hidden="" id="view-sandbox">
+    <div class="page-heading">
+      <div>
+        <div class="eyebrow">THÍ NGHIỆM TƯƠNG TÁC</div>
+        <h1>Nếu chuỗi kết quả thay đổi?</h1>
+        <p>
+          Giữ nguyên lịch sử trước chuỗi và bài đích. Thay đổi các lần nộp rồi
+          chạy lại mô hình.
+        </p>
+      </div>
+      <span class="status-pill warm">Kịch bản giả lập</span>
+    </div>
+    <div class="notice">
+      <strong>Đo phản ứng của mô hình.</strong> Kịch bản mới không có kết quả
+      tương lai quan sát được. Không diễn giải chênh lệch này thành tác động học
+      tập.
+    </div>
+    <div class="sandbox-layout">
+      <section class="card">
+        <div class="section-head">
+          <h2>Chỉnh đầu vào</h2>
+          <button class="button text-button" id="reset-sandbox">
+            Khôi phục
+          </button>
+        </div>
+        <p class="small muted" id="sandbox-context"></p>
+        <div class="binary-legend">
+          <span class="result-chip ac">AC</span>Được chấp nhận<span
+            class="result-chip fail"
+            >0</span
+          >Chưa được chấp nhận
+        </div>
+        <div class="sandbox-attempts" id="sandbox-attempts"></div>
+        <div class="sandbox-actions">
+          <button class="button secondary" id="add-attempt">
+            + Thêm lần nộp</button
+          ><button class="button text-button" id="remove-attempt">
+            Bớt lần cuối
+          </button>
+        </div>
+        <button class="button primary wide" id="run-simulation">
+          Chạy suy luận với chuỗi mới <span>→</span>
+        </button>
+        <p class="micro muted" id="sandbox-dirty"></p>
+      </section>
+      <section class="card">
+        <div class="section-head">
+          <h2>Đầu ra của mô hình</h2>
+          <span class="small muted" id="simulation-status">Chưa chạy</span>
+        </div>
+        <div class="empty-state" id="simulation-results">
+          <span>⌁</span>
+          <h3>Thử thay một kết quả đầu vào</h3>
+          <p>
+            Các trọng số mô hình giữ nguyên.<br />Mỗi lần chạy tạo một dự báo
+            mới.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="view" hidden="" id="view-evidence">
+    <div class="page-heading">
+      <div>
+        <div class="eyebrow">TỪ MỘT HỒ SƠ ĐẾN TOÀN BỘ TẬP KIỂM TRA</div>
+        <h1>Bằng chứng nằm ở phép đo.</h1>
+        <p>
+          Kết quả đã khóa trên 69.825 cặp dự báo của 1.500 người học. Bootstrap
+          theo người học.
+        </p>
+      </div>
+      <button class="button secondary" id="export-evidence">
+        Xuất số liệu <span>↓</span>
+      </button>
+    </div>
+    <details class="quiet-details metric-glossary">
+      <summary>Cách đọc các con số</summary>
+      <p>
+        <strong>Phát hiện thất bại:</strong> tỷ lệ trường hợp thất bại được đánh
+        dấu. <strong>Hồ sơ cần xem xét:</strong> tỷ lệ toàn bộ hồ sơ bị đánh
+        dấu. <strong>NLL:</strong> sai số dự báo; nhỏ hơn là tốt hơn.
+        <strong>H0/H1:</strong> sau lần nộp đầu / sau toàn bộ chuỗi. Khoảng tin
+        cậy (CI95%) biểu diễn bất định của phép ước lượng; app không đo tác dụng
+        của một can thiệp học tập.
+      </p>
+    </details>
+    <section class="card evidence-controls">
+      <label class="select-label"
+        >Mô hình
+        <select id="evidence-model"></select></label
+      ><label class="select-label"
+        >Quy tắc đã khóa
+        <select id="evidence-policy">
+          <option value="validation_workload_30">
+            Khoảng 30% hồ sơ trên validation
+          </option>
+          <option value="validation_recall_80">
+            Phát hiện 80% thất bại trên validation
+          </option>
+        </select></label
+      >
+    </section>
+    <div class="metric-grid" id="evidence-metrics"></div>
+    <div class="two-cards evidence-charts">
+      <section class="card">
+        <div class="section-head">
+          <div>
+            <h2>Cập nhật dự báo có hữu ích?</h2>
+            <p class="small muted">ΔNLL = H1 − H0 · thấp hơn là tốt hơn</p>
+          </div>
+        </div>
+        <div
+          aria-label="Chênh lệch NLL và khoảng tin cậy 95%"
+          class="chart"
+          id="forest-chart"
+          role="img"
+        ></div>
+        <p class="micro muted">
+          CI95% ghép cặp, 1.000 lần bootstrap theo người học; có điều kiện trên
+          mô hình đã fit. Các so sánh này không chứng minh mô hình nào vượt
+          trội.
+        </p>
+      </section>
+      <section class="card">
+        <div class="section-head">
+          <div>
+            <h2>Xác suất có khớp quan sát?</h2>
+            <p class="small muted">
+              Hiệu chỉnh dự báo tại H1 · mỗi điểm là một nhóm xác suất
+            </p>
+          </div>
+        </div>
+        <div
+          aria-label="Đồ thị hiệu chỉnh dự báo"
+          class="chart"
+          id="calibration-chart"
+          role="img"
+        ></div>
+        <p class="micro muted">
+          Trục ngang: nguy cơ dự báo · trục dọc: tỷ lệ thất bại quan sát. Đường
+          chéo biểu diễn hiệu chỉnh lý tưởng.
+        </p>
+      </section>
+    </div>
+    <section class="card threshold-section">
+      <div class="section-head">
+        <div>
+          <h2>Khám phá một ngưỡng chung</h2>
+          <p class="small muted">
+            Thay ngưỡng và xem đánh đổi giữa số hồ sơ xem xét và số thất bại
+            phát hiện.
+          </p>
+        </div>
+        <span class="status-pill warm">Thăm dò sau nghiên cứu</span>
+      </div>
+      <div class="threshold-input">
+        <label for="threshold-slider"
+          >Đánh dấu khi nguy cơ ≥
+          <strong id="threshold-value">50%</strong></label
+        ><input
+          id="threshold-slider"
+          max="100"
+          min="0"
+          step="1"
+          type="range"
+          value="50"
+        />
+      </div>
+      <div id="threshold-results"></div>
+      <p class="micro muted">
+        Cùng một ngưỡng cho H0 và H1. Đây không phải ngưỡng riêng theo giai đoạn
+        đã khóa ở trên, không có CI mới và không dùng để điều chỉnh kết luận bài
+        báo.
+      </p>
+    </section>
+    <section class="card secondary-result">
+      <div>
+        <div class="eyebrow">KIỂM CHỨNG BỔ SUNG · CODEBENCH</div>
+        <h2>Các phiên bản code trung gian</h2>
+        <p>
+          274 cặp từ 28 người học ở học kỳ mới. Chưa xác lập lợi ích tăng thêm
+          sau khi kiểm soát hai đầu chuỗi.
+        </p>
+      </div>
+      <div>
+        <strong>−0,001094</strong
+        ><span>ΔNLL · CI95% [−0,006666; +0,004346]</span>
+      </div>
+    </section>
+  </section>
+  <section class="view" hidden="" id="view-method">
+    <div class="page-heading">
+      <div>
+        <div class="eyebrow">MINH BẠCH VÀ TÁI LẬP</div>
+        <h1>Từ dữ liệu đến con số trên màn hình.</h1>
+        <p>
+          Khu nghiên cứu tái hiện các mô hình và phép đo đã khóa. Khu luyện tập
+          dùng bộ bài Python riêng để bạn thực hành.
+        </p>
+      </div>
+    </div>
+    <div class="method-flow">
+      <div>
+        <span>01</span>
+        <h3>Lịch sử được quan sát</h3>
+        <p>
+          Chuỗi lượt nộp ACcoding; kết quả bài đích chưa đi vào lịch sử dự báo.
+        </p>
+      </div>
+      <div>
+        <span>02</span>
+        <h3>Mô hình đã khóa</h3>
+        <p>Ba logistic và hai ensemble GRU, mỗi ensemble gồm ba seed.</p>
+      </div>
+      <div>
+        <span>03</span>
+        <h3>Cùng một bài đích</h3>
+        <p>
+          H0 và H1 dự báo cùng kết quả lần nộp đầu của bài tiếp theo được quan
+          sát.
+        </p>
+      </div>
+      <div>
+        <span>04</span>
+        <h3>Đối chiếu dự báo gốc</h3>
+        <p>
+          Dự báo chạy lại khớp tệp nghiên cứu trong sai số số học đã quy định.
+        </p>
+      </div>
+    </div>
+    <div class="two-cards">
+      <section class="card prose">
+        <h2>Ứng dụng chứng minh được gì?</h2>
+        <p>
+          Cho thấy mô hình hoạt động được trên hồ sơ thực, cập nhật dự báo khi
+          nhận thêm quan sát, và tái hiện được các phép đo đã báo cáo.
+        </p>
+        <p>
+          Các lần nộp trong phần phát lại là dữ liệu thật. Phần giả lập thay
+          nhãn đầu vào và chạy lại chính checkpoint; không tạo ra quan sát học
+          tập mới.
+        </p>
+        <h3>Giới hạn của trải nghiệm</h3>
+        <p>
+          Đây là công cụ nghiên cứu dự báo và sàng lọc hồi cứu. Chưa có thử
+          nghiệm can thiệp, chưa xác lập lợi ích chọn bài tập, chưa phải hệ
+          thống gia sư đã được kiểm chứng.
+        </p>
+        <p>
+          ACcoding có lượt nộp và phán quyết, không cung cấp mã nguồn hoặc đề
+          bài đầy đủ. Vì vậy, khu Luyện tập dùng 8 bài Python tự biên soạn; bài
+          gợi ý được chọn bằng quy tắc, chưa được kiểm chứng về hiệu quả giáo
+          dục. Xác suất AC không phải phần trăm thành thạo kiến thức.
+        </p>
+        <p>
+          Mã bài tiếp theo lấy từ lịch sử quan sát. Dữ liệu không xác nhận thời
+          điểm phán quyết được trả về; phát lại thứ tự bản ghi không chứng minh
+          triển khai thời gian thực.
+        </p>
+      </section>
+      <section class="card prose">
+        <h2>Cách dùng khi trình bày</h2>
+        <ol>
+          <li>Chọn hồ sơ, chọn mô hình và phát lại từng lần nộp.</li>
+          <li>Giải thích H0, H1 và vì sao bài đích được giữ cố định.</li>
+          <li>Mở kết quả thật; so sánh cả trường hợp dự báo đúng và sai.</li>
+          <li>
+            Sửa chuỗi trong phần thử nghiệm đầu vào để xem mô hình phản ứng.
+          </li>
+          <li>Mở bằng chứng toàn tập để tránh kết luận từ một trường hợp.</li>
+        </ol>
+        <h3>Tài liệu nghiên cứu</h3>
+        <div class="document-links">
+          <a href="/documents/paper" rel="noopener" target="_blank"
+            >Bài báo tiếng Anh <span>↗</span></a
+          ><a href="/documents/report">Báo cáo tiếng Việt <span>↓</span></a
+          ><a href="/documents/source">Nguồn LaTeX <span>↓</span></a
+          ><a href="/documents/study-package"
+            >Gói tái lập nghiên cứu <span>↓</span></a
+          >
+        </div>
+      </section>
+    </div>
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <h2>Dấu vết kiểm chứng</h2>
+          <p class="small muted">
+            Các tệp được kiểm tra tại lúc khởi động. Sai khác checkpoint hoặc dữ
+            liệu sẽ chặn khởi chạy.
+          </p>
+        </div>
+        <span class="status-pill">SHA-256</span>
+      </div>
+      <div class="table-scroll">
+        <table class="hash-table">
+          <thead>
+            <tr>
+              <th>Tệp</th>
+              <th>Hàm băm</th>
+              <th>Kiểm tra</th>
+            </tr>
+          </thead>
+          <tbody id="provenance-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</div>

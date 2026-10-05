@@ -1,0 +1,32 @@
+{
+  "source_run": "catalog-policy-v2",
+  "no_refit": true,
+  "raw_rollout_means_verified": true,
+  "confidence_intervals": "Copied from locked summary; not recomputed or selected after inspection",
+  "input_hashes": {
+    "research/runs/catalog-policy-v2/summary.json": "300411d8e200c41b37e4d753697c50d16c21c2da87021cefc393ca71bce52acb",
+    "research/runs/catalog-policy-v2/rollouts.npz": "0a54ed8a572cb1d966e0999d4ba5ecfcf0d5e2858ea7224aa8d8f31b9c2c558c",
+    "research/runs/catalog-policy-v2/record.json": "51c39f777ac5c794f382c23b7f80b25ed3744e1bfa3c214946681ec27f3634b8",
+    "app/static/data/catalog-v2.json": "b1dcac6a74b19b6c6cce65177276e8f32e9f64c75ccaae4b415546d94bb61fbb"
+  },
+  "assets": {
+    "figures/figure_1_architecture.pdf": "131d6b47a93c6889f4dc97f44fc5210955ebd5855906e48efe9d5d103c0d3272",
+    "figures/figure_1_architecture.png": "a3216668ab94d68816167fa63973607dcdf6fbed51274b908861506b5a6d461b",
+    "figures/figure_1_architecture.svg": "5615c2bc1e2b006cf8ca2588b24bbc834403360e835a1342f68e18ecbf347ef1",
+    "figures/figure_2_protocol.pdf": "c28526a37c3489d7ed7df382e9fbf87450abecd9fa99be2937b75d3700c69445",
+    "figures/figure_2_protocol.png": "e5794db550e70a3329d4373209021f887cc8a7c041dc57c913cc1c852d403d34",
+    "figures/figure_2_protocol.svg": "fa30bd50eb8574770a84d2ea4b6bea080341980b5a3347c65a05ca8e49504a56",
+    "figures/figure_3_prediction_policy.pdf": "b036f56dc0b72d5f817db30b96e73b66bd69e130ea48a6e82f096b4c3537d115",
+    "figures/figure_3_prediction_policy.png": "3933f5b3f6bbd4a05011dcfb4a77e4585f3299369cbc2e191e44a44707a37602",
+    "figures/figure_3_prediction_policy.svg": "1a53a267397baf45d8c75cb7c7d5f1115d8eae989af37169df6dff40fdc81f7e",
+    "figures/figure_4_stress_contrasts.pdf": "5643f9e1bcbf225f33411892819d9bbf420c57e53fe2b43947c097289847b1bb",
+    "figures/figure_4_stress_contrasts.png": "af8cc3c4359bbc377ecb52a9bd00258c64edaab3e29798f34b1cf904091850df",
+    "figures/figure_4_stress_contrasts.svg": "5f1df36dd8e978b8ce7a1620e30e6068bfedc1c28fb72db3241a40efb5e324f0",
+    "figures/graphical_abstract.pdf": "3558561ae5882cd4efed0ec9f2f724e48aa78b69928a25976501e2e1b177bef8",
+    "figures/graphical_abstract.png": "16a2685da9401b1a46eb89e3500bf96c5b331d219ec592b26d797d0796523c55",
+    "figures/graphical_abstract.svg": "156710b027f23abfa5168e2af34f39a339197f1fa6d7345ebe9f6c012d11b0e8",
+    "tables/filter_fits.csv": "fc5082ecc05319945f21d2402df187ffd0f1a3c2d24d6fc69bb9e629c8f88412",
+    "tables/paired_contrasts.csv": "0c14665b14444293fc18694edb57eaa7b4ee8a1e450e47134bac2fa2daa94927",
+    "tables/policy_results.csv": "f814ce3bfda87441eb2850fa1e695866eec9a5867a6da4cb0f63010fdf08d634"
+  }
+}

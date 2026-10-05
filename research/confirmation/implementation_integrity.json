@@ -1,0 +1,8 @@
+{
+  "sealed_at_utc": "2026-09-26T02:21:52.620188+00:00",
+  "confirmatory_script_sha256": "60f25477c1792d41909ea786c1224388611a24976a016293608fa7c825fef797",
+  "baseline_helper_sha256": "0dcc83c01cf09d9a89f12a2680c06aa1281b976401fef7689aea7c45439e73c1",
+  "fixed_probe_helper_sha256": "bf8c44da8200f82f68776e279500433c84653be580e544872ee464758e9fc66c",
+  "validation_lock_sha256": "33f330de16c086c97dddfee2161b2166a20cde3e0d62622aa684cfea9ac76b2f",
+  "implementation_note": "Pre-confirmation read-only review recommended code/hash enforcement. Added seal and evaluation assertions after fit launch, before opening new confirmation outcomes; no fitting, alpha selection, features, targets, or statistical analysis changed."
+}

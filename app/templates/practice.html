@@ -1,0 +1,262 @@
+<section id="learn-home" class="practice-view">
+  <div class="learn-hero">
+    <div class="hero-copy">
+      <span class="eyebrow">BỘ LUYỆN PYTHON CƠ BẢN</span>
+      <h1>Viết code.<br />Hiểu từng lần thử.</h1>
+      <p>
+        Một bài tập, phản hồi rõ ràng và một bước tiếp theo.<br
+          class="desktop-only"
+        />
+        Bắt đầu ngay trong trình duyệt của bạn.
+      </p>
+      <button id="start-learning" class="button primary large">
+        Bắt đầu bài đầu tiên →
+      </button>
+      <p id="home-state" class="muted small">
+        Không cần tài khoản. Bắt đầu với một hàm Python nhỏ.
+      </p>
+    </div>
+    <div
+      class="hero-preview"
+      aria-label="Bài luyện được gợi ý"
+    >
+      <div class="preview-top">
+        <span class="soft-tag" id="home-preview-label">Bài gợi ý</span
+        ><span class="muted small" id="home-preview-topic">Vòng lặp & điều kiện</span>
+      </div>
+      <h2 id="home-preview-title">Chỉ cộng số dương</h2>
+      <p id="home-preview-description">Lấy những số lớn hơn 0. Cộng chúng lại. Trả về kết quả.</p>
+      <div class="home-preview-example" id="home-preview-example"></div>
+    </div>
+  </div>
+  <div class="first-steps" aria-label="Cách sử dụng">
+    <div>
+      <span class="step-number">1</span>
+      <div>
+        <strong>Đọc một đề bài</strong>
+        <p>Có ví dụ để biết kết quả cần làm.</p>
+      </div>
+    </div>
+    <div>
+      <span class="step-number">2</span>
+      <div>
+        <strong>Viết và chạy Python</strong>
+        <p>Xem test nào đúng, chỗ nào cần sửa.</p>
+      </div>
+    </div>
+    <div>
+      <span class="step-number">3</span>
+      <div>
+        <strong>Tiếp tục đúng bước</strong>
+        <p>Chọn bài tiếp theo hoặc luyện lại.</p>
+      </div>
+    </div>
+  </div>
+  <section class="library-section" aria-labelledby="library-title">
+    <div class="section-head">
+      <div>
+        <h2 id="library-title">Bài luyện của bạn</h2>
+        <p id="library-count" class="muted">12 bài · mở bài bất kỳ</p>
+      </div>
+      <span class="completion-count"
+        ><strong id="completed-count">0 / 12</strong> bài hoàn thành</span
+      >
+    </div>
+    <div id="exercise-library" class="lesson-grid"></div>
+  </section>
+  <details class="quiet-details">
+    <summary>Về bộ bài và cách gợi ý bài tiếp theo</summary>
+    <p>
+      Đây là 12 bài Python tự biên soạn. App đọc kết quả kiểm tra, cập nhật
+      ước lượng kỹ năng và dùng Double DQN để gợi ý bài tiếp theo. Mô hình
+      được huấn luyện bằng người học mô phỏng, chưa chứng minh tác động với
+      sinh viên thật. Bạn luôn có thể tự chọn bài. Mã và lịch sử ở trình duyệt này.
+    </p>
+    <a href="#policy" data-route="policy">Xem mô hình chọn bài thế nào →</a>
+  </details>
+</section>
+
+<section id="lesson-view" class="practice-view" hidden>
+  <a class="back-link" href="#learn" data-route="learn"
+    >← Bộ bài luyện Python</a
+  >
+  <div class="lesson-heading">
+    <div>
+      <div class="topic-line">
+        <span id="lesson-topic">Vòng lặp & điều kiện</span
+        ><span id="lesson-level" class="soft-tag">Nền tảng</span>
+      </div>
+      <h1 id="lesson-title">Chỉ cộng số dương</h1>
+    </div>
+    <div class="lesson-path">
+      <span>1. Đọc đề</span><span>→</span><span>2. Viết code</span><span>→</span
+      ><span>3. Kiểm tra</span>
+    </div>
+  </div>
+  <div class="coding-layout">
+    <article class="problem-panel">
+      <h2>Bạn cần làm gì?</h2>
+      <p id="problem-description"></p>
+      <ul id="problem-rules" class="problem-rules"></ul>
+      <h3>Ví dụ</h3>
+      <div id="problem-examples"></div>
+      <details id="hint-panel" class="hint-panel">
+        <summary>Cần một gợi ý?</summary>
+        <ol id="hint-content"></ol>
+        <button id="show-hint" class="button secondary">
+          Cho tôi một gợi ý
+        </button>
+      </details>
+      <details class="quick-help">
+        <summary>Nhắc nhanh cú pháp Python</summary>
+        <p>
+          Vòng lặp duyệt từng phần tử; <code>if</code> kiểm tra điều kiện;
+          <code>return</code> trả kết quả của hàm.
+        </p>
+        <pre>
+for item in items:
+    if điều_kiện:
+        # Xử lý phần tử phù hợp
+
+return kết_quả</pre
+        >
+        <p>
+          Các dòng thuộc một khối cần thụt vào cùng mức. Có thể nhấn Tab trong ô
+          mã để thêm 4 dấu cách.
+        </p>
+      </details>
+    </article>
+    <section class="editor-panel" aria-label="Viết và kiểm tra bài làm">
+      <div class="editor-toolbar">
+        <span
+          ><span class="code-dot"></span
+          ><strong id="function-signature">tong_so_duong()</strong></span
+        >
+        <div>
+          <button id="undo-code" class="text-button" hidden>Hoàn tác</button
+          ><button id="reset-code" class="text-button">Đặt lại mã</button>
+        </div>
+      </div>
+      <div class="code-surface">
+        <pre id="line-numbers" aria-hidden="true">1</pre>
+        <label class="sr-only" for="code-editor">Mã Python của bạn</label
+        ><textarea
+          id="code-editor"
+          spellcheck="false"
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+          wrap="off"
+          maxlength="20000"
+          aria-describedby="save-status"
+        ></textarea>
+      </div>
+      <div class="editor-bottom">
+        <span id="save-status" class="small muted"
+          >Bản nháp lưu trên trình duyệt này</span
+        >
+        <div>
+          <button id="cancel-code" class="button secondary" hidden>
+            Dừng chạy</button
+          ><button id="run-code" class="button primary">Chạy kiểm tra</button>
+        </div>
+      </div>
+      <div class="keyboard-hint">
+        Ctrl + Enter để chạy · Python chạy trên trình duyệt, không gửi mã lên
+        máy chủ
+      </div>
+      <div id="draft-changed" class="draft-note" role="status" hidden>
+        Mã đã thay đổi. Chạy lại để kiểm tra phiên bản mới.
+      </div>
+      <div
+        id="feedback"
+        class="feedback empty-feedback"
+        role="status"
+        aria-live="polite"
+      ></div>
+      <details id="stdout-panel" class="test-details" hidden>
+        <summary>Xem nội dung đã in khi chạy các test</summary>
+        <pre id="stdout-content"></pre>
+      </details>
+      <details id="test-details" class="test-details" hidden>
+        <summary id="test-summary">Xem các trường hợp kiểm tra</summary>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Kết quả</th>
+                <th>Đầu vào</th>
+                <th>Cần trả về</th>
+                <th>Hàm trả về</th>
+              </tr>
+            </thead>
+            <tbody id="test-results"></tbody>
+          </table>
+        </div>
+      </details>
+      <section id="next-lesson" class="next-lesson" hidden>
+        <div>
+          <span class="eyebrow">BƯỚC TIẾP THEO</span>
+          <h3 id="next-title"></h3>
+          <p id="next-reason"></p>
+          <p id="next-policy" class="small muted"></p>
+        </div>
+        <button id="next-exercise" class="button primary">
+          Làm bài tiếp theo →
+        </button>
+        <details>
+          <summary>Vì sao app gợi ý bài này?</summary>
+          <p id="next-explanation"></p>
+          <a href="#policy" data-route="policy">Xem từng quyết định của mô hình →</a>
+        </details>
+      </section>
+    </section>
+  </div>
+</section>
+
+<section id="progress-view" class="practice-view" hidden>
+  <div class="page-heading">
+    <div>
+      <span class="eyebrow">TIẾN ĐỘ CỦA BẠN</span>
+      <h1>Nhìn lại những gì đã làm.</h1>
+      <p>Các bài và bản nháp được lưu trên trình duyệt này.</p>
+    </div>
+    <button id="export-practice" class="button secondary">
+      Xuất nhật ký ↓
+    </button>
+  </div>
+  <div id="progress-empty" class="empty-state">
+    <span class="empty-symbol" aria-hidden="true">⌘</span>
+    <h2>Bắt đầu từ một bài nhỏ.</h2>
+    <p>Sau lần chạy đầu tiên, bạn sẽ thấy tiến độ ở đây.</p>
+    <button id="start-from-progress" class="button primary">
+      Làm bài đầu tiên →
+    </button>
+  </div>
+  <div id="progress-content" hidden>
+    <div class="progress-stats">
+      <div>
+        <strong id="progress-completed">0 / 12</strong
+        ><span>bài đã hoàn thành</span>
+      </div>
+      <div>
+        <strong id="progress-attempts">0</strong><span>lượt chạy kiểm tra</span>
+      </div>
+      <p>
+        Hoàn thành nghĩa là đã qua các test của bài.<br />Đây chưa phải phép đo
+        mức độ thành thạo.
+      </p>
+    </div>
+    <div id="progress-list" class="progress-list"></div>
+    <details class="quiet-details">
+      <summary>Mô hình đang ước lượng kỹ năng thế nào?</summary>
+      <p>Đây là trạng thái bên trong mô hình học từ mô phỏng, chưa phải kết quả đánh giá năng lực của bạn. Qua hết test một bài không có nghĩa đã thành thạo kỹ năng.</p>
+      <div id="skill-estimates" class="skill-grid"></div>
+      <a href="#policy" data-route="policy">Mở bàn thử nghiệm →</a>
+    </details>
+    <p class="muted small progress-note">
+      Nhật ký xuất ra có chứa mã bạn đã viết. Không tự động đưa vào bộ dữ liệu
+      nghiên cứu.
+    </p>
+  </div>
+</section>

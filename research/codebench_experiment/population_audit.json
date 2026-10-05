@@ -1,0 +1,9 @@
+{
+  "archive_user_ids": 471,
+  "users_with_any_dated_execution_event": 467,
+  "users_with_TEST": 414,
+  "users_with_SUBMITION": 466,
+  "users_with_TEST_but_no_SUBMITION": 1,
+  "archive_users_with_no_dated_execution_event": 4,
+  "definition": "Distinct global user IDs. Empty logs do not create events; experiment includes every user with at least one SUBMITION, without a minimum exercise count."
+}

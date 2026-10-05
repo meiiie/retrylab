@@ -1,0 +1,197 @@
+{
+  "audited_at_utc": "2026-09-26T01:46:52.759970+00:00",
+  "project_url": "https://osf.io/zuwf7/",
+  "paper_doi": "https://doi.org/10.1145/3565472.3592955",
+  "scope": "Public metadata and publicly documented schema only",
+  "participant_records_downloaded": 0,
+  "raw_data_use_status": "Not acquired; optional candidate outside the current core study",
+  "sources": [
+    {
+      "name": "project",
+      "url": "https://api.osf.io/v2/nodes/zuwf7/",
+      "response_sha256": "921c7ea4f7b2c88b78067e62440e79e1bf42923486ca334a37e0bcfa72c7f4cb"
+    },
+    {
+      "name": "root_files",
+      "url": "https://api.osf.io/v2/nodes/zuwf7/files/osfstorage/",
+      "response_sha256": "485a199f55a2d3f45fdb2de1ab7c9c1c3b768946181cbc2d3bbdb327a6bd4944"
+    },
+    {
+      "name": "empirical_data_files",
+      "url": "https://api.osf.io/v2/nodes/zuwf7/files/osfstorage/63d7dbe986b9820305baa892/",
+      "response_sha256": "ac05f649888f4ef679a211468f5087d0bfedec63a9b8451cd0b627e7d481a341"
+    }
+  ],
+  "files": [
+    {
+      "source_group": "root_files",
+      "name": "Empirical Study Dataset Description.pdf",
+      "kind": "file",
+      "bytes": 69487,
+      "download_url": "https://osf.io/download/yavp9/",
+      "downloaded": false
+    },
+    {
+      "source_group": "root_files",
+      "name": "empirical_study",
+      "kind": "folder",
+      "bytes": null,
+      "download_url": null,
+      "downloaded": false
+    },
+    {
+      "source_group": "root_files",
+      "name": "license.txt",
+      "kind": "file",
+      "bytes": 1925,
+      "download_url": "https://osf.io/download/g3ebk/",
+      "downloaded": false
+    },
+    {
+      "source_group": "root_files",
+      "name": "simulation_study",
+      "kind": "folder",
+      "bytes": null,
+      "download_url": null,
+      "downloaded": false
+    },
+    {
+      "source_group": "empirical_data_files",
+      "name": "user_features.csv",
+      "kind": "file",
+      "bytes": 101166411,
+      "download_url": "https://osf.io/download/n8phe/",
+      "downloaded": false
+    },
+    {
+      "source_group": "empirical_data_files",
+      "name": "url_model_histories.csv",
+      "kind": "file",
+      "bytes": 10568851,
+      "download_url": "https://osf.io/download/vp5k3/",
+      "downloaded": false
+    },
+    {
+      "source_group": "empirical_data_files",
+      "name": "problem_features.csv",
+      "kind": "file",
+      "bytes": 86632383,
+      "download_url": "https://osf.io/download/bpw8s/",
+      "downloaded": false
+    },
+    {
+      "source_group": "empirical_data_files",
+      "name": "url_logs.csv",
+      "kind": "file",
+      "bytes": 1482476,
+      "download_url": "https://osf.io/download/ngrup/",
+      "downloaded": false
+    },
+    {
+      "source_group": "empirical_data_files",
+      "name": "url_features.csv",
+      "kind": "file",
+      "bytes": 120011,
+      "download_url": "https://osf.io/download/nt7xb/",
+      "downloaded": false
+    }
+  ],
+  "schema_source": "https://osf.io/download/yavp9/",
+  "license_source": "https://osf.io/download/g3ebk/",
+  "license_assessment": {
+    "type": "ASSISTments Data Terms of Use, effective 2020-10-30",
+    "standard_open_license_verified": false,
+    "conditions_observed": [
+      "Cite ASSISTments and the specific dataset",
+      "No commercial use or reference",
+      "Make outcomes freely and openly available",
+      "No de-anonymization",
+      "No raw-data redistribution; collaborators access original source",
+      "Indemnification clause"
+    ]
+  },
+  "task": {
+    "domain": "School mathematics",
+    "action": "Support video recommendation, not selection of the next programming exercise",
+    "observed_reward_definition": "Next problem correct on the first try without additional support",
+    "long_term_learning_outcome": false
+  },
+  "ope_assessment": {
+    "explicit_chosen_action_propensity_in_documented_log_schema": false,
+    "epsilon_in_model_history": true,
+    "algorithm_and_randomization_flag_in_log": true,
+    "per_decision_candidate_set_in_documented_log_schema": false,
+    "exact_propensity_reconstruction_verified": false,
+    "remaining_requirements": [
+      "Recover candidate availability at each decision",
+      "Verify random sampling and tie-breaking rules",
+      "Join each recommendation to the exact pre-decision model state",
+      "Handle model-update delays and missing history dates",
+      "Identify algorithm-mixture probability if pooling policies",
+      "Audit selection caused by missing next-problem reward",
+      "Use pre-decision features and account for repeated students/assignments"
+    ]
+  },
+  "project": {
+    "title": "A Bandit you can Trust Data and Code",
+    "description": "Data and code for the paper \"A Bandit you can Trust\".",
+    "public": true,
+    "date_created": "2023-01-30T14:26:19.000826",
+    "date_modified": "2023-04-21T15:56:05.976281"
+  },
+  "programming_alternative": {
+    "name": "RoboMission 2019-12",
+    "author_schema_url": "https://raw.githubusercontent.com/adaptive-learning/adaptive-learning-research/master/data/robomission-2019-12/README.md",
+    "author_download_folder": "https://drive.google.com/drive/u/0/folders/1WLtWBSfNnLfy-gTF0fPvDKZ-Mge19Qg2",
+    "documented_sizes_approximate": {
+      "events": 2600000,
+      "attempts": 160000,
+      "problems": 85
+    },
+    "documented_tables": {
+      "events.csv": [
+        "id",
+        "event_order",
+        "timestamp",
+        "event_type",
+        "student",
+        "problem",
+        "attempt",
+        "program",
+        "correct",
+        "tools"
+      ],
+      "attempts.csv": [
+        "id",
+        "student",
+        "problem",
+        "problemset",
+        "start",
+        "solved",
+        "time",
+        "n_edits",
+        "n_executions",
+        "program"
+      ],
+      "problems.csv": [
+        "id",
+        "name",
+        "statement",
+        "solution",
+        "context",
+        "problemset",
+        "level1",
+        "level2",
+        "level3"
+      ]
+    },
+    "documented_program_format": "MiniCode, condensed RoboCode/Blockly representation",
+    "explicit_propensity_in_documented_schema": false,
+    "per_decision_candidate_set_in_documented_schema": false,
+    "repository_license": "GPL-3.0",
+    "separately_hosted_dataset_license_verified": false,
+    "license_caution": "Repository/application license must not be assumed to license separately hosted learner data",
+    "participant_records_downloaded": 0,
+    "recommended_status": "Relevant process-rich programming candidate; not required for current study"
+  }
+}

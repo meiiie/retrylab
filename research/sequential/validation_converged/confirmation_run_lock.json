@@ -1,0 +1,8 @@
+{
+  "started_at_utc": "2026-09-26T02:45:54.1542882Z",
+  "application_threshold_sha256": "913dbaded871bc8747fb6f521e4f584b87b38bd965c7b6895b79e1707c5e61d5",
+  "checkpoint_lock_sha256": "b5d46f1509347353a77b3bfeb428063d220dbec595c4b36f33d7ec45c873b81a",
+  "confirmation_input_sha256": "6dc685aaa4167054306216c2193572c49c371c98276c1e4959ae6760261211ed",
+  "model_selection_frozen": true,
+  "application_thresholds_frozen": true
+}

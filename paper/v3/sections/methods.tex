@@ -1,0 +1,69 @@
+\section{Data}\label{sec:data}
+
+\paragraph{Source} We use the public ACcoding dataset, version 2.0.0 \citep{chen2024accoding,sun2026accodingdata}, released by the teaching group of Beihang University for courses in C programming, data structures and algorithm analysis. The archive (SHA-256 prefix \texttt{26b5637d}) contains anonymised submissions with judge verdicts, problem metadata with a 1--10 difficulty rating assigned by educators, and 96 knowledge-point tags that the dataset article describes as defined by educators or teaching assistants. The SQL tables were parsed as text; no submitted code or SQL was executed.
+
+\paragraph{Population and unit of analysis} Two cohorts of 1,500 learners each had been used in earlier, unpublished forecasting analyses of this archive. To keep every result reported here confirmatory, the present study uses only the {{n_learners}} learners who were absent from both cohorts and had at least 20 distinct problems in the snapshot. One \emph{interaction} is a learner's first judged submission on a problem; the label is 1 when that submission is accepted. Unfinished (WT/JG) and judge-side or unclassified statuses (IFNR, OFNR, EFNR, OE) were removed before sequencing, and only C/C++ submissions were kept. The resulting data contain {{n_interactions}} first-encounter interactions on {{n_problems}} problems. As an observable proxy for solving effort we record the number of submissions up to and including the first acceptance.
+
+\paragraph{Skills} We grouped the 96 educator tags into 15 course-level skills (e.g.\ loops, arrays, strings, pointers and linked lists, recursion); problems without tags form a sixteenth group. The groups play the role of knowledge components \citep{koedinger2012kli}, but the grouping is an explicit modelling decision of the authors, released with the code, and not a validated knowledge-component model. Items carry normalised tag weights, so multi-skill problems contribute to several skills.
+
+\paragraph{Partitions} Learners were ranked by a salted SHA-256 hash of their anonymised identifier and split into three disjoint partitions before any outcome of this population was inspected: A ({{n_A}} learners) fits the deployed tracker and all training simulators; B ({{n_B}} learners) fits independent evaluation worlds; T ({{n_T}} learners) is used only for forecast evaluation and as starting points of evaluation episodes. Ten per cent of A and of B are inner-validation learners used for early stopping and model selection.
+
+\section{Methods}\label{sec:methods}
+
+\subsection{Learner models}\label{sec:learners}
+
+Let $H_t=((j_1,y_1),\dots,(j_{t-1},y_{t-1}))$ be a learner's history of problems and first-attempt outcomes. Each model outputs $P_M(y=1\mid j,H_t)$ for any query problem $j$ and is updated after each observed outcome.
+
+\paragraph{Logistic family with online ability} For IRT, AFM and PFA \citep[see][for an overview of this family]{pelanek2017learner},
+\begin{equation}
+\operatorname{logit} P(y=1\mid j,H_t,\theta) = \theta - \beta_j + \ell_M(j,H_t),
+\label{eq:logistic}
+\end{equation}
+where $\beta_j = b_0 + b_d\,d_j + \sum_k w_{jk} b_k + u_j$ combines the released difficulty $d_j$, skill offsets and a regularised problem-specific term. The learning term is $\ell_{\mathrm{IRT}}=0$, $\ell_{\mathrm{AFM}}=\sum_k w_{jk}\gamma_k\log(1+n_k)$ with weighted practice counts $n_k$ \citep{cen2006lfa}, and $\ell_{\mathrm{PFA}}=\sum_k w_{jk}(\gamma_k\log(1+s_k)+\rho_k\log(1+f_k))$ with success and failure counts \citep{pavlik2009pfa}. Parameters are fitted by penalised maximum likelihood (Gaussian priors on $\theta$ and $u_j$). For a new learner, ability is integrated on a 101-point grid with the fitted prior and updated by Bayes' rule after every outcome, so forecasts use only the learner's own past.
+
+\paragraph{DKT and SAKT} DKT \citep{piech2015dkt} feeds $[e_j; y e_j; y]$ to an LSTM, where $e_j$ sums a problem embedding (problems with at least ten fitting learners), a skill projection and a difficulty term; a question-conditioned decoder with a Rasch-style scalar offset, as in AKT \citep{ghosh2020akt}, outputs the next-step probability. SAKT \citep{pandey2019sakt} lets each query attend causally to the most recent 200 interactions, with a fixed per-head recency penalty on attention logits \citep{press2022alibi}; this makes chunked training and step-by-step inference identical. Hyperparameters were chosen on a development cohort only (\cref{sec:protocol}). A second DKT with a different random seed (\emph{twin}) is fitted on A with identical data and settings.
+
+\paragraph{Entropy-based identification tree} Following the topic specification, an ID3 tree \citep{quinlan1986id3} is grown with information gain on eight interpretable history features (e.g.\ prior success on the item's skill, recent success, released difficulty, problem pass rate in A) and reduced by reduced-error pruning on inner-validation learners. Its leaves yield human-readable diagnostic rules.
+
+\subsection{Exercise recommendation as a sequential decision problem}\label{sec:mdp}
+
+A decision is taken after a real prefix of a learner's history. The action set is a pool of {{pool}} problems chosen by a fixed rule from partition-A support counts only (up to 12 per fundamental skill, each attempted by at least 5\% of A learners), excluding problems already met. A disjoint post-test $\mathcal W$ of {{post}} problems (two per assessed skill) measures progress. The deployed \emph{tracker} is DKT fitted on A; the agent's state concatenates the tracker's predicted success on every pool problem, per-skill averages, the eligibility mask, the tracker's post-test forecast and the remaining horizon. An episode lasts ten problems. The reward operationalises the topic's objective of improving scores while limiting solving time:
+\begin{equation}
+r_t = 100\,\bigl[\bar Q_W(H_{t+1}) - \bar Q_W(H_t)\bigr] - \lambda\,(e_t-1),
+\label{eq:reward}
+\end{equation}
+where $\bar Q_W$ is the training world's expected post-test success, $e_t$ the number of submissions spent on the recommended problem and $\lambda={{lam}}$ percentage points (pp) per extra submission.
+
+\paragraph{Agents and baselines} We train Double DQN \citep{mnih2015dqn,vanhasselt2016ddqn} and PPO \citep{schulman2017ppo} with action masking, each with three seeds, in three training conditions on partition A: the DKT-A simulator with its own post-test measure (the standard KT--RL set-up, \emph{KT reward}); an AFM-A world with a latent ability and practice-driven learning (\emph{AFM world}); and a mixture cycling DKT-A, SAKT-A, AFM-A and PFA-A (\emph{mixed worlds}). Non-learning baselines are random, an easy-to-hard curriculum by IRT difficulty, the easiest item of the weakest skill, targeting a predicted success of 0.5 or 0.7 (a common operationalisation of the zone of proximal development \citep{vygotsky1978mind}; see also \citealp{wilson2019eighty} on optimal error rates), easiest and hardest first, and a one-step greedy maximiser of the tracker's expected post-test change (the myopic objective used in KT-based recommenders such as \citet{ozyurt2025exrec}). In latent worlds, a privileged one-step oracle that sees the true state serves as a reference.
+
+\subsection{Evaluation worlds and the negative control}\label{sec:worlds}
+
+A \emph{world} generates first-attempt outcomes and owns the measure of progress. Following the robust evaluation matrix \citep{doroudi2017rem}, every policy is evaluated in nine worlds: the two training worlds (DKT-A, AFM-A); the DKT twin; DKT-B and SAKT-B, fitted on different learners and measured by their own predictions, as in KT-simulator studies; AFM-B and PFA-B, in which a latent ability is drawn from the posterior given the real prefix and the true expected post-test is known; ZPD-B, an \emph{assumed} desirable-difficulty world that keeps AFM-B but lets each practice add $6p(1-p)$ weighted opportunities, where $p$ is the learner's current success probability; and IRT-B, which has no learning term. In IRT-B the true post-test gain is exactly zero for every policy, so any gain reported by the tracker there is spurious. We call IRT-B a \emph{negative control}, borrowing the epidemiological notion of an analysis in which the true effect is known to be absent \citep{lipsitch2010negative,arnold2016negative}. Evaluation episodes start from the real prefix of each T learner (prefix length drawn uniformly between 10 and 60 first encounters), and random outcomes are shared across policies through per-episode random streams.
+
+\subsection{Reported gain, drift and surprise}\label{sec:drift}
+
+For a model $M$ with post-test forecast $\bar P_M(H)=|\mathcal W|^{-1}\sum_{k\in\mathcal W}P_M(y=1\mid k,H)$, define the \emph{drift} of practising problem $j$ after history $H$ as
+\begin{equation}
+D_M(j,H) = \sum_{y\in\{0,1\}} P_M(y\mid j,H)\,\bar P_M\bigl(H\oplus(j,y)\bigr) - \bar P_M(H),
+\label{eq:drift}
+\end{equation}
+the change of the model's own forecast that the model itself expects. The gain a tracker reports over an episode of $T$ steps decomposes exactly into drift and \emph{surprise}:
+\begin{equation}
+\bar P_M(H_{T}) - \bar P_M(H_0) = \sum_{t<T} D_M(j_t,H_t) + \sum_{t<T} \bigl[\bar P_M(H_{t+1}) - \bar P_M(H_t) - D_M(j_t,H_t)\bigr].
+\label{eq:decomposition}
+\end{equation}
+Two properties make the decomposition diagnostic (proofs in \ref{app:proofs}).
+
+\begin{proposition}[No learning, no drift]\label{prop:nodrift}
+Let $M$ have a static latent state $\theta$ with prior $\pi$, outcomes that are conditionally independent given $\theta$, and forecasts given by the posterior predictive distribution. Then $D_M(j,H)=0$ for every problem $j$ and history $H$.
+\end{proposition}
+
+\begin{proposition}[In-simulator gain is accumulated drift]\label{prop:insim}
+If outcomes are generated by $M$ itself, then for any policy that chooses $j_t$ on the basis of $H_t$ (possibly at random), the expected gain reported by $M$ equals the expected accumulated drift, $\mathbb E\bigl[\bar P_M(H_T)-\bar P_M(H_0)\bigr] = \mathbb E\bigl[\sum_{t<T} D_M(j_t,H_t)\bigr]$.
+\end{proposition}
+
+\Cref{prop:nodrift} is the martingale property of posterior expectations \citep{williams1991probability}: IRT with a posterior over ability expects no change of its own forecast, whatever is practised. Models with learning terms (AFM, PFA) have non-zero drift by design, but its size and sign are tied to interpretable learning coefficients; neural trackers are not so constrained. \Cref{prop:insim} states that in the standard set-up, where one KT model is both simulator and yardstick, an agent that maximises the reported gain maximises accumulated drift---the learning that the model implicitly promises for the chosen problems. When the world is not the tracker, the surprise term no longer has mean zero and measures how far the world disagrees with these promises.
+
+\subsection{Pre-registered hypotheses and analysis}\label{sec:protocol}
+
+All hyperparameters, the pool rule, the reward cost and the training budget (300 iterations of 64 parallel episodes per agent) were fixed on a development cohort of previously inspected learners disjoint from the main population. Both protocols were then locked (\ref{app:repro}) before the main population was loaded. The protocols pre-register four hypotheses: \textbf{H1}, the advantage of KT-reward agents over random is larger in their training simulator DKT-A than in each independent world; \textbf{H2}, in the negative control IRT-B the tracker reports a positive gain for the tracker-optimising policies although their true gain is zero; \textbf{H3}, across policies, in-simulator gain in DKT-A is positively rank-correlated with the phantom gain in IRT-B; and \textbf{H4}, the per-problem drift of DKT-A is more dispersed than that of AFM-A fitted to the same learners. Forecasts are evaluated with AUC, negative log-likelihood (NLL), Brier score and expected calibration error on T with 1,000 learner-bootstrap replicates. Policy outcomes are averaged over training seeds within each episode, and 95\% intervals use 2,000 bootstrap replicates of the {{episodes}} evaluation episodes \citep{efron1993bootstrap}. H1--H4 are the confirmatory analyses. All other analyses---rank stability across worlds, worst-case robustness, gain--effort trade-offs, correlates of drift, the drift of other observers and forecasts along learners' real continuations---are exploratory and labelled as such. Intervals are conditional on the fitted worlds, treat the three training seeds as fixed and are not adjusted for multiplicity; all policies, worlds and contrasts are reported.

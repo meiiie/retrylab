@@ -1,0 +1,21 @@
+model,label,rule,metric,difference_pp,ci95_low_pp,ci95_high_pp
+all_submissions,Logistic: all submissions,validation_recall_80,workload,-0.44396706050841006,-0.6564291100356843,-0.2106029453394529
+all_submissions,Logistic: all submissions,validation_recall_80,failure_recall,-0.3578443242661433,-0.6311263894916606,-0.0896982453531493
+all_submissions,Logistic: all submissions,validation_workload_30,workload,0.18617973505191676,-0.0258998832670132,0.4200743913696156
+all_submissions,Logistic: all submissions,validation_workload_30,failure_recall,0.24753141227432662,-0.07096136549085973,0.5750058813799607
+first_attempt,Logistic: first attempts,validation_recall_80,workload,-0.01575366988900706,-0.16713954021346566,0.13749210458706668
+first_attempt,Logistic: first attempts,validation_recall_80,failure_recall,0.045739500094166274,-0.14335339023439944,0.2373177445850968
+first_attempt,Logistic: first attempts,validation_workload_30,workload,0.08020050125313594,-0.08785691853978317,0.2563656271856149
+first_attempt,Logistic: first attempts,validation_workload_30,failure_recall,0.18295800037668175,-0.06655488133528396,0.45720941025803985
+paired_target,Logistic: paired targets,validation_recall_80,workload,0.13748657357680605,0.011230463279876816,0.2781688058237858
+paired_target,Logistic: paired targets,validation_recall_80,failure_recall,0.13990905911157592,-0.03210647130307386,0.3050330855719962
+paired_target,Logistic: paired targets,validation_workload_30,workload,0.03007518796992459,-0.10895690533814437,0.16041011340648775
+paired_target,Logistic: paired targets,validation_workload_30,failure_recall,0.06995452955578796,-0.13843209052461544,0.2782251149823852
+gru_ALL,GRU: all submissions,validation_recall_80,workload,-0.6244181883279687,-0.8706212931575061,-0.3479529794124734
+gru_ALL,GRU: all submissions,validation_recall_80,failure_recall,0.17488632388946712,-0.13687625344925541,0.5401946973437636
+gru_ALL,GRU: all submissions,validation_workload_30,workload,-0.083064804869315,-0.3131069720161961,0.1582054139564663
+gru_ALL,GRU: all submissions,validation_workload_30,failure_recall,0.34977264777894534,0.005359142765397482,0.703962000725689
+gru_FIRST,GRU: first attempts,validation_recall_80,workload,-0.6229860365198681,-0.85749036056112,-0.4031005083637982
+gru_FIRST,GRU: first attempts,validation_recall_80,failure_recall,-0.20179191218016035,-0.46785276307174134,0.05853114176363409
+gru_FIRST,GRU: first attempts,validation_workload_30,workload,0.10168277837450668,-0.140993713691068,0.33687001131078215
+gru_FIRST,GRU: first attempts,validation_workload_30,failure_recall,0.6941641778997476,0.33561430358602995,1.0568250526637701

@@ -1,0 +1,185 @@
+{
+  "status": "final",
+  "source": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\manuscript.tex",
+  "source_sha256": "a82e223bdcca8a053284621575f20652adce29c0ab1131e44a839f0521446474",
+  "pdf": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\manuscript.pdf",
+  "pdf_sha256": "c6d9ad24159b7e55a6a48d3d4794ee918483522bcba1ae54a2f3ffb381bafa43",
+  "engine": "ReportLab limited-LaTeX-subset fallback with matplotlib mathtext images",
+  "reportlab_version": "5.0.0",
+  "renderer_sha256": "a60688f69a7c2f0a2748aacd63ce07de8b2fb6e0aee4e776fe07e061373491d0",
+  "latex_compiled": false,
+  "reason": "Native LaTeX compiler could not find standard directories on this host; no local TeX installation used",
+  "source_scientific_text_rewritten": false,
+  "unsupported_commands_policy": "Raise an explicit error; do not silently omit unsupported source passages",
+  "intentional_format_differences": [
+    "Preamble layout/package commands are not executed; scientific body is parsed by supported subset",
+    "Equations rendered by matplotlib mathtext rather than a TeX engine",
+    "Mathematical expressions are embedded raster images and are not selectable PDF text; editable expressions remain in the TeX source",
+    "Scientific serif layout, table sizing, pagination and footer are set by ReportLab",
+    "TeX hyphen ligatures preserved as ASCII hyphens"
+  ],
+  "page_count": 16,
+  "pages": [
+    {
+      "page": 1,
+      "text_characters": 3462,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-01.png"
+    },
+    {
+      "page": 2,
+      "text_characters": 4529,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-02.png"
+    },
+    {
+      "page": 3,
+      "text_characters": 4118,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-03.png"
+    },
+    {
+      "page": 4,
+      "text_characters": 3441,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-04.png"
+    },
+    {
+      "page": 5,
+      "text_characters": 4291,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-05.png"
+    },
+    {
+      "page": 6,
+      "text_characters": 4706,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-06.png"
+    },
+    {
+      "page": 7,
+      "text_characters": 3408,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-07.png"
+    },
+    {
+      "page": 8,
+      "text_characters": 3704,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-08.png"
+    },
+    {
+      "page": 9,
+      "text_characters": 3240,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-09.png"
+    },
+    {
+      "page": 10,
+      "text_characters": 3567,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-10.png"
+    },
+    {
+      "page": 11,
+      "text_characters": 3341,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-11.png"
+    },
+    {
+      "page": 12,
+      "text_characters": 3950,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-12.png"
+    },
+    {
+      "page": 13,
+      "text_characters": 3926,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-13.png"
+    },
+    {
+      "page": 14,
+      "text_characters": 4589,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-14.png"
+    },
+    {
+      "page": 15,
+      "text_characters": 3606,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-15.png"
+    },
+    {
+      "page": 16,
+      "text_characters": 2474,
+      "preview": "E:\\Sach\\baiThayPhuc\\BaiHong\\paper\\preview\\page-16.png"
+    }
+  ],
+  "numbered_sections": 9,
+  "equations": 6,
+  "tables": 7,
+  "figures": 0,
+  "paragraphs": 105,
+  "bibliography_entries": 22,
+  "cited_keys": [
+    "accoding2026",
+    "amin2026revisionaware",
+    "cheng2026unier",
+    "codebench",
+    "dawid1982",
+    "doroudi2017rem",
+    "gneiting2007",
+    "gonzalezbrenes2015leopard",
+    "heickal2025codeedit",
+    "hoa2026stepbkt",
+    "kim2026reliability",
+    "liang2022helpdkt",
+    "liu2022oktworkshop",
+    "ozyurt2025exrec",
+    "pankiewicz2025srcmldkt",
+    "patel2026codeinsight",
+    "piech2015dkt",
+    "pu2022selfattention",
+    "shi2022codedkt",
+    "wang2021grate",
+    "zhang2026mastery",
+    "zhao2026cekt"
+  ],
+  "parser_counts": {
+    "command:\\": 1,
+    "environment:center": 1,
+    "command:small": 1,
+    "environment:abstract": 1,
+    "command:textbf": 38,
+    "command:%": 32,
+    "command:noindent": 1,
+    "numbered_sections": 9,
+    "command:cite": 25,
+    "command:emph": 22,
+    "inline_math": 114,
+    "environment:equation": 6,
+    "environment:table": 7,
+    "table_rows": 35,
+    "command:ref": 4,
+    "appendix": 1,
+    "environment:thebibliography": 1,
+    "command:url": 22,
+    "command:'": 1
+  },
+  "unique_math_images": 103,
+  "page_bounds_violations": [],
+  "visual_inspection": "Passed: all 16 final pages inspected in four contact sheets; equation, screening, intermediate-code, appendix and reference pages additionally inspected at full preview resolution. No clipping, overlap, missing glyphs, unreadable tables, orphaned headings or footer collisions observed.",
+  "visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "full_resolution_detail_pages": [
+    4,
+    10,
+    12,
+    14,
+    15
+  ],
+  "post_inspection_hashes_verified": true,
+  "review_status": "Root reports final content-integrity review passed; this manifest records rendering and visual checks only."
+}

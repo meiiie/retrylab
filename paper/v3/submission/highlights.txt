@@ -1,0 +1,5 @@
+Six learner models forecast unseen learners equally well (AUC 0.775–0.776)
+KT-reward PPO: +27.2 pp in its simulator, ≤0.35 pp in latent-learning worlds
+In a no-learning control, the DKT tracker still reports a 25.7 pp gain
+In-simulator gain equals the tracker's expected self-change (drift), not learning
+Explicit-learning training worlds transfer best, but only within their model family

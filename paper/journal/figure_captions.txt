@@ -1,0 +1,7 @@
+Figure 1. Training artifacts and browser decision flow. Only retained past responses enter the learner-state update. The application does not observe latent simulator skills.
+
+Figure 2. Fixed-design experiment and sampling units. Repeated rollouts share learner seeds and trained fits; they are not independent human participants.
+
+Figure 3. Prediction and selection have different outcomes. A: validation negative log-likelihood, lower is better. B: nominal expected probe gain; bars show 95% learner-bootstrap intervals conditional on three fixed fits.
+
+Figure 4. Paired probe-gain contrasts across all five environments. Points compare aware/probe with each named comparator. Bars are conditional 95% intervals; zero means no observed mean difference. No multiplicity adjustment is applied.

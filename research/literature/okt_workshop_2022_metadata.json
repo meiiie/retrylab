@@ -1,0 +1,135 @@
+{
+  "created": "2022-10-07T11:25:39.185696+00:00",
+  "modified": "2024-07-15T23:59:04.590032+00:00",
+  "id": 7157118,
+  "conceptrecid": "7157117",
+  "doi": "10.5281/zenodo.7157118",
+  "conceptdoi": "10.5281/zenodo.7157117",
+  "doi_url": "https://doi.org/10.5281/zenodo.7157118",
+  "metadata": {
+    "title": "Open-ended Knowledge Tracing for Programming Exercises",
+    "doi": "10.5281/zenodo.7157118",
+    "publication_date": "2022-07-27",
+    "description": "<p>Knowledge tracing refers to the problem of estimating each student&rsquo;s knowledge component/skill mastery level from their past responses to questions in educational applications. One direct benefit knowledge tracing methods provide is the ability to predict each student&rsquo;s performance on the future questions. However, one key limitation of most existing knowledge tracing methods is that they treat student responses to questions as binary-valued, i.e., whether the responses are correct or incorrect. Response correctness analysis/prediction is easy to navigate but loses important information, especially for open-ended questions: the exact student responses can potentially provide much more information about their knowledge states than only response correctness. In this paper, we present our first exploration into open-ended knowledge tracing (OKT), i.e., the analysis and prediction of students&rsquo; open-ended responses to questions in the knowledge tracing setup. We detail OKT&rsquo;s application to the domain of computer science education with programming exercises. We conduct a series of quantitative and qualitative experiments to test the boundaries of OKT on the real-world dataset for the Second CSEDM Data Challenge.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Liu, Naiming",
+        "affiliation": "Rice University"
+      },
+      {
+        "name": "Wang, Zichao",
+        "affiliation": "Rice University"
+      },
+      {
+        "name": "Baraniuk, Richard G.",
+        "affiliation": "Rice University"
+      },
+      {
+        "name": "Lan, Andrew S.",
+        "affiliation": "University of Massachusetts Amherst"
+      }
+    ],
+    "resource_type": {
+      "title": "Conference paper",
+      "type": "publication",
+      "subtype": "conferencepaper"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "communities": [
+      {
+        "id": "csedm22"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "7157117"
+          }
+        }
+      ]
+    }
+  },
+  "title": "Open-ended Knowledge Tracing for Programming Exercises",
+  "links": {
+    "self": "https://zenodo.org/api/records/7157118",
+    "self_html": "https://zenodo.org/records/7157118",
+    "preview_html": "https://zenodo.org/records/7157118?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.7157118",
+    "self_doi": "https://doi.org/10.5281/zenodo.7157118",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7157118",
+    "reserve_doi": "https://zenodo.org/api/records/7157118/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/7157117",
+    "parent_html": "https://zenodo.org/records/7157117",
+    "parent_doi": "https://doi.org/10.5281/zenodo.7157117",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.7157117",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:7157118/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:7157118/sequence/default",
+    "files": "https://zenodo.org/api/records/7157118/files",
+    "media_files": "https://zenodo.org/api/records/7157118/media-files",
+    "thumbnails": {
+      "10": "https://zenodo.org/api/iiif/record:7157118:okt_csedm_final%20-%20Andrew%20Lan.pdf/full/%5E10,/0/default.jpg",
+      "50": "https://zenodo.org/api/iiif/record:7157118:okt_csedm_final%20-%20Andrew%20Lan.pdf/full/%5E50,/0/default.jpg",
+      "100": "https://zenodo.org/api/iiif/record:7157118:okt_csedm_final%20-%20Andrew%20Lan.pdf/full/%5E100,/0/default.jpg",
+      "250": "https://zenodo.org/api/iiif/record:7157118:okt_csedm_final%20-%20Andrew%20Lan.pdf/full/%5E250,/0/default.jpg",
+      "750": "https://zenodo.org/api/iiif/record:7157118:okt_csedm_final%20-%20Andrew%20Lan.pdf/full/%5E750,/0/default.jpg",
+      "1200": "https://zenodo.org/api/iiif/record:7157118:okt_csedm_final%20-%20Andrew%20Lan.pdf/full/%5E1200,/0/default.jpg"
+    },
+    "archive": "https://zenodo.org/api/records/7157118/files-archive",
+    "archive_media": "https://zenodo.org/api/records/7157118/media-files-archive",
+    "latest": "https://zenodo.org/api/records/7157118/versions/latest",
+    "latest_html": "https://zenodo.org/records/7157118/latest",
+    "versions": "https://zenodo.org/api/records/7157118/versions",
+    "draft": "https://zenodo.org/api/records/7157118/draft",
+    "access_links": "https://zenodo.org/api/records/7157118/access/links",
+    "access_grants": "https://zenodo.org/api/records/7157118/access/grants",
+    "access_users": "https://zenodo.org/api/records/7157118/access/users",
+    "access_request": "https://zenodo.org/api/records/7157118/access/request",
+    "access": "https://zenodo.org/api/records/7157118/access",
+    "communities": "https://zenodo.org/api/records/7157118/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/7157118/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/7157118/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/7157118/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/7157118/quota-increase",
+    "requests": "https://zenodo.org/api/records/7157118/requests"
+  },
+  "updated": "2024-07-15T23:59:04.590032+00:00",
+  "recid": "7157118",
+  "revision": 5,
+  "files": [
+    {
+      "id": "0910c947-70b9-4f97-872e-0c812f98afbe",
+      "key": "okt_csedm_final - Andrew Lan.pdf",
+      "size": 2731758,
+      "checksum": "md5:4560b0385416b59d9cc0c5ca4946059e",
+      "links": {
+        "self": "https://zenodo.org/api/records/7157118/files/okt_csedm_final%20-%20Andrew%20Lan.pdf/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "381529"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 218,
+    "unique_downloads": 206,
+    "views": 237,
+    "unique_views": 231,
+    "version_downloads": 218,
+    "version_unique_downloads": 206,
+    "version_unique_views": 231,
+    "version_views": 237
+  },
+  "state": "done",
+  "submitted": true
+}

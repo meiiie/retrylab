@@ -1,0 +1,16 @@
+{
+  "source": "paper/topic4_policy.tex",
+  "source_sha256": "6d21ccc3e3217ef8e8852796ede0b54e1cbe0b96c9202e8288d9e963c91af6e2",
+  "tool": "compile_latex_document",
+  "status": "compile-failed",
+  "diagnostic": "Unable to find standard directories for platform",
+  "source_compilation_confirmed": false,
+  "fallback_pdf_renderer": "ReportLab + PyMuPDF",
+  "pdfs": [
+    "output/pdf/retrylab-journal-en.pdf",
+    "output/pdf/retrylab-journal-vi.pdf"
+  ],
+  "record_updated_utc": "2026-09-26T17:11:16.616744+00:00",
+  "checked_local_date": "2026-09-27",
+  "document_class": "elsarticle"
+}

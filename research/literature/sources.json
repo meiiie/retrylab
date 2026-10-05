@@ -1,0 +1,1201 @@
+{
+  "audit_date": "2026-09-26",
+  "literature_cutoff": "2026-09-26",
+  "page_number_convention": "One-based page index of archived PDF, not necessarily printed proceedings pagination.",
+  "search_scope": "Targeted closest-work audit; not an exhaustive systematic review or proof of priority.",
+  "retrieval_routes": [
+    "agent-reach Exa search/fetch connector",
+    "web tool for primary metadata",
+    "public publisher/arXiv/author PDF downloads",
+    "agent-reach GitHub CLI read-only API"
+  ],
+  "exact_search_queries_this_pass": [
+    "\"knowledge tracing\" \"repeated attempts\" \"learning gain\" programming Code-DKT reliability",
+    "\"Your Model Is Predictive\" \"Useful\" González-Brenes Huang 2015",
+    "site.educationaldatamining.org/EDM2015 \"Your Model\""
+  ],
+  "sources": [
+    {
+      "id": "code_dkt_2022",
+      "bibkey": "shi2022codedkt",
+      "title": "Code-DKT: A Code-based Knowledge Tracing Model for Programming Tasks",
+      "authors": [
+        "Yang Shi",
+        "Min Chi",
+        "Tiffany Barnes",
+        "Thomas Price"
+      ],
+      "year": 2022,
+      "status": "EDM 2022 published proceedings",
+      "doi": "10.5281/zenodo.6853105",
+      "primary_url": "https://educationaldatamining.org/edm2022/proceedings/2022.EDM-long-papers.5/index.html",
+      "metadata_url": "https://educationaldatamining.org/edm2022/proceedings/2022.EDM-long-papers.5/2022.EDM-long-papers.5.bib",
+      "date_evidence": {
+        "arxiv_v1": "2022-06-07T19:29:44Z",
+        "proceedings_month": "2022-07"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            7
+          ],
+          "section": "5.1.3",
+          "finding": "Explicit comparison of general knowledge versus closeness to current solution, and first versus all attempts."
+        },
+        {
+          "pdf_pages": [
+            9
+          ],
+          "section": "5.2 Case C / Figure 8",
+          "finding": "Same target problem 5 predicted at successive histories after problems 232 and 233; illustrative case, not a systematic paired retry-block proper-score audit."
+        }
+      ],
+      "repositories": [
+        "YangAzure/Code-DKT"
+      ],
+      "caveats": [
+        "Abstract says class of 50 students; methods say 410 students and 50 problems. Cite methods for sample sizes."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "code_dkt_2022",
+            "requested_url": "https://educationaldatamining.org/edm2022/proceedings/2022.EDM-long-papers.5/2022.EDM-long-papers.5.pdf",
+            "resolved_url": "https://educationaldatamining.org/edm2022/proceedings/2022.EDM-long-papers.5/2022.EDM-long-papers.5.pdf",
+            "local_pdf": "papers\\code_dkt_2022.pdf",
+            "sha256": "bb07cabe8559b071614b4bc15107ca614cad177ed81f32ec1ed6128ba3df2e6a",
+            "bytes": 1029084,
+            "pages": 12,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [
+          {
+            "repository": "YangAzure/Code-DKT",
+            "sha": "8ddd13e27853267e1b9bc721cdeb4756822aeec6",
+            "committer_date": "2022-04-25T17:10:02Z",
+            "files": [
+              {
+                "path": "README.md",
+                "local_path": "code\\YangAzure__Code-DKT\\README.md",
+                "sha256": "2c8217daac083d987999c865e6d27d17f450bc6bf0351aa1e3e04487908a53d1",
+                "url": "https://github.com/YangAzure/Code-DKT/blob/8ddd13e27853267e1b9bc721cdeb4756822aeec6/README.md"
+              }
+            ]
+          }
+        ],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "code_edit_aied_2025",
+      "bibkey": "heickal2025codeedit",
+      "title": "Learning Code-Edit Embeddings to Model Student Debugging Behavior",
+      "authors": [
+        "Hasnain Heickal",
+        "Andrew Lan"
+      ],
+      "year": 2025,
+      "status": "AIED 2025 published Springer chapter",
+      "doi": "10.1007/978-3-031-98465-5_12",
+      "primary_url": "https://doi.org/10.1007/978-3-031-98465-5_12",
+      "metadata_url": "https://api.crossref.org/works/10.1007/978-3-031-98465-5_12",
+      "date_evidence": {
+        "published_online": "2025-07-20",
+        "arxiv_v1": "2025-02-26T18:54:39Z",
+        "arxiv_v2": "2025-04-29T20:44:04Z"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            3
+          ],
+          "section": "2.1",
+          "finding": "CodeT5 edit representations use contrastive, reconstruction and regularization objectives."
+        },
+        {
+          "pdf_pages": [
+            4,
+            5
+          ],
+          "section": "3.1 and 4",
+          "finding": "Next-step code suggestion conditioned on desired test-case mask; CodeBLEU and test execution evaluate output."
+        }
+      ],
+      "repositories": [
+        "umass-ml4ed/code-edit-representation"
+      ],
+      "alternate_download_ids": [
+        "code_edit_arxiv_2025"
+      ],
+      "caveats": [
+        "Published plural title Embeddings differs from singular arXiv title Embedding.",
+        "Page anchors refer to 7-page author manuscript, not 8-page Springer chapter or 10-page arXiv v2.",
+        "README inspected; complete repository reproduction not performed."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "code_edit_aied_2025",
+            "requested_url": "https://people.umass.edu/~andrewlan/papers/25aied-codeedit.pdf",
+            "resolved_url": "https://people.umass.edu/~andrewlan/papers/25aied-codeedit.pdf",
+            "local_pdf": "papers\\code_edit_aied_2025.pdf",
+            "sha256": "d4bbf1a87ad1a3f7e17b14d7fc567597455013f988444bde231f8604540f183e",
+            "bytes": 321140,
+            "pages": 7,
+            "retrieved_on": "2026-09-26"
+          },
+          {
+            "id": "code_edit_arxiv_2025",
+            "requested_url": "https://arxiv.org/pdf/2502.19407v2",
+            "resolved_url": "https://arxiv.org/pdf/2502.19407v2",
+            "local_pdf": "papers\\code_edit_arxiv_2025.pdf",
+            "sha256": "c9dd6b2a6450e987d15dc726f6d95e5bf182d55f5ea18fbce99bb4ec5c1c1a05",
+            "bytes": 716914,
+            "pages": 10,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [
+          {
+            "repository": "umass-ml4ed/code-edit-representation",
+            "sha": "141f5d8d91b43414017bd745beb026c7314c07ed",
+            "committer_date": "2025-02-18T02:34:12Z",
+            "files": [
+              {
+                "path": "README.md",
+                "local_path": "code\\umass-ml4ed__code-edit-representation\\README.md",
+                "sha256": "37c853434bb41fcff1526bce8523b48bae1a92216669db24ea36ebfb89caddfd",
+                "url": "https://github.com/umass-ml4ed/code-edit-representation/blob/141f5d8d91b43414017bd745beb026c7314c07ed/README.md"
+              }
+            ]
+          }
+        ],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "reliability_pkt_2026",
+      "bibkey": "kim2026reliability",
+      "title": "Ensuring Reliability in Programming Knowledge Tracing: A Re-evaluation of Attention-augmented Models and Experimental Protocols",
+      "authors": [
+        "Jaewook Kim",
+        "Hyeoncheol Kim"
+      ],
+      "year": 2026,
+      "status": "arXiv author metadata reports accepted ITS 2026, to appear LNCS",
+      "doi": null,
+      "primary_url": "https://arxiv.org/abs/2605.04727v1",
+      "date_evidence": {
+        "arxiv_v1": "2026-05-06T10:22:21Z"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            5,
+            6
+          ],
+          "section": "3.1–3.3",
+          "finding": "Audits attention normalization dimension, raw-row chronological ordering, and tuning sensitivity."
+        },
+        {
+          "pdf_pages": [
+            7,
+            9
+          ],
+          "section": "4 and 6.1",
+          "finding": "Controlled chronological and assignment-wise evaluation; competitive DKT baselines."
+        }
+      ],
+      "repositories": [],
+      "caveats": [
+        "Conference acceptance is verified as an author arXiv metadata statement, not independently verified proceedings publication.",
+        "No new code repository independently located in this focused audit.",
+        "The paper uses causal validity to refer to no future-information leakage; this does not identify intervention effects."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "reliability_pkt_2026",
+            "requested_url": "https://arxiv.org/pdf/2605.04727v1",
+            "resolved_url": "https://arxiv.org/pdf/2605.04727v1",
+            "local_pdf": "papers\\reliability_pkt_2026.pdf",
+            "sha256": "42c17a15846a049d3486517343ed880e574e71e782bf5356b3aa0d4ae7352002",
+            "bytes": 694912,
+            "pages": 15,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "code_insight_2026",
+      "bibkey": "patel2026codeinsight",
+      "title": "A Dataset for Modeling Iterative Problem-Solving",
+      "authors": [
+        "Fagun Patel",
+        "Sang T. Truong",
+        "Duc Q. Nguyen",
+        "Kazunori Fukuhara",
+        "Benjamin W. Domingue",
+        "Sanmi Koyejo",
+        "Nick Haber"
+      ],
+      "year": 2026,
+      "status": "arXiv author metadata states EMNLP 2026 Findings; final proceedings record unverified",
+      "doi": null,
+      "primary_url": "https://arxiv.org/abs/2609.00940v1",
+      "date_evidence": {
+        "arxiv_v1": "2026-09-01T09:00:55Z"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            4
+          ],
+          "section": "Figure 2",
+          "finding": "Shared calibration on weeks 1–3 and predictions on weeks 4–6."
+        },
+        {
+          "pdf_pages": [
+            5
+          ],
+          "section": "4 / Table 1",
+          "finding": "3,074,795 submissions, 3,286 unique students, 394 unique problems; data requires departmental approval/license."
+        },
+        {
+          "pdf_pages": [
+            18
+          ],
+          "section": "Appendix C",
+          "finding": "55% train / 15% validation / 30% test students; predictions at test-case level; up to 10 attempts per student-problem pair."
+        }
+      ],
+      "repositories": [
+        "aims-foundations/dynamic-irt"
+      ],
+      "caveats": [
+        "Do not describe restricted data as already acquired.",
+        "README says 396 problems whereas paper Table 1 says 394; retain distinction.",
+        "Brier and log likelihood already implemented in public metrics.py; not novel metrics.",
+        "Multiple-cutoff temporal evaluation already exists in code; a paired retry-block diagnostic must specify its distinct unit and estimand."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "code_insight_2026",
+            "requested_url": "https://arxiv.org/pdf/2609.00940v1",
+            "resolved_url": "https://arxiv.org/pdf/2609.00940v1",
+            "local_pdf": "papers\\code_insight_2026.pdf",
+            "sha256": "d5100b51652dc545f4934f4bf98bab1ed89999b15de12e1674d2e4346246c0a8",
+            "bytes": 8677709,
+            "pages": 31,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [
+          {
+            "repository": "aims-foundations/dynamic-irt",
+            "sha": "9f091ea59c339cb76e0aabfa94843f1ee0670496",
+            "committer_date": "2026-08-17T19:30:02Z",
+            "files": [
+              {
+                "path": "README.md",
+                "local_path": "code\\aims-foundations__dynamic-irt\\README.md",
+                "sha256": "67f49b145063278c42a0956cde8bbc5c43caabf7c8a9766cd3aa91777d351c64",
+                "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/README.md"
+              },
+              {
+                "path": "dynamic_models/temporal_eval/harness.py",
+                "local_path": "code\\aims-foundations__dynamic-irt\\dynamic_models\\temporal_eval\\harness.py",
+                "sha256": "5a5ade6b6de08bc96d7caf19661247e9e25546e2aec781899fff707ee964e170",
+                "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/dynamic_models/temporal_eval/harness.py"
+              },
+              {
+                "path": "dynamic_models/temporal_eval/student_split.py",
+                "local_path": "code\\aims-foundations__dynamic-irt\\dynamic_models\\temporal_eval\\student_split.py",
+                "sha256": "1f06cbc4aabab5a796a5cb30f714a8b7a173bc83f2b351b750b32314aa0975db",
+                "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/dynamic_models/temporal_eval/student_split.py"
+              },
+              {
+                "path": "dynamic_models/temporal_eval/metrics.py",
+                "local_path": "code\\aims-foundations__dynamic-irt\\dynamic_models\\temporal_eval\\metrics.py",
+                "sha256": "f4565fce576102af048ff232659a49b920ffeca73f2bf6bc201a3926db5104a2",
+                "url": "https://github.com/aims-foundations/dynamic-irt/blob/9f091ea59c339cb76e0aabfa94843f1ee0670496/dynamic_models/temporal_eval/metrics.py"
+              }
+            ]
+          }
+        ],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "exrec_2025",
+      "bibkey": "ozyurt2025exrec",
+      "title": "Personalized Exercise Recommendation with Semantically-Grounded Knowledge Tracing",
+      "authors": [
+        "Yilmazcan Ozyurt",
+        "Tunaberk Almaci",
+        "Stefan Feuerriegel",
+        "Mrinmaya Sachan"
+      ],
+      "year": 2025,
+      "status": "NeurIPS 2025 Main Conference published proceedings",
+      "doi": "10.52202/085713-0440",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/13707aad517ddd6c09ea02e0f55e1e7a-Abstract-Conference.html",
+      "metadata_url": "https://proceedings.neurips.cc/paper_files/paper/30208-/bibtex",
+      "date_evidence": {
+        "arxiv_v1": "2025-07-15T07:54:04Z",
+        "proceedings_year": 2025
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            5,
+            6
+          ],
+          "section": "4.3, Equations 14–17",
+          "finding": "KC prediction calibration targets average predicted question performance, while retaining observed-response prediction loss."
+        },
+        {
+          "pdf_pages": [
+            6
+          ],
+          "section": "4.4, Equations 18–19",
+          "finding": "KT samples response, updates state, and receives signed KC probability difference as reward; no positive-part clipping in Eq.19."
+        },
+        {
+          "pdf_pages": [
+            7
+          ],
+          "section": "4.4.1, Equation 23; 5",
+          "finding": "Both response branches enter expected value; KT-simulated recommendation experiments initialized with student histories."
+        }
+      ],
+      "repositories": [
+        "oezyurty/ExRec"
+      ],
+      "caveats": [
+        "The toy positive-clipped reward failure is not this paper's reward.",
+        "Static code inspection verifies cluster_vector_env.py lines 264–288; not a complete rerun.",
+        "A signed posterior update is not automatically invalid or biased; criticism requires additional evidence."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "exrec_2025",
+            "requested_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/13707aad517ddd6c09ea02e0f55e1e7a-Paper-Conference.pdf",
+            "resolved_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/13707aad517ddd6c09ea02e0f55e1e7a-Paper-Conference.pdf",
+            "local_pdf": "papers\\exrec_2025.pdf",
+            "sha256": "ca4a529f292feea765d42a3e4e475c61713f80a73f4c0ab951d62501e14e74a7",
+            "bytes": 1553169,
+            "pages": 41,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [
+          {
+            "repository": "oezyurty/ExRec",
+            "sha": "234955079f936de876c476bebd4b51468694356d",
+            "committer_date": "2025-12-25T09:53:25Z",
+            "files": [
+              {
+                "path": "README.md",
+                "local_path": "code\\oezyurty__ExRec\\README.md",
+                "sha256": "09fba41104ab91c6b971df339c9dd7938c2d4fa5cc1ac9a60f8aac343788dc6a",
+                "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/README.md"
+              },
+              {
+                "path": "exercise_recommender/envs/cluster_vector_env.py",
+                "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\cluster_vector_env.py",
+                "sha256": "b95a6d7c86f27195306660e161ead35dda4e3e766b2d0c792cdf2331e8c11ae7",
+                "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/cluster_vector_env.py"
+              },
+              {
+                "path": "exercise_recommender/envs/all_kc_envs.py",
+                "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\all_kc_envs.py",
+                "sha256": "79e2c3e5afc9574dc7bf119b5923779447168bfddec9efacf72a8b1841e0d330",
+                "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/all_kc_envs.py"
+              },
+              {
+                "path": "exercise_recommender/envs/kc_evolution_envs.py",
+                "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\kc_evolution_envs.py",
+                "sha256": "0dfbe4c4a620a0eeb7e4def78131b2a3a81da9c33e8d38686a6ff0bca1c7836a",
+                "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/kc_evolution_envs.py"
+              },
+              {
+                "path": "exercise_recommender/envs/worst_kc_envs.py",
+                "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\worst_kc_envs.py",
+                "sha256": "0ed351a9ba36eb75abd96e6c425bec79759c98756294aabd016277eeffacfc0f",
+                "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/worst_kc_envs.py"
+              },
+              {
+                "path": "exercise_recommender/envs/ground_truth_env.py",
+                "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\envs\\ground_truth_env.py",
+                "sha256": "41997ac9aaa53f8832e94b4cb80e06afea46603efd2ffe60b893b0b505d3fb59",
+                "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/envs/ground_truth_env.py"
+              },
+              {
+                "path": "exercise_recommender/wrappers/calibrationqdkt_wrapper.py",
+                "local_path": "code\\oezyurty__ExRec\\exercise_recommender\\wrappers\\calibrationqdkt_wrapper.py",
+                "sha256": "a0293874e1e1012301485d36c2e26da1abdac44326b0e61163325a51427ff6ae",
+                "url": "https://github.com/oezyurty/ExRec/blob/234955079f936de876c476bebd4b51468694356d/exercise_recommender/wrappers/calibrationqdkt_wrapper.py"
+              }
+            ]
+          }
+        ],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "rem_2017",
+      "bibkey": "doroudi2017rem",
+      "title": "Robust Evaluation Matrix: Towards a More Principled Offline Exploration of Instructional Policies",
+      "authors": [
+        "Shayan Doroudi",
+        "Vincent Aleven",
+        "Emma Brunskill"
+      ],
+      "year": 2017,
+      "status": "ACM Learning at Scale 2017 published proceedings",
+      "doi": "10.1145/3051457.3051463",
+      "primary_url": "https://doi.org/10.1145/3051457.3051463",
+      "metadata_url": "https://api.crossref.org/works/10.1145/3051457.3051463",
+      "date_evidence": {
+        "published_online": "2017-04-12"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            3,
+            4
+          ],
+          "section": "Model-based evaluation; Robust Evaluation Matrix",
+          "finding": "Similar prediction accuracy need not imply same best policy; evaluate policies in multiple plausible fitted student models."
+        },
+        {
+          "pdf_pages": [
+            9
+          ],
+          "section": "Conclusion",
+          "finding": "Explicitly does not claim accurate real policy-impact estimation from REM alone."
+        }
+      ],
+      "repositories": [],
+      "caveats": [
+        "Cross-simulator robustness is prior art, not a new contribution.",
+        "A minimum across simulators is not automatically a statistical lower confidence bound."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "rem_2017",
+            "requested_url": "https://www.cs.cmu.edu/~shayand/papers/L@S2017.pdf",
+            "resolved_url": "https://www.cs.cmu.edu/~shayand/papers/L@S2017.pdf",
+            "local_pdf": "papers\\rem_2017.pdf",
+            "sha256": "fbcef90448baf2cd43f68666ca53729f459d78d5b5e8b7715885ff88399aacec",
+            "bytes": 151901,
+            "pages": 10,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "unier_2026",
+      "bibkey": "cheng2026unier",
+      "title": "UniER: A Unified Benchmark for Item-level and Path-level Exercise Recommendation",
+      "authors": [
+        "Xinghe Cheng",
+        "Guiyong Zhuang",
+        "Yusheng Xie",
+        "Jiapu Wang",
+        "Yixin Liu",
+        "Quanlong Guan",
+        "Liangda Fang",
+        "Shirui Pan"
+      ],
+      "year": 2026,
+      "status": "arXiv preprint; peer-reviewed venue unverified",
+      "doi": null,
+      "primary_url": "https://arxiv.org/abs/2605.16750v1",
+      "date_evidence": {
+        "arxiv_v1": "2026-05-16T02:07:58Z"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            5
+          ],
+          "section": "3.1, Equation 7",
+          "finding": "Weighted Cognitive Gain is a weighted signed difference between KT estimates before and after simulated path."
+        },
+        {
+          "pdf_pages": [
+            6,
+            8
+          ],
+          "section": "3.3 and 4.3",
+          "finding": "Nine datasets; eighteen methods; robustness to correctness-label noise."
+        },
+        {
+          "pdf_pages": [
+            17
+          ],
+          "section": "Appendix C.1",
+          "finding": "Implementation/hyperparameter details; repo linked."
+        }
+      ],
+      "repositories": [
+        "chanllon/UniER"
+      ],
+      "caveats": [
+        "This audit has not traced the complete dispatcher to prove every reported run realizes Eq.7 identically.",
+        "Inspected legacy promotion.py signed-difference helper is not evidence that the full benchmark pipeline matches the paper.",
+        "Noise/cold-start robustness and unified KT-derived metrics are prior art."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "unier_2026",
+            "requested_url": "https://arxiv.org/pdf/2605.16750v1",
+            "resolved_url": "https://arxiv.org/pdf/2605.16750v1",
+            "local_pdf": "papers\\unier_2026.pdf",
+            "sha256": "55e2953e5aade09196499d9a0ce0e909719965b1d9effd5e2e8cdbdab94a5c8c",
+            "bytes": 2236930,
+            "pages": 18,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [
+          {
+            "repository": "chanllon/UniER",
+            "sha": "6cd226b267f12a2500dc7dc7d3ceef9a696472b8",
+            "committer_date": "2026-05-08T07:17:30Z",
+            "files": [
+              {
+                "path": "README.md",
+                "local_path": "code\\chanllon__UniER\\README.md",
+                "sha256": "24c81288a07c7792f94ad03c67f832bff4da48bd021db0703f34864a1395a620",
+                "url": "https://github.com/chanllon/UniER/blob/6cd226b267f12a2500dc7dc7d3ceef9a696472b8/README.md"
+              },
+              {
+                "path": "Path-level Exercise Recommendation/DLPR/EduSim/metrics/promotion.py",
+                "local_path": "code\\chanllon__UniER\\Path-level Exercise Recommendation\\DLPR\\EduSim\\metrics\\promotion.py",
+                "sha256": "64201ca4f94734897551db2991fb10f264ab32de8e94889908c56f34fa29238a",
+                "url": "https://github.com/chanllon/UniER/blob/6cd226b267f12a2500dc7dc7d3ceef9a696472b8/Path-level Exercise Recommendation/DLPR/EduSim/metrics/promotion.py"
+              }
+            ]
+          }
+        ],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "leopard_2015",
+      "bibkey": "gonzalezbrenes2015leopard",
+      "title": "Your Model Is Predictive—but Is It Useful? Theoretical and Empirical Considerations of a New Paradigm for Adaptive Tutoring Evaluation",
+      "authors": [
+        "José P. González-Brenes",
+        "Yun Huang"
+      ],
+      "year": 2015,
+      "status": "EDM 2015 published conference paper",
+      "doi": null,
+      "primary_url": "https://www.educationaldatamining.org/EDM2015/uploads/papers/paper_113.pdf",
+      "date_evidence": {
+        "conference_year": 2015
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            2,
+            3,
+            5
+          ],
+          "section": "3 / 3.1 / 3.2",
+          "finding": "LEOPARD evaluates practice effort and outcomes via TEAL and WHITE rather than classification alone."
+        },
+        {
+          "pdf_pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "section": "4 and 5",
+          "finding": "Real-data/synthetic examples show predictive rankings can disagree with tutoring utility; complementary to trials, not replacement."
+        }
+      ],
+      "repositories": [],
+      "caveats": [
+        "No DOI or exact proceedings page range independently verified here; omitted from BibTeX.",
+        "Do not claim first demonstration that prediction accuracy is insufficient for tutoring decisions."
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "leopard_2015",
+            "requested_url": "https://www.educationaldatamining.org/EDM2015/uploads/papers/paper_113.pdf",
+            "resolved_url": "https://www.educationaldatamining.org/EDM2015/uploads/papers/paper_113.pdf",
+            "local_pdf": "papers\\leopard_2015.pdf",
+            "sha256": "516cb9a37392481fd7211c402ff9892a92e15db5bafca9eeb7786ce973ab5972",
+            "bytes": 675222,
+            "pages": 8,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      }
+    },
+    {
+      "id": "step_bkt_2026",
+      "bibkey": "hoa2026stepbkt",
+      "title": "Step-level evidence integration in bayesian knowledge tracing: A controlled within-model ablation study",
+      "authors": [
+        "Nguyen Hoa",
+        "Van Khoa Le"
+      ],
+      "year": 2026,
+      "status": "Mendeley Data version 1 research dataset/notebook artifact; peer-reviewed paper not verified",
+      "doi": "10.17632/tnzghkdgfw.1",
+      "primary_url": "https://data.mendeley.com/datasets/tnzghkdgfw/1",
+      "metadata_url": "https://api.datacite.org/dois/10.17632/tnzghkdgfw.1",
+      "metadata_local": "step_bkt_metadata.json",
+      "date_evidence": {
+        "issued": "2026-09-22T16:51:10Z"
+      },
+      "license": "CC BY-NC 4.0 for Mendeley artifact; do not infer original ASSISTments data relicensing",
+      "evidence": [
+        {
+          "section": "Repository Description and Steps to reproduce",
+          "finding": "Matched BKT conditions share parameters, pre-episode state and next same-skill outcome; metadata reports AUC but not Brier/RMSE gains."
+        }
+      ],
+      "repositories": [],
+      "access": {
+        "full_text_available": false,
+        "relevant_sections_inspected": false,
+        "metadata_inspected": true,
+        "notebook_inspected": false,
+        "downloads": [],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "Metadata alone establishes an earlier public description, not a validated replication or peer-reviewed result.",
+        "Direct repository and public API requests returned 403; notebook not acquired.",
+        "Author names follow DataCite creator parsing (given Nguyen, family Hoa; given Van Khoa, family Le)."
+      ]
+    },
+    {
+      "id": "cekt_2026",
+      "bibkey": "zhao2026cekt",
+      "title": "Correctness Is Not Homogeneous Evidence: A Correctness-conditioned Evidence-aware Knowledge Tracing Model",
+      "authors": [
+        "Fuzheng Zhao"
+      ],
+      "year": 2026,
+      "status": "arXiv version 1 preprint; peer-reviewed venue unverified",
+      "doi": "10.48550/arXiv.2608.22267",
+      "primary_url": "https://arxiv.org/abs/2608.22267v1",
+      "date_evidence": {
+        "arxiv_v1": "2026-08-23T07:55:49Z"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            6
+          ],
+          "section": "3.2.3",
+          "finding": "Separates future windows for weak supervision and proxy validity."
+        },
+        {
+          "pdf_pages": [
+            13,
+            14,
+            17,
+            18,
+            19,
+            20
+          ],
+          "section": "4.2.3, 4.3.2, 5.3",
+          "finding": "Student/seed uncertainty, context-permutation and random-proxy controls, behavior-fusion ablations and proper scores."
+        },
+        {
+          "pdf_pages": [
+            22,
+            23
+          ],
+          "section": "6",
+          "finding": "Acknowledges unstable independent proxy benefit and noncausal interpretation."
+        }
+      ],
+      "repositories": [],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "cekt_2026",
+            "requested_url": "https://arxiv.org/pdf/2608.22267v1",
+            "resolved_url": "https://arxiv.org/pdf/2608.22267v1",
+            "local_pdf": "papers\\cekt_2026.pdf",
+            "sha256": "4cfbbac7ad9169603697d03ff50f2e46b960a4c7ba20e65e98957b7ff768b74b",
+            "bytes": 745813,
+            "pages": 24,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "No repository linked in the inspected PDF; no code reproduction.",
+        "Behavioral gating and proxy-validity diagnostics are established overlap; exact paired same-future-item replay is not the central reported estimand."
+      ]
+    },
+    {
+      "id": "srl_2026",
+      "bibkey": "zhang2026mastery",
+      "title": "Augmenting Knowledge Tracing With Self-Regulated Learning Indicators for Reliable Skill-Mastery Estimation",
+      "authors": [
+        "Yujing Zhang",
+        "Xianghui Meng",
+        "Jionghao Lin"
+      ],
+      "year": 2026,
+      "status": "L@S 2026 published proceedings article; bibliographic metadata and institutional abstract verified",
+      "doi": "10.1145/3774398.3811597",
+      "primary_url": "https://doi.org/10.1145/3774398.3811597",
+      "abstract_url": "https://hub.hku.hk/handle/10722/375606",
+      "metadata_url": "https://api.crossref.org/works/10.1145/3774398.3811597",
+      "metadata_local": "srl_2026_metadata.json",
+      "date_evidence": {
+        "published_online": "2026-06-28"
+      },
+      "proceedings_pages": "373-384",
+      "evidence": [
+        {
+          "section": "Institutional abstract only",
+          "finding": "Studies mastery-threshold crossings with weak regulation, including repeated attempts, and subsequent struggle in ASSISTments."
+        }
+      ],
+      "repositories": [],
+      "access": {
+        "full_text_available": false,
+        "relevant_sections_inspected": false,
+        "metadata_inspected": true,
+        "downloads": [],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "HKU explicitly lists no associated files; full ACM article inaccessible in this audit.",
+        "Exact thresholds, estimation procedure and within-paper page/section anchors are unknown; do not infer them from abstract."
+      ]
+    },
+    {
+      "id": "self_attention_2022",
+      "bibkey": "pu2022selfattention",
+      "title": "Self-attention in Knowledge Tracing: Why It Works",
+      "authors": [
+        "Shi Pu",
+        "Lee Becker"
+      ],
+      "year": 2022,
+      "status": "AIED 2022 published Springer chapter",
+      "doi": "10.1007/978-3-031-11644-5_75",
+      "primary_url": "https://link.springer.com/chapter/10.1007/978-3-031-11644-5_75",
+      "author_manuscript_url": "https://www.researchgate.net/publication/363291044_Self-Attention_in_Knowledge_Tracing_Why_It_Works",
+      "metadata_url": "https://api.crossref.org/works/10.1007/978-3-031-11644-5_75",
+      "metadata_local": "self_attention_2022_metadata.json",
+      "date_evidence": {
+        "published_online": "2022-07-27",
+        "author_manuscript_upload": "2022-09-06"
+      },
+      "proceedings_pages": "731-736",
+      "evidence": [
+        {
+          "manuscript_pages": [
+            4,
+            5
+          ],
+          "section": "4 and 5",
+          "finding": "Student CV and all-versus-first-attempt comparisons include CSEDM programming data."
+        },
+        {
+          "manuscript_pages": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "section": "6",
+          "finding": "DPFA+ compresses repeated attempts into batches and models within-batch success/failure counts."
+        }
+      ],
+      "repositories": [],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "full_text_mode": "Web-indexed 9-page manuscript uploaded by Shi Pu on ResearchGate",
+        "local_pdf_available": false,
+        "downloads": [
+          {
+            "id": "self_attention_2022",
+            "requested_url": "https://link.springer.com/content/pdf/10.1007/978-3-031-11644-5_75",
+            "error": "Response was not a PDF"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "ResearchGate heading is incorrectly the whole proceedings; manuscript text and publisher chapter metadata identify the actual paper.",
+        "Page anchors refer to the 9-page author manuscript, not the six published pages.",
+        "Publisher PDF fetch returned non-PDF; linked ResearchGate download returned 404. No PDF hash is available."
+      ]
+    },
+    {
+      "id": "grate_2021",
+      "bibkey": "wang2021grate",
+      "title": "Knowledge Tracing for Complex Problem Solving: Granular Rank-Based Tensor Factorization",
+      "authors": [
+        "Chunpai Wang",
+        "Shaghayegh Sahebi",
+        "Siqian Zhao",
+        "Peter Brusilovsky",
+        "Laura O. Moraes"
+      ],
+      "year": 2021,
+      "status": "UMAP 2021 published proceedings article",
+      "doi": "10.1145/3450613.3456831",
+      "primary_url": "https://doi.org/10.1145/3450613.3456831",
+      "author_manuscript_url": "https://chunpai.github.io/assets/paper/umap2021.pdf",
+      "metadata_url": "https://api.crossref.org/works/10.1145/3450613.3456831",
+      "metadata_local": "grate_2021_metadata.json",
+      "date_evidence": {
+        "published_online": "2021-06-21",
+        "arxiv_upload_year": 2022
+      },
+      "proceedings_pages": "179-188",
+      "evidence": [
+        {
+          "pdf_pages": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "section": "2.2",
+          "finding": "Adaptive attempt aggregation in knowledge tracing."
+        },
+        {
+          "pdf_pages": [
+            9,
+            11,
+            12,
+            13
+          ],
+          "section": "3.2, 3.4 and 3.5",
+          "finding": "Next-attempt student-CV evaluation, aggregation ablations and knowledge-state fluctuation diagnostics, including programming datasets."
+        }
+      ],
+      "repositories": [
+        "persai-lab/UMAP2021-GRATE"
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "downloads": [
+          {
+            "id": "grate_2021",
+            "requested_url": "https://chunpai.github.io/assets/paper/umap2021.pdf",
+            "resolved_url": "https://chunpai.github.io/assets/paper/umap2021.pdf",
+            "local_pdf": "papers\\grate_2021.pdf",
+            "sha256": "ba69c12b7c4f098f295070666be770fdcee50168b77eb52a2093ed2982e77ee7",
+            "bytes": 1204660,
+            "pages": 16,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "Page anchors refer to the 16-page author manuscript, not ten proceedings pages.",
+        "Repository URL is cited by the paper; code was not inspected or reproduced in this pass.",
+        "The 2022 arXiv deposit is not the 2021 publication date."
+      ]
+    },
+    {
+      "id": "revision_aware_2026",
+      "bibkey": "amin2026revisionaware",
+      "title": "Revision-Aware Success Prediction from Multi-Attempt Programming Trajectories",
+      "authors": [
+        "Md Faizul Ibne Amin",
+        "Yutaka Watanobe",
+        "Daniel M. Muepu",
+        "Kenta Nanaumi",
+        "Haruto Suzuki",
+        "Md. Shahajada Mia",
+        "Md Mostafizer Rahman"
+      ],
+      "year": 2026,
+      "status": "arXiv version 1 preprint; peer-reviewed venue unverified",
+      "doi": "10.48550/arXiv.2608.26169",
+      "primary_url": "https://arxiv.org/abs/2608.26169v1",
+      "metadata_url": "https://arxiv.org/abs/2608.26169v1",
+      "date_evidence": {
+        "citation_year": 2026,
+        "citation_precision": "year",
+        "reason": "Primary page history reports July while the arXiv identifier and some indexes indicate August; retain year-only in citation."
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            3,
+            4
+          ],
+          "section": "III.C–F",
+          "finding": "Same-problem current, next-attempt and short-window acceptance targets; current/pair/multi-snapshot regimes have different eligible sets."
+        },
+        {
+          "pdf_pages": [
+            5,
+            12,
+            13
+          ],
+          "section": "IV.C–E and VII",
+          "finding": "Trajectory construction, input regimes and limitations; not an endpoint-controlled next-different-problem first-response experiment."
+        }
+      ],
+      "repositories": [],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "metadata_inspected": true,
+        "downloads": [
+          {
+            "id": "revision_aware_2026",
+            "requested_url": "https://arxiv.org/pdf/2608.26169v1",
+            "resolved_url": "https://arxiv.org/pdf/2608.26169v1",
+            "local_pdf": "papers\\revision_aware_2026.pdf",
+            "sha256": "5540d462ad1dd13d71523f07112d109b187fa5670b651c1f8c15dde9aa203b71",
+            "bytes": 734207,
+            "pages": 14,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "Citation year only because source dates are not internally consistent; no month/day asserted in bibliography.",
+        "Model comparisons do not hold the eligible cohort constant across all history regimes.",
+        "Human-AI contest setting must not be treated as novice classroom evidence without qualification."
+      ]
+    },
+    {
+      "id": "srcml_dkt_2025",
+      "bibkey": "pankiewicz2025srcmldkt",
+      "title": "srcML-DKT: Enhancing Deep Knowledge Tracing with Robust Code Representations from srcML",
+      "authors": [
+        "Maciej Pankiewicz",
+        "Yang Shi",
+        "Ryan S. Baker"
+      ],
+      "year": 2025,
+      "status": "EDM 2025 published short paper, proceedings pages 541–548",
+      "doi": "10.5281/zenodo.15870306",
+      "primary_url": "https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.83/index.html",
+      "metadata_url": "https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.83/2025.EDM.short-papers.83.bib",
+      "author_manuscript_url": "https://learninganalytics.upenn.edu/ryanbaker/EDM2025-srcml-DKT-proceedings-v01.pdf",
+      "date_evidence": {
+        "proceedings_year": 2025,
+        "proceedings_month": "July"
+      },
+      "proceedings_pages": "541-548",
+      "evidence": [
+        {
+          "pdf_pages": [
+            4,
+            5
+          ],
+          "section": "3.4 and 4.1",
+          "finding": "Code representation handles unparsable submissions; evaluations distinguish first and all attempts."
+        },
+        {
+          "pdf_pages": [
+            5,
+            6
+          ],
+          "section": "4.2",
+          "finding": "Consecutive-code case study; no endpoint-versus-intermediate nuisance-controlled contrast identified in inspected text."
+        }
+      ],
+      "repositories": [],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "metadata_inspected": true,
+        "downloads": [
+          {
+            "id": "srcml_dkt_2025",
+            "requested_url": "https://learninganalytics.upenn.edu/ryanbaker/EDM2025-srcml-DKT-proceedings-v01.pdf",
+            "resolved_url": "https://learninganalytics.upenn.edu/ryanbaker/EDM2025-srcml-DKT-proceedings-v01.pdf",
+            "local_pdf": "papers\\srcml_dkt_2025.pdf",
+            "sha256": "60021f372921e6d4bfb17c85bf7388e4f67c6cb27e0938c16163c5abb73f2955",
+            "bytes": 294840,
+            "pages": 8,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "Page anchors refer to the archived eight-page author manuscript; bibliographic pages come from the official proceedings BibTeX.",
+        "No source-code reproduction in this audit."
+      ]
+    },
+    {
+      "id": "help_dkt_2022",
+      "bibkey": "liang2022helpdkt",
+      "title": "HELP-DKT: an interpretable cognitive model of how students learn programming based on deep knowledge tracing",
+      "authors": [
+        "Yu Liang",
+        "Tianhao Peng",
+        "Yanjun Pu",
+        "Wenjun Wu"
+      ],
+      "year": 2022,
+      "status": "Scientific Reports published journal article, volume 12, article 4012",
+      "doi": "10.1038/s41598-022-07956-0",
+      "primary_url": "https://www.nature.com/articles/s41598-022-07956-0",
+      "metadata_url": "https://api.crossref.org/works/10.1038/s41598-022-07956-0",
+      "metadata_local": "help_dkt_2022_metadata.json",
+      "date_evidence": {
+        "published_online": "2022-03-07"
+      },
+      "journal_volume": "12",
+      "journal_issue": "1",
+      "article_number": "4012",
+      "evidence": [
+        {
+          "pdf_pages": [
+            7,
+            8
+          ],
+          "section": "Task definitions and Implementation",
+          "finding": "Next-challenge prediction from code history is prior art; Task A uses a three-attempt criterion, not next-problem first-response correctness."
+        }
+      ],
+      "repositories": [
+        "liangyubuaa/HELP-DKT"
+      ],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "metadata_inspected": true,
+        "downloads": [
+          {
+            "id": "help_dkt_2022",
+            "requested_url": "https://www.nature.com/articles/s41598-022-07956-0.pdf",
+            "resolved_url": "https://www.nature.com/articles/s41598-022-07956-0.pdf",
+            "local_pdf": "papers\\help_dkt_2022.pdf",
+            "sha256": "85c46bf8e370db928532e2fd88d1da494354a12e9fdffeaadc55df4051322b3d",
+            "bytes": 2535826,
+            "pages": 11,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "Article number 4012 is not a page range.",
+        "Repository URL is stated in the article; repository implementation was not inspected in this audit.",
+        "No complete endpoint/count/time/outcome-matched path ablation identified in the inspected article."
+      ]
+    },
+    {
+      "id": "okt_workshop_2022",
+      "bibkey": "liu2022oktworkshop",
+      "title": "Open-ended Knowledge Tracing for Programming Exercises",
+      "authors": [
+        "Naiming Liu",
+        "Zichao Wang",
+        "Richard G. Baraniuk",
+        "Andrew S. Lan"
+      ],
+      "year": 2022,
+      "status": "6th Educational Data Mining in Computer Science Education (CSEDM) Workshop paper, archived on Zenodo",
+      "doi": "10.5281/zenodo.7157118",
+      "primary_url": "https://zenodo.org/records/7157118",
+      "metadata_url": "https://zenodo.org/api/records/7157118",
+      "metadata_local": "okt_workshop_2022_metadata.json",
+      "date_evidence": {
+        "publication_date": "2022-07-27",
+        "repository_created": "2022-10-07T11:25:39.185696+00:00"
+      },
+      "evidence": [
+        {
+          "pdf_pages": [
+            3,
+            4
+          ],
+          "section": "2.4, 3 and 3.2",
+          "finding": "First-submission training/evaluation and all-submission settings differ; first-only setting excludes revisions, not an intermediate-path increment on fixed first-response targets."
+        }
+      ],
+      "repositories": [],
+      "access": {
+        "full_text_available": true,
+        "relevant_sections_inspected": true,
+        "metadata_inspected": true,
+        "downloads": [
+          {
+            "id": "okt_workshop_2022",
+            "requested_url": "https://zenodo.org/api/records/7157118/files/okt_csedm_final%20-%20Andrew%20Lan.pdf/content",
+            "resolved_url": "https://zenodo.org/api/records/7157118/files/okt_csedm_final%20-%20Andrew%20Lan.pdf/content",
+            "local_pdf": "papers\\okt_workshop_2022.pdf",
+            "sha256": "1bda14b8d42f88bace737c83f672d0621cdc83228ac75d283832763937734a67",
+            "bytes": 2731758,
+            "pages": 8,
+            "retrieved_on": "2026-09-26"
+          }
+        ],
+        "code_inspection": [],
+        "experiments_reproduced": false
+      },
+      "caveats": [
+        "This record cites the inspected eight-page CSEDM workshop version, not the separately titled EMNLP 2022 full paper mentioned in its footnote.",
+        "No proceedings page range independently verified; omitted.",
+        "Repository creation date is distinct from publication date, not used as the publication year."
+      ]
+    }
+  ]
+}

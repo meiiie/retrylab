@@ -1,0 +1,11 @@
+-- SUBMIT	
+SELECT id AS submission_id, problem_id, created_at, result FROM out_submissions;
+
+-- FINISH	
+SELECT creator_id AS user_id, id AS submission_id FROM out_submissions WHERE result = 'AC';
+
+-- CONTAIN	
+SELECT problem_id, tag_id FROM out_problem_tags;
+
+-- BELONG_TO	
+SELECT contest_id, problem_id FROM out_submissions WHERE contest_id IS NOT NULL;

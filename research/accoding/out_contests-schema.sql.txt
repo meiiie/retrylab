@@ -1,0 +1,9 @@
+create table out_contests
+(
+    id           bigint unsigned                       default '0'       not null,
+    start_time   datetime                                                not null,
+    end_time     datetime                                                not null,
+    access_level enum ('private', 'protect', 'public') default 'private' null,
+    updated_at   datetime                                                not null
+);
+

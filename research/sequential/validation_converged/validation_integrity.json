@@ -1,0 +1,8 @@
+{
+  "validation_rows_preserved_exactly": true,
+  "rows": 21468,
+  "models": [
+    "gru_ALL",
+    "gru_FIRST"
+  ]
+}

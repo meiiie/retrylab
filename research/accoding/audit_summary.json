@@ -1,0 +1,126 @@
+{
+  "tables": {
+    "out_contests.sql": {
+      "columns": [
+        "id",
+        "start_time",
+        "end_time",
+        "access_level",
+        "updated_at"
+      ],
+      "insert_statements": 214,
+      "uncompressed_bytes": 38738
+    },
+    "out_problem_tags.sql": {
+      "columns": [
+        "tag_id",
+        "problem_id",
+        "weight"
+      ],
+      "insert_statements": 4320,
+      "uncompressed_bytes": 378188
+    },
+    "out_problems.sql": {
+      "columns": [
+        "id",
+        "access_level",
+        "test_setting",
+        "difficulty",
+        "updated_at"
+      ],
+      "insert_statements": 4301,
+      "uncompressed_bytes": 3813002
+    },
+    "out_submissions.sql": {
+      "columns": [
+        "id",
+        "lang",
+        "result",
+        "score",
+        "time_cost",
+        "memory_cost",
+        "code_length",
+        "detail",
+        "created_at",
+        "creator_id",
+        "problem_id",
+        "contest_id"
+      ],
+      "insert_statements": 2181602,
+      "uncompressed_bytes": 1132680454
+    },
+    "out_users.sql": {
+      "columns": [
+        "id",
+        "last_login"
+      ],
+      "insert_statements": 9866,
+      "uncompressed_bytes": 828874
+    },
+    "out_tags.sql": {
+      "columns": [
+        "id",
+        "content"
+      ],
+      "insert_statements": 96,
+      "uncompressed_bytes": 6650
+    },
+    "relationship.sql": {
+      "columns": [],
+      "insert_statements": 0,
+      "uncompressed_bytes": 353
+    }
+  },
+  "submissions": {
+    "unique_users": 9866,
+    "unique_problems": 4301,
+    "language_counts": {
+      "c": 2137950,
+      "python3": 2563,
+      "c++": 40710,
+      "python": 286,
+      "java": 63,
+      "python2": 30
+    },
+    "verdict_counts": {
+      "AC": 909100,
+      "CE": 104433,
+      "WA": 803752,
+      "TLE": 135404,
+      "REG": 94726,
+      "OE": 34608,
+      "REP": 9684,
+      "PE": 80783,
+      "MLE": 8443,
+      "IFNR": 649,
+      "OFNR": 20
+    },
+    "created_at_min": "2024-01-02 00:13:27",
+    "created_at_max": "2025-12-30 23:57:19",
+    "parsed_records": 2181602,
+    "unparsed_records": 0
+  },
+  "capabilities": {
+    "submission_source_code": false,
+    "full_problem_text": false,
+    "raw_test_case_inputs_outputs": false,
+    "per_test_case_outcomes": false,
+    "student_problem_timestamp_verdict": true,
+    "code_length": true,
+    "compiler_diagnostic_text_in_detail": true,
+    "problem_tags_and_difficulty": true,
+    "notes": "Compiler diagnostics can contain fragments of source code, but no complete source-code field/files are released. test_setting references files/configuration absent from this archive."
+  },
+  "cohort_validation": {
+    "rows": 424311,
+    "unique_submission_ids": 424311,
+    "unique_user_problem_pairs": 181970,
+    "first_observed_problem_attempts": 181970,
+    "repeat_problem_attempts": 242341,
+    "within_user_adjacent_timestamp_ties": 205,
+    "sorted_by_created_at_and_id": true,
+    "duplicate_submission_ids": 0
+  },
+  "cohort_manifest": "E:\\Sach\\baiThayPhuc\\BaiHong\\data\\processed\\accoding\\manifest.json",
+  "notes": "Source rows parsed with strict text decoding and anchored record patterns. The extractor raises an error instead of silently dropping unexpected records. Entire submission table parsed twice; schema read as text only."
+}

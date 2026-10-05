@@ -1,0 +1,31 @@
+{
+  "scope": "Artifact/layout checks; assistant visual inspection recorded separately",
+  "documents": {
+    "en": {
+      "path": "E:\\Sach\\baiThayPhuc\\BaiHong\\output\\pdf\\retrylab-journal-en.pdf",
+      "pages": 12,
+      "all_fonts_embedded": true,
+      "raster_images": 0,
+      "text_boundary_violations": 0,
+      "all_pages_rendered": true,
+      "verified_horizontal_margins_mm": 25,
+      "figures_and_captions_same_page": true,
+      "equation_scale": 1,
+      "sha256": "af77f679637cdf6dd565179816d54f478777bf29b42085d683aa4e2fb1f566cb"
+    },
+    "vi": {
+      "path": "E:\\Sach\\baiThayPhuc\\BaiHong\\output\\pdf\\retrylab-journal-vi.pdf",
+      "pages": 11,
+      "all_fonts_embedded": true,
+      "raster_images": 0,
+      "text_boundary_violations": 0,
+      "all_pages_rendered": true,
+      "verified_horizontal_margins_mm": 25,
+      "figures_and_captions_same_page": true,
+      "equation_scale": 1,
+      "sha256": "cd348201cbf125d06c9aba86e855d0eb7e7ca232d547c49b34b29621b46caa3e"
+    }
+  },
+  "editable_svg_count": 5,
+  "passed": true
+}

@@ -1,0 +1,75 @@
+{
+  "population": "exploratory",
+  "mode": "ALL",
+  "seed": 29,
+  "coverage": {
+    "test_students": 234,
+    "test_submissions": 64371,
+    "test_first_observed_problem_attempts": 27868,
+    "contiguous_episodes": 32810,
+    "single_submission_episodes": 20017,
+    "episodes_with_at_least_two_submissions": 12793,
+    "excluded_no_observed_next_episode": 117,
+    "excluded_next_problem_previously_observed": 1703,
+    "excluded_next_problem_unknown_in_training": 23,
+    "retained_pairs": 10950,
+    "retained_students": 233,
+    "coverage_of_multi_submission_episodes": 0.8559368404596264,
+    "coverage_of_test_first_observed_targets": 0.39292378355102625
+  },
+  "ordinary_predictive_metrics": {
+    "all": {
+      "rows": 64371,
+      "nll": 0.6088535989073491,
+      "brier": 0.21025874433357358,
+      "auc": 0.710931541355143
+    },
+    "first": {
+      "rows": 27868,
+      "nll": 0.6052273350062624,
+      "brier": 0.20894094141690941,
+      "auc": 0.7342700709540015
+    },
+    "retry": {
+      "rows": 36503,
+      "nll": 0.611622048689435,
+      "brier": 0.21126481319590265,
+      "auc": 0.6529091027388643
+    }
+  },
+  "h1_direct_max_error": 1.1920928955078125e-07,
+  "paired": {
+    "pairs": 10950,
+    "students": 233,
+    "target_acceptance_rate": 0.473972602739726,
+    "nll_h0": 0.6213797892167234,
+    "nll_h1": 0.615923712220527,
+    "brier_h0": 0.2161784808096264,
+    "brier_h1": 0.2137627900925542,
+    "mean_probability_h0": 0.46440275237236395,
+    "mean_probability_h1": 0.45714935072548857,
+    "nll_difference": -0.005456076996196363,
+    "brier_difference": -0.0024156907170722283,
+    "probability_change": -0.007253401646875355,
+    "bootstrap": {
+      "repetitions": 1000,
+      "seed": 26092026,
+      "unit": "paired retained student",
+      "interval_type": "percentile 95%; pair-weighted point estimate; fixed fitted models",
+      "intervals": {
+        "nll_difference": {
+          "lower": -0.009210173950058917,
+          "upper": -0.0021081512956601005
+        },
+        "brier_difference": {
+          "lower": -0.004130922539428963,
+          "upper": -0.0009043929072140389
+        },
+        "probability_change": {
+          "lower": -0.00915597848091051,
+          "upper": -0.005096861307500003
+        }
+      }
+    }
+  }
+}

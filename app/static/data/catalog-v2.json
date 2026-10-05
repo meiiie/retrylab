@@ -1,0 +1,1559 @@
+{
+  "version": "retrylab-python-v2",
+  "exercises": [
+    {
+      "id": "sum-positive",
+      "title": "Chỉ cộng số dương",
+      "concept": "Vòng lặp & điều kiện",
+      "level": "Nền tảng",
+      "functionName": "tong_so_duong",
+      "description": "Viết hàm tong_so_duong(numbers) trả về tổng các số lớn hơn 0 trong danh sách numbers.",
+      "rules": [
+        "Bỏ qua số âm và số 0.",
+        "Nếu danh sách rỗng hoặc không có số dương, trả về 0.",
+        "Dùng return để trả kết quả, không dùng print thay cho return."
+      ],
+      "starter": "def tong_so_duong(numbers):\n    # Viết lời giải của bạn ở đây\n    return 0\n",
+      "examples": [
+        {
+          "args": [
+            [
+              -2,
+              0,
+              3,
+              5
+            ]
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            [
+              -4,
+              -1
+            ]
+          ],
+          "expected": 0
+        }
+      ],
+      "hints": [
+        "Tạo một biến tổng bằng 0 trước vòng lặp.",
+        "Duyệt từng số. Chỉ cộng vào tổng khi số đó lớn hơn 0.",
+        "Trả về tổng sau khi vòng lặp kết thúc. Đặt return bên ngoài vòng lặp."
+      ],
+      "takeaway": "Bạn đã xử lý số âm, số 0 và cả danh sách rỗng.",
+      "tests": [
+        {
+          "args": [
+            [
+              -2,
+              0,
+              3,
+              5
+            ]
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            [
+              -4,
+              -1
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              0,
+              4
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            [
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              2,
+              -3,
+              4
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              1000000,
+              -1000000
+            ]
+          ],
+          "expected": 1000000
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 6
+        }
+      ],
+      "support": "count-positive",
+      "challenge": "sum-even",
+      "skill": 0,
+      "difficulty": 0,
+      "cost": 1.0
+    },
+    {
+      "id": "count-positive",
+      "title": "Đếm số dương",
+      "concept": "Vòng lặp & điều kiện",
+      "level": "Củng cố",
+      "functionName": "dem_so_duong",
+      "description": "Viết hàm dem_so_duong(numbers) trả về số phần tử lớn hơn 0 trong danh sách.",
+      "rules": [
+        "Mỗi phần tử dương được tính một lần, kể cả khi giá trị lặp lại.",
+        "Số 0 không phải số dương. Danh sách rỗng có kết quả 0."
+      ],
+      "starter": "def dem_so_duong(numbers):\n    # Đếm số phần tử phù hợp\n    return 0\n",
+      "examples": [
+        {
+          "args": [
+            [
+              -1,
+              2,
+              2,
+              0,
+              5
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        }
+      ],
+      "hints": [
+        "Tạo một biến đếm bằng 0.",
+        "Khi gặp số dương, tăng biến đếm thêm 1, không cộng chính giá trị của số đó.",
+        "Trả biến đếm sau khi duyệt xong danh sách."
+      ],
+      "takeaway": "Bạn đã phân biệt việc đếm phần tử với việc cộng giá trị.",
+      "tests": [
+        {
+          "args": [
+            [
+              -1,
+              2,
+              2,
+              0,
+              5
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              -2,
+              -1
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              7
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              100,
+              -50,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              0,
+              -3,
+              4,
+              5
+            ]
+          ],
+          "expected": 2
+        }
+      ],
+      "support": "sum-positive",
+      "challenge": "sum-even",
+      "skill": 0,
+      "difficulty": 0,
+      "cost": 1.0
+    },
+    {
+      "id": "sum-even",
+      "title": "Tổng các số chẵn",
+      "concept": "Phép chia lấy dư",
+      "level": "Vận dụng",
+      "functionName": "tong_so_chan",
+      "description": "Viết hàm tong_so_chan(numbers) trả về tổng các số chẵn trong danh sách.",
+      "rules": [
+        "Một số là số chẵn nếu chia cho 2 dư 0.",
+        "Tính cả số chẵn âm và số 0.",
+        "Danh sách rỗng có kết quả 0."
+      ],
+      "starter": "def tong_so_chan(numbers):\n    # Chọn các số chẵn để cộng\n    return 0\n",
+      "examples": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              -4,
+              -1,
+              2
+            ]
+          ],
+          "expected": -2
+        }
+      ],
+      "hints": [
+        "Trong Python, x % 2 là phần dư khi chia x cho 2.",
+        "Kiểm tra x % 2 == 0 cho từng phần tử.",
+        "Đừng loại số âm: -4 cũng là một số chẵn."
+      ],
+      "takeaway": "Bạn đã áp dụng điều kiện chẵn/lẻ cho cả số âm.",
+      "tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              -4,
+              -1,
+              2
+            ]
+          ],
+          "expected": -2
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              2,
+              2,
+              2
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              -6,
+              -2
+            ]
+          ],
+          "expected": -8
+        },
+        {
+          "args": [
+            [
+              10,
+              11,
+              -10
+            ]
+          ],
+          "expected": 0
+        }
+      ],
+      "support": "count-even",
+      "challenge": "maximum",
+      "skill": 0,
+      "difficulty": 1,
+      "cost": 1.2
+    },
+    {
+      "id": "count-even",
+      "title": "Có bao nhiêu số chẵn?",
+      "concept": "Phép chia lấy dư",
+      "level": "Củng cố",
+      "functionName": "dem_so_chan",
+      "description": "Viết hàm dem_so_chan(numbers) đếm số phần tử chẵn trong danh sách.",
+      "rules": [
+        "Số 0 và các số chẵn âm cũng được tính.",
+        "Trả về số lượng phần tử, không phải tổng các số."
+      ],
+      "starter": "def dem_so_chan(numbers):\n    # Viết lời giải của bạn ở đây\n    return 0\n",
+      "examples": [
+        {
+          "args": [
+            [
+              0,
+              1,
+              2,
+              -4
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              1,
+              3
+            ]
+          ],
+          "expected": 0
+        }
+      ],
+      "hints": [
+        "Dùng x % 2 == 0 để nhận biết số chẵn.",
+        "Mỗi số phù hợp làm biến đếm tăng thêm 1.",
+        "Bắt đầu với biến đếm 0 để danh sách rỗng cũng cho kết quả đúng."
+      ],
+      "takeaway": "Bạn đã dùng cùng điều kiện cho một nhiệm vụ đếm.",
+      "tests": [
+        {
+          "args": [
+            [
+              0,
+              1,
+              2,
+              -4
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              1,
+              3
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              -2,
+              -3,
+              -4
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              2,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              10
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              3,
+              8,
+              9,
+              12
+            ]
+          ],
+          "expected": 2
+        }
+      ],
+      "support": "sum-even",
+      "challenge": "maximum",
+      "skill": 0,
+      "difficulty": 1,
+      "cost": 1.2
+    },
+    {
+      "id": "maximum",
+      "title": "Tìm số lớn nhất",
+      "concept": "Giá trị biên",
+      "level": "Vận dụng",
+      "functionName": "so_lon_nhat",
+      "description": "Viết hàm so_lon_nhat(numbers) trả về phần tử lớn nhất. Nếu danh sách rỗng, trả về None.",
+      "rules": [
+        "Danh sách có thể chỉ chứa số âm.",
+        "None là giá trị đặc biệt của Python, không phải chuỗi 'None'."
+      ],
+      "starter": "def so_lon_nhat(numbers):\n    # Nhớ kiểm tra danh sách rỗng\n    return None\n",
+      "examples": [
+        {
+          "args": [
+            [
+              -5,
+              -2,
+              -9
+            ]
+          ],
+          "expected": -2
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": null
+        }
+      ],
+      "hints": [
+        "Xử lý danh sách rỗng trước khi truy cập phần tử đầu tiên.",
+        "Nếu tự viết vòng lặp, khởi tạo giá trị lớn nhất bằng phần tử đầu tiên, không phải 0.",
+        "Có thể dùng max(numbers) sau khi đã xử lý trường hợp rỗng."
+      ],
+      "takeaway": "Bạn đã xử lý hai trường hợp dễ bỏ sót: danh sách rỗng và toàn số âm.",
+      "tests": [
+        {
+          "args": [
+            [
+              -5,
+              -2,
+              -9
+            ]
+          ],
+          "expected": -2
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": null
+        },
+        {
+          "args": [
+            [
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              1,
+              8,
+              2
+            ]
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            [
+              0,
+              -1
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              7,
+              7
+            ]
+          ],
+          "expected": 7
+        },
+        {
+          "args": [
+            [
+              -100
+            ]
+          ],
+          "expected": -100
+        },
+        {
+          "args": [
+            [
+              4,
+              3,
+              2,
+              10
+            ]
+          ],
+          "expected": 10
+        }
+      ],
+      "support": "count-positive",
+      "challenge": "unique",
+      "skill": 2,
+      "difficulty": 0,
+      "cost": 1.0
+    },
+    {
+      "id": "unique",
+      "title": "Giữ lại lần xuất hiện đầu",
+      "concept": "Danh sách & tập hợp",
+      "level": "Vận dụng",
+      "functionName": "bo_trung",
+      "description": "Viết hàm bo_trung(numbers) loại phần tử trùng nhưng giữ nguyên thứ tự xuất hiện đầu tiên.",
+      "rules": [
+        "Kết quả phải là một danh sách.",
+        "Không sắp xếp lại các phần tử.",
+        "Danh sách rỗng cho kết quả []."
+      ],
+      "starter": "def bo_trung(numbers):\n    # Giữ thứ tự của các phần tử\n    return []\n",
+      "examples": [
+        {
+          "args": [
+            [
+              3,
+              1,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "hints": [
+        "Tạo một danh sách kết quả rỗng.",
+        "Chỉ thêm phần tử nếu bạn chưa từng gặp nó.",
+        "Có thể dùng một set để nhớ các phần tử đã gặp, và một list để giữ thứ tự."
+      ],
+      "takeaway": "Bạn đã loại trùng mà vẫn bảo toàn thứ tự dữ liệu.",
+      "tests": [
+        {
+          "args": [
+            [
+              3,
+              1,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              -1,
+              0,
+              -1
+            ]
+          ],
+          "expected": [
+            -1,
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              4,
+              3,
+              2
+            ]
+          ],
+          "expected": [
+            4,
+            3,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              8
+            ]
+          ],
+          "expected": [
+            8
+          ]
+        },
+        {
+          "args": [
+            [
+              2,
+              1,
+              2,
+              1,
+              3
+            ]
+          ],
+          "expected": [
+            2,
+            1,
+            3
+          ]
+        }
+      ],
+      "support": "maximum",
+      "challenge": "words",
+      "skill": 1,
+      "difficulty": 0,
+      "cost": 1.0
+    },
+    {
+      "id": "words",
+      "title": "Đếm từ, không phân biệt hoa thường",
+      "concept": "Chuỗi & từ điển",
+      "level": "Vận dụng",
+      "functionName": "tan_suat_tu",
+      "description": "Viết hàm tan_suat_tu(words) trả về từ điển đếm số lần mỗi từ xuất hiện, sau khi chuyển từ về chữ thường.",
+      "rules": [
+        "Đầu vào là danh sách các từ đã tách sẵn.",
+        "'AI' và 'ai' được tính là cùng một từ.",
+        "Danh sách rỗng cho kết quả {}."
+      ],
+      "starter": "def tan_suat_tu(words):\n    # Tạo bảng đếm các từ\n    return {}\n",
+      "examples": [
+        {
+          "args": [
+            [
+              "AI",
+              "ai",
+              "Code"
+            ]
+          ],
+          "expected": {
+            "ai": 2,
+            "code": 1
+          }
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": {}
+        }
+      ],
+      "hints": [
+        "Dùng word.lower() để đưa một từ về chữ thường.",
+        "Dùng dict để lưu số lần đã gặp từng từ.",
+        "counts.get(word, 0) cho bạn số lần hiện có, hoặc 0 nếu từ chưa xuất hiện."
+      ],
+      "takeaway": "Bạn đã kết hợp chuẩn hóa chuỗi và đếm bằng từ điển.",
+      "tests": [
+        {
+          "args": [
+            [
+              "AI",
+              "ai",
+              "Code"
+            ]
+          ],
+          "expected": {
+            "ai": 2,
+            "code": 1
+          }
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": {}
+        },
+        {
+          "args": [
+            [
+              "a"
+            ]
+          ],
+          "expected": {
+            "a": 1
+          }
+        },
+        {
+          "args": [
+            [
+              "A",
+              "a",
+              "A"
+            ]
+          ],
+          "expected": {
+            "a": 3
+          }
+        },
+        {
+          "args": [
+            [
+              "Học",
+              "học"
+            ]
+          ],
+          "expected": {
+            "học": 2
+          }
+        },
+        {
+          "args": [
+            [
+              "one",
+              "two"
+            ]
+          ],
+          "expected": {
+            "one": 1,
+            "two": 1
+          }
+        },
+        {
+          "args": [
+            [
+              "X",
+              "Y",
+              "x"
+            ]
+          ],
+          "expected": {
+            "x": 2,
+            "y": 1
+          }
+        },
+        {
+          "args": [
+            [
+              "code",
+              "CODE",
+              "Code"
+            ]
+          ],
+          "expected": {
+            "code": 3
+          }
+        }
+      ],
+      "support": "unique",
+      "challenge": "streak",
+      "skill": 1,
+      "difficulty": 1,
+      "cost": 1.2
+    },
+    {
+      "id": "streak",
+      "title": "Đoạn số dương dài nhất",
+      "concept": "Trạng thái trong vòng lặp",
+      "level": "Thử thách",
+      "functionName": "doan_duong_dai_nhat",
+      "description": "Viết hàm doan_duong_dai_nhat(numbers) trả về độ dài đoạn liên tiếp gồm toàn số lớn hơn 0 dài nhất.",
+      "rules": [
+        "Số 0 hoặc số âm làm đứt đoạn đang đếm.",
+        "Nếu không có số dương, trả về 0."
+      ],
+      "starter": "def doan_duong_dai_nhat(numbers):\n    # Theo dõi đoạn hiện tại và đoạn dài nhất\n    return 0\n",
+      "examples": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              -1,
+              3,
+              4,
+              5
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              0,
+              -2
+            ]
+          ],
+          "expected": 0
+        }
+      ],
+      "hints": [
+        "Bạn cần hai biến: độ dài đoạn hiện tại và độ dài lớn nhất.",
+        "Gặp số dương thì tăng độ dài hiện tại; gặp số khác thì đặt lại về 0.",
+        "Cập nhật độ dài lớn nhất trong vòng lặp để không bỏ sót đoạn nằm cuối danh sách."
+      ],
+      "takeaway": "Bạn đã theo dõi trạng thái và xử lý được cả đoạn nằm ở cuối danh sách.",
+      "tests": [
+        {
+          "args": [
+            [
+              1,
+              2,
+              -1,
+              3,
+              4,
+              5
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              0,
+              -2
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              1,
+              0,
+              2
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              -1,
+              1,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              0,
+              3
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": 4
+        }
+      ],
+      "support": "sum-positive",
+      "challenge": "words",
+      "skill": 2,
+      "difficulty": 2,
+      "cost": 1.4
+    },
+    {
+      "id": "first-repeat",
+      "title": "Số đầu tiên gặp lại",
+      "concept": "Tập hợp & thứ tự",
+      "level": "Vận dụng",
+      "functionName": "so_gap_lai",
+      "description": "Viết hàm so_gap_lai(numbers) trả về số đầu tiên được gặp lần thứ hai khi duyệt từ trái sang phải. Không có số lặp thì trả về None.",
+      "rules": [
+        "Chọn theo thời điểm gặp lần thứ hai, không theo giá trị nhỏ nhất.",
+        "Danh sách rỗng cho kết quả None."
+      ],
+      "starter": "def so_gap_lai(numbers):\n    return None\n",
+      "examples": [
+        {
+          "args": [
+            [
+              3,
+              1,
+              1,
+              3
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              1,
+              2
+            ]
+          ],
+          "expected": null
+        }
+      ],
+      "hints": [
+        "Tạo một tập hợp các số đã gặp.",
+        "Nếu số đang xét đã có trong tập hợp, trả về số đó ngay.",
+        "Nếu chưa có, thêm vào tập hợp; hết vòng lặp thì trả về None."
+      ],
+      "takeaway": "Bạn đã phân biệt thứ tự xuất hiện và thứ tự lặp lại.",
+      "tests": [
+        {
+          "args": [
+            [
+              3,
+              1,
+              1,
+              3
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": null
+        },
+        {
+          "args": [
+            [
+              1,
+              2
+            ]
+          ],
+          "expected": null
+        },
+        {
+          "args": [
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              -1,
+              2,
+              -1
+            ]
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            [
+              2,
+              2,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              4,
+              3,
+              2,
+              4,
+              2
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            [
+              7
+            ]
+          ],
+          "expected": null
+        }
+      ],
+      "support": "unique",
+      "challenge": "word-lengths",
+      "skill": 1,
+      "difficulty": 1,
+      "cost": 1.2
+    },
+    {
+      "id": "word-lengths",
+      "title": "Nhóm từ theo độ dài",
+      "concept": "Từ điển & danh sách",
+      "level": "Thử thách",
+      "functionName": "nhom_tu",
+      "description": "Viết hàm nhom_tu(words) trả về từ điển: khóa là chuỗi biểu diễn độ dài từ, giá trị là danh sách các từ có độ dài đó, giữ nguyên thứ tự đầu vào.",
+      "rules": [
+        "Giữ nguyên chữ hoa, chữ thường và các từ trùng.",
+        "Chuỗi rỗng có độ dài 0. Danh sách rỗng cho kết quả {}.",
+        "Ví dụ: khóa của từ có 2 chữ là chuỗi '2', dùng str(len(word))."
+      ],
+      "starter": "def nhom_tu(words):\n    return {}\n",
+      "examples": [
+        {
+          "args": [
+            [
+              "ai",
+              "a",
+              "to"
+            ]
+          ],
+          "expected": {
+            "2": [
+              "ai",
+              "to"
+            ],
+            "1": [
+              "a"
+            ]
+          }
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": {}
+        }
+      ],
+      "hints": [
+        "Dùng len(word) để tính độ dài.",
+        "Mỗi khóa trong từ điển cần chứa một danh sách.",
+        "Tạo danh sách nếu khóa chưa có, rồi append từ hiện tại."
+      ],
+      "takeaway": "Bạn đã tổ chức các từ thành nhóm và giữ nguyên thứ tự.",
+      "tests": [
+        {
+          "args": [
+            [
+              "ai",
+              "a",
+              "to"
+            ]
+          ],
+          "expected": {
+            "2": [
+              "ai",
+              "to"
+            ],
+            "1": [
+              "a"
+            ]
+          }
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": {}
+        },
+        {
+          "args": [
+            [
+              ""
+            ]
+          ],
+          "expected": {
+            "0": [
+              ""
+            ]
+          }
+        },
+        {
+          "args": [
+            [
+              "A",
+              "a"
+            ]
+          ],
+          "expected": {
+            "1": [
+              "A",
+              "a"
+            ]
+          }
+        },
+        {
+          "args": [
+            [
+              "hi",
+              "hi"
+            ]
+          ],
+          "expected": {
+            "2": [
+              "hi",
+              "hi"
+            ]
+          }
+        },
+        {
+          "args": [
+            [
+              "abc",
+              "d"
+            ]
+          ],
+          "expected": {
+            "3": [
+              "abc"
+            ],
+            "1": [
+              "d"
+            ]
+          }
+        },
+        {
+          "args": [
+            [
+              "học",
+              "AI"
+            ]
+          ],
+          "expected": {
+            "3": [
+              "học"
+            ],
+            "2": [
+              "AI"
+            ]
+          }
+        },
+        {
+          "args": [
+            [
+              "x",
+              "",
+              "yy"
+            ]
+          ],
+          "expected": {
+            "1": [
+              "x"
+            ],
+            "0": [
+              ""
+            ],
+            "2": [
+              "yy"
+            ]
+          }
+        }
+      ],
+      "support": "words",
+      "challenge": "first-repeat",
+      "skill": 1,
+      "difficulty": 2,
+      "cost": 1.4
+    },
+    {
+      "id": "fibonacci",
+      "title": "Số Fibonacci",
+      "concept": "Trạng thái trong vòng lặp",
+      "level": "Thử thách",
+      "functionName": "fibonacci",
+      "description": "Viết hàm fibonacci(n) trả về số Fibonacci thứ n. Quy ước F(0)=0, F(1)=1, F(n)=F(n-1)+F(n-2).",
+      "rules": [
+        "n là số nguyên từ 0 đến 30.",
+        "Trả về một số nguyên; không in cả dãy."
+      ],
+      "starter": "def fibonacci(n):\n    return 0\n",
+      "examples": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            7
+          ],
+          "expected": 13
+        }
+      ],
+      "hints": [
+        "Giữ hai số liên tiếp của dãy, khởi đầu là 0 và 1.",
+        "Mỗi bước cập nhật đồng thời a, b = b, a + b.",
+        "Sau n bước, a chính là F(n)."
+      ],
+      "takeaway": "Bạn đã cập nhật hai trạng thái mà không làm mất giá trị cũ.",
+      "tests": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            2
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            3
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            7
+          ],
+          "expected": 13
+        },
+        {
+          "args": [
+            10
+          ],
+          "expected": 55
+        },
+        {
+          "args": [
+            20
+          ],
+          "expected": 6765
+        },
+        {
+          "args": [
+            30
+          ],
+          "expected": 832040
+        }
+      ],
+      "support": "prefix-sums",
+      "challenge": "streak",
+      "skill": 2,
+      "difficulty": 2,
+      "cost": 1.4
+    },
+    {
+      "id": "prefix-sums",
+      "title": "Tổng đến từng vị trí",
+      "concept": "Trạng thái & danh sách",
+      "level": "Vận dụng",
+      "functionName": "tong_tich_luy",
+      "description": "Viết hàm tong_tich_luy(numbers) trả về danh sách các tổng tính từ đầu đến từng vị trí.",
+      "rules": [
+        "Kết quả có cùng số phần tử với đầu vào.",
+        "Tính cả số âm; danh sách rỗng cho kết quả []."
+      ],
+      "starter": "def tong_tich_luy(numbers):\n    return []\n",
+      "examples": [
+        {
+          "args": [
+            [
+              2,
+              3,
+              -1
+            ]
+          ],
+          "expected": [
+            2,
+            5,
+            4
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "hints": [
+        "Giữ một biến tổng đang chạy, ban đầu bằng 0.",
+        "Cộng số hiện tại vào tổng.",
+        "Thêm tổng mới vào danh sách kết quả ở mỗi bước."
+      ],
+      "takeaway": "Bạn đã lưu lại trạng thái tổng sau mỗi bước.",
+      "tests": [
+        {
+          "args": [
+            [
+              2,
+              3,
+              -1
+            ]
+          ],
+          "expected": [
+            2,
+            5,
+            4
+          ]
+        },
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              -1,
+              -2
+            ]
+          ],
+          "expected": [
+            -1,
+            -3
+          ]
+        },
+        {
+          "args": [
+            [
+              5
+            ]
+          ],
+          "expected": [
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              4,
+              -4,
+              2
+            ]
+          ],
+          "expected": [
+            4,
+            0,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            0,
+            0
+          ]
+        }
+      ],
+      "support": "sum-positive",
+      "challenge": "fibonacci",
+      "skill": 2,
+      "difficulty": 1,
+      "cost": 1.2
+    }
+  ],
+  "skills": [
+    {
+      "id": "selection",
+      "title": "Lọc và tích lũy",
+      "description": "Duyệt danh sách, kiểm tra điều kiện, cộng hoặc đếm."
+    },
+    {
+      "id": "collections",
+      "title": "Bộ nhớ và cấu trúc dữ liệu",
+      "description": "Dùng tập hợp hoặc từ điển để ghi nhớ các giá trị đã gặp."
+    },
+    {
+      "id": "state",
+      "title": "Cập nhật trạng thái",
+      "description": "Duy trì biến trạng thái qua từng bước của vòng lặp."
+    }
+  ],
+  "provenance": "Authored Python tasks and primary-skill labels. No human log, expert validation or calibrated difficulty. Existing eight task IDs/tests preserved."
+}

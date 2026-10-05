@@ -1,0 +1,39 @@
+/* RetryLab studio · overview.css — the reference screen of the lab-minimal look.
+ * Groups are separated by space and a hairline above, not by frames: main numbers, a one-line pipeline, one figure. */
+
+.overview { display: grid; gap: var(--space-7); }
+
+.stat-skeleton { display: inline-block; width: 96px; height: 36px; vertical-align: middle; }
+
+/* pipeline: five numbered links on one line */
+.ov-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-5); }
+.ov-step-link {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: var(--space-2); row-gap: 2px; align-items: baseline;
+  color: var(--ink); text-decoration: none;
+}
+.ov-step-link:hover { text-decoration: none; }
+.ov-step-link:hover .ov-step-name { text-decoration: underline; text-underline-offset: 3px; }
+.ov-step-index { color: var(--ink-3); font: 400 var(--fs-label)/1 var(--mono); font-variant-numeric: tabular-nums; }
+.ov-step-name { font-size: var(--fs-ui); font-weight: 500; }
+.ov-step-desc { grid-column: 2; color: var(--ink-3); font-size: var(--fs-label); line-height: 1.45; }
+
+/* figure: one small chart per world, all on one scale */
+.ov-worlds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-6); }
+.ov-world { min-width: 0; }
+.ov-world-name { font: 600 var(--fs-ui)/1.3 var(--font); }
+.ov-world-note { min-height: 2.9em; margin: 2px 0 var(--space-2); color: var(--ink-3); font-size: var(--fs-label); line-height: 1.45; text-wrap: pretty; }
+.ov-conclusion { max-width: var(--measure); margin-top: var(--space-5); color: var(--ink-2); font-size: var(--fs-read); line-height: 1.55; font-variant-numeric: tabular-nums; }
+.ov-nowrap { white-space: nowrap; }
+.ov-figure-skeleton { width: 100%; height: 160px; }
+
+@container view (max-width: 760px) {
+  .ov-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--space-5); }
+  .stat-row { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-5); }
+}
+@container view (max-width: 640px) {
+  .ov-worlds { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .ov-world-note { min-height: 0; }
+}
+@container view (max-width: 520px) {
+  .ov-steps, .stat-row { grid-template-columns: minmax(0, 1fr); }
+}
